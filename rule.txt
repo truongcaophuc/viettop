@@ -1,0 +1,205 @@
+Màu chủ đạo: #244556 
+
+Màu phụ: #c9e265 
+
+Màu nhấn: #38B6FF 
+
+Màu background: trắng 
+
+Màu chữ: đen hoặc trắng 
+
+SITEMAP TRANG WEB 
+
+├── Trang chủ (/) 
+
+│   ├── Hero banner (tiêu đề + mô tả + CTA) 
+
+│   ├── Giới thiệu ngắn về DCV 
+
+│   ├── Giải pháp tổng thể (HVAC, UPS, BMS, PCCC, CCTV, Tiếp địa) 
+
+│   ├── Đối tác công nghệ (Airedale, SmartCool, Schneider, Siemens) 
+
+│   ├── Dự án tiêu biểu (3–4 dự án nổi bật) 
+
+│   ├── Blog & Tin mới nhất (3 bài) 
+
+│   ├── Form liên hệ kỹ sư DCV 
+
+│   └── Footer (thông tin công ty, mạng xã hội) 
+
+│ 
+
+├── Giới thiệu (/gioi-thieu) 
+
+│   ├── Về chúng tôi (/gioi-thieu/ve-chung-toi) 
+
+│   ├── Đội ngũ kỹ sư (/gioi-thieu/doi-ngu-ky-su) 
+
+│   └── Hồ sơ năng lực (/gioi-thieu/ho-so-nang-luc) 
+
+│ 
+
+├── Giải pháp (/giai-phap) 
+
+│   ├── HVAC – Làm lạnh chính xác (/giai-phap/hvac-lam-lanh-chinh-xac) 
+
+│   │   ├── SmartCool i-drive Inverter Compressor 
+
+│   │   ├── AireWall ONE Fan Array 
+
+│   │   ├── PAC / CRAC / Chiller Airedale 
+
+│   │   └── Case Study EVN Data Center 
+
+│   │ 
+
+│   ├── UPS & Power Supply (/giai-phap/ups) 
+
+│   │   ├── Hệ thống nguồn dự phòng liên tục 
+
+│   │   ├── Phân phối điện & ATS 
+
+│   │ 
+
+│   ├── BMS & DCIM (/giai-phap/bms-dcim) 
+
+│   │   ├── Hệ thống BMS tích hợp (Modbus / SNMP / BACnet) 
+
+│   │   ├── DCIM – Quản lý hạ tầng trung tâm dữ liệu 
+
+│   │ 
+
+│   ├── Fire & Safety (/giai-phap/pccc) 
+
+│   │   ├── Báo cháy – Chữa cháy tự động 
+
+│   │   ├── Cảm biến khói sớm – Giám sát nhiệt độ môi trường 
+
+│   │ 
+
+│   ├── CCTV & Access Control (/giai-phap/cctv-acs) 
+
+│   │   ├── Hệ thống giám sát an ninh 
+
+│   │   ├── Kiểm soát truy cập tòa nhà 
+
+│   │ 
+
+│   └── Grounding & Surge Protection (/giai-phap/tiep-dia-chong-set) 
+
+│       ├── Tiếp địa công nghiệp 
+
+│       └── Chống sét lan truyền 
+
+│ 
+
+├── Đối tác (/doi-tac) 
+
+│   ├── Airedale by Modine (/doi-tac/airedale-by-modine) 
+
+│   │   ├── AireWall ONE – Data Center Fan Array 
+
+│   │   ├── SmartCool i-drive Inverter Compressor 
+
+│   │   └── CRAC / CRAH / Chiller Airedale 
+
+│   │ 
+
+│   ├── Schneider Electric (/doi-tac/schneider-electric) 
+
+│   ├── Siemens (/doi-tac/siemens) 
+
+│   ├── SmartCool Asia (/doi-tac/smartcool-asia) 
+
+│   └── Đối tác khác (/doi-tac/khac) 
+
+│ 
+
+├── Dự án (/du-an) 
+
+│   ├── Data Center (/du-an/data-center) 
+
+│   │   ├── EVN Đà Nẵng – SmartCool BMS Integration 
+
+│   │   ├── Viettel IDC – PAC 200kW & UPS System 
+
+│   │   ├── VNPT – DCIM & HVAC Integration 
+
+│   │ 
+
+│   ├── Nhà máy (/du-an/nha-may) 
+
+│   │   ├── Nhà máy điện tử XYZ – HVAC công nghiệp 
+
+│   │ 
+
+│   ├── Cao ốc (/du-an/cao-oc) 
+
+│   │   ├── Vincom Smart Tower – Energy Optimization 
+
+│   │ 
+
+│   └── Dự án khác (/du-an/khac) 
+
+│ 
+
+├── Blog (/blog) 
+
+│   ├── Kiến thức kỹ thuật (/blog/kien-thuc-ky-thuat) 
+
+│   │   ├── BMS là gì? Cấu trúc & vai trò trong Data Center 
+
+│   │   ├── Phân biệt HVAC – AHU – FCU – PAC 
+
+│   │ 
+
+│   ├── Giải pháp công nghệ (/blog/giai-phap-cong-nghe) 
+
+│   │   ├── Giải pháp làm lạnh chính xác SmartCool i-drive 
+
+│   │   ├── Ứng dụng Modbus & SNMP trong BMS 
+
+│   │ 
+
+│   ├── Tin tức DCV (/blog/tin-tuc-dcv) 
+
+│   │   ├── DCV trở thành đối tác của Airedale by Modine 
+
+│   │   ├── Hội thảo HVAC Energy Efficiency 2025 
+
+│   │ 
+
+│   └── Bảo trì – Vận hành (/blog/bao-tri-van-hanh) 
+
+│       ├── 5 lỗi thường gặp khi bảo trì hệ thống PAC 
+
+│       ├── Lịch bảo trì định kỳ hệ thống UPS & HVAC 
+
+│ 
+
+├── Liên hệ (/lien-he) 
+
+│   ├── Form liên hệ kỹ sư DCV 
+
+│   ├── Bản đồ Google Map (văn phòng) 
+
+│   ├── Hotline / Email kỹ thuật / Zalo / LinkedIn / Facebook 
+
+│ 
+
+└── Module phụ trợ (ẩn – SEO / Marketing) 
+
+    ├── /bao-gia (Form báo giá nhanh) 
+
+    ├── /tai-lieu (Brochure, Datasheet, Catalog) 
+
+    ├── /profile (Tải hồ sơ năng lực) 
+
+    ├── /tuyen-dung (Tuyển dụng kỹ sư HVAC, BMS, Điện) 
+
+    ├── /privacy-policy (Chính sách bảo mật) 
+
+    └── /terms (Điều khoản sử dụng) 
+
+ 
