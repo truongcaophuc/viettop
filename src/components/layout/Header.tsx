@@ -2,7 +2,7 @@
 
 import { FaPhoneAlt, FaSearch, FaGlobe } from "react-icons/fa";
 import Link from "next/link";
-import SwiperSection from "../home/Swiper";
+// import SwiperSection from "../home/Swiper";
 export default function HomePage() {
   return (
     <div className="font-sans">
@@ -34,7 +34,7 @@ export default function HomePage() {
               CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT
             </h2>
             <p className="font-semibold text-[#d94c00] text-[17px]">
-              CƠ ĐIỆN LẠNH R.E.E
+              CƠ ĐIỆN LẠNH D.C.V
             </p>
           </div>
         </div>
@@ -64,18 +64,19 @@ export default function HomePage() {
           </li>
           <li className="relative group">
             <a href="#" className="hover:text-[#d94c00] transition-colors">
-              Công trình tiêu biểu ▾
+              Công trình tiêu biểu 
+              {/* ▾ */}
             </a>
             <ul className="absolute left-0 hidden group-hover:block bg-white border mt-1 text-sm">
               <li>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
+                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Công trình 1
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
+                {/* <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Công trình 2
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </li>
