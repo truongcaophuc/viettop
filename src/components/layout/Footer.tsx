@@ -11,7 +11,7 @@ export default function Footer() {
       }}
     >
       {/* Lớp phủ làm ảnh nền chìm */}
-      <div className="absolute inset-0 bg-[#004d61]/85 z-0"></div>
+      <div className="absolute inset-0 bg-primary/85 z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Các cột chính */}

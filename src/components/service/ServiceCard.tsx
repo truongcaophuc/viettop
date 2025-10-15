@@ -2,31 +2,50 @@ import { LucideIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface ServiceCardProps {
-  icon: LucideIcon;
+  icon?: LucideIcon;
   title: string;
   description: string;
   features?: string[];
 }
 
-const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, features,url }: ServiceCardProps) => {
   return (
-    <Card className="group cursor-pointer border border-gray-200 rounded-xl bg-white transition-shadow duration-300 hover:shadow-lg">
-      <CardContent className="p-6 space-y-4">
-        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-400 to-cyan-400 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-          <Icon className="h-6 w-6 text-white" />
-        </div>
-        <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-        {features && features.length > 0 && (
-          <ul className="space-y-1 text-sm text-gray-500">
-            {features.map((feature, index) => (
-              <li key={index} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                {feature}
-              </li>
-            ))}
-          </ul>
-        )}
+    <Card
+      className="
+        relative h-64 group cursor-pointer rounded-2xl border border-gray-200 
+        overflow-hidden transition-all duration-500 
+        hover:shadow-2xl hover:-translate-y-1
+      "
+    >
+      {/* Ảnh nền + hiệu ứng zoom */}
+      <div
+        className="
+          absolute inset-0 bg-[url('/image.png')] bg-no-repeat bg-center bg-cover
+          scale-100 group-hover:scale-110 transition-transform duration-700
+        "
+       style={{ backgroundImage: `url('${url}')` }}
+      />
+
+      {/* Overlay đen mờ */}
+      <div
+        className="
+          absolute inset-0 bg-black/40 group-hover:bg-black/60 
+          transition-colors duration-500
+        "
+      />
+
+      {/* Nội dung */}
+      <CardContent
+        className="
+          relative z-10 p-6 flex flex-col justify-end h-full
+        "
+      >
+        <h3 className="text-xl font-bold text-secondary mb-2">
+          {title}
+        </h3>
+        <p className="text-sm text-gray-100 leading-relaxed line-clamp-3">
+          {description}
+        </p>
       </CardContent>
     </Card>
   );

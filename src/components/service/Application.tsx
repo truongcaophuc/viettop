@@ -1,3 +1,6 @@
+"use client";
+import { ChevronRight } from "lucide-react";
+
 export default function Application() {
   const solutions = [
     {
@@ -19,12 +22,13 @@ export default function Application() {
       applications: ["Smart Building", "LEED Certified", "Green Building"],
     },
   ];
+
   return (
-    <section className="py-20 px-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section className="py-20 px-6 md:px-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
         {/* Tiêu đề */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-primary mb-4">
             Ứng dụng đa dạng
           </h2>
           <p className="text-lg text-gray-600">
@@ -37,9 +41,10 @@ export default function Application() {
           {solutions.map((solution, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="bg-white rounded-2xl p-8 border border-gray-200 shadow-md 
+                         hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-primary mb-4">
                 {solution.title}
               </h3>
 
@@ -47,11 +52,11 @@ export default function Application() {
                 {solution.description}
               </p>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {solution.applications.map((app, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"></div>
-                    <span className="text-gray-800">{app}</span>
+                    <ChevronRight className="w-4 h-4 text-accent flex-shrink-0" />
+                    <span className="text-primary font-medium">{app}</span>
                   </div>
                 ))}
               </div>
