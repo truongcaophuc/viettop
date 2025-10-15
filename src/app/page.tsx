@@ -6,7 +6,8 @@ import Head from 'next/head';
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SwiperSection from '../components/home/Swiper';
-import ArticleSlider from "../components/ArticleSlider";
+import ArticleSlider from "../components/home/ArticleSlider";
+import ContactDock from "@/components/layout/ContactDock";
 
 export default function AboutSection() {
   // Animation slideInLeft / slideInRight
@@ -595,6 +596,7 @@ export default function AboutSection() {
           }
         `}</style>
       </section>
+      <ContactDock />
     </>
   );
 }

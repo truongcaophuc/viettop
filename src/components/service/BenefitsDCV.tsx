@@ -1,5 +1,35 @@
 "use client";
+
+import { motion } from "framer-motion";
 import { ShieldCheck, Zap, Eye, CheckCircle2 } from "lucide-react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 50,
+    scale: 0.9 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function BenefitsDCV() {
   const benefits = [
@@ -35,7 +65,13 @@ export default function BenefitsDCV() {
 
   return (
     <section className="py-20 px-6 md:px-20 bg-background">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <motion.div 
+        className="max-w-6xl mx-auto text-center mb-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
           Lợi ích khi lựa chọn <span className="text-secondary">DCV</span>
         </h2>
@@ -43,27 +79,43 @@ export default function BenefitsDCV() {
           DCV mang đến hệ thống trung tâm dữ liệu thông minh, tiết kiệm và ổn định –
           đảm bảo an toàn, hiệu quả và đạt chuẩn quốc tế cho doanh nghiệp của bạn.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <motion.div 
+        className="grid md:grid-cols-4 sm:grid-cols-2 gap-8 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {benefits.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants as any}
+            whileHover={{ 
+              scale: 1.05, 
+              y: -10,
+              transition: { duration: 0.3 }
+            }}
             className="bg-white border border-gray-100 rounded-2xl p-8 shadow-md 
-                       hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                       hover:shadow-xl transition-all duration-500"
           >
-            <div className="flex justify-center mb-5">
+            <motion.div 
+              className="flex justify-center mb-5"
+              whileHover={{ rotate: 10, scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
               <item.icon className={`${item.color} w-10 h-10 drop-shadow-sm`} />
-            </div>
+            </motion.div>
             <h3 className="text-lg font-semibold text-primary mb-3">
               {item.title}
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               {item.description}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

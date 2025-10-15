@@ -7,13 +7,10 @@ import {
   ThumbsUp,
   PhoneOutgoing,
   GitBranch,
-  MessageCircle,
-  Mail,
-  MapPin,
   PencilLine,
-  ChevronUp,
 } from "lucide-react";
 import { Be_Vietnam_Pro } from "next/font/google";
+import ContactDock from "@/components/layout/ContactDock";
 
 const bevn = Be_Vietnam_Pro({
   subsets: ["vietnamese", "latin"],
@@ -98,11 +95,6 @@ const ARC_TABS: Record<
 };
 
 export default function DcvLandingTsx() {
-  /* ====== Contact Dock state ====== */
-  const dockRef = useRef<HTMLDivElement | null>(null);
-  const [dockOpen, setDockOpen] = useState(false);
-  const [showBackTop, setShowBackTop] = useState(false);
-
   /* ====== Arc state ====== */
   const stageRef = useRef<HTMLDivElement | null>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
@@ -112,27 +104,9 @@ export default function DcvLandingTsx() {
 
   const active = useMemo(() => ARC_TABS[activeKey], [activeKey]);
 
-  /* ====== Effects: dock, scroll, outside click ====== */
+  /* ====== Effects: scroll, outside click ====== */
   useEffect(() => {
-    const onScroll = () => setShowBackTop(window.scrollY > 300);
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    const onDocClick = (e: MouseEvent) => {
-      if (!dockRef.current) return;
-      if (!dockRef.current.contains(e.target as Node)) setDockOpen(false);
-    };
-    const onEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDockOpen(false);
-    };
-    document.addEventListener("click", onDocClick);
-    document.addEventListener("keydown", onEsc);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("click", onDocClick);
-      document.removeEventListener("keydown", onEsc);
-    };
+    // Removed contact dock logic - now handled by ContactDock component
   }, []);
 
   /* ====== Layout arc nodes ====== */
@@ -192,7 +166,7 @@ export default function DcvLandingTsx() {
     <div
       className={`${bevn.className} bg-white text-black antialiased [text-rendering:optimizeLegibility]`}
     >
-      {/* Inline styles cho phần Arc và Dock (nhỏ gọn). Có thể chuyển sang CSS module nếu muốn. */}
+      {/* Inline styles cho phần Arc (nhỏ gọn). Có thể chuyển sang CSS module nếu muốn. */}
       <style>{`
         #arcStage{position:relative;height:380px}
         #arcSvg{position:absolute;inset:0;pointer-events:none}
@@ -210,7 +184,6 @@ export default function DcvLandingTsx() {
           #arcNodes .circle{width:58px;height:58px}
           #arcNodes .label{white-space:normal;max-width:160px;text-align:left;font-size:.95rem}
         }
-        #contactDock.open .list{max-height:380px;opacity:1;transform:translateY(0)}
       `}</style>
 
       {/* HERO */}
@@ -452,124 +425,7 @@ export default function DcvLandingTsx() {
       </section>
 
       {/* FLOAT CONTACT DOCK + Back-to-top */}
-      <div
-        id="contactDock"
-        ref={dockRef}
-        className={`fixed right-4 bottom-5 z-[1045] flex flex-col items-center gap-2 ${
-          dockOpen ? "open" : ""
-        }`}
-        aria-label="Liên hệ nhanh"
-      >
-        <div
-          id="contactList"
-          aria-hidden={!dockOpen}
-          className={`list grid justify-items-center gap-2 transition-all duration-300 ${
-            dockOpen
-              ? "opacity-100 translate-y-0 max-h-96"
-              : "opacity-0 translate-y-1 max-h-0"
-          } overflow-hidden`}
-        >
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-white text-[#244556] hover:bg-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-none"
-            href="tel:+842812345678"
-            aria-label="Gọi Hotline"
-            title="Gọi Hotline"
-          >
-            <PhoneOutgoing className="w-5 h-5" />
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-white text-[#244556] hover:bg-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-none"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            aria-label="Messenger"
-            title="Messenger"
-          >
-            <MessageCircle className="w-5 h-5" />
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-white text-[#244556] font-bold hover:bg-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-none"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            aria-label="Zalo"
-            title="Zalo"
-          >
-            Z
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-white text-[#244556] hover:bg-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-none"
-            href="mailto:contact@dinhcaoviet.vn"
-            aria-label="Email"
-            title="Email"
-          >
-            <Mail className="w-5 h-5" />
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-white text-[#244556] hover:bg-white
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-none"
-            href="https://maps.google.com/?q=ĐỈNH+CAO+VIỆT"
-            target="_blank"
-            rel="noopener"
-            aria-label="Bản đồ"
-            title="Bản đồ"
-          >
-            <MapPin className="w-5 h-5" />
-          </a>
-        </div>
-        <button
-          id="dockToggle"
-          type="button"
-          aria-expanded={dockOpen}
-          aria-controls="contactList"
-          aria-label="Mở danh sách liên hệ"
-          onClick={() => setDockOpen((v) => !v)}
-          className={`w-14 h-14 rounded-full inline-flex items-center justify-center 
-              shadow-[0_10px_24px_rgba(0,0,0,0.18)]
-              ${
-                dockOpen
-                  ? "bg-white text-[#c9e265]"
-                  : "bg-[#244556] text-[#c9e265]"
-              }
-              hover:brightness-95 active:translate-y-px
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
-        >
-          <MessageCircle className="w-6 h-6" />
-        </button>
-
-        <button
-          id="backTop"
-          type="button"
-          aria-label="Lên đầu trang"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className={`${showBackTop ? "flex" : "hidden"} 
-              w-12 h-12 rounded-full inline-flex items-center justify-center
-              shadow-[0_10px_24px_rgba(0,0,0,0.18)]
-              bg-[#c9e265] text-[#244556]
-              hover:brightness-95 active:translate-y-px
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
-        >
-          <ChevronUp className="w-5 h-5" />
-        </button>
-      </div>
+      <ContactDock />
     </div>
   );
 }

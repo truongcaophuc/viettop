@@ -1,67 +1,108 @@
 "use client";
-import { CheckCircle, AlertTriangle } from "lucide-react";
+
+import { motion } from "framer-motion";
+
+const problems = [
+  {
+    text: "Hệ thống làm mát không ổn định, tiêu tốn điện, khó kiểm soát nhiệt độ.",
+    icon: "/cool.svg",
+  },
+  {
+    text: "Mất điện đột ngột, nguồn dự phòng yếu, ATS hoạt động không ổn định.",
+    icon: "/electric.svg",
+  },
+  {
+    text: "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu, hệ thống không đồng bộ.",
+    icon: "/monitor.svg",
+  },
+  {
+    text: "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm và chữa cháy tự động.",
+    icon: "/fire.svg", // dùng thay Fire
+  },
+  {
+    text: "An ninh kém, khó kiểm soát ra vào và giám sát khu vực quan trọng.",
+    icon: "/security.svg",
+  },
+  {
+    text: "Thiết bị dễ hư hỏng do sét, tiếp địa và chống sét không đạt chuẩn.",
+    icon: "/lightning.svg",
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 50,
+    scale: 0.9 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function CustomerProblemsSolutions() {
-  const problems = [
-    "Hệ thống làm mát không ổn định, tiêu tốn điện năng.",
-    "Nguồn điện dự phòng yếu, ATS hoạt động không ổn định.",
-    "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu.",
-    "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm.",
-    "An ninh kém, khó kiểm soát ra vào khu vực quan trọng.",
-    "Thiết bị dễ hư hỏng do chống sét và tiếp địa không đạt chuẩn.",
-  ];
-
-  const solutions = [
-    "Điều hòa chính xác, duy trì môi trường ổn định cho thiết bị CNTT.",
-    "Nguồn điện liên tục và hệ thống dự phòng thông minh.",
-    "Giám sát – điều khiển – tối ưu vận hành toàn bộ hạ tầng.",
-    "Phòng cháy chữa cháy tự động, cảnh báo sớm và an toàn.",
-    "Kiểm soát ra vào thông minh, tăng cường an ninh hệ thống.",
-    "Tiếp địa – chống sét đạt chuẩn, bảo vệ thiết bị toàn diện.",
-  ];
-
   return (
     <section className="py-20 px-6 md:px-20 bg-[--background]">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Cột trái: Vấn đề khách hàng */}
-        <div className="shadow-lg rounded-2xl p-8 bg-white border border-gray-100 hover:shadow-2xl transition-shadow duration-500">
-          <h2 className="text-3xl font-bold text-[--primary] mb-6">
-            Vấn đề khách hàng
-          </h2>
-          <ul className="space-y-4">
-            {problems.map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 bg-gray-50 p-4 rounded-xl border border-gray-100 hover:bg-gray-100 transition"
-              >
-                <AlertTriangle
-                  className="text-secondary w-5 h-5 mt-0.5 flex-shrink-0 drop-shadow-sm"
-                />
-                <p className="text-gray-700">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="max-w-6xl mx-auto">
+        <motion.h2 
+          className="text-3xl font-bold text-[--primary] mb-10 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          Vấn đề của khách hàng
+        </motion.h2>
 
-        {/* Cột phải: Giải pháp Viettop */}
-        <div className="shadow-lg rounded-2xl p-8 bg-white border border-gray-100 hover:shadow-2xl transition-shadow duration-500">
-          <h2 className="text-3xl font-bold text-[--primary] mb-6">
-            Giải pháp từ Viettop
-          </h2>
-          <ul className="space-y-4">
-            {solutions.map((item, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 bg-[--primary]/5 p-4 rounded-xl border border-[--primary]/10 hover:bg-[--primary]/10 transition"
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {problems.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants as any}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -5,
+                transition: { duration: 0.3 }
+              }}
+              className="flex flex-col items-center gap-4 p-6 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-2xl transition-shadow duration-500"
+            >
+              {/* Icon */}
+              <motion.div 
+                className="h-50 flex items-center justify-center rounded-full bg-[--secondary]/20"
+                whileHover={{ rotate: 5 }}
+                transition={{ duration: 0.3 }}
               >
-                <CheckCircle
-                  className="text-success w-5 h-5 mt-0.5 flex-shrink-0 drop-shadow-sm"
-                />
-                <p className="text-gray-800">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+                <img src={item.icon} alt={item.text} className="text-[--secondary] w-full h-full" />
+              </motion.div>
+
+              {/* Nội dung */}
+              <p className="text-gray-700 text-sm md:text-base">{item.text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -6,9 +6,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   features?: string[];
+  url?: string;
 }
 
-const ServiceCard = ({ icon: Icon, title, description, features,url }: ServiceCardProps) => {
+const ServiceCard = ({ title, description, url }: ServiceCardProps) => {
   return (
     <Card
       className="
@@ -23,7 +24,7 @@ const ServiceCard = ({ icon: Icon, title, description, features,url }: ServiceCa
           absolute inset-0 bg-[url('/image.png')] bg-no-repeat bg-center bg-cover
           scale-100 group-hover:scale-110 transition-transform duration-700
         "
-       style={{ backgroundImage: `url('${url}')` }}
+        style={{ backgroundImage: `url('${url}')` }}
       />
 
       {/* Overlay đen mờ */}
@@ -40,9 +41,7 @@ const ServiceCard = ({ icon: Icon, title, description, features,url }: ServiceCa
           relative z-10 p-6 flex flex-col justify-end h-full
         "
       >
-        <h3 className="text-xl font-bold text-secondary mb-2">
-          {title}
-        </h3>
+        <h3 className="text-xl font-bold text-secondary mb-2">{title}</h3>
         <p className="text-sm text-gray-100 leading-relaxed line-clamp-3">
           {description}
         </p>
