@@ -2,7 +2,7 @@ import hvacImage from "@/assets/hvac-system.jpg";
 
 export default function OutstandingSolutions() {
   return (
-    <section className="py-20 bg-gray-50 px-6 md:px-20">
+    <section className="py-20 bg-gray-200 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Hình minh họa */}
         <div className="order-2 md:order-1">

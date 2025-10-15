@@ -47,7 +47,7 @@ export default function ServiceList() {
         "Kiểm soát nhiệt độ và độ ẩm chính xác",
         "Tiết kiệm năng lượng tối ưu",
       ],
-      url: "https://tse3.mm.bing.net/th/id/OIP.RRLOBRFBrkBVO44KuMKvCgHaC9?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+      url: "/hvac.jpg",
     },
     {
       icon: Zap,
@@ -61,7 +61,7 @@ export default function ServiceList() {
         "Monitoring & Alert System",
         "Bảo trì định kỳ chuyên nghiệp",
       ],
-      url: "https://web.tradekorea.com/product/286/1212286/UPS%20_%20POWER%20SUPPLY_2.gif",
+      url: "/ups.jpg",
     },
     {
       icon: MonitorCog,
@@ -75,7 +75,7 @@ export default function ServiceList() {
         "Dashboard giám sát real-time",
         "Tự động hóa và tối ưu hóa",
       ],
-      url: "https://www.deltapowersolutions.com/media/images/other/technial-article-understanding-the-role-of-DCIM-in-modern-data-centers.jpg",
+      url: "/bms.jpg",
     },
     {
       icon: Flame,
@@ -89,7 +89,7 @@ export default function ServiceList() {
         "Giám sát nhiệt độ môi trường",
         "Tích hợp BMS",
       ],
-      url: "https://th.bing.com/th/id/OIP.oKSeQoMG8s1FPVuzDq5c3AHaGI?w=203&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3",
+      url: "/fire_alarm.jpg",
     },
     {
       icon: Camera,
@@ -103,7 +103,7 @@ export default function ServiceList() {
         "Lưu trữ đám mây",
         "Cảnh báo thời gian thực",
       ],
-      url: "https://www.flexi.co.th/wp-content/uploads/2023/01/shutterstock_272833616-1024x683.webp",
+      url: "/access_control.jpg",
     },
     {
       icon: Network,
@@ -117,7 +117,7 @@ export default function ServiceList() {
         "Đo kiểm định kỹ thuật",
         "Tuân thủ tiêu chuẩn quốc tế",
       ],
-      url: "https://tse3.mm.bing.net/th/id/OIP.ZgIW842BLtZEYCMEaFfqFQHaEy?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+      url: "/lightning.jpg",
     },
   ];
 

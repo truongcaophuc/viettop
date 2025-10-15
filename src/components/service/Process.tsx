@@ -59,7 +59,6 @@ function FishboneStep({
   index: number;
   isLeft: boolean;
 }) {
-  console.log("is left", isLeft);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const animation = useAnimation();
@@ -75,7 +74,7 @@ function FishboneStep({
       ref={ref}
       initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
       animate={animation}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      transition={{ duration: 0.4, delay: index * 0.2 }}
       className="relative flex w-full items-center"
     >
       {/* Connector line */}

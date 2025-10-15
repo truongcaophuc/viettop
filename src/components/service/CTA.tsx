@@ -42,7 +42,7 @@ export default function CTA() {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <motion.button 
-            className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg 
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg 
                        font-semibold flex items-center gap-2 transition-all duration-300 
                        shadow-lg hover:shadow-xl"
             whileHover={{ 
@@ -65,7 +65,7 @@ export default function CTA() {
             </motion.div>
           </motion.button>
 
-          <motion.button 
+          {/* <motion.button 
             className="border-2 border-primary text-primary hover:bg-primary hover:text-white 
                        px-8 py-4 rounded-lg font-semibold flex items-center gap-2 
                        transition-all duration-300"
@@ -88,7 +88,7 @@ export default function CTA() {
               <Download className="w-5 h-5" />
             </motion.div>
             Tải hồ sơ năng lực
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </motion.section>

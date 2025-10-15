@@ -7,17 +7,19 @@ import CustomerProblemsSolutions from "@/components/service/CustomerProblemsSolu
 import BenefitDCV from "@/components/service/BenefitsDCV";
 import Process from "@/components/service/Process";
 import ContactDock from "@/components/layout/ContactDock";
-
+import Problem from "@/components/service/Problem";
+import ProcessNew from "@/components/service/ProcessNew";
+import Benefit from "@/components/service/Benefit";
 const Services = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <CustomerProblemsSolutions />
+      <Problem/>
       <ServiceList />
       {/* <OutstandingSolutions /> */}
       {/* <Application /> */}
-      <Process />
-      <BenefitDCV />
+      <ProcessNew />
+      <Benefit />
       <CTA />
       <ContactDock />
     </div>

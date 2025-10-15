@@ -59,7 +59,7 @@ const itemVariants = {
 
 export default function CustomerProblemsSolutions() {
   return (
-    <section className="py-20 px-6 md:px-20 bg-[--background]">
+    <section className="py-20 px-6 md:px-20 bg-gray-200">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-3xl font-bold text-[--primary] mb-10 text-center"
