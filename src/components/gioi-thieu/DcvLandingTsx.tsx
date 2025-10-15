@@ -476,49 +476,52 @@ export default function DcvLandingTsx() {
 
       {/* ===================== CTA ===================== */}
       <section id="cta-cuoi-trang" className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <Reveal>
-            <div
-              className="relative overflow-hidden rounded-2xl md:rounded-3xl text-white p-6 md:p-10"
-              style={{
-                backgroundImage:
-                  "linear-gradient(60deg, rgba(15,27,34,.85), rgba(15,27,34,.55)), linear-gradient(to bottom right, #244556, #1b3542)",
-              }}
-            >
-              {/* orbs */}
-              <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF] rounded-full blur-2xl opacity-30" />
-              <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265] rounded-full blur-2xl opacity-25" />
+    <div className="max-w-5xl mx-auto px-4">
+      <Reveal>
+        <div
+          className="relative overflow-hidden rounded-2xl md:rounded-3xl text-white p-6 md:p-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(60deg, rgba(15,27,34,.85), rgba(15,27,34,.55)), linear-gradient(to bottom right, #244556, #1b3542)",
+          }}
+        >
+          {/* orbs */}
+          <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF] rounded-full blur-2xl opacity-30" />
+          <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265] rounded-full blur-2xl opacity-25" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4 relative">
-                <Reveal as="div" className="lg:col-span-8">
-                  <h2 className="font-extrabold text-2xl md:text-3xl mb-2 tracking-tight">
-                    Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
-                  </h2>
-                  <p className="text-white/80">
-                    Liên hệ ngay với{" "}
-                    <strong className="text-white">ĐỈNH CAO VIỆT</strong> để
-                    được tư vấn giải pháp tối ưu và hiệu quả nhất.
-                  </p>
-                </Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-y-2 lg:gap-x-3 relative">
+            <Reveal as="div" className="lg:col-span-8">
+              <h2 className="font-extrabold text-2xl md:text-3xl mb-2 tracking-tight">
+                Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
+              </h2>
+              <p className="text-white/70 text-sm">
+                Liên hệ ngay với{" "}
+                <strong className="text-white">ĐỈNH CAO VIỆT</strong> để
+                được tư vấn giải pháp tối ưu và hiệu quả nhất.
+              </p>
+            </Reveal>
 
-                <Reveal delay={120} className="lg:col-span-4 lg:text-right">
-                  <a
-                    href="contact.html"
-                    className="inline-flex items-center gap-3 bg-white text-[#244556] font-bold px-6 py-4 rounded-none
-                       shadow-[0_12px_26px_rgba(0,0,0,0.06)]
-                       hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(0,0,0,0.10)]
-                       transition-transform focus-visible:outline-none focus-visible:ring-2
-                       focus-visible:ring-white/40 active:translate-y-px"
-                  >
-                    <PencilLine className="w-5 h-5" />
-                    <span>Điền form tư vấn</span>
-                  </a>
-                </Reveal>
-              </div>
-            </div>
-          </Reveal>
+            <Reveal delay={120} className="lg:col-span-4 lg:text-right">
+              <a
+                href="contact.html"
+                className="inline-flex items-center gap-1 bg-white text-[#244556] font-semibold
+                           text-sm md:text-base px-7 py-3 rounded-lg
+                           shadow-[0_6px_16px_rgba(0,0,0,0.06)]
+                           hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.10)]
+                           transition-transform focus-visible:outline-none focus-visible:ring-2
+                           focus-visible:ring-white/40 active:translate-y-px"
+              >
+                <PencilLine className="w-5 h-5" />
+                <span className="-ml-0.5">Tư vấn ngay</span>
+              </a>
+            </Reveal>
+
+
+          </div>
         </div>
-      </section>
+      </Reveal>
+    </div>
+</section>
 
       {/* ===================== FLOAT CONTACT DOCK ===================== */}
       <div
