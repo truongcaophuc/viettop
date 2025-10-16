@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import {
   Flag,
   TrendingUp,
@@ -72,6 +72,8 @@ function Reveal({
 
 /* ===================== Arc tabs data ===================== */
 type ArcKey = "vision" | "strategy" | "team" | "customer";
+// Mảng keys để dễ dàng lặp và xác định index
+const ARC_KEYS: ArcKey[] = ["vision", "strategy", "team", "customer"];
 
 const ARC_TABS: Record<
   ArcKey,
@@ -161,6 +163,8 @@ export default function DcvLandingTsx() {
   const pathRef = useRef<SVGPathElement | null>(null);
   const nodesWrapRef = useRef<HTMLDivElement | null>(null);
   const [activeKey, setActiveKey] = useState<ArcKey>("customer");
+  // Thêm state cho interval
+  const autoSlideInterval = useRef<number | null>(null);
 
   const active = useMemo(() => ARC_TABS[activeKey], [activeKey]);
   const arcBg = useMemo(() => {
@@ -169,7 +173,48 @@ export default function DcvLandingTsx() {
       "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
     return `url('${url}')`;
   }, [activeKey]);
+  
+  // Hàm đặt lại interval tự động chuyển slide
+  const startAutoSlide = useCallback(() => {
+    // 1. Dọn dẹp interval cũ nếu có
+    if (autoSlideInterval.current !== null) {
+      window.clearInterval(autoSlideInterval.current);
+    }
 
+    // 2. Thiết lập interval mới chỉ cho desktop
+    const isMobile = window.matchMedia("(max-width: 991.98px)").matches;
+    if (isMobile) return;
+
+    autoSlideInterval.current = window.setInterval(() => {
+      setActiveKey((prevKey) => {
+        const currentIndex = ARC_KEYS.indexOf(prevKey);
+        // Tính index tiếp theo (quay lại 0 nếu là nút cuối)
+        const nextIndex = (currentIndex + 1) % ARC_KEYS.length;
+        return ARC_KEYS[nextIndex];
+      });
+    }, 3000);
+  }, []);
+
+  // Hàm custom để thay đổi tab và reset timer
+  const handleSetActiveKey = (key: ArcKey) => {
+    setActiveKey(key);
+    // Reset timer khi người dùng tương tác
+    startAutoSlide(); 
+  };
+  
+  // Effect để khởi động và dọn dẹp interval
+  useEffect(() => {
+    // Khởi động khi component mount
+    startAutoSlide();
+
+    // Dọn dẹp khi component unmount
+    return () => {
+      if (autoSlideInterval.current !== null) {
+        window.clearInterval(autoSlideInterval.current);
+      }
+    };
+  }, [startAutoSlide]);
+  
   /* ====== Effects: dock, scroll, outside click ====== */
   useEffect(() => {
     const onScroll = () => setShowBackTop(window.scrollY > 300);
@@ -367,10 +412,10 @@ export default function DcvLandingTsx() {
                   {/* Primary button */}
                   <a
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                 border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
-                 hover:bg-white hover:text-[#244556]
-                 transition-colors focus-visible:outline-none focus-visible:ring-2
-                 focus-visible:ring-[#244556]/40 active:translate-y-px"
+                  border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
+                  hover:bg-white hover:text-[#244556]
+                  transition-colors focus-visible:outline-none focus-visible:ring-2
+                  focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <PhoneOutgoing className="w-5 h-5" />
                     Liên hệ tư vấn
@@ -379,10 +424,10 @@ export default function DcvLandingTsx() {
                   {/* Secondary */}
                   <a
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                  border border-[#c9e265] bg-[#c9e265] text-white px-5 py-2.5 shadow-sm
-                  hover:bg-white hover:text-[#c9e265]
-                  transition-colors focus-visible:outline-none focus-visible:ring-2
-                  focus-visible:ring-[#244556]/40 active:translate-y-px"
+                   border border-[#c9e265] bg-[#c9e265] text-white px-5 py-2.5 shadow-sm
+                   hover:bg-white hover:text-[#c9e265]
+                   transition-colors focus-visible:outline-none focus-visible:ring-2
+                   focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <GitBranch className="w-5 h-5" />
                     Giải pháp
@@ -392,7 +437,7 @@ export default function DcvLandingTsx() {
             </div>
 
             <Reveal delay={120} className="hidden md:block">
-  <div className="relative">
+ <div className="relative">
     <img
       className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
       src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
@@ -426,22 +471,23 @@ export default function DcvLandingTsx() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4">
-  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+ <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     {/* Left content with smooth switch */}
     <div className="lg:col-span-5 order-2 lg:order-1">
       {/* Mobile pill tabs: nằm sát nội dung, kéo ngang */}
       <div id="arcTabsMobile" className="-mt-1 mb-5 overflow-x-auto no-scrollbar">
         <div className="flex items-center gap-2 snap-x snap-mandatory">
           {([
-            { key: "vision",   icon: <Flag className="w-4 h-4" />,       label: "Tầm nhìn" },
+            { key: "vision", 	icon: <Flag className="w-4 h-4" />, 		label: "Tầm nhìn" },
             { key: "strategy", icon: <TrendingUp className="w-4 h-4" />, label: "Chiến lược" },
-            { key: "team",     icon: <Users className="w-4 h-4" />,      label: "Đội ngũ" },
-            { key: "customer", icon: <ThumbsUp className="w-4 h-4" />,   label: "Khách hàng" },
+            { key: "team", 	icon: <Users className="w-4 h-4" />, 		label: "Đội ngũ" },
+            { key: "customer", icon: <ThumbsUp className="w-4 h-4" />, 	label: "Khách hàng" },
           ] as { key: ArcKey; icon: React.ReactNode; label: string }[]).map(({ key, icon, label }) => (
             <button
               key={key}
               type="button"
-              onClick={() => setActiveKey(key)}
+              // Dùng handleSetActiveKey để reset timer
+              onClick={() => handleSetActiveKey(key)} 
               aria-selected={activeKey === key}
               className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
                 ${activeKey === key
@@ -485,7 +531,8 @@ export default function DcvLandingTsx() {
               className={`node ${activeKey === key ? "active" : ""}`}
               data-key={key}
               aria-selected={activeKey === key}
-              onClick={() => setActiveKey(key)}
+              // Dùng handleSetActiveKey để reset timer
+              onClick={() => handleSetActiveKey(key)} 
             >
               <span className="circle">{icon as any}</span>
               <span className="label">{label}</span>
