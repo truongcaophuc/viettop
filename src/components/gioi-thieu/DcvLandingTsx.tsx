@@ -15,6 +15,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Be_Vietnam_Pro } from "next/font/google";
+import { AnimatePresence, motion } from "framer-motion";
 
 const bevn = Be_Vietnam_Pro({
   subsets: ["vietnamese", "latin"],
@@ -78,8 +79,7 @@ const ARC_TABS: Record<
 > = {
   vision: {
     title: "TẦM NHÌN, SỨ MỆNH",
-    lead:
-      "Sứ mệnh của DCV là đưa công nghệ vận hành thông minh vào từng công trình.",
+    lead: "DCV kiến tạo chuẩn vận hành thông minh & bền vững cho mọi công trình.",
     body: (
       <p className="mb-0 text-white/[0.85]">
         Sứ mệnh của DCV là đưa công nghệ vận hành thông minh vào từng công
@@ -88,13 +88,11 @@ const ARC_TABS: Record<
         vững chắc hôm nay là nền tảng cho một thế giới kết nối bền vững mai sau.
       </p>
     ),
-    bg:
-      "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
+    bg: "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
   },
   strategy: {
     title: "CHIẾN LƯỢC CỐT LÕI",
-    lead:
-      "DCV định hướng phát triển bền vững dựa trên chất lượng, công nghệ và con người.",
+    lead: "Tập trung 3 trụ cột: Chất lượng – Công nghệ – Con người, hướng tới tăng trưởng bền vững.",
     body: (
       <p className="mb-0 text-white/[0.85]">
         Đỉnh Cao Việt (DCV) định hướng phát triển bền vững dựa trên chất lượng,
@@ -104,8 +102,7 @@ const ARC_TABS: Record<
         giá trị bền vững và hiệu quả tối đa cho khách hàng.
       </p>
     ),
-    bg:
-      "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
+    bg: "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
   },
   customer: {
     title: "ĐỐI VỚI KHÁCH HÀNG",
@@ -113,8 +110,8 @@ const ARC_TABS: Record<
     body: (
       <>
         <p className="text-white/[0.85]">
-          Đỉnh Cao Việt (DCV) luôn đặt khách hàng ở vị trí trung tâm trong mọi
-          hoạt động.
+          Khách hàng là trung tâm; hiệu quả, an toàn và ổn định là thước đo
+          thành công.
         </p>
         <p className="text-white/[0.85]">
           Chúng tôi cam kết mang đến giải pháp kỹ thuật tối ưu, an toàn và bền
@@ -128,26 +125,22 @@ const ARC_TABS: Record<
         </p>
       </>
     ),
-    bg:
-      "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
+    bg: "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
   },
   team: {
     title: "ĐỘI NGŨ NHÂN SỰ",
-    lead:
-      "Đội ngũ kỹ sư, chuyên viên, chuyên gia DCV có hơn 20 năm kinh nghiệm trên toàn quốc.",
+    lead: "Đội ngũ chứng chỉ đầy đủ, hơn 20 năm thực chiến M&E, HVAC, BMS, Data Center.",
     body: (
       <>
         <p className="text-white/[0.85]">
-          Đội ngũ nhân sự của Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên viên
-          và chuyên gia kỹ thuật có hơn 20 năm kinh nghiệm trong việc tư vấn,
-          thiết kế, thi công và bảo trì các hệ thống M&E, HVAC, BMS và Data
-          Center trên toàn quốc.
+          Đội ngũ Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên gia với hơn 20
+          năm kinh nghiệm trong tư vấn, thiết kế, thi công và bảo trì các hệ
+          thống M&E, HVAC, BMS và Data Center trên toàn quốc.
         </p>
         <p className="mb-0 text-white/[0.85]">
-          Mỗi thành viên trong đội ngũ DCV đều được đào tạo bài bản và sở hữu
-          các chứng chỉ chuyên môn về thiết kế hệ thống điều hòa chính xác
-          (PAC), UPS, PCCC, DCIM và quản lý năng lượng thông minh, đảm bảo đáp
-          ứng các tiêu chuẩn kỹ thuật khắt khe nhất.
+          Mỗi thành viên đều được đào tạo bài bản, sở hữu các chứng chỉ chuyên
+          môn về PAC, UPS, PCCC, DCIM và quản lý năng lượng thông minh, cam kết
+          đáp ứng các tiêu chuẩn kỹ thuật khắt khe nhất.
         </p>
       </>
     ),
@@ -174,7 +167,7 @@ export default function DcvLandingTsx() {
       active.bg ??
       "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
     return `url('${url}')`;
-  }, [active.bg]);
+  }, [activeKey]);
 
   /* ====== Effects: dock, scroll, outside click ====== */
   useEffect(() => {
@@ -245,12 +238,38 @@ export default function DcvLandingTsx() {
       if (t) window.clearTimeout(t);
       t = window.setTimeout(layoutArcNodes, 120);
     };
+    const onOrient = () => {
+      if (t) window.clearTimeout(t);
+      t = window.setTimeout(layoutArcNodes, 120);
+    };
     window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onOrient);
     return () => {
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onOrient);
       if (t) window.clearTimeout(t);
     };
   }, []);
+
+  /* ====== Small helper for smooth content switch ====== */
+  const ContentSwitch: React.FC<{ k: ArcKey }> = ({ k }) => {
+    const data = ARC_TABS[k];
+    return (
+      <motion.div
+        key={k}
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -8 }}
+        transition={{ duration: 0.28, ease: "easeOut" }}
+      >
+        <h2 className="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight text-[#c9e265]">
+          {data.title}
+        </h2>
+        <p className="text-white/[0.85] mb-3">{data.lead}</p>
+        <div className="mb-3">{data.body}</div>
+      </motion.div>
+    );
+  };
 
   return (
     <div
@@ -258,23 +277,38 @@ export default function DcvLandingTsx() {
     >
       {/* Inline styles for Arc/Dock */}
       <style>{`
-        #arcStage{position:relative;height:380px}
-        #arcSvg{position:absolute;inset:0;pointer-events:none}
-        #arcNodes{position:absolute;inset:0;pointer-events:none}
-        #arcNodes .node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:auto;cursor:pointer;background:transparent;border:0}
-        #arcNodes .circle{width:78px;height:78px;border-radius:9999px;display:grid;place-items:center;background:#fff;color:#244556;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:transform .18s ease, box-shadow .18s ease, outline-color .18s ease;outline:3px solid transparent}
-        #arcNodes .node.active .circle{transform:translateY(-2px) scale(1.03);outline-color:rgba(201,226,101,.65)}
-        #arcNodes .node:hover .circle{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
-        #arcNodes .label{font-weight:700;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.35)}
-        @media (max-width: 991.98px){
-          #arcStage{height:auto;padding-top:6px}
-          #arcSvg{display:none}
-          #arcNodes{position:static;display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;padding-top:4px}
-          #arcNodes .node{position:static;transform:none}
-          #arcNodes .circle{width:58px;height:58px}
-          #arcNodes .label{white-space:normal;max-width:160px;text-align:left;font-size:.95rem}
-        }
-        #contactDock.open .list{max-height:380px;opacity:1;transform:translateY(0)}
+      /* ===== Arc layout & responsiveness ===== */
+#arcStage{position:relative;min-height:320px;height:clamp(320px,40vw,420px)}
+@media (min-width: 1280px){#arcStage{height:200px}}
+#arcSvg{position:absolute;inset:0;pointer-events:none}
+#arcNodes{position:absolute;inset:0;pointer-events:none}
+#arcNodes .node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:auto;cursor:pointer;background:transparent;border:0}
+#arcNodes .circle{width:78px;height:78px;border-radius:9999px;display:grid;place-items:center;background:#fff;color:#244556;box-shadow:0 12px 28px rgba(0,0,0,.25);transition:transform .18s ease, box-shadow .18s ease, outline-color .18s ease;outline:3px solid transparent}
+#arcNodes .node.active .circle{transform:translateY(-2px) scale(1.03);outline-color:rgba(201,226,101,.65)}
+#arcNodes .node:hover .circle{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
+#arcNodes .label{font-weight:700;color:#fff;white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.35)}
+
+/* Ẩn tab mobile theo mặc định (desktop) */
+#arcTabsMobile{display:none}
+
+@media (max-width: 991.98px){
+  /* Thu gọn section & bỏ min-height ở mobile */
+  #tong-quan-chien-luoc{padding-top:2rem;padding-bottom:2rem}
+  #arcStage{min-height:0 !important;height:auto !important;padding-top:0}
+
+  /* Ẩn cung + nodes ở mobile */
+  #arcSvg, #arcNodes{display:none !important}
+
+  /* Hiện pill tabs ở mobile và cho kéo ngang */
+  #arcTabsMobile{display:flex}
+
+  /* Ẩn scrollbar ngang */
+  .no-scrollbar::-webkit-scrollbar{display:none}
+  .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+}
+
+/* Contact dock */
+#contactDock.open .list{max-height:380px;opacity:1;transform:translateY(0)}
       `}</style>
 
       {/* ===================== HERO ===================== */}
@@ -356,12 +390,14 @@ export default function DcvLandingTsx() {
               </Reveal>
             </div>
 
-            <Reveal delay={120}>
+            <Reveal delay={120} className="hidden md:block">
               <div className="relative">
                 <img
                   className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
                   src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
                   alt="ĐỈNH CAO VIỆT – Giải pháp M&E"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </Reveal>
@@ -372,32 +408,84 @@ export default function DcvLandingTsx() {
       {/* ===================== ARC STRATEGY ===================== */}
       <section
         id="tong-quan-chien-luoc"
-        className="py-16 relative overflow-hidden text-white bg-cover bg-center md:bg-fixed"
-        style={{ backgroundImage: arcBg }}
+        className="py-16 relative overflow-hidden text-white"
       >
-        <div className="absolute inset-0 bg-[linear-gradient(60deg,rgba(15,27,34,.85),rgba(15,27,34,.55))]" />
+        {/* Background crossfade */}
+        <div className="absolute inset-0">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeKey}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+              style={{ backgroundImage: arcBg }}
+            />
+          </AnimatePresence>
+          <div className="absolute inset-0 bg-[linear-gradient(60deg,rgba(15,27,34,.85),rgba(15,27,34,.55))]" />
+        </div>
+
         <div className="relative max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            {/* Left content */}
-            <Reveal className="lg:col-span-5 order-2 lg:order-1">
-              <div id="arcContent">
-                <h2
-                  id="arcTitle"
-                  className="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight text-[#c9e265]"
-                >
-                  {active.title}
-                </h2>
-                <p id="arcLead" className="text-white/[0.85] mb-3">
-                  {active.lead}
-                </p>
-                <div id="arcBody" className="mb-3">
-                  {active.body}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left content with smooth switch */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              {/* Mobile pill tabs: nằm sát nội dung, kéo ngang */}
+              <div
+                id="arcTabsMobile"
+                className="-mt-1 mb-5 overflow-x-auto no-scrollbar"
+              >
+                <div className="flex items-center gap-2 snap-x snap-mandatory">
+                  {(
+                    [
+                      {
+                        key: "vision",
+                        icon: <Flag className="w-4 h-4" />,
+                        label: "Tầm nhìn",
+                      },
+                      {
+                        key: "strategy",
+                        icon: <TrendingUp className="w-4 h-4" />,
+                        label: "Chiến lược",
+                      },
+                      {
+                        key: "team",
+                        icon: <Users className="w-4 h-4" />,
+                        label: "Đội ngũ",
+                      },
+                      {
+                        key: "customer",
+                        icon: <ThumbsUp className="w-4 h-4" />,
+                        label: "Khách hàng",
+                      },
+                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
+                  ).map(({ key, icon, label }) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setActiveKey(key)}
+                      aria-selected={activeKey === key}
+                      className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
+                ${
+                  activeKey === key
+                    ? "bg-[#c9e265] text-[#244556] border-[#c9e265] shadow"
+                    : "bg-white/90 text-[#244556] border-white/60"
+                }`}
+                    >
+                      {icon as any}
+                      <span>{label}</span>
+                    </button>
+                  ))}
                 </div>
               </div>
-            </Reveal>
 
-            {/* Right arc */}
-            <Reveal delay={120} className="lg:col-span-7 order-1 lg:order-2">
+              <AnimatePresence mode="wait">
+                <ContentSwitch k={activeKey} />
+              </AnimatePresence>
+            </div>
+
+            {/* Right arc (desktop giữ nguyên) */}
+            <div className="lg:col-span-7 order-1 lg:order-2">
               <div id="arcStage" ref={stageRef}>
                 <svg
                   id="arcSvg"
@@ -414,114 +502,90 @@ export default function DcvLandingTsx() {
                     fill="none"
                   />
                 </svg>
-
                 <div id="arcNodes" ref={nodesWrapRef} aria-label="Arc tabs">
-                  <button
-                    className={`node ${activeKey === "vision" ? "active" : ""}`}
-                    data-key="vision"
-                    aria-selected={activeKey === "vision"}
-                    onClick={() => setActiveKey("vision")}
-                  >
-                    <span className="circle">
-                      <Flag className="w-6 h-6" />
-                    </span>
-                    <span className="label">Tầm nhìn – Sứ mệnh</span>
-                  </button>
-
-                  <button
-                    className={`node ${
-                      activeKey === "strategy" ? "active" : ""
-                    }`}
-                    data-key="strategy"
-                    aria-selected={activeKey === "strategy"}
-                    onClick={() => setActiveKey("strategy")}
-                  >
-                    <span className="circle">
-                      <TrendingUp className="w-6 h-6" />
-                    </span>
-                    <span className="label">Chiến lược cốt lõi</span>
-                  </button>
-
-                  <button
-                    className={`node ${activeKey === "team" ? "active" : ""}`}
-                    data-key="team"
-                    aria-selected={activeKey === "team"}
-                    onClick={() => setActiveKey("team")}
-                  >
-                    <span className="circle">
-                      <Users className="w-6 h-6" />
-                    </span>
-                    <span className="label">Đội ngũ nhân sự</span>
-                  </button>
-
-                  <button
-                    className={`node ${
-                      activeKey === "customer" ? "active" : ""
-                    }`}
-                    data-key="customer"
-                    aria-selected={activeKey === "customer"}
-                    onClick={() => setActiveKey("customer")}
-                  >
-                    <span className="circle">
-                      <ThumbsUp className="w-6 h-6" />
-                    </span>
-                    <span className="label">Đối với khách hàng</span>
-                  </button>
+                  {(
+                    [
+                      {
+                        key: "vision",
+                        icon: <Flag className="w-6 h-6" />,
+                        label: "Tầm nhìn – Sứ mệnh",
+                      },
+                      {
+                        key: "strategy",
+                        icon: <TrendingUp className="w-6 h-6" />,
+                        label: "Chiến lược cốt lõi",
+                      },
+                      {
+                        key: "team",
+                        icon: <Users className="w-6 h-6" />,
+                        label: "Đội ngũ nhân sự",
+                      },
+                      {
+                        key: "customer",
+                        icon: <ThumbsUp className="w-6 h-6" />,
+                        label: "Đối với khách hàng",
+                      },
+                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
+                  ).map(({ key, icon, label }) => (
+                    <button
+                      key={key}
+                      className={`node ${activeKey === key ? "active" : ""}`}
+                      data-key={key}
+                      aria-selected={activeKey === key}
+                      onClick={() => setActiveKey(key)}
+                    >
+                      <span className="circle">{icon as any}</span>
+                      <span className="label">{label}</span>
+                    </button>
+                  ))}
                 </div>
               </div>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ===================== CTA ===================== */}
       <section id="cta-cuoi-trang" className="py-16">
-    <div className="max-w-5xl mx-auto px-4">
-      <Reveal>
-        <div
-          className="relative overflow-hidden rounded-2xl md:rounded-3xl text-white p-6 md:p-10"
-          style={{
-            backgroundImage:
-              "linear-gradient(60deg, rgba(15,27,34,.85), rgba(15,27,34,.55)), linear-gradient(to bottom right, #244556, #1b3542)",
-          }}
-        >
-          {/* orbs */}
-          <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF] rounded-full blur-2xl opacity-30" />
-          <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265] rounded-full blur-2xl opacity-25" />
+        <div className="max-w-5xl mx-auto px-4">
+          <Reveal>
+            <div
+              className="relative overflow-hidden rounded-2xl md:rounded-3xl text-white p-6 md:p-10"
+              style={{
+                backgroundImage:
+                  "linear-gradient(60deg, rgba(15,27,34,.85), rgba(15,27,34,.55)), linear-gradient(to bottom right, #244556, #1b3542)",
+              }}
+            >
+              {/* orbs */}
+              <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF] rounded-full blur-2xl opacity-30" />
+              <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265] rounded-full blur-2xl opacity-25" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-y-2 lg:gap-x-3 relative">
-            <Reveal as="div" className="lg:col-span-8">
-              <h2 className="font-extrabold text-2xl md:text-3xl mb-2 tracking-tight">
-                Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
-              </h2>
-              <p className="text-white/70 text-sm">
-                Liên hệ ngay với{" "}
-                <strong className="text-white">ĐỈNH CAO VIỆT</strong> để
-                được tư vấn giải pháp tối ưu và hiệu quả nhất.
-              </p>
-            </Reveal>
+              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-y-2 lg:gap-x-3 relative">
+                <Reveal as="div" className="lg:col-span-8">
+                  <h2 className="font-extrabold text-2xl md:text-3xl mb-2 tracking-tight">
+                    Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
+                  </h2>
+                  <p className="text-white/70 text-sm">
+                    Liên hệ ngay với{" "}
+                    <strong className="text-white">ĐỈNH CAO VIỆT</strong> để
+                    được tư vấn giải pháp tối ưu và hiệu quả nhất.
+                  </p>
+                </Reveal>
 
-            <Reveal delay={120} className="lg:col-span-4 lg:text-right">
-              <a
-                href="contact.html"
-                className="inline-flex items-center gap-1 bg-white text-[#244556] font-semibold
-                           text-sm md:text-base px-7 py-3 rounded-lg
-                           shadow-[0_6px_16px_rgba(0,0,0,0.06)]
-                           hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.10)]
-                           transition-transform focus-visible:outline-none focus-visible:ring-2
-                           focus-visible:ring-white/40 active:translate-y-px"
-              >
-                <PencilLine className="w-5 h-5" />
-                <span className="-ml-0.5">Tư vấn ngay</span>
-              </a>
-            </Reveal>
-
-
-          </div>
+                <Reveal delay={120} className="lg:col-span-4 lg:text-right">
+                  <a
+                    href="contact.html"
+                    className="inline-flex items-center gap-1 bg-white text-[#244556] font-semibold text-sm md:text-base px-7 py-3 rounded-lg shadow-[0_6px_16px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.10)] transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 active:translate-y-px"
+                  >
+                    <PencilLine className="w-5 h-5" />
+                    <span className="-ml-0.5">Tư vấn ngay</span>
+                  </a>
+                </Reveal>
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </Reveal>
-    </div>
-</section>
+      </section>
 
       {/* ===================== FLOAT CONTACT DOCK ===================== */}
       <div
@@ -542,18 +606,31 @@ export default function DcvLandingTsx() {
           } overflow-hidden`}
         >
           {[
-            { icon: <PhoneOutgoing className="w-5 h-5" />, href: "tel:+842812345678", label: "Gọi Hotline" },
-            { icon: <MessageCircle className="w-5 h-5" />, href: "#", label: "Messenger" },
+            {
+              icon: <PhoneOutgoing className="w-5 h-5" />,
+              href: "tel:+842812345678",
+              label: "Gọi Hotline",
+            },
+            {
+              icon: <MessageCircle className="w-5 h-5" />,
+              href: "#",
+              label: "Messenger",
+            },
             { icon: "Z", href: "#", label: "Zalo" },
-            { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@dinhcaoviet.vn", label: "Email" },
-            { icon: <MapPin className="w-5 h-5" />, href: "https://maps.google.com/?q=ĐỈNH+CAO+VIỆT", label: "Bản đồ" },
+            {
+              icon: <Mail className="w-5 h-5" />,
+              href: "mailto:contact@dinhcaoviet.vn",
+              label: "Email",
+            },
+            {
+              icon: <MapPin className="w-5 h-5" />,
+              href: "https://maps.google.com/?q=ĐỈNH+CAO+VIỆT",
+              label: "Bản đồ",
+            },
           ].map((item, i) => (
             <a
               key={i}
-              className="w-12 h-12 rounded-full inline-flex items-center justify-center
-               border border-black/10 bg-white text-[#244556] hover:bg-white
-               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-               shadow-none"
+              className="w-12 h-12 rounded-full inline-flex items-center justify-center border border-black/10 bg-white text-[#244556] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40 shadow-none"
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener" : undefined}
@@ -565,7 +642,7 @@ export default function DcvLandingTsx() {
           ))}
         </div>
 
-        {/* Toggle button: default (chưa nhấn) bg #c9e265, color #244556 */}
+        {/* Toggle button */}
         <button
           id="dockToggle"
           type="button"
@@ -573,15 +650,9 @@ export default function DcvLandingTsx() {
           aria-controls="contactList"
           aria-label="Mở danh sách liên hệ"
           onClick={() => setDockOpen((v) => !v)}
-          className={`w-14 h-14 rounded-full inline-flex items-center justify-center
-              shadow-[0_10px_24px_rgba(0,0,0,0.18)]
-              ${
-                dockOpen
-                  ? "bg-white text-[#244556]"
-                  : "bg-[#c9e265] text-[#244556]"
-              }
-              hover:brightness-95 active:translate-y-px
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
+          className={`w-14 h-14 rounded-full inline-flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] ${
+            dockOpen ? "bg-white text-[#244556]" : "bg-[#c9e265] text-[#244556]"
+          } hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
         >
           <MessageCircle className="w-6 h-6" />
         </button>
@@ -593,11 +664,7 @@ export default function DcvLandingTsx() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className={`${
             showBackTop ? "flex" : "hidden"
-          } w-12 h-12 rounded-full inline-flex items-center justify-center
-              shadow-[0_10px_24px_rgba(0,0,0,0.18)]
-              bg-[#c9e265] text-[#244556]
-              hover:brightness-95 active:translate-y-px
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
+          } w-12 h-12 rounded-full inline-flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] bg-[#c9e265] text-[#244556] hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
         >
           <ChevronUp className="w-5 h-5" />
         </button>
