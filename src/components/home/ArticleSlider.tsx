@@ -7,7 +7,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// 🔹 Custom arrow buttons
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NextArrow = ({ onClick }: any) => (
   <button
@@ -72,7 +71,6 @@ export default function ArticleSlider() {
     },
   ];
 
-  // ✅ FIX: bỏ centerMode & set width full trên mobile
   const settings = {
     dots: false,
     infinite: true,
@@ -86,24 +84,6 @@ export default function ArticleSlider() {
       { breakpoint: 1536, settings: { slidesToShow: 4 } },
       { breakpoint: 1280, settings: { slidesToShow: 3 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: "0px",
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          centerPadding: "0px",
-        },
-      },
     ],
   };
 
@@ -125,8 +105,9 @@ export default function ArticleSlider() {
           </p>
         </motion.h2>
 
-        <div className="relative">
-          <Slider {...settings} className="article-slider">
+        {/* Desktop Slider */}
+        <div className="hidden md:block relative">
+          <Slider {...settings}>
             {articles.map((article) => (
               <div key={article.id} className="px-3 md:px-4">
                 <motion.div
@@ -161,35 +142,45 @@ export default function ArticleSlider() {
               </div>
             ))}
           </Slider>
+        </div>
 
-          {/* ✅ CSS FIX: ép chiều rộng slide full + không co */}
-          <style jsx global>{`
-            .article-slider .slick-slide {
-              display: flex !important;
-              justify-content: center;
-              align-items: stretch;
-            }
-            .article-slider .slick-slide > div {
-              width: 100% !important;
-              max-width: 100% !important;
-              display: flex;
-            }
-            .article-slider .slick-list {
-              overflow: hidden;
-            }
-            @media (max-width: 768px) {
-              .article-slider .slick-slide {
-                padding: 0 5px;
-              }
-              .article-slider .slick-slide > div {
-                width: 100% !important;
-              }
-              .article-slider .slick-track {
-                display: flex !important;
-                gap: 0;
-              }
-            }
-          `}</style>
+        {/* Mobile List (không dùng slider để tránh lỗi) */}
+        {/* Mobile List (hiệu ứng 1.5s mỗi item) */}
+        <div className="block md:hidden space-y-6">
+          {articles.map((article, index) => (
+            <motion.div
+              key={article.id}
+              className="overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-500"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1.5, 
+                delay: index * 0.6, 
+                ease: "easeOut",
+              }}
+            >
+              <div className="relative w-full h-52 sm:h-64">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-xs text-orange-500 font-semibold mb-1 uppercase">
+                  {article.category}
+                </p>
+                <h3 className="text-lg font-bold text-gray-800 mb-2 hover:text-green-600 transition">
+                  {article.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {article.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
