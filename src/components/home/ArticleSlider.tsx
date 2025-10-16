@@ -72,66 +72,49 @@ export default function ArticleSlider() {
     },
   ];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1536, // 2K screen
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
+ const settings = {
+  dots: false,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1536,
+      settings: { slidesToShow: 4, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 1280,
+      settings: { slidesToShow: 3, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 2, slidesToScroll: 1 },
+    },
+    {
+      breakpoint: 768, // Tablet hoặc điện thoại ngang
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+        centerPadding: "0px",
       },
-      {
-        breakpoint: 1280, // Laptop
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
+    },
+    {
+      breakpoint: 480, // Điện thoại nhỏ
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+        centerPadding: "0px",
       },
-      {
-        breakpoint: 1024, // Tablet horizontal
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768, // Tablet vertical
-        settings: {
-          slidesToShow: 1.3,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "30px",
-        },
-      },
-      {
-        breakpoint: 640, // Mobile large
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "20px",
-        },
-      },
-      {
-        breakpoint: 480, // Mobile small
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: "10px",
-        },
-      },
-    ],
-  };
+    },
+  ],
+};
+
 
   return (
     <section className="bg-gray-50 py-20 relative">
@@ -203,6 +186,26 @@ export default function ArticleSlider() {
                 padding: 0 3px;
               }
             }
+              .article-slider .slick-slide {
+              display: flex !important;
+              justify-content: center;
+            }
+
+            .article-slider .slick-slide > div {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            @media (max-width: 768px) {
+              .article-slider .slick-slide > div {
+                width: 100% !important;
+                max-width: 100% !important;
+              }
+              .article-slider .slick-list {
+                margin: 0;
+              }
+            }
+
           `}</style>
         </div>
       </div>
