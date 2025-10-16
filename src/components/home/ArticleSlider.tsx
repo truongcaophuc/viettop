@@ -72,59 +72,50 @@ export default function ArticleSlider() {
     },
   ];
 
- const settings = {
-  dots: false,
-  infinite: true,
-  speed: 600,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-  responsive: [
-    {
-      breakpoint: 1536,
-      settings: { slidesToShow: 4, slidesToScroll: 1 },
-    },
-    {
-      breakpoint: 1280,
-      settings: { slidesToShow: 3, slidesToScroll: 1 },
-    },
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 2, slidesToScroll: 1 },
-    },
-    {
-      breakpoint: 768, // Tablet hoặc điện thoại ngang
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,
-        centerPadding: "0px",
+  // ✅ FIX: bỏ centerMode & set width full trên mobile
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      { breakpoint: 1536, settings: { slidesToShow: 4 } },
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "0px",
+        },
       },
-    },
-    {
-      breakpoint: 480, // Điện thoại nhỏ
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: false,
-        centerPadding: "0px",
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+          centerPadding: "0px",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   return (
     <section className="bg-gray-50 py-20 relative">
-      <div className="max-w-[90rem] mx-auto px-6 relative">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 relative">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center"
-          initial={{ opacity: 0.5, y: 80 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.6 }}
         >
           KIẾN THỨC & GIẢI PHÁP CƠ ĐIỆN
           <p className="text-gray-500 text-base mt-2 font-normal max-w-2xl mx-auto">
@@ -139,13 +130,13 @@ export default function ArticleSlider() {
             {articles.map((article) => (
               <div key={article.id} className="px-3 md:px-4">
                 <motion.div
-                  className="overflow-hidden hover:scale-105 transition-all duration-500 bg-white rounded-xl shadow-sm"
-                  initial={{ opacity: 0, y: 100 }}
+                  className="overflow-hidden hover:scale-105 transition-all duration-500 bg-white rounded-xl shadow-sm flex flex-col h-full"
+                  initial={{ opacity: 0, y: 80 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  transition={{ duration: 0.7 }}
                 >
-                  <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-60 xl:h-64">
+                  <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-60 xl:h-64 flex-shrink-0">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -153,7 +144,7 @@ export default function ArticleSlider() {
                       className="object-cover transition-transform duration-700 ease-in-out hover:scale-110"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="p-5 flex flex-col flex-grow">
                     <p className="text-xs text-orange-500 font-semibold mb-1 uppercase">
                       {article.category}
                     </p>
@@ -171,41 +162,33 @@ export default function ArticleSlider() {
             ))}
           </Slider>
 
+          {/* ✅ CSS FIX: ép chiều rộng slide full + không co */}
           <style jsx global>{`
             .article-slider .slick-slide {
-              padding: 0 5px;
-            }
-            .article-slider .slick-list {
-              margin: 0 -5px;
-            }
-            .article-slider .slick-slide:focus {
-              outline: none;
-            }
-            @media (max-width: 768px) {
-              .article-slider .slick-slide {
-                padding: 0 3px;
-              }
-            }
-              .article-slider .slick-slide {
               display: flex !important;
               justify-content: center;
+              align-items: stretch;
             }
-
             .article-slider .slick-slide > div {
-              width: 100%;
-              max-width: 100%;
+              width: 100% !important;
+              max-width: 100% !important;
+              display: flex;
             }
-
+            .article-slider .slick-list {
+              overflow: hidden;
+            }
             @media (max-width: 768px) {
+              .article-slider .slick-slide {
+                padding: 0 5px;
+              }
               .article-slider .slick-slide > div {
                 width: 100% !important;
-                max-width: 100% !important;
               }
-              .article-slider .slick-list {
-                margin: 0;
+              .article-slider .slick-track {
+                display: flex !important;
+                gap: 0;
               }
             }
-
           `}</style>
         </div>
       </div>
