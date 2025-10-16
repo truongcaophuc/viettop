@@ -185,7 +185,7 @@ export default function AboutSection() {
           {/* Tiêu đề */}
           <div className="text-center mb-12 animate-fadeInUp opacity-0 transition-opacity duration-700">
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-[#244556] via-[#38B6FF] to-[#c9e265] text-transparent bg-clip-text drop-shadow-lg">
-              <span className="text-[#c9e265]">TIÊU CHÍ</span> ĐÁNH GIÁ THIẾT KẾ WEBSITE
+              <span className="text-[#c9e265]">GIẢI PHÁP TỔNG THỂ VỀ CƠ ĐIỆN</span> & HẠ TẦNG TRUNG TÂM DỮ LIỆU
             </h2>
             <p className="text-xl text-white mt-2 font-medium">
               mang lại hiệu quả cao
@@ -505,7 +505,7 @@ export default function AboutSection() {
                   <p className="text-lg font-bold">0938 002 776</p>
                 </div>
                 <img
-                  src="https://static.vecteezy.com/system/resources/previews/003/344/958/non_2x/hotline-symbol-with-headphones-and-customer-icon-vector.jpg"
+                  src="https://static.vecteezy.com/system/resources/thumbnails/018/726/054/small_2x/accept-phone-icon-social-icon-set-png.png"
                   alt="Hotline"
                   className="w-10 h-10 ml-3"
                 />

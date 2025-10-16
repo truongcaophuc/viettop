@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import {
   Flag,
   TrendingUp,
@@ -72,6 +72,8 @@ function Reveal({
 
 /* ===================== Arc tabs data ===================== */
 type ArcKey = "vision" | "strategy" | "team" | "customer";
+// Mảng keys để dễ dàng lặp và xác định index
+const ARC_KEYS: ArcKey[] = ["vision", "strategy", "team", "customer"];
 
 const ARC_TABS: Record<
   ArcKey,
@@ -79,7 +81,8 @@ const ARC_TABS: Record<
 > = {
   vision: {
     title: "TẦM NHÌN, SỨ MỆNH",
-    lead: "DCV kiến tạo chuẩn vận hành thông minh & bền vững cho mọi công trình.",
+    lead:
+      "DCV kiến tạo chuẩn vận hành thông minh & bền vững cho mọi công trình.",
     body: (
       <p className="mb-0 text-white/[0.85]">
         Sứ mệnh của DCV là đưa công nghệ vận hành thông minh vào từng công
@@ -88,11 +91,13 @@ const ARC_TABS: Record<
         vững chắc hôm nay là nền tảng cho một thế giới kết nối bền vững mai sau.
       </p>
     ),
-    bg: "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
+    bg:
+      "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
   },
   strategy: {
     title: "CHIẾN LƯỢC CỐT LÕI",
-    lead: "Tập trung 3 trụ cột: Chất lượng – Công nghệ – Con người, hướng tới tăng trưởng bền vững.",
+    lead:
+      "Tập trung 3 trụ cột: Chất lượng – Công nghệ – Con người, hướng tới tăng trưởng bền vững.",
     body: (
       <p className="mb-0 text-white/[0.85]">
         Đỉnh Cao Việt (DCV) định hướng phát triển bền vững dựa trên chất lượng,
@@ -102,7 +107,8 @@ const ARC_TABS: Record<
         giá trị bền vững và hiệu quả tối đa cho khách hàng.
       </p>
     ),
-    bg: "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
+    bg:
+      "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
   },
   customer: {
     title: "ĐỐI VỚI KHÁCH HÀNG",
@@ -110,8 +116,7 @@ const ARC_TABS: Record<
     body: (
       <>
         <p className="text-white/[0.85]">
-          Khách hàng là trung tâm; hiệu quả, an toàn và ổn định là thước đo
-          thành công.
+        Khách hàng là trung tâm; hiệu quả, an toàn và ổn định là thước đo thành công.
         </p>
         <p className="text-white/[0.85]">
           Chúng tôi cam kết mang đến giải pháp kỹ thuật tối ưu, an toàn và bền
@@ -125,22 +130,20 @@ const ARC_TABS: Record<
         </p>
       </>
     ),
-    bg: "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
+    bg:
+      "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
   },
   team: {
     title: "ĐỘI NGŨ NHÂN SỰ",
-    lead: "Đội ngũ chứng chỉ đầy đủ, hơn 20 năm thực chiến M&E, HVAC, BMS, Data Center.",
+    lead:
+      "Đội ngũ chứng chỉ đầy đủ, hơn 20 năm thực chiến M&E, HVAC, BMS, Data Center.",
     body: (
       <>
         <p className="text-white/[0.85]">
-          Đội ngũ Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên gia với hơn 20
-          năm kinh nghiệm trong tư vấn, thiết kế, thi công và bảo trì các hệ
-          thống M&E, HVAC, BMS và Data Center trên toàn quốc.
+        Đội ngũ Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên gia với hơn 20 năm kinh nghiệm trong tư vấn, thiết kế, thi công và bảo trì các hệ thống M&E, HVAC, BMS và Data Center trên toàn quốc.
         </p>
         <p className="mb-0 text-white/[0.85]">
-          Mỗi thành viên đều được đào tạo bài bản, sở hữu các chứng chỉ chuyên
-          môn về PAC, UPS, PCCC, DCIM và quản lý năng lượng thông minh, cam kết
-          đáp ứng các tiêu chuẩn kỹ thuật khắt khe nhất.
+        Mỗi thành viên đều được đào tạo bài bản, sở hữu các chứng chỉ chuyên môn về PAC, UPS, PCCC, DCIM và quản lý năng lượng thông minh, cam kết đáp ứng các tiêu chuẩn kỹ thuật khắt khe nhất.
         </p>
       </>
     ),
@@ -160,6 +163,8 @@ export default function DcvLandingTsx() {
   const pathRef = useRef<SVGPathElement | null>(null);
   const nodesWrapRef = useRef<HTMLDivElement | null>(null);
   const [activeKey, setActiveKey] = useState<ArcKey>("customer");
+  // Thêm state cho interval
+  const autoSlideInterval = useRef<number | null>(null);
 
   const active = useMemo(() => ARC_TABS[activeKey], [activeKey]);
   const arcBg = useMemo(() => {
@@ -168,7 +173,48 @@ export default function DcvLandingTsx() {
       "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
     return `url('${url}')`;
   }, [activeKey]);
+  
+  // Hàm đặt lại interval tự động chuyển slide
+  const startAutoSlide = useCallback(() => {
+    // 1. Dọn dẹp interval cũ nếu có
+    if (autoSlideInterval.current !== null) {
+      window.clearInterval(autoSlideInterval.current);
+    }
 
+    // 2. Thiết lập interval mới chỉ cho desktop
+    const isMobile = window.matchMedia("(max-width: 991.98px)").matches;
+    if (isMobile) return;
+
+    autoSlideInterval.current = window.setInterval(() => {
+      setActiveKey((prevKey) => {
+        const currentIndex = ARC_KEYS.indexOf(prevKey);
+        // Tính index tiếp theo (quay lại 0 nếu là nút cuối)
+        const nextIndex = (currentIndex + 1) % ARC_KEYS.length;
+        return ARC_KEYS[nextIndex];
+      });
+    }, 3000);
+  }, []);
+
+  // Hàm custom để thay đổi tab và reset timer
+  const handleSetActiveKey = (key: ArcKey) => {
+    setActiveKey(key);
+    // Reset timer khi người dùng tương tác
+    startAutoSlide(); 
+  };
+  
+  // Effect để khởi động và dọn dẹp interval
+  useEffect(() => {
+    // Khởi động khi component mount
+    startAutoSlide();
+
+    // Dọn dẹp khi component unmount
+    return () => {
+      if (autoSlideInterval.current !== null) {
+        window.clearInterval(autoSlideInterval.current);
+      }
+    };
+  }, [startAutoSlide]);
+  
   /* ====== Effects: dock, scroll, outside click ====== */
   useEffect(() => {
     const onScroll = () => setShowBackTop(window.scrollY > 300);
@@ -366,10 +412,10 @@ export default function DcvLandingTsx() {
                   {/* Primary button */}
                   <a
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                 border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
-                 hover:bg-white hover:text-[#244556]
-                 transition-colors focus-visible:outline-none focus-visible:ring-2
-                 focus-visible:ring-[#244556]/40 active:translate-y-px"
+                  border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
+                  hover:bg-white hover:text-[#244556]
+                  transition-colors focus-visible:outline-none focus-visible:ring-2
+                  focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <PhoneOutgoing className="w-5 h-5" />
                     Liên hệ tư vấn
@@ -378,10 +424,10 @@ export default function DcvLandingTsx() {
                   {/* Secondary */}
                   <a
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                  border border-[#c9e265] bg-[#c9e265] text-white px-5 py-2.5 shadow-sm
-                  hover:bg-white hover:text-[#c9e265]
-                  transition-colors focus-visible:outline-none focus-visible:ring-2
-                  focus-visible:ring-[#244556]/40 active:translate-y-px"
+                   border border-[#c9e265] bg-[#c9e265] text-white px-5 py-2.5 shadow-sm
+                   hover:bg-white hover:text-[#c9e265]
+                   transition-colors focus-visible:outline-none focus-visible:ring-2
+                   focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <GitBranch className="w-5 h-5" />
                     Giải pháp
@@ -391,25 +437,23 @@ export default function DcvLandingTsx() {
             </div>
 
             <Reveal delay={120} className="hidden md:block">
-              <div className="relative">
-                <img
-                  className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
-                  alt="ĐỈNH CAO VIỆT – Giải pháp M&E"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </Reveal>
+ <div className="relative">
+    <img
+      className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
+      src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
+      alt="ĐỈNH CAO VIỆT – Giải pháp M&E"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</Reveal>
+
           </div>
         </div>
       </section>
 
       {/* ===================== ARC STRATEGY ===================== */}
-      <section
-        id="tong-quan-chien-luoc"
-        className="py-16 relative overflow-hidden text-white"
-      >
+      <section id="tong-quan-chien-luoc" className="py-16 relative overflow-hidden text-white">
         {/* Background crossfade */}
         <div className="absolute inset-0">
           <AnimatePresence mode="wait">
@@ -427,122 +471,79 @@ export default function DcvLandingTsx() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left content with smooth switch */}
-            <div className="lg:col-span-5 order-2 lg:order-1">
-              {/* Mobile pill tabs: nằm sát nội dung, kéo ngang */}
-              <div
-                id="arcTabsMobile"
-                className="-mt-1 mb-5 overflow-x-auto no-scrollbar"
-              >
-                <div className="flex items-center gap-2 snap-x snap-mandatory">
-                  {(
-                    [
-                      {
-                        key: "vision",
-                        icon: <Flag className="w-4 h-4" />,
-                        label: "Tầm nhìn",
-                      },
-                      {
-                        key: "strategy",
-                        icon: <TrendingUp className="w-4 h-4" />,
-                        label: "Chiến lược",
-                      },
-                      {
-                        key: "team",
-                        icon: <Users className="w-4 h-4" />,
-                        label: "Đội ngũ",
-                      },
-                      {
-                        key: "customer",
-                        icon: <ThumbsUp className="w-4 h-4" />,
-                        label: "Khách hàng",
-                      },
-                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
-                  ).map(({ key, icon, label }) => (
-                    <button
-                      key={key}
-                      type="button"
-                      onClick={() => setActiveKey(key)}
-                      aria-selected={activeKey === key}
-                      className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
-                ${
-                  activeKey === key
-                    ? "bg-[#c9e265] text-[#244556] border-[#c9e265] shadow"
-                    : "bg-white/90 text-[#244556] border-white/60"
-                }`}
-                    >
-                      {icon as any}
-                      <span>{label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <AnimatePresence mode="wait">
-                <ContentSwitch k={activeKey} />
-              </AnimatePresence>
-            </div>
-
-            {/* Right arc (desktop giữ nguyên) */}
-            <div className="lg:col-span-7 order-1 lg:order-2">
-              <div id="arcStage" ref={stageRef}>
-                <svg
-                  id="arcSvg"
-                  ref={svgRef}
-                  viewBox="0 0 800 360"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    id="arcPath"
-                    ref={pathRef}
-                    d="M20,330 C240,20 560,20 780,330"
-                    stroke="rgba(201,226,101,.6)"
-                    strokeWidth={2}
-                    fill="none"
-                  />
-                </svg>
-                <div id="arcNodes" ref={nodesWrapRef} aria-label="Arc tabs">
-                  {(
-                    [
-                      {
-                        key: "vision",
-                        icon: <Flag className="w-6 h-6" />,
-                        label: "Tầm nhìn – Sứ mệnh",
-                      },
-                      {
-                        key: "strategy",
-                        icon: <TrendingUp className="w-6 h-6" />,
-                        label: "Chiến lược cốt lõi",
-                      },
-                      {
-                        key: "team",
-                        icon: <Users className="w-6 h-6" />,
-                        label: "Đội ngũ nhân sự",
-                      },
-                      {
-                        key: "customer",
-                        icon: <ThumbsUp className="w-6 h-6" />,
-                        label: "Đối với khách hàng",
-                      },
-                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
-                  ).map(({ key, icon, label }) => (
-                    <button
-                      key={key}
-                      className={`node ${activeKey === key ? "active" : ""}`}
-                      data-key={key}
-                      aria-selected={activeKey === key}
-                      onClick={() => setActiveKey(key)}
-                    >
-                      <span className="circle">{icon as any}</span>
-                      <span className="label">{label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+ <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    {/* Left content with smooth switch */}
+    <div className="lg:col-span-5 order-2 lg:order-1">
+      {/* Mobile pill tabs: nằm sát nội dung, kéo ngang */}
+      <div id="arcTabsMobile" className="-mt-1 mb-5 overflow-x-auto no-scrollbar">
+        <div className="flex items-center gap-2 snap-x snap-mandatory">
+          {([
+            { key: "vision", 	icon: <Flag className="w-4 h-4" />, 		label: "Tầm nhìn" },
+            { key: "strategy", icon: <TrendingUp className="w-4 h-4" />, label: "Chiến lược" },
+            { key: "team", 	icon: <Users className="w-4 h-4" />, 		label: "Đội ngũ" },
+            { key: "customer", icon: <ThumbsUp className="w-4 h-4" />, 	label: "Khách hàng" },
+          ] as { key: ArcKey; icon: React.ReactNode; label: string }[]).map(({ key, icon, label }) => (
+            <button
+              key={key}
+              type="button"
+              // Dùng handleSetActiveKey để reset timer
+              onClick={() => handleSetActiveKey(key)} 
+              aria-selected={activeKey === key}
+              className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
+                ${activeKey === key
+                  ? 'bg-[#c9e265] text-[#244556] border-[#c9e265] shadow'
+                  : 'bg-white/90 text-[#244556] border-white/60'}`}
+            >
+              {icon as any}
+              <span>{label}</span>
+            </button>
+          ))}
         </div>
+      </div>
+
+      <AnimatePresence mode="wait">
+        <ContentSwitch k={activeKey} />
+      </AnimatePresence>
+    </div>
+
+    {/* Right arc (desktop giữ nguyên) */}
+    <div className="lg:col-span-7 order-1 lg:order-2">
+      <div id="arcStage" ref={stageRef}>
+        <svg id="arcSvg" ref={svgRef} viewBox="0 0 800 360" preserveAspectRatio="none">
+          <path
+            id="arcPath"
+            ref={pathRef}
+            d="M20,330 C240,20 560,20 780,330"
+            stroke="rgba(201,226,101,.6)"
+            strokeWidth={2}
+            fill="none"
+          />
+        </svg>
+        <div id="arcNodes" ref={nodesWrapRef} aria-label="Arc tabs">
+          {([
+            { key: "vision", icon: <Flag className="w-6 h-6" />, label: "Tầm nhìn – Sứ mệnh" },
+            { key: "strategy", icon: <TrendingUp className="w-6 h-6" />, label: "Chiến lược cốt lõi" },
+            { key: "team", icon: <Users className="w-6 h-6" />, label: "Đội ngũ nhân sự" },
+            { key: "customer", icon: <ThumbsUp className="w-6 h-6" />, label: "Đối với khách hàng" },
+          ] as { key: ArcKey; icon: React.ReactNode; label: string }[]).map(({ key, icon, label }) => (
+            <button
+              key={key}
+              className={`node ${activeKey === key ? "active" : ""}`}
+              data-key={key}
+              aria-selected={activeKey === key}
+              // Dùng handleSetActiveKey để reset timer
+              onClick={() => handleSetActiveKey(key)} 
+            >
+              <span className="circle">{icon as any}</span>
+              <span className="label">{label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       </section>
 
       {/* ===================== CTA ===================== */}
@@ -566,9 +567,7 @@ export default function DcvLandingTsx() {
                     Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
                   </h2>
                   <p className="text-white/70 text-sm">
-                    Liên hệ ngay với{" "}
-                    <strong className="text-white">ĐỈNH CAO VIỆT</strong> để
-                    được tư vấn giải pháp tối ưu và hiệu quả nhất.
+                    Liên hệ ngay với <strong className="text-white">ĐỈNH CAO VIỆT</strong> để được tư vấn giải pháp tối ưu và hiệu quả nhất.
                   </p>
                 </Reveal>
 
@@ -600,33 +599,15 @@ export default function DcvLandingTsx() {
           id="contactList"
           aria-hidden={!dockOpen}
           className={`list grid justify-items-center gap-2 transition-all duration-300 ${
-            dockOpen
-              ? "opacity-100 translate-y-0 max-h-96"
-              : "opacity-0 translate-y-1 max-h-0"
+            dockOpen ? "opacity-100 translate-y-0 max-h-96" : "opacity-0 translate-y-1 max-h-0"
           } overflow-hidden`}
         >
           {[
-            {
-              icon: <PhoneOutgoing className="w-5 h-5" />,
-              href: "tel:+842812345678",
-              label: "Gọi Hotline",
-            },
-            {
-              icon: <MessageCircle className="w-5 h-5" />,
-              href: "#",
-              label: "Messenger",
-            },
+            { icon: <PhoneOutgoing className="w-5 h-5" />, href: "tel:+842812345678", label: "Gọi Hotline" },
+            { icon: <MessageCircle className="w-5 h-5" />, href: "#", label: "Messenger" },
             { icon: "Z", href: "#", label: "Zalo" },
-            {
-              icon: <Mail className="w-5 h-5" />,
-              href: "mailto:contact@dinhcaoviet.vn",
-              label: "Email",
-            },
-            {
-              icon: <MapPin className="w-5 h-5" />,
-              href: "https://maps.google.com/?q=ĐỈNH+CAO+VIỆT",
-              label: "Bản đồ",
-            },
+            { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@dinhcaoviet.vn", label: "Email" },
+            { icon: <MapPin className="w-5 h-5" />, href: "https://maps.google.com/?q=ĐỈNH+CAO+VIỆT", label: "Bản đồ" },
           ].map((item, i) => (
             <a
               key={i}
