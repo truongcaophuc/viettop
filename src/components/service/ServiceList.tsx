@@ -47,7 +47,7 @@ export default function ServiceList() {
         "Kiểm soát nhiệt độ và độ ẩm chính xác",
         "Tiết kiệm năng lượng tối ưu",
       ],
-      url: "/hvac.jpg",
+      url: "/service/hvac.jpg",
     },
     {
       icon: Zap,
@@ -61,7 +61,7 @@ export default function ServiceList() {
         "Monitoring & Alert System",
         "Bảo trì định kỳ chuyên nghiệp",
       ],
-      url: "/ups.jpg",
+      url: "/service/ups.jpg",
     },
     {
       icon: MonitorCog,
@@ -75,7 +75,7 @@ export default function ServiceList() {
         "Dashboard giám sát real-time",
         "Tự động hóa và tối ưu hóa",
       ],
-      url: "/bms.jpg",
+      url: "/service/bms.jpg",
     },
     {
       icon: Flame,
@@ -89,7 +89,7 @@ export default function ServiceList() {
         "Giám sát nhiệt độ môi trường",
         "Tích hợp BMS",
       ],
-      url: "/fire_alarm.jpg",
+      url: "/service/fire_alarm.jpg",
     },
     {
       icon: Camera,
@@ -103,7 +103,7 @@ export default function ServiceList() {
         "Lưu trữ đám mây",
         "Cảnh báo thời gian thực",
       ],
-      url: "/access_control.jpg",
+      url: "/service/access_control.jpg",
     },
     {
       icon: Network,
@@ -117,30 +117,30 @@ export default function ServiceList() {
         "Đo kiểm định kỹ thuật",
         "Tuân thủ tiêu chuẩn quốc tế",
       ],
-      url: "/lightning.jpg",
+      url: "/service/lightning.jpg",
     },
   ];
 
   return (
-    <section className="py-20 px-20">
+    <section className="py-12 md:py-20 px-4 md:px-20">
       <div className="container mx-auto px-4">
         <motion.div 
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             Giải pháp chuyên nghiệp
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 text-base md:text-lg">
             6 nhóm giải pháp kỹ thuật hàng đầu cho công trình của bạn
           </p>
         </motion.div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

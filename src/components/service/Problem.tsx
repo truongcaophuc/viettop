@@ -42,7 +42,7 @@ export default function SemiCircleProblems() {
   const [active, setActive] = useState<number>(0);
 
   return (
-    <section className="py-20 px-6 md:px-20 bg-gray-50 flex flex-col items-center justify-center">
+    <section className="py-20 flex flex-col items-center justify-center">
       <motion.h2
         className="text-3xl font-bold text-[--primary] mb-16 text-center"
         initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export default function SemiCircleProblems() {
       </motion.h2>
 
       {/* Khung chứa nửa vòng tròn */}
-      <div className="mt-20 relative w-[600px] h-[320px] flex items-end justify-center">
+      <div className="relative w-full h-[400px] flex items-end justify-center bg-gradient-to-br from-[#244556] to-[#c9e265]">
         {problems.map((item, index) => {
           const angle = (Math.PI / (problems.length - 1)) * index;
           const radius = 300;

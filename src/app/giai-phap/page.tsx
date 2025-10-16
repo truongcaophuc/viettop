@@ -10,11 +10,12 @@ import ContactDock from "@/components/layout/ContactDock";
 import Problem from "@/components/service/Problem";
 import ProcessNew from "@/components/service/ProcessNew";
 import Benefit from "@/components/service/Benefit";
+import ProblemV2 from "@/components/service/ProblemV2";
 const Services = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Problem/>
+      <ProblemV2/>
       <ServiceList />
       {/* <OutstandingSolutions /> */}
       {/* <Application /> */}

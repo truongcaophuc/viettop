@@ -13,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1 
-            className="text-5xl font-bold text-secondary"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -21,7 +21,7 @@ export default function Hero() {
             Dịch vụ & Giải pháp
           </motion.h1>
           <motion.p 
-            className="text-xl text-white/90"
+            className="text-lg md:text-xl text-white/90"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}

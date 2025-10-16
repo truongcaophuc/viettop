@@ -6,7 +6,7 @@ import { ArrowRight, Download } from "lucide-react";
 export default function CTA() {
   return (
     <motion.section 
-      className="py-20 px-6 md:px-20 bg-gradient-to-br from-primary/5 to-secondary/10"
+      className="py-12 md:py-20 px-4 md:px-6 lg:px-20 bg-gradient-to-br from-primary/5 to-secondary/10"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -14,7 +14,7 @@ export default function CTA() {
     >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-primary mb-6"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 md:mb-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function CTA() {
         </motion.h2>
         
         <motion.p 
-          className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto"
+          className="text-base md:text-lg text-gray-600 mb-8 md:mb-10 max-w-2xl mx-auto px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -35,34 +35,26 @@ export default function CTA() {
         </motion.p>
 
         <motion.div 
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center px-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <motion.button 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg 
-                       font-semibold flex items-center gap-2 transition-all duration-300 
-                       shadow-lg hover:shadow-xl"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-            }}
+            className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl text-sm md:text-base w-full sm:w-auto"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
           >
             Liên hệ tư vấn
-            <motion.div
-              animate={{ x: [0, 5, 0] }}
-              transition={{ 
-                duration: 1.5, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            >
-              <ArrowRight className="w-5 h-5" />
-            </motion.div>
+          </motion.button>
+          
+          <motion.button 
+            className="border-2 border-primary text-primary px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 text-sm md:text-base w-full sm:w-auto"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Xem báo giá
           </motion.button>
 
           {/* <motion.button 
