@@ -31,12 +31,28 @@ const items = [
   },
 ];
 
-export default function CenterActiveCarousel() {
-  const [active, setActive] = useState(0);
+export default function ProblemV2() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const nextSlide = () => setActive((prev) => (prev + 1) % items.length);
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Check on mount
+    checkMobile();
+    
+    // Add event listener for resize
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % items.length);
   const prevSlide = () =>
-    setActive((prev) => (prev - 1 + items.length) % items.length);
+    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
 
   // Tự động chuyển slide (tuỳ chọn)
   // useEffect(() => {
@@ -46,9 +62,9 @@ export default function CenterActiveCarousel() {
 
   // Lấy ra 3 slide cần hiển thị (left - center - right)
   const getVisibleSlides = () => {
-    const left = (active - 1 + items.length) % items.length;
-    const right = (active + 1) % items.length;
-    return [left, active, right];
+    const left = (currentIndex - 1 + items.length) % items.length;
+    const right = (currentIndex + 1) % items.length;
+    return [left, currentIndex, right];
   };
 
   return (
@@ -67,32 +83,32 @@ export default function CenterActiveCarousel() {
         </button>
 
         {/* Carousel */}
-        <div className="relative flex items-center justify-center w-full h-[200px] md:h-[300px]">
+        <div className="relative flex items-center justify-center w-full h-[250px] md:h-[350px]">
           <AnimatePresence initial={false}>
             {getVisibleSlides().map((index, i) => {
               const item = items[index];
               const isCenter = i === 1;
 
               const positions = [
-                { x: "-200px", scale: 0.7, opacity: 0.5, zIndex: 5 },
+                { x: "-250px", scale: 0.7, opacity: 0.5, zIndex: 5 },
                 { x: "0px", scale: 1, opacity: 1, zIndex: 10 },
-                { x: "200px", scale: 0.7, opacity: 0.5, zIndex: 5 },
+                { x: "250px", scale: 0.7, opacity: 0.5, zIndex: 5 },
               ];
 
               // Responsive positions for mobile
               const mobilePositions = [
-                { x: "-120px", scale: 0.6, opacity: 0.4, zIndex: 5 },
+                { x: "-150px", scale: 0.6, opacity: 0.4, zIndex: 5 },
                 { x: "0px", scale: 1, opacity: 1, zIndex: 10 },
-                { x: "120px", scale: 0.6, opacity: 0.4, zIndex: 5 },
+                { x: "150px", scale: 0.6, opacity: 0.4, zIndex: 5 },
               ];
 
-              const { x, scale, opacity, zIndex } = window.innerWidth < 768 ? mobilePositions[i] : positions[i];
+              const { x, scale, opacity, zIndex } = isMobile ? mobilePositions[i] : positions[i];
 
               return (
                 <motion.div
                   key={index}
                   className="absolute rounded-2xl overflow-hidden shadow-lg bg-white"
-                  style={{ width: window.innerWidth < 768 ? 240 : 320, height: window.innerWidth < 768 ? 180 : 240, zIndex }}
+                  style={{ width: isMobile ? 300 : 400, height: isMobile ? 225 : 300, zIndex }}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ x, scale, opacity }}
                   exit={{ opacity: 0 }}
