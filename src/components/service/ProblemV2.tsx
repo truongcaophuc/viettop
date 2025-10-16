@@ -53,12 +53,14 @@ export default function ProblemV2() {
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % items.length);
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  
+  const goToSlide = (index: number) => setCurrentIndex(index);
 
-  // Tự động chuyển slide (tuỳ chọn)
-  // useEffect(() => {
-  //   const timer = setInterval(nextSlide, 4000);
-  //   return () => clearInterval(timer);
-  // }, []);
+  // Tự động chuyển slide
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   // Lấy ra 3 slide cần hiển thị (left - center - right)
   const getVisibleSlides = () => {
@@ -135,6 +137,21 @@ export default function ProblemV2() {
         >
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
         </button>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? "bg-primary scale-110"
+                : "bg-gray-300 hover:bg-gray-400"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
