@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-primary text-white py-20 bg-[url('/service.png')] bg-no-repeat bg-center bg-cover">
+    <section className="bg-primary text-white py-20 bg-[url('/service/service.png')] bg-no-repeat bg-center bg-cover">
       <div className="container mx-auto px-4">
         <motion.div 
           className="max-w-3xl mx-auto text-center space-y-6"
