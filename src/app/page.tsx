@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import SwiperSection from '../components/home/Swiper';
 import ArticleSlider from "../components/home/ArticleSlider";
 import ContactDock from "@/components/layout/ContactDock";
+import BackToTopButton from '@/components/layout/BackToTopButton';
+import PartnerSection from '@/components/home/PartnerSection';
 
 export default function AboutSection() {
   // Animation slideInLeft / slideInRight
@@ -78,7 +80,7 @@ export default function AboutSection() {
     },
     {
       id: 4,
-      title: " Hệ thống Phòng cháy Chữa cháy (Fire Fight Systems)",
+      title: " Hệ thống Phòng cháy Chữa cháy (Fire Fight System)",
       description: "Thiết kế, lắp đặt và nghiệm thu hệ thống PCCC tự động gồm sprinkler, báo cháy địa chỉ, chữa cháy khí FM200/CO₂ theo tiêu chuẩn NFPA, TCVN. Chúng tôi đảm bảo mọi công trình đạt chuẩn an toàn và được cấp phép PCCC bởi cơ quan quản lý nhà nước. Ứng dụng: Nhà xưởng, tòa nhà, khách sạn, trung tâm dữ liệu. ",
       image: "/home/giải pháp/cháy.png",
     },
@@ -290,132 +292,36 @@ export default function AboutSection() {
         `}</style>
       </section>
 
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* Tiêu đề */}
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-              ĐỐI TÁC & CÔNG NGHỆ TỪ CÁC{" "}
-              <span className="text-red-600">THƯƠNG HIỆU HÀNG ĐẦU THẾ GIỚI</span>
-          </motion.h2>
+      <PartnerSection />
 
-          {/* Mô tả */}
-          <motion.p
-            className="text-gray-600 max-w-3xl mx-auto mb-16"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            DCV hợp tác cùng các thương hiệu hàng đầu thế giới để mang đến giải pháp
-            làm lạnh chính xác, tiết kiệm năng lượng và bền vững.
-          </motion.p>
-
-          {/* 3 khối logo */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Logo 1 */}
-            <motion.div
-              className="bg-gray-50 rounded-2xl shadow-sm overflow-hidden transition-shadow duration-300 hover:shadow-xl"
-              whileHover={{ y: -5 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.09 }}
-                className="overflow-hidden"
-                transition={{ type: "spring", stiffness: 170, damping: 20 }}
-              >
-                <div className="relative w-[400px] h-[350px]">
-                  <Image src="/home/Đối tác/sản xuất.png" alt="Airedale by Modine" fill />
-                </div>
-
-              </motion.div>
-              <div className="p-6">
-                <h3  className="text-2xl font-bold text-black mb-3 transition-all duration-300 hover:text-green-600 hover:-translate-y-1 hover:scale-105 hover:drop-shadow-md">
-                  Airedale by Modine (UK)
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Nhà sản xuất hàng đầu thế giới về hệ thống làm lạnh chính xác (PAC, CRAC, CRAH, Chiller)
-                  cho Data Center và công nghiệp HVAC.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Logo 2 */}
-            <motion.div
-              className="bg-gray-50 rounded-2xl shadow-sm overflow-hidden transition-shadow duration-300 hover:shadow-xl"
-              whileHover={{ y: -5 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.09 }}
-                className="overflow-hidden"
-                transition={{ type: "spring", stiffness: 150, damping: 15 }}
-              >
-                <div className="relative w-[400px] h-[350px]">
-                  <Image src="/home/Đối tác/tường quạt.png" alt="AireWall ONE" fill />
-                </div>
-              </motion.div>
-              <div className="p-6">
-                <h3  className="text-2xl font-bold text-black mb-3 transition-all duration-300 hover:text-green-600 hover:-translate-y-1 hover:scale-105 hover:drop-shadow-md">
-                  AireWall ONE™ – Data Center Fan Array 
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Giải pháp tường quạt thông minh công suất 200–650 kW, giúp tăng hiệu suất trao đổi nhiệt và tiết kiệm năng lượng tới 30%. 
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Logo 3 */}
-            <motion.div
-              className="bg-gray-50 rounded-2xl shadow-sm overflow-hidden transition-shadow duration-300 hover:shadow-xl"
-              whileHover={{ y: -5 }}
-            >
-              <motion.div
-                whileHover={{ scale: 1.09 }}
-                className="overflow-hidden"
-                transition={{ type: "spring", stiffness: 150, damping: 15 }}
-              >
-                <div className="relative w-[400px] h-[350px]">
-                  <Image src="/home/Đối tác/máy nén.png" alt="SmartCool" fill />
-                </div>
-              </motion.div>
-              <div className="p-6">
-                <h3  className="text-2xl font-bold text-black mb-3 transition-all duration-300 hover:text-green-600 hover:-translate-y-1 hover:scale-105 hover:drop-shadow-md">
-                  SmartCool™ i-drive Inverter Compressor 
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Máy nén inverter công suất 5–83 kW, tiết kiệm tới 45% điện năng, phù hợp trung tâm dữ liệu vừa và nhỏ. 
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50 min-h-screen flex items-center">
         <div className="container mx-auto px-4 text-center">
           {/* --- Tiêu đề chính + mô tả --- */}
-          <h2 className=" md:text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="md:text-4xl font-bold text-gray-800 mb-6">
             <span className="text-green-600">GIẢI PHÁP CƠ ĐIỆN</span> TỔNG THỂ CHO DOANH NGHIỆP & DỰ ÁN
           </h2>
           <p className="text-gray-700 mb-12 max-w-3xl mx-auto">
-            Chúng tôi cung cấp giải pháp M&E toàn diện từ tư vấn, thiết kế, thi công đến vận hành – đảm bảo công trình an toàn, tiết kiệm năng lượng và vận hành ổn định theo tiêu chuẩn quốc tế (TCVN, ISO, IEC…).
+            Chúng tôi cung cấp giải pháp M&E toàn diện từ tư vấn, thiết kế, thi công đến vận hành – đảm bảo công trình an toàn,
+            tiết kiệm năng lượng và vận hành ổn định theo tiêu chuẩn quốc tế (TCVN, ISO, IEC…).
           </p>
 
           {/* --- Section card --- */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((solution) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
                 className="relative overflow-hidden rounded-lg flex flex-col"
-                initial={{ opacity: 0, y: 50 }}      // ban đầu ẩn + dịch xuống 50px
-                whileInView={{ opacity: 1, y: 0 }}   // khi vào view fade-in + slide lên
-                viewport={{ once: true, amount: 0.7 }} // chỉ chạy 1 lần khi 30% card vào view
-                transition={{ duration: 1, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.3, // ⚡️ xuất hiện tuần tự từng cái
+                  ease: "easeOut",
+                }}
               >
                 {/* Phần số và tiêu đề */}
-                <div className="p-4 bg-white text-left">
+                <div className="p-4 bg-white text-left shadow-md rounded-t-lg">
                   <h3 className="text-5xl font-bold text-gray-800 mb-2 relative inline-block">
                     0{solution.id}
                   </h3>
@@ -428,31 +334,31 @@ export default function AboutSection() {
 
                 {/* Phần ảnh */}
                 <motion.div
-                  className="relative w-full h-[280px] overflow-hidden"
-                  whileHover={{ scale: 1.1 }}
+                  className="relative w-full h-[280px] overflow-hidden rounded-b-lg"
+                  whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 150, damping: 15 }}
                 >
                   <Image
                     src={solution.image}
                     alt={solution.title}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover"
                   />
                 </motion.div>
               </motion.div>
             ))}
           </div>
 
-          <br />
-          <br />
           {/* --- Cam kết --- */}
-          <h3 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
-            Cam kết
-          </h3>
-          <p className="text-gray-700 mb-0 text-center max-w-5xl mx-auto">
-            Với hơn 10 năm kinh nghiệm trong ngành Cơ Điện, chúng tôi tự tin mang đến giải pháp tối ưu – an toàn – hiệu quả cho từng dự án.
-            Liên hệ ngay để được tư vấn kỹ thuật miễn phí và nhận đề xuất giải pháp phù hợp nhất cho công trình của bạn.
-          </p>
+          <div className="mt-20">
+            <h3 className="text-4xl md:text-5xl font-extrabold text-green-700 mb-4">
+              Cam kết
+            </h3>
+            <p className="text-gray-700 text-center max-w-5xl mx-auto">
+              Với hơn 10 năm kinh nghiệm trong ngành Cơ Điện, chúng tôi tự tin mang đến giải pháp tối ưu – an toàn – hiệu quả cho từng dự án.
+              Liên hệ ngay để được tư vấn kỹ thuật miễn phí và nhận đề xuất giải pháp phù hợp nhất cho công trình của bạn.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -528,7 +434,7 @@ export default function AboutSection() {
               </a>
             </div>
           </div>
-
+          <BackToTopButton />
           {/* --- Cột phải: Form liên hệ --- */}
           <div className="bg-white rounded-3xl p-8 text-[#244556] shadow-lg animate-slideInRight opacity-0 transition-opacity duration-700">
             <h3 className="text-2xl font-semibold mb-6 text-center">
