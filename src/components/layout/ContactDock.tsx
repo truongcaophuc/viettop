@@ -1,151 +1,221 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import {
-  PhoneOutgoing,
-  MessageCircle,
-  Mail,
-  MapPin,
-  ChevronUp,
-} from "lucide-react";
+import { useState } from "react";
 
 export default function ContactDock() {
-  const dockRef = useRef<HTMLDivElement | null>(null);
-  const [dockOpen, setDockOpen] = useState(false);
-  const [showBackTop, setShowBackTop] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setShowBackTop(window.scrollY > 300);
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-
-    const onDocClick = (e: MouseEvent) => {
-      if (!dockRef.current) return;
-      if (!dockRef.current.contains(e.target as Node)) setDockOpen(false);
-    };
-    const onEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDockOpen(false);
-    };
-    document.addEventListener("click", onDocClick);
-    document.addEventListener("keydown", onEsc);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("click", onDocClick);
-      document.removeEventListener("keydown", onEsc);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <>
-      {/* Inline styles for ContactDock */}
-      <style>{`
-        #contactDock.open .list{max-height:380px;opacity:1;transform:translateY(0)}
-      `}</style>
-
-      {/* FLOAT CONTACT DOCK + Back-to-top */}
+    <div className="chatbot-container">
+      {/* === Nút chính === */}
       <div
-        id="contactDock"
-        ref={dockRef}
-        className={`fixed right-4 bottom-5 z-[1045] flex flex-col items-center gap-2 ${
-          dockOpen ? "open" : ""
-        }`}
-        aria-label="Liên hệ nhanh"
+        className="chatbot-button"
+        onClick={() => setIsActive(!isActive)}
+        id="chatbotToggle"
       >
-        <div
-          id="contactList"
-          aria-hidden={!dockOpen}
-          className={`list grid justify-items-center gap-2 transition-all duration-300 ${
-            dockOpen
-              ? "opacity-100 translate-y-0 max-h-96"
-              : "opacity-0 translate-y-1 max-h-0"
-          } overflow-hidden`}
-        >
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-primary text-secondary hover:bg-primary/80
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40
-             shadow-none"
-            href="tel:+842812345678"
-            aria-label="Gọi Hotline"
-            title="Gọi Hotline"
-          >
-            <PhoneOutgoing className="w-5 h-5 text-secondary" />
-          </a>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/007/225/199/non_2x/robot-chat-bot-concept-illustration-vector.jpg"
+          alt="Chatbot"
+          className="chatbot-avatar"
+        />
 
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-primary text-secondary hover:bg-primary/80
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40
-             shadow-none"
-            href="https://zalo.me/0123456789"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat Zalo"
-            title="Chat Zalo"
-          >
-            <MessageCircle className="w-5 h-5 text-secondary" />
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-primary text-primary hover:bg-primary/80
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40
-             shadow-none"
-            href="mailto:info@dinhcaoviet.com"
-            aria-label="Gửi Email"
-            title="Gửi Email"
-          >
-            <Mail className="w-5 h-5 text-secondary" />
-          </a>
-
-          <a
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-primary text-primary hover:bg-primary/80
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40
-             shadow-none"
-            href="https://maps.google.com/?q=Đỉnh+Cao+Việt"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Xem bản đồ"
-            title="Xem bản đồ"
-          >
-            <MapPin className="w-5 h-5 text-secondary" />
-          </a>
-        </div>
-
-        {/* Back to top button */}
-        {showBackTop && (
-          <button
-            onClick={scrollToTop}
-            className="w-12 h-12 rounded-full inline-flex items-center justify-center
-             border border-black/10 bg-primary text-[#244556] hover:bg-primary/80
-             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-             shadow-lg hover:shadow-xl transition-all duration-200"
-            aria-label="Về đầu trang"
-            title="Về đầu trang"
-          >
-            <ChevronUp className="w-5 h-5 text-secondary" />
-          </button>
-        )}
-
-        {/* Main toggle button */}
-        <button
-          onClick={() => setDockOpen(!dockOpen)}
-          className="w-14 h-14 rounded-full inline-flex items-center justify-center
-           bg-[#244556] text-white hover:bg-[#1e3a4a]
-           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40
-           shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5"
-          aria-label={dockOpen ? "Đóng menu liên hệ" : "Mở menu liên hệ"}
-          aria-expanded={dockOpen}
-        >
-          <PhoneOutgoing className="w-6 h-6 text-secondary" />
-        </button>
+        <div className="chatbot-wave"></div>
+        <div className="chatbot-wave delay"></div>
       </div>
-    </>
+
+      {/* === Các nút mạng xã hội === */}
+      <div
+        id="chatbotSocials"
+        className={`chatbot-socials ${isActive ? "active" : ""}`}
+      >
+        <a
+          href="#"
+          className="social zalo"
+          title="Zalo"
+          target="_blank"
+        >
+          <img
+            src="https://haiauint.vn/wp-content/uploads/2024/02/zalo-icon.png"
+            alt="Zalo"
+          />
+        </a>
+
+        <a
+          href="#"
+          className="social whatsapp"
+          title="WhatsApp"
+          target="_blank"
+        >
+          <img
+            src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png"
+            alt="WhatsApp"
+          />
+        </a>
+
+        <a
+          href="#"
+          className="social messenger"
+          title="Messenger"
+          target="_blank"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqF5nN-XjhMZ50aNI2-Ud93SfwQHptgVAaA&s"
+            alt="Messenger"
+          />
+        </a>
+
+        <a href="#" className="social instagram" title="Instagram" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            alt="Instagram"
+          />
+        </a>
+
+        <a
+          href="#"
+          className="social youtube"
+          title="YouTube"
+          target="_blank"
+        >
+          <img
+            src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-round-icon-png-image_6315993.png"
+            alt="YouTube"
+          />
+        </a>
+
+        <a
+          href="#"
+          className="social tiktok"
+          title="TikTok"
+          target="_blank"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
+            alt="TikTok"
+          />
+        </a>
+      </div>
+
+      {/* === Styles === */}
+      <style jsx>{`
+        .chatbot-container {
+          position: fixed;
+          bottom: 30px;
+          right: 20px;
+          z-index: 9999;
+          margin-bottom: 80px;
+        }
+
+        /* === Nút chính === */
+        .chatbot-button {
+          width: 70px;
+          height: 70px;
+          background: transparent; /* ✅ bỏ nền trắng */
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          animation: chatbotShake 3s infinite;
+          position: relative;
+          overflow: visible;
+          z-index: 10;
+          transition: transform 0.3s ease;
+        }
+
+        .chatbot-avatar {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: cover;
+          z-index: 2;
+        }
+
+        .chatbot-button:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 25px rgba(51, 102, 255, 0.3);
+        }
+
+        /* === Sóng lan tỏa === */
+        .chatbot-wave {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: rgba(51, 102, 255, 0.25);
+          animation: chatbotWave 2s infinite;
+          z-index: 1;
+        }
+
+        .chatbot-wave.delay {
+          animation-delay: 1s;
+        }
+
+        @keyframes chatbotWave {
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          100% {
+            transform: scale(2.5);
+            opacity: 0;
+          }
+        }
+
+        @keyframes chatbotShake {
+          0%, 100% {
+            transform: rotate(0deg);
+          }
+          10%, 30%, 50%, 70%, 90% {
+            transform: rotate(-3deg);
+          }
+          20%, 40%, 60%, 80% {
+            transform: rotate(3deg);
+          }
+        }
+
+        /* === Icon MXH === */
+        .chatbot-socials {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 17px;
+          position: absolute;
+          bottom: 100px;
+          right: 0;
+          opacity: 0;
+          transform: translateY(30px);
+          pointer-events: none;
+          transition: all 0.4s ease;
+        }
+
+        .chatbot-socials.active {
+          opacity: 1;
+          transform: translateY(0);
+          pointer-events: auto;
+        }
+
+        .chatbot-socials .social {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chatbot-socials .social img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .chatbot-socials .social:hover {
+          transform: scale(1.4);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+      `}</style>
+    </div>
   );
 }

@@ -11,6 +11,7 @@ import Problem from "@/components/service/Problem";
 import ProcessNew from "@/components/service/ProcessNew";
 import Benefit from "@/components/service/Benefit";
 import ProblemV2 from "@/components/service/ProblemV2";
+import BackToTopButton from "@/components/layout/BackToTopButton";
 const Services = () => {
   return (
     <div className="min-h-screen">
@@ -23,6 +24,7 @@ const Services = () => {
       <Benefit />
       <CTA />
       <ContactDock />
+      <BackToTopButton />
     </div>
   );
 };

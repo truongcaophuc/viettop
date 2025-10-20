@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useEffect, useMemo, useRef, useState, useCallback } from "react";
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 import { Be_Vietnam_Pro } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
+import ContactDock from "../layout/ContactDock";
+import BackToTopButton from "../layout/BackToTopButton";
 
 const bevn = Be_Vietnam_Pro({
   subsets: ["vietnamese", "latin"],
@@ -58,6 +61,7 @@ function Reveal({
 
   return (
     <Tag
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref={ref as any}
       style={{ transitionDelay: `${delay}ms` }}
       className={`will-change-transform transition duration-700 ease-out
@@ -258,6 +262,7 @@ export default function DcvLandingTsx() {
     }
 
     const rect = stage.getBoundingClientRect();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const vb = (svg as any).viewBox.baseVal as {
       x: number;
       y: number;
@@ -624,7 +629,7 @@ export default function DcvLandingTsx() {
         </div>
 
         {/* Toggle button */}
-        <button
+        {/* <button
           id="dockToggle"
           type="button"
           aria-expanded={dockOpen}
@@ -636,9 +641,9 @@ export default function DcvLandingTsx() {
           } hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
         >
           <MessageCircle className="w-6 h-6" />
-        </button>
+        </button> */}
 
-        <button
+        {/* <button
           id="backTop"
           type="button"
           aria-label="Lên đầu trang"
@@ -648,7 +653,9 @@ export default function DcvLandingTsx() {
           } w-12 h-12 rounded-full inline-flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] bg-[#c9e265] text-[#244556] hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
         >
           <ChevronUp className="w-5 h-5" />
-        </button>
+        </button> */}
+         <BackToTopButton />
+        <ContactDock />
       </div>
     </div>
   );
