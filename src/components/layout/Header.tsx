@@ -1,16 +1,27 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaPhoneAlt, FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 
-export default function HomePage() {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // ✅ Theo dõi trạng thái cuộn trang
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="font-sans">
-      {/* --- TOP BAR --- */}
-      <div className="bg-[#005baa] text-white text-sm py-2 px-4 flex justify-between md:justify-end items-center gap-4">
+    <header className="font-sans relative">
+      {/* --- THANH TIN TỨC --- */}
+      <div className="bg-[#005baa] text-white text-sm py-2 px-4 flex justify-between md:justify-end items-center gap-4 z-40 relative">
         <a
           href="#"
           className="bg-[#d94c00] px-3 py-1 rounded-sm font-semibold hidden md:block"
@@ -28,111 +39,91 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* --- HEADER / NAV --- */}
-      <nav className="bg-white flex items-center justify-between md:justify-center md:gap-[200px] px-6 md:px-16 py-6 shadow-md border-t-4 border-[#d94c00] relative">
-        {/* Logo + Tiêu đề */}
-        <div className="flex items-center gap-2">
-          <img
-            src="https://png.pngtree.com/png-vector/20221231/ourmid/pngtree-sun-illustration-logo-sunny-sunset-horizon-vector-png-image_43736816.jpg"
-            alt="REE Logo"
-            className="h-12"
-          />
-          <div className="leading-tight">
-            <h2 className="font-bold text-[#005baa] text-[13px] md:text-[15px]">
-              CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT
-            </h2>
-            <p className="font-semibold text-[#d94c00] text-[15px] md:text-[17px]">
-              CƠ ĐIỆN LẠNH DCV
-            </p>
+      {/* --- THANH ĐIỀU HƯỚNG --- */}
+      <nav
+        className={`w-full top-0 left-0 z-50 transition-all duration-500 ${
+          isScrolled
+            ? "fixed bg-black text-white shadow-lg backdrop-blur-sm"
+            : "relative bg-white text-[#002b5c] shadow-md border-t-4 border-[#d94c00]"
+        }`}
+      >
+        <div className="flex items-center justify-between md:justify-center md:gap-[200px] px-6 md:px-16 py-4 md:py-6">
+          {/* Logo + Tiêu đề */}
+          <div className="flex items-center gap-2">
+            <img
+              src="https://png.pngtree.com/png-vector/20221231/ourmid/pngtree-sun-illustration-logo-sunny-sunset-horizon-vector-png-image_43736816.jpg"
+              alt="REE Logo"
+              className="h-12"
+            />
+            <div className="leading-tight">
+              <h2
+                className={`font-bold text-[13px] md:text-[15px] ${
+                  isScrolled ? "text-white" : "text-[#005baa]"
+                }`}
+              >
+                CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT
+              </h2>
+              <p className="font-semibold text-[#d94c00] text-[15px] md:text-[17px]">
+                CƠ ĐIỆN LẠNH DCV
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Nút menu mobile */}
-        <button
-          className="md:hidden text-2xl text-[#005baa]"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
+          {/* Nút mở menu mobile */}
+          <button
+            className="md:hidden text-2xl"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </button>
 
-        {/* Menu điều hướng */}
-        <ul
-          className={`${
-            menuOpen
-              ? "flex flex-col absolute top-full left-0 w-full bg-white border-t shadow-lg z-50"
-              : "hidden"
-          } md:flex md:static md:flex-row md:gap-8 text-[#002b5c] font-semibold text-base uppercase`}
-        >
-          <li className="border-b md:border-none">
-            <Link
-              href="/"
-              className="block px-6 py-3 hover:text-[#d94c00] transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Trang chủ
-            </Link>
-          </li>
-          <li className="border-b md:border-none">
-            <Link
-              href="/gioi-thieu"
-              className="block px-6 py-3 hover:text-[#d94c00] transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Giới thiệu
-            </Link>
-          </li>
-          <li className="border-b md:border-none">
-            <Link
-              href="/giai-phap"
-              className="block px-6 py-3 hover:text-[#d94c00] transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Dịch vụ
-            </Link>
-          </li>
-          <li className="relative border-b md:border-none group">
-            <a
-              href="#"
-              className="block px-6 py-3 hover:text-[#d94c00] transition-colors"
-            >
-              Công trình tiêu biểu
-            </a>
-            {/* Dropdown hiển thị khi hover */}
-            <ul className="hidden md:absolute md:left-0 md:top-full md:bg-white md:border md:mt-1 md:group-hover:block text-sm shadow-lg">
-              <li>
-                {/* <Link
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100"
+          {/* Menu điều hướng */}
+          <ul
+            className={`${
+              menuOpen
+                ? `flex flex-col absolute top-full left-0 w-full border-t shadow-lg z-50 ${
+                    isScrolled ? "bg-black" : "bg-white"
+                  }`
+                : "hidden"
+            } md:flex md:static md:flex-row md:gap-8 font-semibold text-base uppercase`}
+          >
+            {[
+              { href: "/", label: "Trang chủ" },
+              { href: "/gioi-thieu", label: "Giới thiệu" },
+              { href: "/giai-phap", label: "Dịch vụ" },
+              { href: "/blog", label: "Tin tức" },
+              { href: "#", label: "Liên hệ" },
+            ].map((item) => (
+              <li key={item.href} className="border-b md:border-none">
+                <Link
+                  href={item.href}
+                  className={`block px-6 py-3 transition-colors ${
+                    isScrolled
+                      ? "hover:text-[#d94c00] text-white"
+                      : "hover:text-[#d94c00] text-[#002b5c]"
+                  }`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  Công trình 1
+                  {item.label}
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Công trình 2
-                </Link> */}
-              </li>
-            </ul>
-          </li>
-          <li className="border-b md:border-none">
-            <Link
-              href="#"
-              className="block px-6 py-3 hover:text-[#d94c00] transition-colors"
-              onClick={() => setMenuOpen(false)}
-            >
-              Liên hệ
-            </Link>
-          </li>
-        </ul>
+            ))}
+          </ul>
+        </div>
       </nav>
 
-      {/* --- CSS --- */}
+      {/* --- CSS BỔ SUNG --- */}
       <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
+
+        /* Tránh nội dung bị che khi header cố định */
+        body {
+          padding-top: 0;
+        }
+
+        /* Animation & style Swiper nếu bạn dùng */
         .swiper-button-next,
         .swiper-button-prev {
           color: white;
@@ -150,9 +141,6 @@ export default function HomePage() {
         .swiper-button-prev:hover {
           color: #d94c00;
         }
-        .animate-fadeIn {
-          animation: fadeInUp 1s ease both;
-        }
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -164,6 +152,6 @@ export default function HomePage() {
           }
         }
       `}</style>
-    </div>
+    </header>
   );
 }
