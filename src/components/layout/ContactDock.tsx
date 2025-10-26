@@ -1,38 +1,48 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 
 export default function ContactDock() {
-  const [isActive, setIsActive] = useState(false);
+  // --- Chèn Chatwoot SDK ---
+  useEffect(() => {
+    const BASE_URL = "https://crm.smb.securityzone.vn";
+    const g = document.createElement("script");
+    const s = document.getElementsByTagName("script")[0];
+    g.src = `${BASE_URL}/packs/js/sdk.js`;
+    g.async = true;
+    s.parentNode?.insertBefore(g, s);
+    g.onload = () => {
+      // @ts-expect-error
+      window.chatwootSDK.run({
+        websiteToken: "u6cRPyuWKHjAiBFoe65QLNmT",
+        baseUrl: BASE_URL,
+      });
+    };
+  }, []);
 
   return (
     <div className="chatbot-container">
-      {/* === Nút chính === */}
-      <div
-        className="chatbot-button"
-        onClick={() => setIsActive(!isActive)}
-        id="chatbotToggle"
-      >
+      {/* === Ảnh đại diện Chatbot (có hiệu ứng sóng) === */}
+      {/* <div className="chatbot-button">
         <img
           src="https://static.vecteezy.com/system/resources/previews/007/225/199/non_2x/robot-chat-bot-concept-illustration-vector.jpg"
           alt="Chatbot"
           className="chatbot-avatar"
         />
-
         <div className="chatbot-wave"></div>
         <div className="chatbot-wave delay"></div>
-      </div>
+      </div> */}
 
-      {/* === Các nút mạng xã hội === */}
-      <div
-        id="chatbotSocials"
-        className={`chatbot-socials ${isActive ? "active" : ""}`}
-      >
+      {/* === Các nút MXH (hiển thị sẵn) === */}
+      <div className="chatbot-socials active">
         <a
           href="#"
           className="social zalo"
           title="Zalo"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="https://haiauint.vn/wp-content/uploads/2024/02/zalo-icon.png"
@@ -45,6 +55,7 @@ export default function ContactDock() {
           className="social whatsapp"
           title="WhatsApp"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png"
@@ -57,6 +68,7 @@ export default function ContactDock() {
           className="social messenger"
           title="Messenger"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxqF5nN-XjhMZ50aNI2-Ud93SfwQHptgVAaA&s"
@@ -64,7 +76,13 @@ export default function ContactDock() {
           />
         </a>
 
-        <a href="#" className="social instagram" title="Instagram" target="_blank">
+        <a
+          href="#"
+          className="social instagram"
+          title="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
             alt="Instagram"
@@ -76,6 +94,7 @@ export default function ContactDock() {
           className="social youtube"
           title="YouTube"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-round-icon-png-image_6315993.png"
@@ -88,6 +107,7 @@ export default function ContactDock() {
           className="social tiktok"
           title="TikTok"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img
             src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
@@ -96,7 +116,7 @@ export default function ContactDock() {
         </a>
       </div>
 
-      {/* === Styles === */}
+      {/* === CSS === */}
       <style jsx>{`
         .chatbot-container {
           position: fixed;
@@ -106,21 +126,19 @@ export default function ContactDock() {
           margin-bottom: 80px;
         }
 
-        /* === Nút chính === */
+        /* Nút Chatbot */
         .chatbot-button {
           width: 70px;
           height: 70px;
-          background: transparent; /* ✅ bỏ nền trắng */
+          background: transparent;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          cursor: pointer;
-          animation: chatbotShake 3s infinite;
           position: relative;
           overflow: visible;
           z-index: 10;
-          transition: transform 0.3s ease;
+          animation: chatbotShake 3s infinite;
         }
 
         .chatbot-avatar {
@@ -131,12 +149,7 @@ export default function ContactDock() {
           z-index: 2;
         }
 
-        .chatbot-button:hover {
-          transform: scale(1.1);
-          box-shadow: 0 8px 25px rgba(51, 102, 255, 0.3);
-        }
-
-        /* === Sóng lan tỏa === */
+        /* Sóng lan tỏa */
         .chatbot-wave {
           position: absolute;
           width: 100%;
@@ -174,22 +187,16 @@ export default function ContactDock() {
           }
         }
 
-        /* === Icon MXH === */
+        /* Các icon MXH */
         .chatbot-socials {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 17px;
           position: absolute;
-          bottom: 100px;
+          bottom: 10px;
           right: 0;
-          opacity: 0;
-          transform: translateY(30px);
-          pointer-events: none;
           transition: all 0.4s ease;
-        }
-
-        .chatbot-socials.active {
           opacity: 1;
           transform: translateY(0);
           pointer-events: auto;
@@ -212,7 +219,7 @@ export default function ContactDock() {
         }
 
         .chatbot-socials .social:hover {
-          transform: scale(1.4);
+          transform: scale(1.3);
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
         }
       `}</style>

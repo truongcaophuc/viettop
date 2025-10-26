@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     domains: [
       "maisonoffice.vn",
       "www.shutterstock.com",
-      "cdn-icons-png.flaticon.com",'hoanghamobile.com','images2.thanhnien.vn', 'maisonoffice.vn', 'reeme.com.vn'
+      "cdn-icons-png.flaticon.com",'hoanghamobile.com','images2.thanhnien.vn', 'maisonoffice.vn', 'reeme.com.vn', "congcutot.vn"
     ], // 👈 thêm dòng này
     remotePatterns: [
       {
