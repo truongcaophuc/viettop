@@ -1,22 +1,27 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-const blogs = [
-  { id: 1, title: "BMS là gì? Giải pháp quản lý tòa nhà thông minh cho Data Center hiện đại" },
-  { id: 2, title: "HVAC – AHU – FCU – PAC: Hiểu Đúng Để Thiết Kế Chuẩn" },
-  { id: 3, title: "Hệ Thống UPS và Phân Phối Điện Trong Data Center" },
-  { id: 4, title: "SmartCool i-drive: Giải pháp làm lạnh chính xác Tiết kiệm và Ổn định" },
-  { id: 5, title: "Ứng Dụng Modbus & SNMP Trong BMS và Giám Sát Thiết Bị" },
-  { id: 6, title: "Tích Hợp Hệ Thống An Toàn & Giám Sát Vào Nền Tảng DCIM" },
-];
+type BlogItem = { id: number; title: string };
 
 export default function BlogSidebar() {
+  const { t, i18n } = useTranslation();
   const [search, setSearch] = useState("");
-  const filteredBlogs = blogs.filter((b) =>
-    b.title.toLowerCase().includes(search.toLowerCase())
-  );
+
+  // Lấy mảng blog từ i18n
+  const blogs: BlogItem[] = useMemo(() => {
+    const arr = t("blogPageSidebar", { returnObjects: true }) as BlogItem[] | string;
+    // Nếu key thiếu sẽ trả string; fallback về mảng rỗng
+    return Array.isArray(arr) ? arr : [];
+  }, [t, i18n.language]);
+
+  const filteredBlogs = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return blogs;
+    return blogs.filter((b) => b.title.toLowerCase().includes(q));
+  }, [blogs, search]);
 
   return (
     <aside className="space-y-10">
@@ -25,24 +30,27 @@ export default function BlogSidebar() {
         <div className="relative">
           <input
             type="text"
-            placeholder="Tìm kiếm..."
+            placeholder={t("blogSidebar.searchPlaceholder")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="w-full border border-gray-300 rounded-full py-2 px-4 pr-10 text-sm focus:ring-2 focus:ring-blue-500 outline-none"
+            aria-label={t("blogSidebar.searchAria", { defaultValue: "Search posts" })}
           />
-          <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+          <FaSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" aria-hidden />
         </div>
       </div>
 
-      {/* Recent Posts */}
+      {/* All posts */}
       <div>
-        <h3 className="text-lg font-semibold border-b pb-2 mb-4">TẤT CẢ BÀI VIẾT</h3>
+        <h3 className="text-lg font-semibold border-b pb-2 mb-4">
+          {t("blogSidebar.allPosts")}
+        </h3>
         <ul className="space-y-3">
           {filteredBlogs.map((post) => (
             <li key={post.id}>
               <Link
                 href={`/blog/${post.id}`}
-                className="text-[17px] block px-3 py-2 text-sm text-gray-700 rounded transition-all hover:bg-black hover:text-white"
+                className="block px-3 py-2 text-[17px] text-gray-700 rounded transition-all hover:bg-black hover:text-white"
               >
                 {post.title}
               </Link>
@@ -53,7 +61,9 @@ export default function BlogSidebar() {
 
       {/* Featured */}
       <div>
-        <h3 className="text-lg font-semibold border-b pb-2 mb-4">BÀI VIẾT NỔI BẬT</h3>
+        <h3 className="text-lg font-semibold border-b pb-2 mb-4">
+          {t("blogSidebar.featuredPosts")}
+        </h3>
         <ul className="space-y-3">
           {blogs
             .filter((post) => post.id === 1 || post.id === 2)
@@ -72,17 +82,21 @@ export default function BlogSidebar() {
 
       {/* Archives */}
       <div>
-        <h3 className="text-lg font-semibold border-b pb-2 mb-4">LƯU TRỮ</h3>
+        <h3 className="text-lg font-semibold border-b pb-2 mb-4">
+          {t("blogSidebar.archives")}
+        </h3>
         <p className="text-sm text-gray-700 cursor-pointer hover:text-blue-600 transition">
-          Tháng 12 năm 2025
+          {t("blogSidebar.archiveDate")}
         </p>
       </div>
 
       {/* Categories */}
       <div>
-        <h3 className="text-lg font-semibold border-b pb-2 mb-4">THỂ LOẠI</h3>
+        <h3 className="text-lg font-semibold border-b pb-2 mb-4">
+          {t("blogSidebar.categories")}
+        </h3>
         <p className="text-sm text-gray-700 cursor-pointer hover:text-blue-600 transition">
-          Bài viết
+          {t("blogSidebar.categoryName")}
         </p>
       </div>
     </aside>

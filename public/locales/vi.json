@@ -1,0 +1,1074 @@
+{
+  "_comment1": "gioi-thieu",
+  "aboutPage": {
+    "hero": {
+      "title": "ĐỈNH CAO VIỆT – GIẢI PHÁP M&E TOÀN DIỆN CHO HẠ TẦNG CÔNG NGHỆ",
+      "subtitle": "Đồng hành kiến tạo trung tâm dữ liệu (Data Center) & hạ tầng mạng ICT với hiệu suất – an toàn – bền vững."
+    },
+    "intro": {
+      "title": "GIỚI THIỆU VỀ CHÚNG TÔI",
+      "p1": "Công ty CP Tư Vấn Đầu Tư – Thương Mại ĐỈNH CAO VIỆT được thành lập từ 12/2004, tập trung vào các giải pháp M&E cho Data Center & hạ tầng ICT.",
+      "p2": "Với gần 20 năm kinh nghiệm, chúng tôi là đối tác tin cậy của nhiều tập đoàn, ngân hàng, bệnh viện… cam kết giải pháp tối ưu – an toàn – bền vững.",
+      "p3": "Chúng tôi cam kết mang đến giải pháp tối ưu, đảm bảo hiệu suất, an toàn và tính bền vững lâu dài trong vận hành hệ thống kỹ thuật.",
+      "buttonContact": "Liên hệ tư vấn",
+      "buttonSolutions": "Giải pháp",
+      "imageAlt": "ĐỈNH CAO VIỆT – Giải pháp M&E"
+    },
+    "strategy": {
+      "tabVision": "Tầm nhìn",
+      "tabStrategy": "Chiến lược",
+      "tabTeam": "Đội ngũ",
+      "tabCustomer": "Khách hàng",
+      "nodeVision": "Tầm nhìn – Sứ mệnh",
+      "nodeStrategy": "Chiến lược cốt lõi",
+      "nodeTeam": "Đội ngũ nhân sự",
+      "nodeCustomer": "Đối với khách hàng",
+      "content": {
+        "vision": {
+          "title": "TẦM NHÌN, SỨ MỆNH",
+          "lead": "DCV kiến tạo chuẩn vận hành thông minh & bền vững cho mọi công trình.",
+          "body": "<p>Sứ mệnh của DCV là đưa công nghệ vận hành thông minh vào từng công trình, góp phần kiến tạo tương lai xanh, tiết kiệm năng lượng và nâng cao trải nghiệm người dùng.</p><p>Chúng tôi tin rằng mỗi giải pháp kỹ thuật vững chắc hôm nay là nền tảng cho một thế giới kết nối bền vững mai sau.</p>"
+        },
+        "strategy": {
+          "title": "CHIẾN LƯỢC CỐT LÕI",
+          "lead": "Tập trung 3 trụ cột: Chất lượng – Công nghệ – Con người, hướng tới tăng trưởng bền vững.",
+          "body": "<p>Đỉnh Cao Việt (DCV) định hướng phát triển bền vững dựa trên chất lượng, công nghệ và con người. Chúng tôi tập trung vào đổi mới giải pháp kỹ thuật, nâng cao năng lực đội ngũ, hợp tác chiến lược và xây dựng hệ thống M&E – Data Center hiện đại, tiết kiệm năng lượng, nhằm mang lại giá trị bền vững và hiệu quả tối đa cho khách hàng.</p>"
+        },
+        "customer": {
+          "title": "ĐỐI VỚI KHÁCH HÀNG",
+          "lead": "DCV đặt khách hàng ở vị trí trung tâm trong mọi hoạt động.",
+          "body": "<p>Khách hàng là trung tâm; hiệu quả, an toàn và ổn định là thước đo thành công.</p><p>Chúng tôi cam kết mang đến giải pháp kỹ thuật tối ưu, an toàn và bền vững, giúp khách hàng vận hành hiệu quả, tiết kiệm năng lượng và ổn định lâu dài.</p><p>Với phương châm “Chất lượng – Uy tín – Hiệu quả”, DCV không ngừng hoàn thiện để trở thành đối tác tin cậy và đồng hành phát triển cùng khách hàng.</p>"
+        },
+        "team": {
+          "title": "ĐỘI NGŨ NHÂN SỰ",
+          "lead": "Đội ngũ chứng chỉ đầy đủ, hơn 20 năm thực chiến M&E, HVAC, BMS, Data Center.",
+          "body": "<p>Đội ngũ Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên gia với hơn 20 năm kinh nghiệm trong tư vấn, thiết kế, thi công và bảo trì các hệ thống M&E, HVAC, BMS và Data Center trên toàn quốc.</p><p>Mỗi thành viên đều được đào tạo bài bản, sở hữu các chứng chỉ chuyên môn về PAC, UPS, PCCC, DCIM và quản lý năng lượng thông minh, cam kết đáp ứng các tiêu chuẩn kỹ thuật khắt khe nhất.</p>"
+        }
+      }
+    },
+    "cta": {
+      "title": "Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?",
+      "subtitle": "Liên hệ ngay với <strong>ĐỈNH CAO VIỆT</strong> để được tư vấn giải pháp tối ưu và hiệu quả nhất.",
+      "button": "Tư vấn ngay"
+    },
+    "contactDock": {
+      "ariaLabel": "Liên hệ nhanh",
+      "hotline": "Gọi Hotline",
+      "messenger": "Messenger",
+      "zalo": "Zalo",
+      "email": "Email",
+      "map": "Bản đồ",
+      "toggle": "Mở danh sách liên hệ",
+      "backToTop": "Lên đầu trang"
+    }
+  },
+
+  "header": {
+    "topbar": {
+      "news": "Tin Tức & Sự Kiện",
+      "hotline": "Hotline: 1900 3339",
+      "toggleLanguageTitle": "Đổi ngôn ngữ",
+      "toggleLanguageLabel": "Đổi ngôn ngữ"
+    },
+    "nav": {
+      "logoAlt": "Logo DCV",
+      "companyName1": "CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT",
+      "companyName2": "CƠ ĐIỆN LẠNH DCV",
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "services": "Dịch vụ",
+      "projects": "Công trình tiêu biểu",
+      "contact": "Liên hệ",
+      "blog": "Blog"
+    }
+  },
+
+  "footer": {
+    "companyInfo": {
+      "name1": "CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT",
+      "name2": "CƠ ĐIỆN LẠNH DCV",
+      "description": "Giải pháp M&E toàn diện cho Data Center & hạ tầng ICT.",
+      "logoAlt": "Logo DCV Footer"
+    },
+    "quickLinks": {
+      "title": "LIÊN KẾT NHANH",
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "services": "Giải pháp",
+      "projects": "Công trình tiêu biểu",
+      "contact": "Liên hệ"
+    },
+    "mainSolutions": {
+      "title": "GIẢI PHÁP CHÍNH",
+      "electrical": "Hệ thống Điện",
+      "hvac": "Điều hòa & Thông gió (HVAC)",
+      "bms": "Tự động hóa & BMS",
+      "fireProtection": "Phòng cháy Chữa cháy",
+      "itInfra": "Hạ tầng CNTT & Data Center",
+      "maintenance": "Bảo trì Kỹ thuật"
+    },
+    "contactInfo": {
+      "title": "THÔNG TIN LIÊN HỆ",
+      "addressLabel": "Địa chỉ:",
+      "addressValue": "12/42 Trường Chinh, P. Hòa Thuận Tây, Q. Hải Châu, TP. Đà Nẵng",
+      "phoneLabel": "Điện thoại:",
+      "phoneValue": "123456789",
+      "hotlineLabel": "Hotline:",
+      "hotlineValue": "1900 3339",
+      "emailLabel": "Email:",
+      "emailValue": "contact@dinhcaoviet.vn"
+    },
+    "copyright": "© {currentYear} Bản quyền thuộc về Công ty CP Dịch vụ & Kỹ thuật Cơ điện lạnh DCV. Đã đăng ký Bản quyền."
+  },
+
+  "_comment2": "homepage.swiper",
+  "homepage": {
+    "swiper": {
+      "slide1": {
+        "title": "R.E.E M&E",
+        "desc": "Top 500 Doanh nghiệp lớn nhất Việt Nam"
+      },
+      "slide2": {
+        "title": "Giải pháp cơ điện hàng đầu",
+        "desc": "Cung cấp dịch vụ chuyên nghiệp, chất lượng cao"
+      },
+      "slide3": {
+        "title": "Đối tác tin cậy của doanh nghiệp",
+        "desc": "Chúng tôi mang đến hiệu quả và bền vững"
+      },
+      "button": "Xem chi tiết"
+    },
+
+    "_comment3": "homepage.articles",
+    "articles": {
+      "sectionTitle": "KIẾN THỨC & GIẢI PHÁP CƠ ĐIỆN",
+      "sectionSubtitle": "Cập nhật xu hướng công nghệ, tiêu chuẩn kỹ thuật và kinh nghiệm thi công M&E thực tế – giúp chủ đầu tư, kỹ sư và nhà thầu tối ưu hiệu quả dự án.",
+      "article1": {
+        "title": "Tối ưu hệ thống điều hòa trung tâm VRV/VRF trong công trình lớn",
+        "category": "Cơ điện",
+        "description": "Hiểu rõ nguyên lý hoạt động và những yếu tố ảnh hưởng đến hiệu suất giúp giảm đến 20% chi phí năng lượng cho hệ thống HVAC."
+      },
+      "article2": {
+        "title": "5 điểm cần kiểm tra trước khi nghiệm thu hệ thống điện hạ thế",
+        "category": "Điện",
+        "description": "Kiểm tra tải, dây dẫn, tiếp địa, và thiết bị bảo vệ là bước quan trọng đảm bảo an toàn và tuân thủ tiêu chuẩn TCVN."
+      },
+      "article3": {
+        "title": "Hệ thống PCCC tự động: Những lỗi thường gặp khi thi công",
+        "category": "Cấp thoát nước",
+        "description": "Các lỗi nhỏ như chọn sai đầu phun sprinkler hay bố trí tủ báo cháy không đúng vị trí có thể ảnh hưởng đến toàn bộ hệ thống."
+      },
+      "article4": {
+        "title": "Ứng dụng BMS trong quản lý tòa nhà thông minh",
+        "category": "Tự động hóa",
+        "description": "Hệ thống BMS giúp chủ đầu tư giám sát điện năng, điều hòa, ánh sáng và an ninh trên cùng một nền tảng duy nhất."
+      },
+      "article5": {
+        "title": "Giải pháp tiết kiệm năng lượng cho hệ thống điện",
+        "category": "Công nghệ",
+        "description": "Tối ưu công suất, chọn thiết bị hiệu suất cao và giám sát từ xa giúp tiết kiệm đáng kể chi phí vận hành."
+      }
+    },
+
+    "_comment4": "homepage.intro",
+    "intro": {
+      "title": "GIẢI PHÁP CƠ ĐIỆN LẠNH & HẠ TẦNG TRUNG TÂM DỮ LIỆU DCV",
+      "description": "<strong>DCV</strong> chuyên thiết kế, thi công và tích hợp hệ thống Cơ Điện chính xác cho Trung tâm dữ liệu, nhà máy và cao ốc thương mại – đạt chuẩn quốc tế về hiệu suất và an toàn.",
+      "buttonSolutions": "XEM GIẢI PHÁP →",
+      "buttonContact": "LIÊN HỆ KỸ SƯ TƯ VẤN →",
+      "stat1": "Năm kinh nghiệm",
+      "stat2": "Dự án triển khai",
+      "stat3": "Khách hàng doanh nghiệp",
+      "stat4": "Đối tác công nghệ toàn cầu"
+    },
+
+    "_comment5": "homepage.criteria",
+    "criteria": {
+      "title": "<span class=\"text-[#c9e265]\">GIẢI PHÁP TỔNG THỂ VỀ CƠ ĐIỆN</span> & HẠ TẦNG TRUNG TÂM DỮ LIỆU",
+      "subtitle": "mang lại hiệu quả cao",
+      "left1": "Fire & Safety",
+      "left2": "CCTV & Access Control",
+      "left3": "Ground & Surge Protection",
+      "centerTitle": "DCV",
+      "centerSubtitle": "Giải pháp tổng thể về Cơ Điện & Hạ tầng Trung tâm dữ liệu",
+      "centerDescription": "Cung cấp các giải pháp trong lĩnh vực M&E – HVAC – BMS – DCIM, đáp ứng nhu cầu vận hành ổn định, tiết kiệm năng lượng và an toàn tuyệt đối cho các trung tâm dữ liệu, nhà máy và cao ốc thương mại.",
+      "centerButton": "Liên hệ tư vấn →",
+      "right1": "HVAC & SmartCool PAC",
+      "right2": "UPS & Power System",
+      "right3": "BMS & DCIM"
+    },
+
+    "_comment6": "homepage.partners",
+    "partners": {
+      "title": "ĐỐI TÁC & CÔNG NGHỆ TỪ CÁC <span class=\"text-red-600\">THƯƠNG HIỆU HÀNG ĐẦU THẾ GIỚI</span>",
+      "description": "DCV hợp tác cùng các thương hiệu hàng đầu thế giới để mang đến giải pháp làm lạnh chính xác, tiết kiệm năng lượng và bền vững.",
+      "partner1Title": "Airedale by Modine (UK)",
+      "partner1Description": "Nhà sản xuất hàng đầu thế giới về hệ thống làm lạnh chính xác (PAC, CRAC, CRAH, Chiller) cho Data Center và công nghiệp HVAC.",
+      "partner2Title": "AireWall ONE™ – Data Center Fan Array",
+      "partner2Description": "Giải pháp tường quạt thông minh công suất 200–650 kW, giúp tăng hiệu suất trao đổi nhiệt và tiết kiệm năng lượng tới 30%.",
+      "partner3Title": "SmartCool™ i-drive Inverter Compressor",
+      "partner3Description": "Máy nén inverter công suất 5–83 kW, tiết kiệm tới 45% điện năng, phù hợp trung tâm dữ liệu vừa và nhỏ."
+    },
+
+    "_comment7": "homepage.solutionsList",
+    "solutionsList": {
+      "title": "<span class=\"text-green-600\">GIẢI PHÁP CƠ ĐIỆN</span> TỔNG THỂ CHO DOANH NGHIỆP & DỰ ÁN",
+      "description": "Chúng tôi cung cấp giải pháp M&E toàn diện từ tư vấn, thiết kế, thi công đến vận hành – đảm bảo công trình an toàn, tiết kiệm năng lượng và vận hành ổn định theo tiêu chuẩn quốc tế (TCVN, ISO, IEC…).",
+      "item1": {
+        "title": "Hệ thống Điện (Electrical Systems)",
+        "description": "Thiết kế và thi công hệ thống điện trung thế, hạ thế, chiếu sáng, tiếp địa và chống sét cho các công trình dân dụng – công nghiệp. Chúng tôi đảm bảo tiêu chuẩn an toàn, ổn định tải và tối ưu chi phí vận hành thông qua thiết bị chất lượng cao và giải pháp tiết kiệm điện năng. Ứng dụng: Nhà máy, tòa nhà văn phòng, khu công nghiệp, trung tâm dữ liệu."
+      },
+      "item2": {
+        "title": "Hệ thống Điều hòa & Thông gió (HVAC Systems)",
+        "description": "Cung cấp giải pháp điều hòa không khí trung tâm (VRV/VRF, Chiller, AHU, FCU) và hệ thống thông gió, hút khói, cấp gió tươi cho công trình. Từ khâu thiết kế đến thi công, chúng tôi luôn chú trọng hiệu suất năng lượng, độ ồn thấp và độ bền thiết bị. Ứng dụng: Cao ốc, khách sạn, bệnh viện, trung tâm thương mại."
+      },
+      "item3": {
+        "title": "Hệ thống Tự động hóa & Quản lý tòa nhà (BMS)",
+        "description": "Triển khai hệ thống điều khiển và giám sát tòa nhà thông minh (BMS) – kết nối các thiết bị điện, HVAC, chiếu sáng, an ninh, PCCC trên cùng nền tảng. Giải pháp giúp tối ưu năng lượng, nâng cao tiện nghi và giảm chi phí vận hành cho chủ đầu tư. Ứng dụng: Building, nhà máy, khu phức hợp, Data Center."
+      },
+      "item4": {
+        "title": "Hệ thống Phòng cháy Chữa cháy (Fire Fight Systems)",
+        "description": "Thiết kế, lắp đặt và nghiệm thu hệ thống PCCC tự động gồm sprinkler, báo cháy địa chỉ, chữa cháy khí FM200/CO₂ theo tiêu chuẩn NFPA, TCVN. Chúng tôi đảm bảo mọi công trình đạt chuẩn an toàn và được cấp phép PCCC bởi cơ quan quản lý nhà nước. Ứng dụng: Nhà xưởng, tòa nhà, khách sạn, trung tâm dữ liệu."
+      },
+      "item5": {
+        "title": "Hạ tầng CNTT & Data Center",
+        "description": "Cung cấp giải pháp hạ tầng công nghệ thông tin gồm hệ thống mạng LAN, WiFi, camera, Access Control, UPS, Rack, và hệ thống làm mát chuyên dụng cho trung tâm dữ liệu (Data Center). Chúng tôi tích hợp toàn bộ hệ thống điện, lạnh, mạng và bảo mật theo chuẩn TIA-942 / Uptime Tier. Ứng dụng: Doanh nghiệp, nhà máy, trung tâm dữ liệu, văn phòng."
+      },
+      "item6": {
+        "title": "Dịch vụ Bảo trì & Kỹ thuật",
+        "description": "Dịch vụ bảo trì định kỳ, kiểm tra, nâng cấp và thay thế thiết bị M&E giúp duy trì hoạt động ổn định và kéo dài tuổi thọ hệ thống. Chúng tôi có đội ngũ kỹ sư trực 24/7, sẵn sàng hỗ trợ khẩn cấp và kiểm tra định kỳ theo hợp đồng bảo trì chuyên nghiệp. Ứng dụng: Tòa nhà, khu công nghiệp, nhà máy sản xuất."
+      },
+      "commitmentTitle": "Cam kết",
+      "commitmentP1": "Với hơn 10 năm kinh nghiệm trong ngành Cơ Điện, chúng tôi tự tin mang đến giải pháp tối ưu – an toàn – hiệu quả cho từng dự án.",
+      "commitmentP2": "Liên hệ ngay để được tư vấn kỹ thuật miễn phí và nhận đề xuất giải pháp phù hợp nhất cho công trình của bạn."
+    },
+
+    "_comment8": "homepage.contactForm",
+    "contactForm": {
+      "title": "Cần tư vấn giải pháp <span class=\"text-[#c9e265]\">M&E – HVAC – BMS</span> cho dự án của bạn?",
+      "subtitle": "Liên hệ ngay để được hỗ trợ kỹ thuật miễn phí.",
+      "addressLabel": "Địa chỉ:",
+      "addressValue": "12/42 trường chinh - đà nẵng",
+      "phoneLabel": "Số điện thoại:",
+      "phoneValue": "123456789",
+      "emailLabel": "Email:",
+      "emailValue": "123@gmail.com",
+      "zaloSub": "Nhắn tin qua",
+      "zaloTitle": "ZALO OFFICIAL CỦA HD AGENCY",
+      "hotlineSub": "Gọi ngay hotline",
+      "hotlineTitle": "0938 002 776",
+      "facebookSub": "Live chat trực tiếp",
+      "facebookTitle": "FACEBOOK OFFICIAL CỦA HD AGENCY",
+      "formTitle": "Nhận tư vấn miễn phí",
+      "formNamePlaceholder": "Họ và tên*",
+      "formCompanyPlaceholder": "Công ty / Dự án",
+      "formEmailPlaceholder": "Email*",
+      "formPhonePlaceholder": "Số điện thoại*",
+      "formInterestSelect": "Loại giải pháp quan tâm",
+      "formInterestOption1": "M&E",
+      "formInterestOption2": "HVAC",
+      "formInterestOption3": "BMS",
+      "formMessagePlaceholder": "Nội dung yêu cầu",
+      "formAgreement": "Đồng ý liên hệ",
+      "formButton": "Gửi yêu cầu →"
+    }
+  },
+
+  "servicesPage": {
+    "_comment9": "src/components/service/Hero",
+    "hero": {
+      "title": "Dịch vụ & Giải pháp",
+      "subtitle": "Cung cấp giải pháp tổng thể cho hạ tầng kỹ thuật công trình, từ tư vấn thiết kế đến thi công và bảo trì."
+    },
+    "_comment10": "src/components/service/problemsv2",
+    "problems": {
+      "title": "Vấn đề bạn đang mắc phải?",
+      "item1": "Hệ thống làm mát không ổn định, tiêu tốn điện, khó kiểm soát nhiệt độ.",
+      "item2": "Mất điện đột ngột, nguồn dự phòng yếu, ATS hoạt động không ổn định.",
+      "item3": "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu, hệ thống không đồng bộ.",
+      "item4": "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm và chữa cháy tự động.",
+      "item5": "An ninh kém, khó kiểm soát ra vào và giám sát khu vực quan trọng.",
+      "item6": "Thiết bị dễ hư hỏng do sét, tiếp địa và chống sét không đạt chuẩn."
+    },
+    "_comment11": "src/components/service/applications",
+    "applications": {
+      "title": "Ứng dụng đa dạng",
+      "subtitle": "Giải pháp phù hợp cho nhiều loại công trình khác nhau",
+      "card1": {
+        "title": "Data Center",
+        "description": "Giải pháp toàn diện cho trung tâm dữ liệu, từ HVAC, UPS đến BMS và DCIM.",
+        "item1": "Tier III/IV Data Center",
+        "item2": "IDC (Trung tâm dữ liệu Internet)",
+        "item3": "Phòng máy chủ (Server Room)"
+      },
+      "card2": {
+        "title": "Nhà máy công nghiệp",
+        "description": "Hệ thống kỹ thuật công nghiệp, HVAC và BMS cho môi trường sản xuất.",
+        "item1": "Nhà máy điện tử",
+        "item2": "Nhà máy dược phẩm",
+        "item3": "Nhà máy thực phẩm & đồ uống"
+      },
+      "card3": {
+        "title": "Cao ốc văn phòng",
+        "description": "Giải pháp tòa nhà thông minh, tiết kiệm năng lượng và thoải mái.",
+        "item1": "Tòa nhà thông minh (Smart Building)",
+        "item2": "Chứng nhận LEED",
+        "item3": "Công trình xanh (Green Building)"
+      }
+    },
+    "_comment12": "src/components/service/benefits",
+    "benefits": {
+      "imageAlt": "Trung tâm dữ liệu DCV",
+      "title": "Lợi ích khi lựa chọn <span class=\"text-secondary\">DCV</span>",
+      "description": "DCV mang đến giải pháp trung tâm dữ liệu thông minh, an toàn và tiết kiệm — giúp doanh nghiệp của bạn vận hành hiệu quả, giảm chi phí và đạt chuẩn quốc tế.",
+      "item1": "Vận hành ổn định, giảm thiểu downtime và rủi ro hệ thống.",
+      "item2": "Tiết kiệm điện năng, tối ưu chi phí vận hành và bảo trì.",
+      "item3": "Giám sát tập trung 24/7, dễ dàng kiểm soát toàn bộ thiết bị.",
+      "item4": "Đảm bảo an toàn và đạt chuẩn quốc tế về bảo mật dữ liệu."
+    },
+    "_comment13": "src/components/service/benefitsDCV",
+    "benefitsDCV": {
+      "title": "Lợi ích khi lựa chọn <span class=\"text-secondary\">DCV</span>",
+      "description": "DCV mang đến hệ thống trung tâm dữ liệu thông minh, tiết kiệm và ổn định – đảm bảo an toàn, hiệu quả và đạt chuẩn quốc tế cho doanh nghiệp của bạn.",
+      "card1": {
+        "title": "Vận hành ổn định",
+        "description": "Hệ thống hoạt động tin cậy, giảm tối đa rủi ro và downtime."
+      },
+      "card2": {
+        "title": "Tiết kiệm chi phí",
+        "description": "Tối ưu điện năng tiêu thụ và giảm chi phí bảo trì định kỳ."
+      },
+      "card3": {
+        "title": "Giám sát 24/7",
+        "description": "Dễ dàng quản lý và theo dõi thiết bị tập trung, mọi lúc mọi nơi."
+      },
+      "card4": {
+        "title": "An toàn – đạt chuẩn",
+        "description": "Đảm bảo tiêu chuẩn quốc tế về độ an toàn, bảo mật và tin cậy."
+      }
+    },
+    "_comment14": "src/components/service/cta",
+    "cta": {
+      "title": "Sẵn sàng nâng cấp hệ thống của bạn?",
+      "description": "Liên hệ với chúng tôi ngay hôm nay để được tư vấn miễn phí và nhận báo giá chi tiết cho giải pháp phù hợp nhất với doanh nghiệp của bạn.",
+      "buttonContact": "Liên hệ tư vấn",
+      "buttonQuote": "Xem báo giá"
+    },
+    "_comment15": "src/components/service/customerProblems",
+    "customerProblems": {
+      "title": "Vấn đề của khách hàng",
+      "item1": "Hệ thống làm mát không ổn định, tiêu tốn điện, khó kiểm soát nhiệt độ.",
+      "item2": "Mất điện đột ngột, nguồn dự phòng yếu, ATS hoạt động không ổn định.",
+      "item3": "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu, hệ thống không đồng bộ.",
+      "item4": "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm và chữa cháy tự động.",
+      "item5": "An ninh kém, khó kiểm soát ra vào và giám sát khu vực quan trọng.",
+      "item6": "Thiết bị dễ hư hỏng do sét, tiếp địa và chống sét không đạt chuẩn."
+    },
+    "_comment16": "src/components/service/outstandingSolution",
+    "outstandingSolution": {
+      "imageAlt": "Hệ thống HVAC",
+      "tag": "Giải pháp nổi bật",
+      "title": "SmartCool i-drive Inverter",
+      "description": "Công nghệ biến tần tiên tiến từ Airedale by Modine giúp tiết kiệm năng lượng lên đến <span class=\"font-semibold text-accent\">40%</span> so với hệ thống truyền thống, đồng thời đảm bảo độ chính xác nhiệt độ ±1°C cho môi trường Data Center.",
+      "point1": "Tiết kiệm năng lượng tối ưu",
+      "point2": "Độ chính xác cao",
+      "point3": "Vận hành êm ái",
+      "point4": "Tuổi thọ cao",
+      "point5": "Tích hợp BMS/DCIM",
+      "button": "Tìm hiểu chi tiết"
+    },
+    "_comment17": "src/components/service/semiCircleProblems",
+    "semiCircleProblems": {
+      "title": "Vấn đề của khách hàng",
+      "item1": "Hệ thống làm mát không ổn định, tiêu tốn điện, khó kiểm soát nhiệt độ.",
+      "item2": "Mất điện đột ngột, nguồn dự phòng yếu, ATS hoạt động không ổn định.",
+      "item3": "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu, hệ thống không đồng bộ.",
+      "item4": "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm và chữa cháy tự động.",
+      "item5": "An ninh kém, khó kiểm soát ra vào và giám sát khu vực quan trọng.",
+      "item6": "Thiết bị dễ hư hỏng do sét, tiếp địa và chống sét không đạt chuẩn."
+    },
+    "_comment18": "src/components/service/process",
+    "process": {
+      "title": "Quy trình 8 bước",
+      "step1": "Thiết kế và tư vấn",
+      "step2": "Cung cấp thiết bị",
+      "step3": "Quản lý dự án",
+      "step4": "Triển khai lắp đặt",
+      "step5": "Đo kiểm & Cấu hình",
+      "step6": "Đào tạo và huấn luyện",
+      "step7": "Chuyển giao",
+      "step8": "Bảo trì & Bảo dưỡng"
+    },
+    "_comment19": "src/components/service/processDetailed",
+    "processDetailed": {
+      "title": "Quy trình 8 bước",
+      "stepPrefix": "Bước {{stepNum}}: ",
+      "step1": {
+        "title": "Thiết kế và tư vấn",
+        "description": "Chúng tôi khảo sát thực tế, phân tích nhu cầu, lên bản vẽ và đề xuất giải pháp tối ưu nhất cho hạ tầng của bạn."
+      },
+      "step2": {
+        "title": "Cung cấp thiết bị",
+        "description": "Đảm bảo cung cấp thiết bị chính hãng, đồng bộ, đạt tiêu chuẩn kỹ thuật và hiệu năng cao."
+      },
+      "step3": {
+        "title": "Quản lý dự án",
+        "description": "Đội ngũ kỹ sư giám sát tiến độ, chất lượng, phối hợp chặt chẽ giữa các bên để đảm bảo đúng kế hoạch."
+      },
+      "step4": {
+        "title": "Triển khai lắp đặt",
+        "description": "Thực hiện lắp đặt đúng kỹ thuật, an toàn, đảm bảo thẩm mỹ và hiệu suất vận hành tối ưu."
+      },
+      "step5": {
+        "title": "Đo kiểm & Cấu hình",
+        "description": "Tiến hành kiểm tra, cân chỉnh và cấu hình chi tiết để hệ thống hoạt động ổn định và chính xác."
+      },
+      "step6": {
+        "title": "Đào tạo & Huấn luyện",
+        "description": "Hướng dẫn đội ngũ kỹ thuật của khách hàng vận hành, giám sát và xử lý tình huống thực tế."
+      },
+      "step7": {
+        "title": "Chuyển giao",
+        "description": "Bàn giao tài liệu, bản vẽ, sơ đồ hệ thống và chứng nhận nghiệm thu đầy đủ."
+      },
+      "step8": {
+        "title": "Bảo trì & Bảo dưỡng",
+        "description": "Cung cấp dịch vụ bảo trì định kỳ, khắc phục sự cố nhanh chóng để duy trì hệ thống luôn ổn định."
+      }
+    },
+
+    "_comment20": "src/components/service/serviceList",
+    "serviceList": {
+      "title": "Giải pháp chuyên nghiệp",
+      "subtitle": "6 nhóm giải pháp kỹ thuật hàng đầu cho công trình của bạn",
+      "card1": {
+        "title": "HVAC SYSTEM",
+        "description": "Hệ thống điều hòa không khí. Đảm bảo làm mát chính xác, duy trì môi trường ổn định cho trung tâm dữ liệu và thiết bị công nghệ.",
+        "feature1": "SmartCool i-drive Inverter Compressor",
+        "feature2": "AireWall ONE Fan Array",
+        "feature3": "PAC / CRAC / Chiller Airedale",
+        "feature4": "Kiểm soát nhiệt độ và độ ẩm chính xác",
+        "feature5": "Tiết kiệm năng lượng tối ưu"
+      },
+      "card2": {
+        "title": "UPS & POWER DISTRIBUTION SYSTEM",
+        "description": "Nguồn điện liên tục và hệ thống phân phối điện. Cung cấp nguồn điện ổn định, dự phòng kịp thời để tránh gián đoạn hoạt động.",
+        "feature1": "UPS công suất cao",
+        "feature2": "Hệ thống ATS tự động",
+        "feature3": "Phân phối điện thông minh (PDU)",
+        "feature4": "Hệ thống giám sát & cảnh báo",
+        "feature5": "Bảo trì định kỳ chuyên nghiệp"
+      },
+      "card3": {
+        "title": "BMS/DCIM SYSTEM",
+        "description": "Hệ thống quản lý tòa nhà và trung tâm dữ liệu. Giúp giám sát, điều khiển và tối ưu hiệu suất vận hành của toàn bộ hạ tầng.",
+        "feature1": "BMS tích hợp đa giao thức",
+        "feature2": "DCIM - Quản lý Hạ tầng Trung tâm Dữ liệu",
+        "feature3": "Giao thức Modbus / SNMP / BACnet",
+        "feature4": "Bảng điều khiển giám sát thời gian thực",
+        "feature5": "Tự động hóa và tối ưu hóa"
+      },
+      "card4": {
+        "title": "FIRE ALARM & FIRE FIGHTING SYSTEM",
+        "description": "Hệ thống phòng cháy chữa cháy và an toàn. Phát hiện sớm nguy cơ cháy nổ, tự động kích hoạt biện pháp bảo vệ an toàn cho người và thiết bị.",
+        "feature1": "Báo cháy thông minh & địa chỉ",
+        "feature2": "Chữa cháy tự động (Khí/Nước)",
+        "feature3": "Cảm biến khói sớm VESDA",
+        "feature4": "Giám sát nhiệt độ môi trường",
+        "feature5": "Tích hợp BMS"
+      },
+      "card5": {
+        "title": "ACCESS CONTROL & CCTV SYSTEM",
+        "description": "Giám sát và kiểm soát ra vào. Tăng cường an ninh, quản lý truy cập hiệu quả vào các khu vực quan trọng.",
+        "feature1": "Camera giám sát HD/4K/IP",
+        "feature2": "Hệ thống kiểm soát ra vào (Thẻ/Vân tay)",
+        "feature3": "Nhận diện khuôn mặt (AI)",
+        "feature4": "Lưu trữ NVR/Cloud",
+        "feature5": "Cảnh báo xâm nhập thời gian thực"
+      },
+      "card6": {
+        "title": "EARTHING & LIGHTNING PROTECTION SYSTEM",
+        "description": "Tiếp địa và chống sét lan truyền. Bảo vệ thiết bị khỏi sét đánh và xung điện đột biến, đảm bảo an toàn cho toàn hệ thống.",
+        "feature1": "Tiếp địa an toàn & công nghiệp",
+        "feature2": "Chống sét lan truyền (AC/DC/Data)",
+        "feature3": "Thiết bị chống sét (SPD)",
+        "feature4": "Đo kiểm định kỳ điện trở đất",
+        "feature5": "Tuân thủ tiêu chuẩn quốc tế (IEC/TCVN)"
+      }
+    }
+  },
+
+  "blogSidebar": {
+    "searchPlaceholder": "Tìm kiếm...",
+    "allPosts": "TẤT CẢ BÀI VIẾT",
+    "featuredPosts": "BÀI VIẾT NỔI BẬT",
+    "archives": "LƯU TRỮ",
+    "archiveDate": "Tháng 12 năm 2025",
+    "categories": "THỂ LOẠI",
+    "categoryName": "Bài viết"
+  },
+  "blogPageSidebar": [
+    {
+      "id": 1,
+      "title": "BMS là gì? Giải pháp quản lý tòa nhà thông minh cho Data Center hiện đại"
+    },
+    {
+      "id": 2,
+      "title": "HVAC – AHU – FCU – PAC: Hiểu Đúng Để Thiết Kế Chuẩn"
+    },
+    {
+      "id": 3,
+      "title": "Hệ Thống UPS và Phân Phối Điện Trong Data Center"
+    },
+    {
+      "id": 4,
+      "title": "SmartCool i-drive: Giải pháp làm lạnh chính xác Tiết kiệm và Ổn định"
+    },
+    {
+      "id": 5,
+      "title": "Ứng Dụng Modbus & SNMP Trong BMS và Giám Sát Thiết Bị"
+    },
+    {
+      "id": 6,
+      "title": "Tích Hợp Hệ Thống An Toàn & Giám Sát Vào Nền Tảng DCIM"
+    }
+  ],
+  "blogPage": {
+    "categoryLabel": "Tin tức",
+    "publishedOn": "Đăng vào ngày",
+    "publishedBy": "bởi",
+    "readMoreButton": "CHI TIẾT BÀI VIẾT →",
+    "post1": {
+      "title": "BMS là gì? Giải pháp quản lý tòa nhà thông minh cho Data Center hiện đại",
+      "excerpt": "Ngôi nhà này được thiết kế bởi một nhóm kiến trúc sư Ý, sử dụng vật liệu tự nhiên, tạo cảm giác hòa mình với thiên nhiên xung quanh."
+    },
+    "post2": {
+      "title": "HVAC – AHU – FCU – PAC: Hiểu Đúng Để Thiết Kế Chuẩn",
+      "excerpt": "Cải tạo không chỉ giúp làm mới không gian sống mà còn mang lại giá trị tinh thần và thẩm mỹ vượt trội cho ngôi nhà của bạn."
+    },
+    "post3": {
+      "title": "Hệ Thống UPS và Phân Phối Điện Trong Data Center",
+      "excerpt": "Sự kết hợp giữa vật liệu tự nhiên, ánh sáng và màu sắc tinh tế giúp tạo nên phong cách sống sang trọng và hiện đại."
+    },
+    "post4": {
+      "title": "SmartCool i-drive: Giải pháp làm lạnh chính xác Tiết kiệm và Ổn định",
+      "excerpt": "Một công trình kiến trúc hiện đại nằm giữa rừng, tận dụng ánh sáng tự nhiên và thông gió để mang đến sự thư thái tuyệt đối."
+    },
+    "post5": {
+      "title": "Ứng Dụng Modbus & SNMP Trong BMS và Giám Sát Thiết Bị",
+      "excerpt": "Những công nghệ tiên tiến giúp ngôi nhà trở nên tiện nghi, tiết kiệm năng lượng và dễ dàng điều khiển từ xa."
+    },
+    "post6": {
+      "title": "Tích Hợp Hệ Thống An Toàn & Giám Sát Vào Nền Tảng DCIM",
+      "excerpt": "Thiết kế kiến trúc xanh hướng đến sự bền vững, giúp giảm thiểu tác động đến môi trường và mang lại cuộc sống lành mạnh hơn."
+    }
+  },
+  "blogPost": {
+    "blogPost1": {
+      "category": "Tin tức",
+      "title": "BMS là gì? Giải pháp quản lý tòa nhà thông minh cho Data Center hiện đại",
+      "publishedOn": "Đăng vào ngày",
+      "publishedBy": "bởi",
+      "bannerAlt": "BMS hệ thống quản lý tòa nhà", 
+      "section1": {
+        "title": "BMS là gì?",
+        "p1": "<strong>BMS (Building Management System)</strong> – Hệ thống Quản lý Tòa nhà là “bộ não trung tâm” giúp tự động giám sát, điều khiển và tối ưu toàn bộ hạ tầng kỹ thuật trong tòa nhà và Data Center. Hệ thống này giúp đảm bảo hiệu suất năng lượng, độ an toàn và sự tiện nghi ở mức cao nhất.",
+        "p2": "Trong thời đại chuyển đổi số, BMS đóng vai trò nền tảng trong việc kết nối hàng trăm thiết bị thông minh – từ hệ thống điện, điều hòa, chiếu sáng cho đến an ninh và phòng cháy chữa cháy – tạo nên một môi trường vận hành tối ưu, tiết kiệm và bền vững."
+      },
+      "section2": {
+        "title": "Cấu trúc BMS: 3 thành phần chính",
+        "sub1Title": "1. Sensors – Hệ thống cảm biến",
+        "sub1Item1": "Cảm biến nhiệt độ & độ ẩm: Giám sát môi trường phòng server.",
+        "sub1Item2": "Cảm biến áp suất: Theo dõi hệ thống thông gió và điều hòa.",
+        "sub1Item3": "Cảm biến năng lượng: Đo công suất tiêu thụ điện.",
+        "sub1Item4": "Cảm biến rò rỉ nước: Phát hiện sớm nguy cơ rò nước.",
+        "sub1Item5": "Cảm biến khói & nhiệt: Cảnh báo cháy sớm.",
+        "sub1Item6": "Cảm biến chất lượng không khí: Giám sát bụi và hạt lơ lửng.",
+        "sub2Title": "2. Controllers – Bộ điều khiển",
+        "sub2Item1": "<strong>DDC:</strong> Xử lý logic và điều khiển thiết bị trực tiếp.",
+        "sub2Item2": "<strong>PLC:</strong> Điều khiển quy trình tự động phức tạp.",
+        "sub2Item3": "<strong>Gateway Controllers:</strong> Kết nối các giao thức khác nhau.",
+        "sub3Title": "3. HMI – Giao diện quản lý",
+        "sub3Item1": "Dashboard hiển thị trạng thái toàn hệ thống.",
+        "sub3Item2": "Đồ họa trực quan theo sơ đồ tầng với mã màu cảnh báo.",
+        "sub3Item3": "Báo cáo & phân tích xu hướng năng lượng.",
+        "sub3Item4": "Cảnh báo thông minh qua Email, SMS, App.",
+        "sub3Item5": "Điều khiển từ xa qua web hoặc mobile app."
+      },
+      "section3": {
+        "title": "Vai trò của BMS trong Data Center",
+        "p1": "Trong các trung tâm dữ liệu, nơi yêu cầu tính ổn định và chính xác cao, BMS đóng vai trò sống còn trong việc đảm bảo hệ thống vận hành an toàn, hiệu quả và liên tục 24/7.",
+        "listItem1": "<strong>Quản lý hệ thống làm mát:</strong> Duy trì nhiệt độ lý tưởng (18–27°C), điều phối hệ thống CRAC/CRAH, ngăn hotspot, tối ưu airflow.",
+        "listItem2": "<strong>Giám sát & tối ưu năng lượng:</strong> Theo dõi PUE real-time, phát hiện thiết bị tiêu thụ năng lượng bất thường, và dự báo nhu cầu năng lượng.",
+        "listItem3": "<strong>An toàn & bảo mật:</strong> Tích hợp kiểm soát ra vào, hệ thống camera, cảnh báo cháy nổ, và quản lý chữa cháy tự động.",
+        "listItem4": "<strong>Quản lý nguồn điện dự phòng:</strong> Giám sát UPS, máy phát điện diesel và pin dự phòng, tự động kích hoạt khi mất điện.",
+        "imageAlt": "BMS trong Data Center" 
+      },
+      "section4": {
+        "title": "6 Lợi Ích Vượt Trội Khi Triển Khai BMS", 
+        "benefit1Title": "1. Tối Ưu Hóa Vận Hành",
+        "benefit1Item1": "Tự động hóa các tác vụ lặp đi lặp lại, giảm sai sót thủ công.",
+        "benefit1Item2": "Giảm thời gian phản ứng sự cố từ hàng giờ xuống chỉ vài phút.",
+        "benefit1Item3": "Vận hành liên tục 24/7 mà không cần can thiệp thủ công.",
+        "benefit1Item4": "Điều chỉnh hoạt động thiết bị theo thời gian thực và nhu cầu thực tế.",
+        "benefit2Title": "2. Tiết Kiệm Chi Phí Đáng Kể",
+        "benefit2Item1": "Giảm 20–30% chi phí năng lượng nhờ tối ưu vận hành thiết bị.",
+        "benefit2Item2": "Kéo dài tuổi thọ thiết bị thông qua bảo trì dự đoán (Predictive Maintenance).",
+        "benefit2Item3": "Giảm chi phí nhân công vận hành nhờ tự động hóa.",
+        "benefit2Item4": "Tránh thiệt hại tài chính do downtime hoặc sự cố bất ngờ.",
+        "benefit3Title": "3. Nâng Cao Độ Tin Cậy",
+        "benefit3Item1": "Đảm bảo uptime đạt 99.99% hoặc cao hơn cho các hệ thống quan trọng.",
+        "benefit3Item2": "Phát hiện sớm vấn đề tiềm ẩn trước khi gây ra sự cố nghiêm trọng.",
+        "benefit3Item3": "Tích hợp redundancy và failover tự động đảm bảo liên tục dịch vụ.",
+        "benefit3Item4": "Ghi nhận và phân tích dữ liệu lịch sử để xác định nguyên nhân gốc rễ.",
+        "benefit4Title": "4. Quản Lý Tập Trung",
+        "benefit4Item1": "Một giao diện thống nhất để giám sát toàn bộ hệ thống hạ tầng.",
+        "benefit4Item2": "Quản lý nhiều địa điểm hoặc chi nhánh từ trung tâm điều khiển duy nhất.",
+        "benefit4Item3": "Báo cáo tự động, thống nhất và chuẩn hóa cho các bộ phận kỹ thuật.",
+        "benefit4Item4": "Dễ dàng mở rộng quy mô quản lý khi số lượng thiết bị tăng.",
+        "benefit5Title": "5. Tuân Thủ Tiêu Chuẩn",
+        "benefit5Item1": "Đáp ứng các tiêu chuẩn vận hành quốc tế Tier III, Tier IV.",
+        "benefit5Item2": "Hỗ trợ lưu trữ dữ liệu phục vụ kiểm toán (audit) và compliance.",
+        "benefit5Item3": "Báo cáo tiêu thụ năng lượng và môi trường theo chuẩn ISO 50001.",
+        "benefit5Item4": "Đảm bảo an toàn, bền vững và thân thiện môi trường.",
+        "benefit6Title": "6. Khả Năng Mở Rộng Linh Hoạt",
+        "benefit6Item1": "Dễ dàng tích hợp thêm cảm biến (sensor) hoặc thiết bị mới mà không cần dừng hệ thống.",
+        "benefit6Item2": "Kết nối linh hoạt với DCIM, ITSM, SCADA, hoặc hệ thống giám sát năng lượng.",
+        "benefit6Item3": "Nâng cấp phần mềm, firmware từ xa mà không gây gián đoạn hoạt động.",
+        "benefit6Item4": "Hỗ trợ tích hợp AI, IoT, Machine Learning cho vận hành thông minh trong tương lai."
+      },
+      "section5": {
+        "title": "Xu hướng BMS thế hệ mới",
+        "item1": "<strong>AI & Machine Learning:</strong> Dự đoán sự cố, tối ưu hiệu suất năng lượng.",
+        "item2": "<strong>IoT Integration:</strong> Mật độ cảm biến cao hơn, chi phí thấp hơn.",
+        "item3": "<strong>Cloud-based Management:</strong> Quản lý hệ thống từ xa mọi lúc, mọi nơi.",
+        "item4": "<strong>Digital Twin:</strong> Mô phỏng ảo toàn bộ trung tâm dữ liệu.",
+        "item5": "<strong>Green Technology:</strong> Tích hợp năng lượng tái tạo, giảm carbon footprint."
+      },
+      "section6": {
+        "title": "Kết luận",
+        "p1": "<strong>BMS</strong> không chỉ là công cụ quản lý – mà là yếu tố then chốt đảm bảo <strong>Data Center</strong> vận hành hiệu quả, an toàn và bền vững. Trong bối cảnh dữ liệu bùng nổ và áp lực năng lượng gia tăng, đầu tư vào hệ thống BMS chất lượng là xu hướng tất yếu cho mọi trung tâm dữ liệu hiện đại.",
+        "p2": "Với BMS, doanh nghiệp không chỉ “quản lý” – mà đang chủ động kiểm soát tương lai của hạ tầng số.",
+        "imageAlt": "BMS quản lý tòa nhà thông minh"
+      }
+    },
+    "blogPost2": {
+      "category": "Tin tức",
+      "title": "HVAC – AHU – FCU – PAC: Hiểu Đúng Để Thiết Kế Chuẩn",
+      "publishedOn": "Đăng vào ngày",
+      "publishedBy": "bởi",
+      "bannerAlt": "Tổng quan HVAC",
+      "section1": {
+        "title": "Giới Thiệu",
+        "p1": "Trong lĩnh vực điều hòa không khí, việc phân biệt và lựa chọn đúng hệ thống là yếu tố quyết định đến hiệu quả vận hành, chi phí đầu tư và trải nghiệm người dùng. Bài viết này sẽ giúp bạn hiểu rõ sự khác biệt giữa <strong>HVAC, AHU, FCU</strong> và <strong>PAC</strong> — từ chức năng, cấu tạo đến tiêu chí lựa chọn phù hợp."
+      },
+      "section2": {
+        "title": "1. HVAC - Hệ Thống Tổng Thể",
+        "sub1Title": "1.1. Định Nghĩa",
+        "sub1P": "<strong>HVAC (Heating, Ventilation, and Air Conditioning)</strong> là hệ thống tổng hòa bao gồm tất cả các thiết bị và công nghệ phục vụ cho việc điều hòa không khí, sưởi ấm và thông gió trong công trình.",
+        "sub2Title": "1.2. Chức Năng Chính",
+        "sub2List1": "Heating (Sưởi ấm): Duy trì nhiệt độ trong mùa đông",
+        "sub2List2": "Ventilation (Thông gió): Đảm bảo không khí trong lành, trao đổi khí",
+        "sub2List3": "Air Conditioning (Điều hòa): Làm mát, khử ẩm trong mùa hè",
+        "sub2List4": "Kiểm soát chất lượng không khí (lọc bụi, khử khuẩn)",
+        "sub2List5": "Điều chỉnh độ ẩm",
+        "sub3Title": "1.3. Các Thành Phần",
+        "sub3List1": "Chiller (máy làm lạnh nước)",
+        "sub3List2": "Boiler (nồi hơi)",
+        "sub3List3": "Cooling Tower (tháp giải nhiệt)",
+        "sub3List4": "AHU, FCU, PAC (các thiết bị đầu cuối)",
+        "sub3List5": "Hệ thống ống gió và ống nước",
+        "sub3List6": "Hệ thống điều khiển BMS",
+        "sub4Title": "1.4. Ứng Dụng",
+        "sub4P": "Toà nhà văn phòng, trung tâm thương mại, bệnh viện, nhà máy, khách sạn cao cấp.",
+        "imageAlt": "HVAC tổng thể"
+      },
+      "section3": {
+        "title": "2. AHU - Tủ Xử Lý Không Khí Trung Tâm",
+        "sub1Title": "2.1. Định Nghĩa",
+        "sub1P": "<strong>AHU (Air Handling Unit)</strong> là tủ xử lý không khí trung tâm, chịu trách nhiệm xử lý và phân phối không khí cho toàn bộ hoặc một phần lớn công trình.",
+        "sub2Title": "2.2. Cấu Tạo Chi Tiết",
+        "sub2List1": "Buồng lọc gió: lọc sơ bộ, lọc tinh, lọc HEPA",
+        "sub2List2": "Buồng làm lạnh (Cooling Coil): dàn lạnh nước lạnh",
+        "sub2List3": "Buồng sưởi (Heating Coil): dùng nước nóng hoặc điện",
+        "sub2List4": "Buồng quạt: cấp và hồi gió",
+        "sub2List5": "Buồng tạo ẩm (Humidifier)",
+        "sub2List6": "Buồng trộn gió (Mixing Box)",
+        "sub3Title": "2.3. Nguyên Lý Hoạt Động",
+        "sub3P": "Gió tươi từ bên ngoài trộn với gió hồi từ phòng, đi qua bộ lọc, qua dàn lạnh hoặc dàn sưởi để điều chỉnh nhiệt độ, sau đó được quạt cấp đẩy qua hệ thống ống gió đến các khu vực sử dụng.",
+        "sub4Title": "2.4. Ưu & Nhược Điểm",
+        "sub4Pros": "Ưu điểm: Xử lý tập trung, kiểm soát tốt, tiết kiệm năng lượng.",
+        "sub4Cons": "Nhược điểm: Chi phí cao, cần không gian lớn, ống gió phức tạp."
+      },
+      "section4": {
+        "title": "3. FCU - Tủ Xử Lý Không Khí Cục Bộ",
+        "p1": "<strong>FCU (Fan Coil Unit)</strong> là thiết bị xử lý không khí cục bộ, phục vụ từng phòng hoặc khu vực nhỏ độc lập.",
+        "list1": "Dàn trao đổi nhiệt (Coil)",
+        "list2": "Quạt ly tâm nhiều tốc độ",
+        "list3": "Khay hứng nước ngưng",
+        "list4": "Bộ lọc gió đơn giản",
+        "list5": "Van điều khiển nước lạnh",
+        "p2": "FCU phù hợp với các khu vực riêng biệt như phòng khách sạn, văn phòng nhỏ, phòng họp."
+      },
+      "section5": {
+        "title": "4. PAC - Điều Hòa Tủ Đứng Chính Xác",
+        "sub1Title": "4.1. Định Nghĩa",
+        "sub1P": "PAC là thiết bị điều hòa chuyên dụng với khả năng kiểm soát nhiệt độ và độ ẩm ở mức chính xác cao, đảm bảo môi trường hoạt động ổn định cho các thiết bị công nghệ, đặc biệt trong điều kiện hoạt động 24/7/365.",
+        "sub2Title": "4.2. Đặc Điểm Kỹ Thuật",
+        "sub2List1": "Độ chính xác nhiệt độ: ±1°C hoặc ±0.5°C",
+        "sub2List2": "Độ ẩm: ±5% RH hoặc ±2% RH",
+        "sub2List3": "Hoạt động liên tục 24/7 không gián đoạn",
+        "sub2List4": "Công suất: 5 kW – 100+ kW",
+        "sub2List5": "Tỷ lệ ẩn nhiệt cao (SHR > 0.9)",
+        "sub3Title": "4.3. Cấu Tạo",
+        "sub3List1": "Compressor kép điều khiển biến tần",
+        "sub3List2": "Dàn lạnh hiệu suất cao, van điện tử EEV",
+        "sub3List3": "Hệ thống tạo ẩm điện cực hoặc hồng ngoại",
+        "sub3List4": "Hệ thống khử ẩm tái nhiệt sâu",
+        "sub3List5": "Quạt EC tiết kiệm điện, điều khiển vô cấp",
+        "sub3List6": "Kết nối BMS, giám sát từ xa, cảnh báo lỗi",
+        "sub4Title": "4.4. Phân Loại PAC",
+        "sub4P1": "Theo phương thức làm mát:",
+        "sub4P1List1": "Air-cooled: Giải nhiệt bằng không khí",
+        "sub4P1List2": "Water-cooled: Giải nhiệt bằng nước",
+        "sub4P1List3": "Glycol-cooled: Dùng dung dịch glycol",
+        "sub4P1List4": "Chilled water: Dùng nước lạnh từ Chiller",
+        "sub4P2": "Theo kiểu lắp đặt:",
+        "sub4P2List1": "Up-flow: Gió thổi lên (dưới sàn kỹ thuật)",
+        "sub4P2List2": "Down-flow: Gió thổi xuống",
+        "sub4P2List3": "Horizontal: Gió thổi ngang",
+        "sub5Title": "4.5. Nguyên Lý Hoạt Động",
+        "sub5P1": "PAC liên tục theo dõi nhiệt độ và độ ẩm qua cảm biến chính xác cao. Khi phát hiện sai lệch nhỏ, hệ thống sẽ tự động kích hoạt chế độ làm lạnh, tạo ẩm hoặc khử ẩm để khôi phục cân bằng.",
+        "sub5P2": "Không khí tuần hoàn liên tục đảm bảo nhiệt độ và độ ẩm đồng đều khắp không gian. Hệ thống PAC cũng có khả năng tự chẩn đoán, cảnh báo sự cố, và ghi log dữ liệu để quản lý bảo trì.",
+        "sub6Title": "4.6. Ưu & Nhược Điểm",
+        "sub6ProsTitle": "Ưu điểm:",
+        "sub6Pros1": "Độ chính xác cực cao",
+        "sub6Pros2": "Vận hành liên tục 24/7, độ tin cậy cao",
+        "sub6Pros3": "Tuổi thọ 15–20 năm",
+        "sub6Pros4": "Tích hợp giám sát thông minh, cảnh báo từ xa",
+        "sub6ConsTitle": "Nhược điểm:",
+        "sub6Cons1": "Chi phí đầu tư và bảo trì cao",
+        "sub6Cons2": "Tiêu thụ điện năng lớn",
+        "sub6Cons3": "Yêu cầu kỹ thuật viên có chuyên môn",
+        "sub6Cons4": "Cần hệ thống phụ trợ như UPS hoặc nước làm mát",
+        "sub7Title": "4.7. Tiêu Chí Lựa Chọn",
+        "sub7Intro": "PAC là lựa chọn tối ưu cho các khu vực yêu cầu môi trường kiểm soát chặt chẽ, không cho phép gián đoạn như:",
+        "sub7List1": "Phòng máy chủ (Server Room)",
+        "sub7List2": "Data Center",
+        "sub7List3": "Phòng điều khiển trung tâm (Control Room)",
+        "sub7List4": "Phòng viễn thông (Telecom Room)",
+        "sub7List5": "Phòng thí nghiệm chính xác, bảo tàng, kho lưu trữ dữ liệu"
+      },
+      "section6": {
+        "title": "5. Hướng Dẫn Lựa Chọn Theo Môi Trường",
+        "officeTitle": "5.1. Văn Phòng",
+        "officeList1": "Văn phòng mở lớn (> 500m²): AHU + hệ thống ống gió",
+        "officeList2": "Văn phòng nhiều phòng riêng: Chiller + FCU cho từng phòng",
+        "officeList3": "Văn phòng nhỏ (< 100m²): VRV/VRF hoặc Multi Split",
+        "hospitalTitle": "5.2. Bệnh Viện",
+        "hospitalList1": "Phòng mổ, ICU: AHU chuyên dụng với lọc HEPA",
+        "hospitalList2": "Phòng bệnh thường: FCU 4 ống",
+        "hospitalList3": "Phòng máy chủ bệnh viện: PAC",
+        "hotelTitle": "5.3. Khách Sạn",
+        "hotelList1": "Phòng khách: FCU âm trần",
+        "hotelList2": "Sảnh, nhà hàng: AHU",
+        "factoryTitle": "5.4. Nhà Máy & Công Nghiệp",
+        "factoryList1": "Phòng sạch sản xuất: AHU với FFU",
+        "factoryList2": "Phòng máy chủ nhà máy: PAC",
+        "factoryList3": "Khu văn phòng: FCU hoặc AHU tùy diện tích",
+        "dcTitle": "5.5. Data Center",
+        "dcList1": "Server Room nhỏ (< 50m²): PAC 1-2 units với N+1 redundancy",
+        "dcList2": "Data Center trung bình: PAC với Chiller riêng, cấu hình Hot/Cold aisle",
+        "dcList3": "Data Center lớn: Hệ thống PAC phân tán + Chiller Plant với công nghệ Free Cooling"
+      },
+      "section7": {
+        "title": "6. Xu Hướng Công Nghệ Mới",
+        "vrvTitle": "6.1. VRV/VRF (Variable Refrigerant Volume/Flow)",
+        "vrvP": "Hệ thống <strong>VRV/VRF</strong> cho phép điều khiển lưu lượng môi chất lạnh biến thiên theo nhu cầu thực tế của từng khu vực, giúp tiết kiệm năng lượng từ 30–50% so với hệ thống truyền thống.",
+        "vrvList1": "Hoạt động linh hoạt – mỗi dàn lạnh có thể điều chỉnh độc lập",
+        "vrvList2": "Giảm hao phí năng lượng nhờ công nghệ Inverter và cảm biến thông minh",
+        "vrvList3": "Thi công gọn gàng, phù hợp cho tòa nhà cao tầng và văn phòng",
+        "vrvList4": "Kết hợp ưu điểm giữa hệ thống cục bộ (Multi Split) và trung tâm (Chiller)",
+        "beamTitle": "6.2. Chilled Beam",
+        "beamP": "<strong>Chilled Beam</strong> là công nghệ làm lạnh bằng nước thông qua các dầm trần (beam) tích hợp ống dẫn nước lạnh. Giải pháp này giúp tiết kiệm không gian ống gió và tiêu thụ điện năng thấp hơn nhiều so với hệ thống truyền thống.",
+        "beamList1": "Tối ưu không gian – giảm 40% kích thước trần kỹ thuật",
+        "beamList2": "Hiệu quả năng lượng cao nhờ sử dụng nước làm lạnh",
+        "beamList3": "Vận hành êm ái, bảo trì dễ dàng",
+        "beamList4": "Phù hợp cho bệnh viện, văn phòng cao cấp, trường học",
+        "aiTitle": "6.3. AI & IoT trong HVAC",
+        "aiP": "Ứng dụng <strong>AI</strong> và <strong>IoT</strong> đang thay đổi hoàn toàn cách vận hành và quản lý hệ thống HVAC. Dữ liệu từ cảm biến được thu thập liên tục để tối ưu hiệu suất, dự đoán sự cố và giảm chi phí bảo trì.",
+        "aiList1": "Tối ưu năng lượng theo thời gian thực",
+        "aiList2": "Bảo trì dự báo (Predictive Maintenance)",
+        "aiList3": "Phát hiện sớm rò rỉ gas hoặc lỗi cảm biến",
+        "aiList4": "Điều khiển thông minh theo hành vi người dùng và lịch sử sử dụng",
+        "freeTitle": "6.4. Free Cooling",
+        "freeP": "<strong>Free Cooling</strong> là giải pháp sử dụng không khí ngoài trời để làm mát khi điều kiện môi trường cho phép, đặc biệt hiệu quả ở vùng khí hậu mát mẻ hoặc ban đêm.",
+        "freeList1": "Tận dụng không khí tự nhiên – giảm thời gian hoạt động của Chiller",
+        "freeList2": "Tăng tuổi thọ thiết bị và giảm CO₂ phát thải",
+        "freeList3": "Phù hợp cho Data Center, nhà máy và khu công nghiệp",
+        "summaryTitle": "Tổng Kết",
+        "summaryP": "Sự kết hợp của <strong>VRV/VRF, Chilled Beam, AI/IoT</strong> và <strong>Free Cooling</strong> đang định hình tương lai ngành HVAC theo hướng bền vững, tiết kiệm năng lượng và thân thiện với môi trường. Các xu hướng này giúp doanh nghiệp giảm chi phí, tăng hiệu quả và hướng tới mô hình tòa nhà xanh (Green Building) trong tương lai."
+      },
+      "section8": {
+        "title": "7. Kết Luận",
+        "p1": "Lựa chọn hệ thống HVAC phù hợp đòi hỏi hiểu rõ đặc thù công trình, yêu cầu vận hành và ngân sách đầu tư. Nguyên tắc vàng: xác định nhu cầu cụ thể, đánh giá tổng thể, tư vấn chuyên gia và bảo trì định kỳ.",
+        "imageAlt": "Kết luận HVAC"
+      }
+    },
+    "blogPost3": {
+    "category": "Data Center",
+    "title": "Hệ Thống UPS và Phân Phối Điện Trong Data Center",
+    "publishedOn": "Đăng vào ngày",
+    "publishedBy": "bởi",
+    "bannerAlt": "UPS và phân phối điện Data Center",
+    "section1Title": "1. Nguyên Lý Hoạt Động Của Hệ Thống UPS",
+    "section1P1": "<strong>UPS (Uninterruptible Power Supply)</strong> là thiết bị cung cấp nguồn điện dự phòng không gián đoạn, giúp bảo vệ thiết bị IT trong Data Center khỏi các sự cố mất điện đột ngột hoặc sụt áp.",
+    "section1Sub1Title": "1.1. UPS Là Gì?",
+    "section1Sub1P1": "UPS hoạt động như một “lá chắn năng lượng”, đảm bảo nguồn điện ổn định và sạch cho hệ thống máy chủ. Khi nguồn lưới gặp sự cố, UPS chuyển sang dùng pin trong chưa đến 4ms.",
+    "section1Sub2Title": "1.2. Ba Chế Độ Hoạt Động",
+    "section1Sub2Item1": "<strong>Chế độ bình thường:</strong> Chỉnh lưu AC sang DC để nạp pin và cung cấp điện sạch qua nghịch lưu.",
+    "section1Sub2Item2": "<strong>Chế độ pin:</strong> Khi mất điện, UPS tự động dùng pin để duy trì hệ thống trong 10–30 phút.",
+    "section1Sub2Item3": "<strong>Chế độ bypass:</strong> Cấp điện trực tiếp từ lưới khi bảo trì hoặc tải quá công suất.",
+    "section2Title": "2. Cơ Chế Bảo Vệ Của UPS",
+    "section2Item1": "Chống mất điện: chuyển nguồn trong mili-giây.",
+    "section2Item2": "Ổn định điện áp và lọc nhiễu tần số cao.",
+    "section2Item3": "Chống sét lan truyền và dao động điện áp.",
+    "section2Item4": "Điều chỉnh tần số: duy trì 50Hz/60Hz ổn định.",
+    "section3Title": "3. Cấu Trúc Nguồn: Main – ATS – UPS – PDU",
+    "section3P1": "Hệ thống cấp điện trong <strong>Data Center</strong> được thiết kế với nhiều tầng bảo vệ nhằm đảm bảo nguồn điện luôn <strong>ổn định, sạch và liên tục 24/7</strong>. Sơ đồ dòng điện tổng quát:",
+    "section3P2": "<strong>NGUỒN LƯỚI → ATS → UPS → PDU → THIẾT BỊ IT</strong><br/>(Máy phát điện và Pin dự phòng được kết nối song song với <strong>ATS</strong> và <strong>UPS</strong> để bảo đảm không gián đoạn.)",
+    "section3Sub1Title": "3.1. Thành Phần Chính",
+    "section3Sub1_1Title": "🔹 Main Power (Nguồn Chính)",
+    "section3Sub1_1Item1": "Cung cấp điện từ lưới điện quốc gia hoặc trạm biến áp riêng của doanh nghiệp.",
+    "section3Sub1_1Item2": "Tích hợp <strong>máy phát điện dự phòng</strong> khởi động trong 10–15 giây khi mất điện.",
+    "section3Sub1_1Item3": "Đảm bảo đầu vào ổn định cho toàn hệ thống ATS – UPS – PDU.",
+    "section3Sub1_2Title": "🔹 ATS (Automatic Transfer Switch)",
+    "section3Sub1_2Item1": "Thiết bị <strong>tự động chuyển nguồn</strong> giữa lưới điện và máy phát khi xảy ra sự cố mất điện.",
+    "section3Sub1_2Item2": "Thời gian chuyển đổi cực nhanh: <strong>&lt; 100ms</strong>, không làm gián đoạn hệ thống IT.",
+    "section3Sub1_2Item3": "Có chế độ <strong>bypass thủ công</strong> để bảo trì mà không làm gián đoạn hoạt động.",
+    "section3Sub1_3Title": "🔹 UPS (Uninterruptible Power Supply)",
+    "section3Sub1_3Item1": "Cung cấp điện tức thời khi mất điện, đảm bảo hoạt động liên tục cho thiết bị CNTT.",
+    "section3Sub1_3Item2": "Cấu hình linh hoạt:",
+    "section3Sub1_3Item2_1": "<strong>N+1:</strong> Một UPS dự phòng cho mỗi cụm vận hành.",
+    "section3Sub1_3Item2_2": "<strong>2N:</strong> Hai hệ thống độc lập (A-side & B-side), đạt độ tin cậy Tier IV.",
+    "section3Sub1_3Item3": "Thành phần chính:",
+    "section3Sub1_3Item3_1": "<strong>Rectifier:</strong> Chuyển đổi AC → DC để nạp pin.",
+    "section3Sub1_3Item3_2": "<strong>Battery Bank:</strong> Lưu trữ năng lượng dự phòng (10–30 phút).",
+    "section3Sub1_3Item3_3": "<strong>Inverter:</strong> Chuyển DC → AC cung cấp điện sạch cho tải IT.",
+    "section3Sub1_3Item3_4": "<strong>Bypass Circuit:</strong> Cấp điện trực tiếp khi cần bảo trì hoặc quá tải.",
+    "section3Sub1_4Title": "🔹 PDU (Power Distribution Unit)",
+    "section3Sub1_4Item1": "Phân phối điện từ UPS đến các tủ rack, thiết bị mạng và server.",
+    "section3Sub1_4Item2": "Gồm hai loại:",
+    "section3Sub1_4Item2_1": "<strong>Room PDU:</strong> Phân phối điện cho toàn phòng máy.",
+    "section3Sub1_4Item2_2": "<strong>Rack PDU:</strong> Gắn trong từng tủ rack (thường 42U), có nhiều ổ cắm.",
+    "section3Sub1_4Item3": "Tích hợp các tính năng thông minh:",
+    "section3Sub1_4Item3_1": "Đo công suất tiêu thụ theo ổ cắm hoặc theo rack.",
+    "section3Sub1_4Item3_2": "Cảnh báo quá tải và giám sát nhiệt độ môi trường.",
+    "section3Sub1_4Item3_3": "Điều khiển từ xa qua giao diện web hoặc phần mềm DCIM.",
+    "section3P3": "Nhờ thiết kế cấu trúc nhiều tầng như vậy, hệ thống nguồn trong Data Center đảm bảo điện năng <strong>ổn định – an toàn – không gián đoạn</strong>, kể cả trong trường hợp sự cố mất điện lưới hoặc bảo trì hệ thống.",
+    "section4Title": "4. Dòng Điện Liên Tục 24/7 – Quy Trình Hoạt Động",
+    "section4P1": "Hệ thống điện trong Data Center được thiết kế theo nguyên tắc <strong>không gián đoạn (24/7/365)</strong>, đảm bảo thiết bị CNTT luôn nhận điện ổn định, dù xảy ra sự cố mất điện từ lưới. Toàn bộ quá trình được chia thành 4 giai đoạn chính:",
+    "section4Sub1Title": "4.1. Hoạt Động Bình Thường",
+    "section4Sub1Item1": "Lưới điện → ATS → UPS (nạp pin) → PDU → Thiết bị IT.",
+    "section4Sub1Item2": "UPS vừa cấp điện “sạch” cho tải, vừa sạc đầy pin dự phòng.",
+    "section4Sub1Item3": "Thời gian hoạt động: <strong>Không giới hạn</strong> khi nguồn lưới ổn định.",
+    "section4Sub2Title": "4.2. Mất Điện (0–15s)",
+    "section4Sub2Item1": "Khi lưới mất điện, UPS lập tức chuyển sang chế độ pin <strong>(không gián đoạn)</strong>.",
+    "section4Sub2Item2": "Pin UPS duy trì điện cho toàn hệ thống trong 10–30 phút.",
+    "section4Sub2Item3": "Máy phát điện tự động khởi động trong 10–15 giây.",
+    "section4Sub3Title": "4.3. Máy Phát Hoạt Động",
+    "section4Sub3Item1": "Khi máy phát ổn định, ATS chuyển nguồn sang máy phát.",
+    "section4Sub3Item2": "Luồng điện: <strong>Máy phát → ATS → UPS → PDU → Thiết bị</strong>.",
+    "section4Sub3Item3": "UPS tiếp tục sạc pin trong khi cấp điện từ máy phát.",
+    "section4Sub3Item4": "Thời gian hoạt động: <strong>24–48 giờ</strong> tùy dung lượng nhiên liệu.",
+    "section4Sub4Title": "4.4. Phục Hồi Điện Lưới",
+    "section4Sub4Item1": "Khi điện lưới trở lại, ATS tự động chuyển nguồn về lưới.",
+    "section4Sub4Item2": "Luồng điện: <strong>Lưới điện → ATS → UPS → PDU → Thiết bị IT</strong>.",
+    "section4Sub4Item3": "Máy phát ngừng sau 5 phút để đảm bảo điện ổn định.",
+    "section4Sub4Item4": "Toàn bộ quá trình chuyển đổi <strong>liền mạch</strong> – không ảnh hưởng đến hệ thống CNTT.", 
+    "section4P2": "Nhờ quy trình này, hệ thống điện Data Center duy trì hoạt động liên tục, an toàn và ổn định, đáp ứng tiêu chuẩn <strong>uptime 99.995%</strong> của Tier III–IV.",
+    "imageAlt1": "Sơ đồ UPS trong Data Center",
+    "section5Title": "5. Giám Sát & Bảo Trì Hệ Thống",
+    "section5P1": "Hệ thống UPS và PDU được giám sát qua phần mềm <strong>DCIM (Data Center Infrastructure Management)</strong>, theo dõi tải, điện áp, nhiệt độ và tình trạng pin theo thời gian thực.",
+    "section5Item1": "Giám sát qua Dashboard, cảnh báo sự cố qua email/SMS.",
+    "section5Item2": "UPS kiểm tra hàng tháng, test tải hàng quý, thay pin mỗi 5–7 năm.",
+    "section5Item3": "Máy phát điện test hàng tuần và bảo dưỡng định kỳ 6 tháng/lần.",
+    "section6Title": "6. Bảo Trì Định Kỳ",
+    "section6P1": "Để hệ thống điện Data Center hoạt động ổn định và đạt tuổi thọ tối đa, việc bảo trì định kỳ là bắt buộc. Các hạng mục chính bao gồm UPS và máy phát điện.",
+    "section6Sub1Title": "6.1. UPS (Uninterruptible Power Supply)",
+    "section6Sub1Item1": "<strong>Hàng tháng:</strong> Kiểm tra tình trạng pin, nhật ký sự cố và nhiệt độ thiết bị.",
+    "section6Sub1Item2": "<strong>Hàng quý:</strong> Thực hiện kiểm tra chuyển đổi nguồn giữa chế độ lưới và pin.",
+    "section6Sub1Item3": "<strong>Hàng năm:</strong> Test tải đầy đủ để đánh giá hiệu suất tổng thể của hệ thống UPS.",
+    "section6Sub1Item4": "<strong>Thay pin:</strong> Chu kỳ từ <strong>5–7 năm</strong> tùy theo điều kiện hoạt động và loại pin.",
+    "section6Sub2Title": "6.2. Máy Phát Điện Dự Phòng",
+    "section6Sub2Item1": "<strong>Hàng tuần:</strong> Chạy thử không tải trong khoảng 15 phút để đảm bảo khả năng khởi động.",
+    "section6Sub2Item2": "<strong>Hàng tháng:</strong> Test có tải trong 30 phút để kiểm tra công suất thực tế và khả năng duy trì điện áp ổn định.",
+    "section6Sub2Item3": "<strong>Mỗi 6 tháng:</strong> Thực hiện bảo dưỡng định kỳ, thay dầu, lọc gió, và kiểm tra mức nhiên liệu.",
+    "section6P2": "Ngoài ra, hệ thống DCIM có thể hỗ trợ tự động ghi nhận lịch bảo trì, nhắc nhở và lưu trữ báo cáo kiểm tra, giúp vận hành viên quản lý lịch trình hiệu quả hơn.",
+    "section7Title": "Kết Luận",
+    "section7P1": "Hệ thống <strong>Main – ATS – UPS – PDU</strong> tạo thành bốn lớp bảo vệ liên tục cho trung tâm dữ liệu, đảm bảo điện năng ổn định, sạch và không gián đoạn.",
+    "section7P2": "Với thiết kế <strong>redundancy N+1 hoặc 2N</strong> và quy trình bảo trì định kỳ nghiêm ngặt, hệ thống có thể đạt <strong>độ tin cậy 99.995%</strong> (Tier III – Tier IV).",
+    "section7P3": "Điều này giúp Data Center vận hành 24/7/365, đáp ứng yêu cầu cao nhất của doanh nghiệp trong kỷ nguyên số – nơi <strong>downtime bằng thiệt hại</strong>.",
+    "imageAlt2": "Hệ thống điện Data Center hiện đại"
+  },
+  "blogPost4": {
+    "category": "Data Center Cooling",
+    "title": "SmartCool i-drive: Giải pháp làm lạnh chính xác – Tiết kiệm và Ổn định",
+    "publishedOn": "Đăng vào ngày",
+    "publishedBy": "bởi",
+    "bannerAlt": "SmartCool i-drive – hệ thống làm lạnh Data Center",
+    "section1Title": "1. Giới Thiệu",
+    "section1P1": "<strong>SmartCool i-drive</strong> là hệ thống điều hòa làm lạnh chính xác thế hệ mới, được thiết kế đặc biệt cho <strong>phòng server và trung tâm dữ liệu</strong>. Với công nghệ biến tần thông minh và khả năng kiểm soát nhiệt độ siêu chính xác, SmartCool i-drive mang đến giải pháp tối ưu về <strong>hiệu suất, độ tin cậy và tiết kiệm năng lượng</strong>.",
+    "imageAlt1": "Cấu trúc hệ thống SmartCool i-drive",
+    "section2Title": "2. Cơ Chế Làm Lạnh Thông Minh",
+    "section2P1": "SmartCool i-drive sử dụng cảm biến nhiệt độ và độ ẩm <strong>đa điểm</strong>, kết hợp với <strong>thuật toán AI điều khiển tự động</strong> để phân tích tải nhiệt và điều chỉnh công suất làm lạnh theo thời gian thực. Nhờ đó, hệ thống duy trì môi trường nhiệt độ ổn định, bảo vệ server khỏi sự biến động đột ngột.",
+    "section2Item1": "Tối ưu vận hành theo mức tải thực tế.",
+    "section2Item2": "Phản ứng nhanh với thay đổi nhiệt độ trong phòng server.",
+    "section2Item3": "Giảm chu kỳ bật/tắt máy nén, giúp <strong>tăng tuổi thọ</strong> thiết bị.",
+    "section3Title": "3. Công Nghệ Biến Tần Tiên Tiến",
+    "section3P1": "<strong>Inverter Technology</strong> trên SmartCool i-drive cho phép máy nén thay đổi tốc độ từ 10–100%, thay vì chỉ bật/tắt như máy truyền thống. Cơ chế này giúp tiết kiệm điện năng, giảm độ ồn và đảm bảo nhiệt độ chính xác.",
+    "section3Item1": "Vận hành mượt mà, không giật lag.",
+    "section3Item2": "Giảm độ ồn xuống dưới <strong>55dB</strong>.",
+    "section3Item3": "Kéo dài tuổi thọ máy nén gấp 2 lần.",
+    "section3Item4": "Khởi động êm ái, không gây sốc điện áp.",
+    "imageAlt2": "Nguyên lý biến tần của SmartCool i-drive",
+    "section4Title": "4. Kiểm Soát Nhiệt Độ Siêu Chính Xác ±0.5°C",
+    "section4P1": "SmartCool i-drive đạt độ chính xác nhiệt độ ±0.5°C — vượt trội hơn nhiều so với các hệ thống làm lạnh thông thường (dao động ±2–3°C). Mức kiểm soát này cực kỳ quan trọng trong môi trường Data Center.",
+    "section4Item1": "Bảo vệ thiết bị server khỏi stress nhiệt.",
+    "section4Item2": "Giảm nguy cơ lỗi phần cứng do biến động nhiệt độ.",
+    "section4Item3": "Tối ưu hiệu suất hoạt động, giảm điện năng tiêu thụ cho hệ thống làm mát.",
+    "section4Item4": "Tuân thủ tiêu chuẩn <strong>ASHRAE</strong> cho trung tâm dữ liệu hiện đại.",
+    "section5Title": "5. Tiết Kiệm Điện Năng Vượt Trội",
+    "section5P1": "SmartCool i-drive có thể giúp <strong>giảm 40–60%</strong> chi phí điện năng so với hệ thống thông thường nhờ các công nghệ thông minh:",
+    "section5Item1": "<strong>EC Fan:</strong> Quạt tiết kiệm điện, hiệu suất cao.",
+    "section5Item2": "<strong>Smart Capacity Control:</strong> Điều chỉnh công suất theo tải nhiệt thực tế.",
+    "section5Item3": "<strong>Free Cooling:</strong> Tận dụng không khí ngoài trời khi điều kiện nhiệt độ cho phép.",
+    "section5Item4": "<strong>Sleep Mode:</strong> Tự động giảm công suất trong giờ thấp điểm.",
+    "section5P2": "Với phòng server diện tích <strong>50m²</strong>, hệ thống có thể tiết kiệm đến <strong>30–50 triệu đồng/năm</strong> tiền điện.",
+    "imageAlt3": "Tiết kiệm năng lượng SmartCool i-drive",
+    "section6Title": "6. Ưu Điểm Nổi Bật",
+    "section6Item1": "Độ chính xác nhiệt độ ±0.5°C – hàng đầu thị trường.",
+    "section6Item2": "Tiết kiệm điện 40–60% – hoàn vốn sau 2–3 năm.",
+    "section6Item3": "Vận hành êm ái dưới 55dB, thân thiện môi trường.",
+    "section6Item4": "Giám sát từ xa 24/7 qua ứng dụng di động hoặc nền tảng DCIM.",
+    "section6Item5": "Cảnh báo sớm sự cố, hỗ trợ bảo trì dự phòng.",
+    "section6Item6": "Tuổi thọ thiết bị lên tới 15–20 năm.",
+    "section7Title": "7. Kết Luận",
+    "section7P1": "<strong>SmartCool i-drive</strong> là lựa chọn hoàn hảo cho các doanh nghiệp đang tìm kiếm giải pháp làm lạnh chính xác, ổn định và tiết kiệm năng lượng cho trung tâm dữ liệu. Mặc dù chi phí đầu tư ban đầu cao hơn, nhưng hiệu quả kinh tế và độ tin cậy lâu dài là vượt trội.",
+    "section7P2": "Với việc kết hợp giữa <strong>công nghệ biến tần, trí tuệ nhân tạo và giám sát thông minh</strong>, SmartCool i-drive giúp doanh nghiệp hướng tới mục tiêu <strong>Data Center xanh – tiết kiệm – hiệu quả</strong>.",
+    "imageAlt4": "SmartCool i-drive Data Center Cooling"
+  },
+
+  "blogPost5": {
+    "category": "Building Management System",
+    "title": "Ứng Dụng Modbus & SNMP Trong BMS và Giám Sát Thiết Bị",
+    "publishedOn": "Đăng vào ngày",
+    "publishedBy": "bởi",
+    "bannerAlt": "Ứng dụng Modbus và SNMP trong BMS",
+    "section1Title": "Giới Thiệu",
+    "section1P1": "Trong kỷ nguyên tự động hóa và Internet of Things (IoT), việc giám sát và điều khiển các hệ thống trong tòa nhà trở nên ngày càng quan trọng. <strong>Modbus</strong> và <strong>SNMP</strong> là hai giao thức truyền thông phổ biến nhất được sử dụng trong <strong>BMS (Building Management System)</strong> để thu thập dữ liệu, điều khiển thiết bị và quản lý hạ tầng thông minh.",
+    "section1P2": "Modbus thường được ứng dụng cho thiết bị công nghiệp, HVAC, đồng hồ điện, cảm biến môi trường... trong khi SNMP chủ yếu dùng trong giám sát thiết bị mạng, máy chủ và UPS. Cả hai kết hợp lại giúp BMS vận hành ổn định, minh bạch và hiệu quả.",
+    "section2Title": "1. Giao Thức Modbus",
+    "section2Sub1Title": "1.1. Tổng Quan",
+    "section2Sub1P1": "<strong>Modbus</strong> là giao thức truyền thông công nghiệp mã nguồn mở, được phát triển bởi Modicon (nay là Schneider Electric). Nhờ tính đơn giản, ổn định và dễ triển khai, Modbus trở thành tiêu chuẩn de-facto trong công nghiệp tự động hóa.",
+    "section2Sub1Item1": "Modbus RTU – hoạt động qua đường truyền RS-485.",
+    "section2Sub1Item2": "Modbus TCP/IP – truyền dữ liệu qua Ethernet (LAN/WAN).",
+    "section2Sub1Item3": "Modbus ASCII – dạng ký tự, dễ debug và kiểm tra.",
+    "section2Sub2Title": "1.2. Cơ Chế Hoạt Động",
+    "section2Sub2P1": "Modbus sử dụng mô hình <strong>Master–Slave</strong> (hoặc Client–Server trong Modbus TCP):",
+    "section2Sub2Item1": "Master gửi yêu cầu đọc hoặc ghi dữ liệu đến Slave.",
+    "section2Sub2Item2": "Slave phản hồi bằng dữ liệu trong các thanh ghi (Register).",
+    "section2Sub2Item3": "Một Master có thể kết nối đến tối đa <strong>247 thiết bị Slave</strong>.",
+    "section2Sub2Item4": "Dữ liệu được kiểm tra bằng mã <strong>CRC</strong> để đảm bảo chính xác.",
+    "imageAlt1": "Mô hình truyền thông Modbus TCP",
+    "section3Title": "2. Giao Thức SNMP",
+    "section3Sub1Title": "2.1. Tổng Quan",
+    "section3Sub1P1": "<strong>SNMP (Simple Network Management Protocol)</strong> là giao thức quản lý mạng dùng để giám sát và điều khiển các thiết bị IT như switch, router, server, UPS, camera IP...",
+    "section3Sub1Item1": "SNMPv1: Phiên bản đầu tiên, đơn giản nhưng bảo mật yếu.",
+    "section3Sub1Item2": "SNMPv2c: Cải thiện tốc độ và thêm lệnh GETBULK.",
+    "section3Sub1Item3": "SNMPv3: Hỗ trợ mã hóa và xác thực người dùng.",
+    "section3Sub2Title": "2.2. Cơ Chế Hoạt Động",
+    "section3Sub2P1": "SNMP hoạt động theo mô hình <strong>Manager – Agent</strong>:",
+    "section3Sub2Item1": "Manager gửi lệnh <strong>GET</strong> để lấy thông tin.",
+    "section3Sub2Item2": "Agent phản hồi dựa trên cơ sở dữ liệu <strong>MIB</strong> (Management Information Base).",
+    "section3Sub2Item3": "Agent có thể chủ động gửi <strong>Trap</strong> khi có sự cố (mất nguồn, quá nhiệt...).",
+    "section3Sub2Item4": "Manager có thể dùng lệnh <strong>SET</strong> để thay đổi cấu hình thiết bị.",
+    "imageAlt2": "Mô hình SNMP trong giám sát mạng",
+    "section4Title": "3. Cách Truyền Dữ Liệu",
+    "section4Sub1Title": "3.1. Quy Trình Modbus",
+    "section4Sub1Item1": "Master kết nối tới Slave qua RS-485 hoặc TCP/IP.",
+    "section4Sub1Item2": "Gửi lệnh đọc/ghi với địa chỉ thanh ghi cụ thể.",
+    "section4Sub1Item3": "Slave xử lý và trả về dữ liệu thực.",
+    "section4Sub1Item4": "Phần mềm BMS hiển thị thông tin real-time.",
+    "section4Sub2Title": "3.2. Quy Trình SNMP",
+    "section4Sub2Item1": "Manager gửi lệnh GET request với OID cụ thể.",
+    "section4Sub2Item2": "Agent truy xuất MIB và phản hồi dữ liệu.",
+    "section4Sub2Item3": "Manager lưu dữ liệu và cập nhật dashboard.",
+    "section4Sub2Item4": "Agent gửi Trap khi có cảnh báo hoặc sự kiện bất thường.",
+    "section5Title": "4. Ứng Dụng Thực Tế Trong BMS",
+    "section5Sub1Title": "4.1. Ứng Dụng Modbus",
+    "section5Sub1Item1": "<strong>Điều hòa trung tâm (HVAC):</strong> Kết nối 50 máy lạnh qua Modbus RTU để thu thập nhiệt độ, độ ẩm, công suất và điều khiển bật/tắt từ xa.",
+    "section5Sub1Item2": "<strong>Giám sát năng lượng:</strong> Đồng hồ điện Modbus TCP truyền dữ liệu tiêu thụ mỗi 5 giây, giúp phát hiện bất thường.",
+    "section5Sub1Item3": "<strong>Phòng server:</strong> Cảm biến nhiệt độ, UPS và PAC điều khiển qua Modbus tích hợp vào DCIM.",
+    "section5Sub2Title": "4.2. Ứng Dụng SNMP",
+    "section5Sub2Item1": "<strong>Giám sát mạng:</strong> Monitor hàng trăm switch/router, thu thập CPU, RAM, băng thông, cảnh báo khi interface down.",
+    "section5Sub2Item2": "<strong>Quản lý UPS:</strong> Theo dõi điện áp, tải, nhiệt độ, nhận Trap khi chuyển sang pin, tự động shutdown server khi pin yếu.",
+    "section5Sub2Item3": "<strong>Giám sát môi trường:</strong> Cảm biến nhiệt độ, độ ẩm, khói gửi Trap ngay khi phát hiện bất thường.",
+    "section5Sub3Title": "4.3. Kết Hợp Cả Hai Trong BMS",
+    "section5Sub3Item1": "Modbus cho thiết bị HVAC, đồng hồ điện, cảm biến môi trường.",
+    "section5Sub3Item2": "SNMP cho hạ tầng mạng, UPS, camera IP.",
+    "section5Sub3Item3": "Gateway trung gian giúp chuyển đổi hai giao thức.",
+    "section5Sub3Item4": "Dashboard tổng hợp hiển thị toàn bộ dữ liệu trong BMS.",
+    "section6Title": "5. Lợi Ích Khi Ứng Dụng Modbus & SNMP",
+    "section6Item1": "Tích hợp đa dạng thiết bị từ nhiều nhà sản xuất.",
+    "section6Item2": "Giám sát real-time 24/7 với cảnh báo tức thời.",
+    "section6Item3": "Phát hiện sự cố sớm, giảm thời gian downtime.",
+    "section6Item4": "Điều khiển và cấu hình thiết bị từ xa tiện lợi.",
+    "section6Item5": "Dữ liệu tập trung giúp phân tích xu hướng và báo cáo năng lượng.",
+    "section6Item6": "Tối ưu hóa vận hành và tiết kiệm chi phí bảo trì.",
+    "section7Title": "Kết Luận",
+    "section7P1": "<strong>Modbus</strong> và <strong>SNMP</strong> là hai giao thức nền tảng giúp BMS trở nên thông minh và linh hoạt hơn. Modbus phù hợp cho các thiết bị công nghiệp yêu cầu phản hồi tức thời, trong khi SNMP là lựa chọn lý tưởng cho quản lý thiết bị IT và mạng.",
+    "section7P2": "Khi được tích hợp hợp lý, hai giao thức này tạo nên một hệ thống giám sát tập trung, an toàn và hiệu quả — giúp đội vận hành dễ dàng kiểm soát toàn bộ hạ tầng tòa nhà, từ HVAC đến UPS và mạng nội bộ.",
+    "imageAlt3": "Dashboard BMS với Modbus và SNMP"
+  },
+  "blogPost6": {
+    "category": "Data Center Infrastructure Management",
+    "title": "Tích Hợp Hệ Thống An Toàn & Giám Sát Vào Nền Tảng DCIM",
+    "publishedOn": "Đăng vào ngày",
+    "publishedBy": "bởi",
+    "bannerAlt": "Tích hợp hệ thống an toàn và giám sát DCIM",
+    "section1Title": "Giới Thiệu",
+    "section1P1": "Trong các trung tâm dữ liệu hiện đại, việc đảm bảo <strong>an toàn, an ninh và giám sát tập trung</strong> đóng vai trò then chốt. Bằng cách tích hợp các hệ thống như <strong>Fire Alarm, CCTV</strong> và <strong>Access Control</strong> vào nền tảng <strong>DCIM (Data Center Infrastructure Management)</strong>, doanh nghiệp có thể quản lý toàn diện hạ tầng, giảm thiểu rủi ro và nâng cao hiệu quả vận hành.",
+    "section2Title": "Giải Pháp Quản Lý Tập Trung Toàn Diện",
+    "section2P1": "DCIM trở thành “bộ não trung tâm”, kết nối toàn bộ hệ thống an toàn và giám sát thông qua các giao thức tiêu chuẩn, giúp hợp nhất dữ liệu và hiển thị trên một dashboard duy nhất.",
+    "imageAlt1": "Dashboard DCIM quản lý toàn diện",
+    "section3Title": "Cách Thức Tích Hợp",
+    "section3Sub1Title": "1. Kết Nối Qua Giao Thức Chuẩn",
+    "section3Sub1P1": "Các hệ thống được kết nối với DCIM qua <strong>BACnet, Modbus, SNMP hoặc API</strong>, giúp truyền tải dữ liệu thời gian thực về trạng thái thiết bị, sự kiện và cảnh báo.",
+    "section3Sub2Title": "2. Giao Diện Quản Lý Duy Nhất",
+    "section3Sub2P1": "Tất cả thông tin từ các hệ thống an toàn và giám sát được hiển thị trên một dashboard tập trung. Điều này giúp người vận hành dễ dàng theo dõi, xử lý sự cố và đưa ra quyết định nhanh chóng.",
+    "section3Sub3Title": "3. Liên Kết Dữ Liệu Thông Minh",
+    "section3Sub3P1": "Khi phát hiện khói, hệ thống DCIM có thể <strong>tự động hiển thị camera khu vực liên quan</strong>, kích hoạt cảnh báo và <strong>khóa các lối ra vào nguy hiểm</strong>. Đây là nền tảng cho mô hình vận hành chủ động và tự động hóa thông minh.",
+    "imageAlt2": "Liên kết dữ liệu thông minh giữa Fire Alarm và CCTV",
+    "section4Title": "Lợi Ích Vận Hành",
+    "section4Item1": "<strong>Phản ứng nhanh chóng:</strong> Cảnh báo tập trung giúp đội ngũ phản ứng kịp thời khi có sự cố cháy nổ, xâm nhập hay mất kết nối.",
+    "section4Item2": "<strong>Giảm nhân lực giám sát:</strong> Một nhóm kỹ thuật nhỏ có thể quản lý toàn bộ tòa nhà qua giao diện DCIM.",
+    "section4Item3": "<strong>Báo cáo tự động:</strong> Ghi nhận đầy đủ lịch sử ra vào, sự cố và báo cháy để phục vụ kiểm toán và tiêu chuẩn an toàn.",
+    "section4Item4": "<strong>Phân tích và dự báo:</strong> Dữ liệu lịch sử giúp phát hiện điểm yếu trong hệ thống và xây dựng kế hoạch bảo trì chủ động.",
+    "section5Title": "Cảnh Báo Tập Trung",
+    "section5Sub1Title": "1. Ưu Tiên Thông Minh",
+    "section5Sub1P1": "DCIM tự động phân loại cảnh báo theo mức độ <strong>khẩn cấp – cảnh báo – thông tin</strong>, giúp người vận hành tập trung xử lý các sự cố quan trọng nhất trước.",
+    "section5Sub2Title": "2. Thông Báo Đa Kênh",
+    "section5Sub2P1": "Cảnh báo được gửi qua nhiều kênh như <strong>email, SMS, app di động</strong> và giao diện dashboard để đảm bảo đội ngũ luôn được cập nhật dù ở bất kỳ đâu.",
+    "section5Sub3Title": "3. Liên Kết Sự Kiện",
+    "section5Sub3P1": "Khi xảy ra sự cố, DCIM hiển thị <strong>vị trí chính xác trên sơ đồ tầng</strong>, kèm hình ảnh từ camera và lịch sử ra vào – giúp đánh giá nhanh tình huống tổng thể.",
+    "imageAlt3": "Cảnh báo tập trung trong hệ thống DCIM",
+    "section6Title": "Kết Luận",
+    "section6P1": "Việc tích hợp các hệ thống an toàn và giám sát vào nền tảng <strong>DCIM</strong> không chỉ giúp <strong>đơn giản hóa quản lý vận hành</strong> mà còn <strong>nâng cao đáng kể khả năng phòng ngừa, phản ứng và bảo mật</strong>.",
+    "section6P2": "Đây là xu hướng tất yếu để xây dựng <strong>Trung tâm dữ liệu thông minh – an toàn – hiệu quả</strong>, đáp ứng yêu cầu khắt khe của doanh nghiệp trong kỷ nguyên chuyển đổi số.",
+    "imageAlt4": "Kết luận tích hợp hệ thống DCIM"
+  }
+    
+
+  }
+}

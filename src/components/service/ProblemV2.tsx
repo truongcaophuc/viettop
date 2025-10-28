@@ -1,129 +1,141 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useState, useEffect, useMemo, useCallback } from "react"; // Import useMemo
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from 'react-i18next'; // 1. Import hook
 
-const items = [
-  {
-    image: "/service/hệ thống điều hòa.jpg",
-    text: "Hệ thống làm mát không ổn định, tiêu tốn điện, khó kiểm soát nhiệt độ.",
-  },
-  {
-    image: "/service/Mất điện đột ngột.jpg",
-    text: "Mất điện đột ngột, nguồn dự phòng yếu, ATS hoạt động không ổn định.",
-  },
-  {
-    image: "/service/Khó giám sát.jpg",
-    text: "Khó giám sát, quản lý hạ tầng trung tâm dữ liệu, hệ thống không đồng bộ.",
-  },
-  {
-    image: "/service/hệ thống chống cháy.jpg",
-    text: "Nguy cơ cháy nổ cao, thiếu cảnh báo sớm và chữa cháy tự động.",
-  },
-  {
-    image: "/service/giám sát và kiểm soát ra vào.jpg",
-    text: "An ninh kém, khó kiểm soát ra vào và giám sát khu vực quan trọng.",
-  },
-  {
-    image: "/service/tiếp địa và chống sét.jpg",
-    text: "Thiết bị dễ hư hỏng do sét, tiếp địa và chống sét không đạt chuẩn.",
-  },
+// Keep original items structure for image paths if needed outside useMemo
+const originalItems = [
+  { image: "/service/hệ thống điều hòa.jpg", keySuffix: "item1" },
+  { image: "/service/Mất điện đột ngột.jpg", keySuffix: "item2" },
+  { image: "/service/Khó giám sát.jpg", keySuffix: "item3" },
+  { image: "/service/hệ thống chống cháy.jpg", keySuffix: "item4" },
+  { image: "/service/giám sát và kiểm soát ra vào.jpg", keySuffix: "item5" },
+  { image: "/service/tiếp địa và chống sét.jpg", keySuffix: "item6" },
 ];
 
 export default function ProblemV2() {
+  const { t } = useTranslation(); // 2. Get translation function
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // 3. Wrap items array generation in useMemo and use t()
+  const items = useMemo(() => originalItems.map(item => ({
+      image: item.image, // Keep image path
+      text: t(`servicesPage.problems.${item.keySuffix}`) // Use key suffix
+  })), [t]); // Depend on t
+
+  // Effect to check mobile status (remains the same)
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      // Ensure window is defined (for SSR safety, though less critical with "use client")
+      if (typeof window !== 'undefined') {
+          setIsMobile(window.innerWidth < 768);
+      }
     };
-    
-    // Check on mount
     checkMobile();
-    
-    // Add event listener for resize
     window.addEventListener('resize', checkMobile);
-    
-    // Cleanup
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % items.length);
-  const prevSlide = () =>
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
-  
+  // Slider navigation functions (remain the same)
+  const nextSlide = useCallback(() => setCurrentIndex((prev) => (prev + 1) % items.length), [items.length]); // Add items.length dependency
+  const prevSlide = useCallback(() => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length), [items.length]); // Add items.length dependency
   const goToSlide = (index: number) => setCurrentIndex(index);
 
-  // Tự động chuyển slide
+  // Auto slide effect (remains the same, but add nextSlide dependency)
   useEffect(() => {
     const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide]); // Add nextSlide dependency
 
-  // Lấy ra 3 slide cần hiển thị (left - center - right)
-  const getVisibleSlides = () => {
+  // Get visible slides (remains the same, but add items.length dependency)
+  const getVisibleSlides = useCallback(() => {
     const left = (currentIndex - 1 + items.length) % items.length;
     const right = (currentIndex + 1) % items.length;
     return [left, currentIndex, right];
-  };
+  }, [currentIndex, items.length]); // Add dependencies
+
 
   return (
-    <section className="py-12 md:py-20 bg-gray-100 overflow-hidden">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center text-primary px-4">
-        Vấn đề bạn đang mắc phải 
-      </h2>
+    <section className="py-16 md:py-20 bg-gray-100 overflow-hidden px-4 sm:px-6 lg:px-8"> {/* Adjusted padding */}
+      <motion.h2 // Added motion
+        className="text-3xl font-bold mb-10 md:mb-14 text-center text-primary" // Adjusted margin
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        {/* 4. Use t() for title */}
+        {t('servicesPage.problems.title')}
+      </motion.h2>
 
-      <div className="relative flex items-center justify-center max-w-5xl mx-auto px-4">
-        {/* Nút điều hướng */}
+      <div className="relative flex items-center justify-center max-w-5xl mx-auto">
+        {/* Navigation Buttons (Improved styling and accessibility) */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 md:left-0 z-10 bg-white shadow-lg p-2 md:p-3 rounded-full hover:bg-gray-100"
+          className="absolute left-0 sm:left-[-10px] md:left-[-20px] z-20 bg-white shadow-md hover:shadow-lg p-2 md:p-3 rounded-full text-gray-600 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50" // Adjusted positioning, added focus styles
+          aria-label={t('common.previousSlide', 'Previous Slide')} // Add translated aria-label
         >
           <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
         </button>
 
-        {/* Carousel */}
-        <div className="relative flex items-center justify-center w-full h-[250px] md:h-[350px]">
-          <AnimatePresence initial={false}>
+        {/* Carousel Container */}
+        <div className="relative flex items-center justify-center w-full h-[280px] sm:h-[320px] md:h-[380px]"> {/* Adjusted height */}
+          <AnimatePresence initial={false} mode="popLayout"> {/* Added mode */}
             {getVisibleSlides().map((index, i) => {
               const item = items[index];
-              const isCenter = i === 1;
+              if (!item) return null; // Add check in case items array isn't ready
 
+              // Define positions outside
               const positions = [
-                { x: "-250px", scale: 0.7, opacity: 0.5, zIndex: 5 },
-                { x: "0px", scale: 1, opacity: 1, zIndex: 10 },
-                { x: "250px", scale: 0.7, opacity: 0.5, zIndex: 5 },
+                { x: "-60%", scale: 0.7, opacity: 0.4, zIndex: 5 }, // Use percentages for better responsiveness
+                { x: "0%", scale: 1, opacity: 1, zIndex: 10 },
+                { x: "60%", scale: 0.7, opacity: 0.4, zIndex: 5 },
               ];
-
-              // Responsive positions for mobile
               const mobilePositions = [
-                { x: "-150px", scale: 0.6, opacity: 0.4, zIndex: 5 },
-                { x: "0px", scale: 1, opacity: 1, zIndex: 10 },
-                { x: "150px", scale: 0.6, opacity: 0.4, zIndex: 5 },
+                { x: "-55%", scale: 0.6, opacity: 0.3, zIndex: 5 },
+                { x: "0%", scale: 1, opacity: 1, zIndex: 10 },
+                { x: "55%", scale: 0.6, opacity: 0.3, zIndex: 5 },
               ];
 
-              const { x, scale, opacity, zIndex } = isMobile ? mobilePositions[i] : positions[i];
+              // Determine current style based on screen size (only on client)
+              const currentPositions = isMobile ? mobilePositions : positions;
+              const { x, scale, opacity, zIndex } = currentPositions[i];
 
               return (
                 <motion.div
-                  key={index}
-                  className="absolute rounded-2xl overflow-hidden shadow-lg bg-white"
-                  style={{ width: isMobile ? 300 : 400, height: isMobile ? 225 : 300, zIndex }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ x, scale, opacity }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  key={index} // Use index from getVisibleSlides as key for AnimatePresence
+                  className="absolute rounded-xl overflow-hidden shadow-lg bg-white cursor-pointer" // Adjusted radius, added cursor
+                  style={{
+                      width: isMobile ? '75%' : '55%', // Use percentage width
+                      maxWidth: isMobile ? '280px' : '400px', // Max width
+                      aspectRatio: '4/3', // Maintain aspect ratio
+                      zIndex
+                  }}
+                  initial={{ opacity: 0, scale: 0.8 }} // Start smaller
+                  animate={{ x, scale, opacity, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } }} // Smoother ease
+                  exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.3, ease: "easeIn" } }} // Add exit animation
+                  onClick={() => goToSlide(index)} // Go to slide on click
                 >
                   <Image
-                    src={encodeURI(item.image)}
-                    alt={item.text}
+                    // Use encodeURI only if image paths might contain special chars
+                    // src={encodeURI(item.image)}
+                    src={item.image}
+                    alt={item.text} // 5. Use translated text for alt
                     fill
+                    sizes="(max-width: 768px) 75vw, 55vw" // Add sizes prop
                     className="object-cover"
+                    priority={i === 1} // Prioritize loading center image
                   />
-                  <div className="absolute bottom-0 w-full bg-black/50 text-white text-center p-2 md:p-3 text-xs md:text-sm">
-                    {item.text}
+                  {/* Caption */}
+                  <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/70 via-black/40 to-transparent p-3 md:p-4 text-white text-center">
+                    <p className="text-xs md:text-sm font-medium line-clamp-2"> {/* Added line-clamp */}
+                       {/* 5. Use translated item.text */}
+                      {item.text}
+                    </p>
                   </div>
                 </motion.div>
               );
@@ -133,26 +145,46 @@ export default function ProblemV2() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 md:right-0 z-10 bg-white shadow-lg p-2 md:p-3 rounded-full hover:bg-gray-100"
+          className="absolute right-0 sm:right-[-10px] md:right-[-20px] z-20 bg-white shadow-md hover:shadow-lg p-2 md:p-3 rounded-full text-gray-600 hover:text-primary transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50" // Adjusted positioning, added focus styles
+           aria-label={t('common.nextSlide', 'Next Slide')} // Add translated aria-label
         >
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
         </button>
       </div>
 
       {/* Dots Indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-8 space-x-2"> {/* Increased margin top */}
         {items.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ease-in-out ${ // Adjusted size
               index === currentIndex
-                ? "bg-primary scale-110"
+                ? "bg-primary scale-125" // Scale up active dot
                 : "bg-gray-300 hover:bg-gray-400"
             }`}
+             aria-label={`${t('common.goToSlide', 'Go to slide')} ${index + 1}`} // Add translated aria-label
           />
         ))}
       </div>
     </section>
   );
 }
+
+// Add common translations to your JSON files if they don't exist:
+// vi.json:
+// {
+//   "common": {
+//     "previousSlide": "Slide trước",
+//     "nextSlide": "Slide tiếp theo",
+//     "goToSlide": "Đi đến slide"
+//   }
+// }
+// en.json:
+// {
+//   "common": {
+//     "previousSlide": "Previous Slide",
+//     "nextSlide": "Next Slide",
+//     "goToSlide": "Go to slide"
+//   }
+// }

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Be_Vietnam_Pro } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ContactDock from "../layout/ContactDock";
 import BackToTopButton from "../layout/BackToTopButton";
 
@@ -76,86 +77,11 @@ function Reveal({
 
 /* ===================== Arc tabs data ===================== */
 type ArcKey = "vision" | "strategy" | "team" | "customer";
-// Mảng keys để dễ dàng lặp và xác định index
 const ARC_KEYS: ArcKey[] = ["vision", "strategy", "team", "customer"];
 
-const ARC_TABS: Record<
-  ArcKey,
-  { title: string; lead: string; body: React.ReactNode; bg?: string }
-> = {
-  vision: {
-    title: "TẦM NHÌN, SỨ MỆNH",
-    lead:
-      "DCV kiến tạo chuẩn vận hành thông minh & bền vững cho mọi công trình.",
-    body: (
-      <p className="mb-0 text-white/[0.85]">
-        Sứ mệnh của DCV là đưa công nghệ vận hành thông minh vào từng công
-        trình, góp phần kiến tạo tương lai xanh, tiết kiệm năng lượng và nâng
-        cao trải nghiệm người dùng. Chúng tôi tin rằng mỗi giải pháp kỹ thuật
-        vững chắc hôm nay là nền tảng cho một thế giới kết nối bền vững mai sau.
-      </p>
-    ),
-    bg:
-      "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
-  },
-  strategy: {
-    title: "CHIẾN LƯỢC CỐT LÕI",
-    lead:
-      "Tập trung 3 trụ cột: Chất lượng – Công nghệ – Con người, hướng tới tăng trưởng bền vững.",
-    body: (
-      <p className="mb-0 text-white/[0.85]">
-        Đỉnh Cao Việt (DCV) định hướng phát triển bền vững dựa trên chất lượng,
-        công nghệ và con người. Chúng tôi tập trung vào đổi mới giải pháp kỹ
-        thuật, nâng cao năng lực đội ngũ, hợp tác chiến lược và xây dựng hệ
-        thống M&E – Data Center hiện đại, tiết kiệm năng lượng, nhằm mang lại
-        giá trị bền vững và hiệu quả tối đa cho khách hàng.
-      </p>
-    ),
-    bg:
-      "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
-  },
-  customer: {
-    title: "ĐỐI VỚI KHÁCH HÀNG",
-    lead: "DCV đặt khách hàng ở vị trí trung tâm trong mọi hoạt động.",
-    body: (
-      <>
-        <p className="text-white/[0.85]">
-        Khách hàng là trung tâm; hiệu quả, an toàn và ổn định là thước đo thành công.
-        </p>
-        <p className="text-white/[0.85]">
-          Chúng tôi cam kết mang đến giải pháp kỹ thuật tối ưu, an toàn và bền
-          vững, giúp khách hàng vận hành hiệu quả, tiết kiệm năng lượng và ổn
-          định lâu dài.
-        </p>
-        <p className="mb-0 text-white/[0.85]">
-          Với phương châm “Chất lượng – Uy tín – Hiệu quả”, DCV không ngừng hoàn
-          thiện để trở thành đối tác tin cậy và đồng hành phát triển cùng khách
-          hàng.
-        </p>
-      </>
-    ),
-    bg:
-      "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
-  },
-  team: {
-    title: "ĐỘI NGŨ NHÂN SỰ",
-    lead:
-      "Đội ngũ chứng chỉ đầy đủ, hơn 20 năm thực chiến M&E, HVAC, BMS, Data Center.",
-    body: (
-      <>
-        <p className="text-white/[0.85]">
-        Đội ngũ Đỉnh Cao Việt (DCV) bao gồm các kỹ sư, chuyên gia với hơn 20 năm kinh nghiệm trong tư vấn, thiết kế, thi công và bảo trì các hệ thống M&E, HVAC, BMS và Data Center trên toàn quốc.
-        </p>
-        <p className="mb-0 text-white/[0.85]">
-        Mỗi thành viên đều được đào tạo bài bản, sở hữu các chứng chỉ chuyên môn về PAC, UPS, PCCC, DCIM và quản lý năng lượng thông minh, cam kết đáp ứng các tiêu chuẩn kỹ thuật khắt khe nhất.
-        </p>
-      </>
-    ),
-    bg: "https://drh.vn/FileUpload/Images/bg14.jpg",
-  },
-};
-
 export default function DcvLandingTsx() {
+  const { t, i18n } = useTranslation();
+
   /* ====== Contact Dock state ====== */
   const dockRef = useRef<HTMLDivElement | null>(null);
   const [dockOpen, setDockOpen] = useState(false);
@@ -167,58 +93,101 @@ export default function DcvLandingTsx() {
   const pathRef = useRef<SVGPathElement | null>(null);
   const nodesWrapRef = useRef<HTMLDivElement | null>(null);
   const [activeKey, setActiveKey] = useState<ArcKey>("customer");
-  // Thêm state cho interval
   const autoSlideInterval = useRef<number | null>(null);
 
-  const active = useMemo(() => ARC_TABS[activeKey], [activeKey]);
+  // ARC_TABS dựa trên i18n
+  const ARC_TABS = useMemo(
+    () => ({
+      vision: {
+        title: t("aboutPage.strategy.content.vision.title"),
+        lead: t("aboutPage.strategy.content.vision.lead"),
+        body: (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: t("aboutPage.strategy.content.vision.body"),
+            }}
+          />
+        ),
+        bg: "https://media.istockphoto.com/id/1166272744/vi/anh/m%C3%A0n-h%C3%ACnh-c%C3%B4ng-ngh%E1%BB%87-k%E1%BB%B9-thu%E1%BA%ADt-s%E1%BB%91-t%C6%B0%C6%A1ng-lai-tr%C3%AAn-m%E1%BA%AFt.jpg?s=612x612&w=0&k=20&c=gQ9Z-ZgrIFrJV93j-2TNVrfE_yY3d5fY6BvDY1g3Uvg=",
+      },
+      strategy: {
+        title: t("aboutPage.strategy.content.strategy.title"),
+        lead: t("aboutPage.strategy.content.strategy.lead"),
+        body: (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: t("aboutPage.strategy.content.strategy.body"),
+            }}
+          />
+        ),
+        bg: "https://cdn.pixabay.com/photo/2019/09/29/22/06/light-bulb-4514505_1280.jpg",
+      },
+      customer: {
+        title: t("aboutPage.strategy.content.customer.title"),
+        lead: t("aboutPage.strategy.content.customer.lead"),
+        body: (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: t("aboutPage.strategy.content.customer.body"),
+            }}
+          />
+        ),
+        bg: "https://www.pace.edu.vn/uploads/news/2023/04/ky-nang-giao-tiep-voi-khach-hang.jpg",
+      },
+      team: {
+        title: t("aboutPage.strategy.content.team.title"),
+        lead: t("aboutPage.strategy.content.team.lead"),
+        body: (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: t("aboutPage.strategy.content.team.body"),
+            }}
+          />
+        ),
+        bg: "https://drh.vn/FileUpload/Images/bg14.jpg",
+      },
+    }),
+    [t]
+  );
+
+  const active = useMemo(() => ARC_TABS[activeKey], [activeKey, ARC_TABS]);
   const arcBg = useMemo(() => {
     const url =
-      active.bg ??
+      active?.bg ??
       "https://cdn.pixabay.com/photo/2016/11/18/12/55/light-1834289_1280.jpg";
     return `url('${url}')`;
-  }, [activeKey]);
-  
-  // Hàm đặt lại interval tự động chuyển slide
+  }, [active]);
+
+  // Auto slide
   const startAutoSlide = useCallback(() => {
-    // 1. Dọn dẹp interval cũ nếu có
     if (autoSlideInterval.current !== null) {
       window.clearInterval(autoSlideInterval.current);
     }
-
-    // 2. Thiết lập interval mới chỉ cho desktop
     const isMobile = window.matchMedia("(max-width: 991.98px)").matches;
     if (isMobile) return;
-
     autoSlideInterval.current = window.setInterval(() => {
       setActiveKey((prevKey) => {
         const currentIndex = ARC_KEYS.indexOf(prevKey);
-        // Tính index tiếp theo (quay lại 0 nếu là nút cuối)
         const nextIndex = (currentIndex + 1) % ARC_KEYS.length;
         return ARC_KEYS[nextIndex];
       });
     }, 3000);
   }, []);
 
-  // Hàm custom để thay đổi tab và reset timer
   const handleSetActiveKey = (key: ArcKey) => {
     setActiveKey(key);
-    // Reset timer khi người dùng tương tác
-    startAutoSlide(); 
-  };
-  
-  // Effect để khởi động và dọn dẹp interval
-  useEffect(() => {
-    // Khởi động khi component mount
     startAutoSlide();
+  };
 
-    // Dọn dẹp khi component unmount
+  useEffect(() => {
+    startAutoSlide();
     return () => {
       if (autoSlideInterval.current !== null) {
         window.clearInterval(autoSlideInterval.current);
       }
     };
   }, [startAutoSlide]);
-  
+
   /* ====== Effects: dock, scroll, outside click ====== */
   useEffect(() => {
     const onScroll = () => setShowBackTop(window.scrollY > 300);
@@ -226,11 +195,14 @@ export default function DcvLandingTsx() {
     onScroll();
 
     const onDocClick = (e: MouseEvent) => {
-      if (!dockRef.current) return;
-      if (!dockRef.current.contains(e.target as Node)) setDockOpen(false);
+      if (dockRef.current && !dockRef.current.contains(e.target as Node)) {
+        setDockOpen(false);
+      }
     };
     const onEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDockOpen(false);
+      if (e.key === "Escape") {
+        setDockOpen(false);
+      }
     };
     document.addEventListener("click", onDocClick);
     document.addEventListener("keydown", onEsc);
@@ -243,9 +215,9 @@ export default function DcvLandingTsx() {
   }, []);
 
   /* ====== Layout arc nodes along the SVG path ====== */
-  const layoutArcNodes = () => {
+  const layoutArcNodes = useCallback(() => {
     const stage = stageRef.current;
-    const svg = svgRef.current;
+    const svg = svgRef.current; // ✅ fixed
     const path = pathRef.current;
     const wrap = nodesWrapRef.current;
     if (!stage || !svg || !path || !wrap) return;
@@ -262,49 +234,41 @@ export default function DcvLandingTsx() {
     }
 
     const rect = stage.getBoundingClientRect();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const vb = (svg as any).viewBox.baseVal as {
-      x: number;
-      y: number;
-      width: number;
-      height: number;
-    };
+    const vb = (svg as any).viewBox?.baseVal;
+    if (!vb) return;
     const scaleX = rect.width / vb.width;
     const scaleY = rect.height / vb.height;
     const total = path.getTotalLength();
     const step = 1 / (nodes.length + 1);
 
     nodes.forEach((node, idx) => {
-      const t = (idx + 1) * step;
-      const p = path.getPointAtLength(total * t);
+      const tt = (idx + 1) * step;
+      const p = path.getPointAtLength(total * tt);
       node.style.left = `${p.x * scaleX}px`;
       node.style.top = `${p.y * scaleY}px`;
     });
-  };
+  }, []);
 
   useEffect(() => {
     layoutArcNodes();
-    let t: number | null = null;
-    const onResize = () => {
-      if (t) window.clearTimeout(t);
-      t = window.setTimeout(layoutArcNodes, 120);
+    let timeoutId: number | null = null; // ✅ renamed
+    const handleResize = () => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(layoutArcNodes, 120);
     };
-    const onOrient = () => {
-      if (t) window.clearTimeout(t);
-      t = window.setTimeout(layoutArcNodes, 120);
-    };
-    window.addEventListener("resize", onResize);
-    window.addEventListener("orientationchange", onOrient);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleResize);
     return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("orientationchange", onOrient);
-      if (t) window.clearTimeout(t);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleResize);
+      if (timeoutId) window.clearTimeout(timeoutId);
     };
-  }, []);
+  }, [layoutArcNodes]);
 
-  /* ====== Small helper for smooth content switch ====== */
+  /* ====== Smooth content switch ====== */
   const ContentSwitch: React.FC<{ k: ArcKey }> = ({ k }) => {
     const data = ARC_TABS[k];
+    if (!data) return null;
     return (
       <motion.div
         key={k}
@@ -328,7 +292,7 @@ export default function DcvLandingTsx() {
     >
       {/* Inline styles for Arc/Dock */}
       <style>{`
-      /* ===== Arc layout & responsiveness ===== */
+/* ===== Arc layout & responsiveness ===== */
 #arcStage{position:relative;min-height:320px;height:clamp(320px,40vw,420px)}
 @media (min-width: 1280px){#arcStage{height:200px}}
 #arcSvg{position:absolute;inset:0;pointer-events:none}
@@ -374,11 +338,10 @@ export default function DcvLandingTsx() {
         <Reveal>
           <div className="max-w-[1000px] px-4 py-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-3 tracking-tight">
-              ĐỈNH CAO VIỆT – GIẢI PHÁP M&E TOÀN DIỆN CHO HẠ TẦNG CÔNG NGHỆ
+              {t("aboutPage.hero.title")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-6">
-              Đồng hành kiến tạo trung tâm dữ liệu (Data Center) & hạ tầng mạng
-              ICT với hiệu suất – an toàn – bền vững.
+              {t("aboutPage.hero.subtitle")}
             </p>
           </div>
         </Reveal>
@@ -393,66 +356,61 @@ export default function DcvLandingTsx() {
                 as="h2"
                 className="text-brand font-extrabold text-3xl md:text-4xl mb-3 tracking-tight text-[#244556]"
               >
-                GIỚI THIỆU VỀ CHÚNG TÔI
+                {t("aboutPage.intro.title")}
               </Reveal>
 
               <Reveal delay={80} className="text-gray-600 text-lg mb-4">
-                Công ty CP Tư Vấn Đầu Tư – Thương Mại ĐỈNH CAO VIỆT được thành
-                lập từ 12/2004, tập trung vào các giải pháp M&E cho Data Center
-                & hạ tầng ICT.
+                {t("aboutPage.intro.p1")}
               </Reveal>
               <Reveal delay={160} className="text-gray-600 mb-4">
-                Với gần 20 năm kinh nghiệm, chúng tôi là đối tác tin cậy của
-                nhiều tập đoàn, ngân hàng, bệnh viện… cam kết giải pháp tối ưu –
-                an toàn – bền vững.
+                {t("aboutPage.intro.p2")}
               </Reveal>
               <Reveal delay={240} className="text-gray-600 mb-6">
-                Chúng tôi cam kết mang đến giải pháp tối ưu, đảm bảo hiệu suất,
-                an toàn và tính bền vững lâu dài trong vận hành hệ thống kỹ
-                thuật.
+                {t("aboutPage.intro.p3")}
               </Reveal>
 
               <Reveal delay={320}>
                 <div className="flex gap-2 flex-wrap">
                   {/* Primary button */}
                   <a
+                    href="#cta-cuoi-trang"
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                  border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
-                  hover:bg-white hover:text-[#244556]
-                  transition-colors focus-visible:outline-none focus-visible:ring-2
-                  focus-visible:ring-[#244556]/40 active:translate-y-px"
+                    border border-[#244556] bg-[#244556] text-white px-5 py-2.5 shadow-sm
+                    hover:bg-white hover:text-[#244556]
+                    transition-colors focus-visible:outline-none focus-visible:ring-2
+                    focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <PhoneOutgoing className="w-5 h-5" />
-                    Liên hệ tư vấn
+                    {t("aboutPage.intro.buttonContact")}
                   </a>
 
                   {/* Secondary */}
                   <a
+                    href="/giai-phap"
                     className="inline-flex items-center gap-2 font-semibold rounded-full
-                   border border-[#c9e265] bg-[#c9e265] text-white px-5 py-2.5 shadow-sm
-                   hover:bg-white hover:text-[#c9e265]
-                   transition-colors focus-visible:outline-none focus-visible:ring-2
-                   focus-visible:ring-[#244556]/40 active:translate-y-px"
+                    border border-[#c9e265] bg-[#c9e265] text-[#244556] px-5 py-2.5 shadow-sm
+                    hover:bg-white hover:text-[#c9e265] hover:border-[#c9e265]
+                    transition-colors focus-visible:outline-none focus-visible:ring-2
+                    focus-visible:ring-[#244556]/40 active:translate-y-px"
                   >
                     <GitBranch className="w-5 h-5" />
-                    Giải pháp
+                    {t("aboutPage.intro.buttonSolutions")}
                   </a>
                 </div>
               </Reveal>
             </div>
 
             <Reveal delay={120} className="hidden md:block">
- <div className="relative">
-    <img
-      className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
-      src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
-      alt="ĐỈNH CAO VIỆT – Giải pháp M&E"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-</Reveal>
-
+              <div className="relative">
+                <img
+                  className="w-full min-h-[260px] object-cover rounded-xl shadow-[0_10px_24px_rgba(0,0,0,0.08)]"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop"
+                  alt={t("aboutPage.intro.imageAlt")}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -476,79 +434,82 @@ export default function DcvLandingTsx() {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4">
- <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-    {/* Left content with smooth switch */}
-    <div className="lg:col-span-5 order-2 lg:order-1">
-      {/* Mobile pill tabs: nằm sát nội dung, kéo ngang */}
-      <div id="arcTabsMobile" className="-mt-1 mb-5 overflow-x-auto no-scrollbar">
-        <div className="flex items-center gap-2 snap-x snap-mandatory">
-          {([
-            { key: "vision", 	icon: <Flag className="w-4 h-4" />, 		label: "Tầm nhìn" },
-            { key: "strategy", icon: <TrendingUp className="w-4 h-4" />, label: "Chiến lược" },
-            { key: "team", 	icon: <Users className="w-4 h-4" />, 		label: "Đội ngũ" },
-            { key: "customer", icon: <ThumbsUp className="w-4 h-4" />, 	label: "Khách hàng" },
-          ] as { key: ArcKey; icon: React.ReactNode; label: string }[]).map(({ key, icon, label }) => (
-            <button
-              key={key}
-              type="button"
-              // Dùng handleSetActiveKey để reset timer
-              onClick={() => handleSetActiveKey(key)} 
-              aria-selected={activeKey === key}
-              className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
-                ${activeKey === key
-                  ? 'bg-[#c9e265] text-[#244556] border-[#c9e265] shadow'
-                  : 'bg-white/90 text-[#244556] border-white/60'}`}
-            >
-              {icon as any}
-              <span>{label}</span>
-            </button>
-          ))}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left content with smooth switch */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              {/* Mobile pill tabs */}
+              <div id="arcTabsMobile" className="-mt-1 mb-5 overflow-x-auto no-scrollbar">
+                <div className="flex items-center gap-2 snap-x snap-mandatory py-1">
+                  {(
+                    [
+                      { key: "vision", icon: <Flag className="w-4 h-4" />, label: t("aboutPage.strategy.tabVision") },
+                      { key: "strategy", icon: <TrendingUp className="w-4 h-4" />, label: t("aboutPage.strategy.tabStrategy") },
+                      { key: "team", icon: <Users className="w-4 h-4" />, label: t("aboutPage.strategy.tabTeam") },
+                      { key: "customer", icon: <ThumbsUp className="w-4 h-4" />, label: t("aboutPage.strategy.tabCustomer") },
+                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
+                  ).map(({ key, icon, label }) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => handleSetActiveKey(key)}
+                      aria-selected={activeKey === key}
+                      className={`snap-start shrink-0 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition-all
+                        ${
+                          activeKey === key
+                            ? "bg-[#c9e265] text-[#244556] border-[#c9e265] shadow"
+                            : "bg-white/90 text-[#244556] border-white/60 hover:bg-white"
+                        }`}
+                    >
+                      {icon as any}
+                      <span>{label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <AnimatePresence mode="wait">
+                <ContentSwitch k={activeKey} />
+              </AnimatePresence>
+            </div>
+
+            {/* Right arc (desktop only) */}
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <div id="arcStage" ref={stageRef}>
+                <svg id="arcSvg" ref={svgRef} viewBox="0 0 800 360" preserveAspectRatio="none">
+                  <path
+                    id="arcPath"
+                    ref={pathRef}
+                    d="M20,330 C240,20 560,20 780,330"
+                    stroke="rgba(201,226,101,.6)"
+                    strokeWidth={2}
+                    fill="none"
+                  />
+                </svg>
+                <div id="arcNodes" ref={nodesWrapRef} aria-label="Arc tabs">
+                  {(
+                    [
+                      { key: "vision", icon: <Flag className="w-6 h-6" />, label: t("aboutPage.strategy.nodeVision") },
+                      { key: "strategy", icon: <TrendingUp className="w-6 h-6" />, label: t("aboutPage.strategy.nodeStrategy") },
+                      { key: "team", icon: <Users className="w-6 h-6" />, label: t("aboutPage.strategy.nodeTeam") },
+                      { key: "customer", icon: <ThumbsUp className="w-6 h-6" />, label: t("aboutPage.strategy.nodeCustomer") },
+                    ] as { key: ArcKey; icon: React.ReactNode; label: string }[]
+                  ).map(({ key, icon, label }) => (
+                    <button
+                      key={key}
+                      className={`node ${activeKey === key ? "active" : ""}`}
+                      data-key={key}
+                      aria-selected={activeKey === key}
+                      onClick={() => handleSetActiveKey(key)}
+                    >
+                      <span className="circle">{icon as any}</span>
+                      <span className="label">{label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <AnimatePresence mode="wait">
-        <ContentSwitch k={activeKey} />
-      </AnimatePresence>
-    </div>
-
-    {/* Right arc (desktop giữ nguyên) */}
-    <div className="lg:col-span-7 order-1 lg:order-2">
-      <div id="arcStage" ref={stageRef}>
-        <svg id="arcSvg" ref={svgRef} viewBox="0 0 800 360" preserveAspectRatio="none">
-          <path
-            id="arcPath"
-            ref={pathRef}
-            d="M20,330 C240,20 560,20 780,330"
-            stroke="rgba(201,226,101,.6)"
-            strokeWidth={2}
-            fill="none"
-          />
-        </svg>
-        <div id="arcNodes" ref={nodesWrapRef} aria-label="Arc tabs">
-          {([
-            { key: "vision", icon: <Flag className="w-6 h-6" />, label: "Tầm nhìn – Sứ mệnh" },
-            { key: "strategy", icon: <TrendingUp className="w-6 h-6" />, label: "Chiến lược cốt lõi" },
-            { key: "team", icon: <Users className="w-6 h-6" />, label: "Đội ngũ nhân sự" },
-            { key: "customer", icon: <ThumbsUp className="w-6 h-6" />, label: "Đối với khách hàng" },
-          ] as { key: ArcKey; icon: React.ReactNode; label: string }[]).map(({ key, icon, label }) => (
-            <button
-              key={key}
-              className={`node ${activeKey === key ? "active" : ""}`}
-              data-key={key}
-              aria-selected={activeKey === key}
-              // Dùng handleSetActiveKey để reset timer
-              onClick={() => handleSetActiveKey(key)} 
-            >
-              <span className="circle">{icon as any}</span>
-              <span className="label">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
       </section>
 
       {/* ===================== CTA ===================== */}
@@ -563,26 +524,27 @@ export default function DcvLandingTsx() {
               }}
             >
               {/* orbs */}
-              <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF] rounded-full blur-2xl opacity-30" />
-              <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265] rounded-full blur-2xl opacity-25" />
+              <span className="absolute -left-16 -top-10 w-56 h-56 bg-[#38B6FF]/30 rounded-full blur-2xl opacity-50 pointer-events-none" />
+              <span className="absolute -right-20 -bottom-16 w-72 h-72 bg-[#c9e265]/25 rounded-full blur-2xl opacity-50 pointer-events-none" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-y-2 lg:gap-x-3 relative">
+              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-y-4 lg:gap-x-3 relative z-10">
                 <Reveal as="div" className="lg:col-span-8">
                   <h2 className="font-extrabold text-2xl md:text-3xl mb-2 tracking-tight">
-                    Cần một đối tác M&E chuyên nghiệp cho dự án của bạn?
+                    {t("aboutPage.cta.title")}
                   </h2>
-                  <p className="text-white/70 text-sm">
-                    Liên hệ ngay với <strong className="text-white">ĐỈNH CAO VIỆT</strong> để được tư vấn giải pháp tối ưu và hiệu quả nhất.
-                  </p>
+                  <p
+                    className="text-white/70 text-sm"
+                    dangerouslySetInnerHTML={{ __html: t("aboutPage.cta.subtitle") }}
+                  />
                 </Reveal>
 
                 <Reveal delay={120} className="lg:col-span-4 lg:text-right">
                   <a
-                    href="contact.html"
+                    href="/lien-he"
                     className="inline-flex items-center gap-1 bg-white text-[#244556] font-semibold text-sm md:text-base px-7 py-3 rounded-lg shadow-[0_6px_16px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.10)] transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 active:translate-y-px"
                   >
                     <PencilLine className="w-5 h-5" />
-                    <span className="-ml-0.5">Tư vấn ngay</span>
+                    <span className="-ml-0.5">{t("aboutPage.cta.button")}</span>
                   </a>
                 </Reveal>
               </div>
@@ -598,63 +560,53 @@ export default function DcvLandingTsx() {
         className={`fixed right-4 bottom-5 z-[1045] flex flex-col items-center gap-2 ${
           dockOpen ? "open" : ""
         }`}
-        aria-label="Liên hệ nhanh"
+        aria-label={t("aboutPage.contactDock.ariaLabel")}
       >
         <div
           id="contactList"
           aria-hidden={!dockOpen}
           className={`list grid justify-items-center gap-2 transition-all duration-300 ${
-            dockOpen ? "opacity-100 translate-y-0 max-h-96" : "opacity-0 translate-y-1 max-h-0"
+            dockOpen ? "opacity-100 translate-y-0 max-h-96" : "opacity-0 translate-y-1 max-h-0 pointer-events-none"
           } overflow-hidden`}
         >
           {[
-            { icon: <PhoneOutgoing className="w-5 h-5" />, href: "tel:+842812345678", label: "Gọi Hotline" },
-            { icon: <MessageCircle className="w-5 h-5" />, href: "#", label: "Messenger" },
-            { icon: "Z", href: "#", label: "Zalo" },
-            { icon: <Mail className="w-5 h-5" />, href: "mailto:contact@dinhcaoviet.vn", label: "Email" },
-            { icon: <MapPin className="w-5 h-5" />, href: "https://maps.google.com/?q=ĐỈNH+CAO+VIỆT", label: "Bản đồ" },
+            {
+              icon: <PhoneOutgoing className="w-5 h-5" />,
+              href: `tel:${t("footer.contact.hotline", "19003339")}`,
+              label: t("aboutPage.contactDock.hotline"),
+            },
+            { icon: <MessageCircle className="w-5 h-5" />, href: "#", label: t("aboutPage.contactDock.messenger") },
+            { icon: "Z", href: "#", label: t("aboutPage.contactDock.zalo") },
+            {
+              icon: <Mail className="w-5 h-5" />,
+              href: `mailto:${t("footer.contact.email", "contact@dinhcaoviet.vn")}`,
+              label: t("aboutPage.contactDock.email"),
+            },
+            { icon: <MapPin className="w-5 h-5" />, href: "#", label: t("aboutPage.contactDock.map") },
           ].map((item, i) => (
             <a
               key={i}
-              className="w-12 h-12 rounded-full inline-flex items-center justify-center border border-black/10 bg-white text-[#244556] hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40 shadow-none"
+              className="w-12 h-12 rounded-full inline-flex items-center justify-center border border-gray-200 bg-white text-[#244556] hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40 shadow-sm transition-colors"
               href={item.href}
-              target={item.href.startsWith("http") ? "_blank" : undefined}
-              rel={item.href.startsWith("http") ? "noopener" : undefined}
+              target={
+                item.href.startsWith("http") || item.href.startsWith("mailto") || item.href.startsWith("tel")
+                  ? "_blank"
+                  : undefined
+              }
+              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={item.label}
               title={item.label}
             >
-              {item.icon as any}
+              {item.icon === "Z" ? (
+                <span className="font-bold text-lg select-none">Z</span>
+              ) : (
+                (item.icon as any)
+              )}
             </a>
           ))}
         </div>
 
-        {/* Toggle button */}
-        {/* <button
-          id="dockToggle"
-          type="button"
-          aria-expanded={dockOpen}
-          aria-controls="contactList"
-          aria-label="Mở danh sách liên hệ"
-          onClick={() => setDockOpen((v) => !v)}
-          className={`w-14 h-14 rounded-full inline-flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] ${
-            dockOpen ? "bg-white text-[#244556]" : "bg-[#c9e265] text-[#244556]"
-          } hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
-        >
-          <MessageCircle className="w-6 h-6" />
-        </button> */}
-
-        {/* <button
-          id="backTop"
-          type="button"
-          aria-label="Lên đầu trang"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className={`${
-            showBackTop ? "flex" : "hidden"
-          } w-12 h-12 rounded-full inline-flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] bg-[#c9e265] text-[#244556] hover:brightness-95 active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#244556]/40`}
-        >
-          <ChevronUp className="w-5 h-5" />
-        </button> */}
-         <BackToTopButton />
+        <BackToTopButton />
         <ContactDock />
       </div>
     </div>

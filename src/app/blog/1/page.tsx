@@ -3,300 +3,328 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import BlogSidebar from "../component/BlogSidebar";
+import { useTranslation, Trans } from "react-i18next";
+import { useMemo } from "react";
 
 export default function Blog1() {
+  const { t, i18n } = useTranslation();
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
     visible: { opacity: 1, y: 0 },
   };
 
-  const contentSections = [
-    {
-      title: "BMS là gì?",
-      content: (
-        <>
-          <p>
-            <strong>BMS (Building Management System)</strong> – Hệ thống Quản lý
-            Tòa nhà là “bộ não trung tâm” giúp tự động giám sát, điều khiển và
-            tối ưu toàn bộ hạ tầng kỹ thuật trong tòa nhà và Data Center. Hệ
-            thống này giúp đảm bảo hiệu suất năng lượng, độ an toàn và sự tiện
-            nghi ở mức cao nhất.
-          </p>
-          <p>
-            Trong thời đại chuyển đổi số, BMS đóng vai trò nền tảng trong việc
-            kết nối hàng trăm thiết bị thông minh – từ hệ thống điện, điều hòa,
-            chiếu sáng cho đến an ninh và phòng cháy chữa cháy – tạo nên một môi
-            trường vận hành tối ưu, tiết kiệm và bền vững.
-          </p>
-        </>
-      ),
-    },
-    {
-      title: "Cấu trúc BMS: 3 thành phần chính",
-      content: (
-        <>
-          <h3 className="font-semibold text-lg mt-4 mb-2">1. Sensors – Hệ thống cảm biến</h3>
-          <ul className="list-disc ml-6">
-            <li>Cảm biến nhiệt độ & độ ẩm: Giám sát môi trường phòng server.</li>
-            <li>Cảm biến áp suất: Theo dõi hệ thống thông gió và điều hòa.</li>
-            <li>Cảm biến năng lượng: Đo công suất tiêu thụ điện.</li>
-            <li>Cảm biến rò rỉ nước: Phát hiện sớm nguy cơ rò nước.</li>
-            <li>Cảm biến khói & nhiệt: Cảnh báo cháy sớm.</li>
-            <li>Cảm biến chất lượng không khí: Giám sát bụi và hạt lơ lửng.</li>
+  // Nội dung các section — dùng i18n + Trans; re-compute khi đổi ngôn ngữ
+  const contentSections = useMemo(
+    () => [
+      {
+        key: "section1",
+        content: (
+          <>
+            <p>
+              <Trans
+                i18nKey="blogPost.blogPost1.section1.p1"
+                components={{ strong: <strong /> }}
+              />
+            </p>
+            <p>{t("blogPost.blogPost1.section1.p2")}</p>
+          </>
+        ),
+      },
+      {
+        key: "section2",
+        content: (
+          <>
+            <h3 className="font-semibold text-lg mt-4 mb-2">
+              {t("blogPost.blogPost1.section2.sub1Title")}
+            </h3>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>{t("blogPost.blogPost1.section2.sub1Item1")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub1Item2")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub1Item3")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub1Item4")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub1Item5")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub1Item6")}</li>
+            </ul>
+
+            <h3 className="font-semibold text-lg mt-4 mb-2">
+              {t("blogPost.blogPost1.section2.sub2Title")}
+            </h3>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section2.sub2Item1"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section2.sub2Item2"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section2.sub2Item3"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+            </ul>
+
+            <h3 className="font-semibold text-lg mt-4 mb-2">
+              {t("blogPost.blogPost1.section2.sub3Title")}
+            </h3>
+            <ul className="list-disc ml-6 space-y-1">
+              <li>{t("blogPost.blogPost1.section2.sub3Item1")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub3Item2")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub3Item3")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub3Item4")}</li>
+              <li>{t("blogPost.blogPost1.section2.sub3Item5")}</li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        key: "section3",
+        content: (
+          <>
+            <p>{t("blogPost.blogPost1.section3.p1")}</p>
+            <ul className="list-disc ml-6 space-y-2 mt-3">
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section3.listItem1"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section3.listItem2"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section3.listItem3"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+              <li>
+                <Trans
+                  i18nKey="blogPost.blogPost1.section3.listItem4"
+                  components={{ strong: <strong /> }}
+                />
+              </li>
+            </ul>
+
+            <motion.div
+              variants={fadeInUp}
+              className="relative w-full aspect-video mt-6 rounded-lg overflow-hidden shadow-lg group"
+            >
+              <Image
+                src="/blog/blog1/GetImage (1).png"
+                alt={t("blogPost.blogPost1.section3.imageAlt")}
+                fill
+                sizes="(max-width: 1024px) 100vw, 66vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </motion.div>
+          </>
+        ),
+      },
+      {
+        key: "section4",
+        content: (
+          <>
+            <ul className="list-decimal ml-6 space-y-4">
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit1Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit1Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit1Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit1Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit1Item4")}</li>
+                </ul>
+              </li>
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit2Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit2Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit2Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit2Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit2Item4")}</li>
+                </ul>
+              </li>
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit3Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit3Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit3Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit3Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit3Item4")}</li>
+                </ul>
+              </li>
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit4Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit4Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit4Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit4Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit4Item4")}</li>
+                </ul>
+              </li>
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit5Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit5Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit5Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit5Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit5Item4")}</li>
+                </ul>
+              </li>
+              <li>
+                <strong>{t("blogPost.blogPost1.section4.benefit6Title")}</strong>
+                <ul className="list-disc ml-6 mt-2 space-y-1">
+                  <li>{t("blogPost.blogPost1.section4.benefit6Item1")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit6Item2")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit6Item3")}</li>
+                  <li>{t("blogPost.blogPost1.section4.benefit6Item4")}</li>
+                </ul>
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        key: "section5",
+        content: (
+          <ul className="list-disc ml-6 space-y-2">
+            <li>
+              <Trans
+                i18nKey="blogPost.blogPost1.section5.item1"
+                components={{ strong: <strong /> }}
+              />
+            </li>
+            <li>
+              <Trans
+                i18nKey="blogPost.blogPost1.section5.item2"
+                components={{ strong: <strong /> }}
+              />
+            </li>
+            <li>
+              <Trans
+                i18nKey="blogPost.blogPost1.section5.item3"
+                components={{ strong: <strong /> }}
+              />
+            </li>
+            <li>
+              <Trans
+                i18nKey="blogPost.blogPost1.section5.item4"
+                components={{ strong: <strong /> }}
+              />
+            </li>
+            <li>
+              <Trans
+                i18nKey="blogPost.blogPost1.section5.item5"
+                components={{ strong: <strong /> }}
+              />
+            </li>
           </ul>
+        ),
+      },
+      {
+        key: "section6",
+        content: (
+          <>
+            <p>
+              <Trans
+                i18nKey="blogPost.blogPost1.section6.p1"
+                components={{ strong: <strong /> }}
+              />
+            </p>
+            <p className="mt-3">{t("blogPost.blogPost1.section6.p2")}</p>
 
-          <h3 className="font-semibold text-lg mt-4 mb-2">2. Controllers – Bộ điều khiển</h3>
-          <ul className="list-disc ml-6">
-            <li>
-              <strong>DDC:</strong> Xử lý logic và điều khiển thiết bị trực tiếp.
-            </li>
-            <li>
-              <strong>PLC:</strong> Điều khiển quy trình tự động phức tạp.
-            </li>
-            <li>
-              <strong>Gateway Controllers:</strong> Kết nối các giao thức khác nhau.
-            </li>
-          </ul>
+            <motion.div
+              variants={fadeInUp}
+              className="relative w-full aspect-video mt-6 rounded-lg overflow-hidden shadow-lg group"
+            >
+              <Image
+                src="/blog/blog1/GetImage (2).png"
+                alt={t("blogPost.blogPost1.section6.imageAlt")}
+                fill
+                sizes="(max-width: 1024px) 100vw, 66vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </motion.div>
+          </>
+        ),
+      },
+    ],
+    [t, i18n.language]
+  );
 
-          <h3 className="font-semibold text-lg mt-4 mb-2">3. HMI – Giao diện quản lý</h3>
-          <ul className="list-disc ml-6">
-            <li>Dashboard hiển thị trạng thái toàn hệ thống.</li>
-            <li>Đồ họa trực quan theo sơ đồ tầng với mã màu cảnh báo.</li>
-            <li>Báo cáo & phân tích xu hướng năng lượng.</li>
-            <li>Cảnh báo thông minh qua Email, SMS, App.</li>
-            <li>Điều khiển từ xa qua web hoặc mobile app.</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      title: "Vai trò của BMS trong Data Center",
-      content: (
-        <>
-          <p>
-            Trong các trung tâm dữ liệu, nơi yêu cầu tính ổn định và chính xác
-            cao, BMS đóng vai trò sống còn trong việc đảm bảo hệ thống vận hành
-            an toàn, hiệu quả và liên tục 24/7.
-          </p>
-          <ul className="list-disc ml-6 space-y-2 mt-3">
-            <li>
-              <strong>Quản lý hệ thống làm mát:</strong> Duy trì nhiệt độ lý
-              tưởng (18–27°C), điều phối hệ thống CRAC/CRAH, ngăn hotspot, tối ưu
-              airflow.
-            </li>
-            <li>
-              <strong>Giám sát & tối ưu năng lượng:</strong> Theo dõi PUE
-              real-time, phát hiện thiết bị tiêu thụ năng lượng bất thường, và dự
-              báo nhu cầu năng lượng.
-            </li>
-            <li>
-              <strong>An toàn & bảo mật:</strong> Tích hợp kiểm soát ra vào, hệ
-              thống camera, cảnh báo cháy nổ, và quản lý chữa cháy tự động.
-            </li>
-            <li>
-              <strong>Quản lý nguồn điện dự phòng:</strong> Giám sát UPS, máy
-              phát điện diesel và pin dự phòng, tự động kích hoạt khi mất điện.
-            </li>
-          </ul>
-
-          {/* --- ẢNH MINH HỌA --- */}
-          <motion.div
-            variants={fadeInUp}
-            className="relative w-full h-[360px] mt-6 rounded-xl overflow-hidden shadow-lg"
-          >
-            <Image
-              src="/blog/blog1/GetImage (1).png"
-              alt="BMS trong Data Center"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </motion.div>
-        </>
-      ),
-    },
-    {
-      title: "6. Lợi Ích Vượt Trội Khi Triển Khai BMS",
-      content: (
-        <>
-          <ul className="list-decimal ml-6 space-y-4">
-            <li>
-              <strong>1. Tối Ưu Hóa Vận Hành</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Tự động hóa các tác vụ lặp đi lặp lại, giảm sai sót thủ công.</li>
-                <li>Giảm thời gian phản ứng sự cố từ hàng giờ xuống chỉ vài phút.</li>
-                <li>Vận hành liên tục 24/7 mà không cần can thiệp thủ công.</li>
-                <li>Điều chỉnh hoạt động thiết bị theo thời gian thực và nhu cầu thực tế.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>2. Tiết Kiệm Chi Phí Đáng Kể</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Giảm 20–30% chi phí năng lượng nhờ tối ưu vận hành thiết bị.</li>
-                <li>Kéo dài tuổi thọ thiết bị thông qua bảo trì dự đoán (Predictive Maintenance).</li>
-                <li>Giảm chi phí nhân công vận hành nhờ tự động hóa.</li>
-                <li>Tránh thiệt hại tài chính do downtime hoặc sự cố bất ngờ.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>3. Nâng Cao Độ Tin Cậy</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Đảm bảo uptime đạt 99.99% hoặc cao hơn cho các hệ thống quan trọng.</li>
-                <li>Phát hiện sớm vấn đề tiềm ẩn trước khi gây ra sự cố nghiêm trọng.</li>
-                <li>Tích hợp redundancy và failover tự động đảm bảo liên tục dịch vụ.</li>
-                <li>Ghi nhận và phân tích dữ liệu lịch sử để xác định nguyên nhân gốc rễ.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>4. Quản Lý Tập Trung</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Một giao diện thống nhất để giám sát toàn bộ hệ thống hạ tầng.</li>
-                <li>Quản lý nhiều địa điểm hoặc chi nhánh từ trung tâm điều khiển duy nhất.</li>
-                <li>Báo cáo tự động, thống nhất và chuẩn hóa cho các bộ phận kỹ thuật.</li>
-                <li>Dễ dàng mở rộng quy mô quản lý khi số lượng thiết bị tăng.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>5. Tuân Thủ Tiêu Chuẩn</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Đáp ứng các tiêu chuẩn vận hành quốc tế Tier III, Tier IV.</li>
-                <li>Hỗ trợ lưu trữ dữ liệu phục vụ kiểm toán (audit) và compliance.</li>
-                <li>Báo cáo tiêu thụ năng lượng và môi trường theo chuẩn ISO 50001.</li>
-                <li>Đảm bảo an toàn, bền vững và thân thiện môi trường.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>6. Khả Năng Mở Rộng Linh Hoạt</strong>
-              <ul className="list-disc ml-6 mt-2 space-y-1">
-                <li>Dễ dàng tích hợp thêm cảm biến (sensor) hoặc thiết bị mới mà không cần dừng hệ thống.</li>
-                <li>Kết nối linh hoạt với DCIM, ITSM, SCADA, hoặc hệ thống giám sát năng lượng.</li>
-                <li>Nâng cấp phần mềm, firmware từ xa mà không gây gián đoạn hoạt động.</li>
-                <li>Hỗ trợ tích hợp AI, IoT, Machine Learning cho vận hành thông minh trong tương lai.</li>
-              </ul>
-            </li>
-          </ul>
-        </>
-      ),
-    },
-
-    {
-      title: "Xu hướng BMS thế hệ mới",
-      content: (
-        <ul className="list-disc ml-6 space-y-2">
-          <li>
-            <strong>AI & Machine Learning:</strong> Dự đoán sự cố, tối ưu hiệu
-            suất năng lượng.
-          </li>
-          <li>
-            <strong>IoT Integration:</strong> Mật độ cảm biến cao hơn, chi phí
-            thấp hơn.
-          </li>
-          <li>
-            <strong>Cloud-based Management:</strong> Quản lý hệ thống từ xa mọi
-            lúc, mọi nơi.
-          </li>
-          <li>
-            <strong>Digital Twin:</strong> Mô phỏng ảo toàn bộ trung tâm dữ liệu.
-          </li>
-          <li>
-            <strong>Green Technology:</strong> Tích hợp năng lượng tái tạo, giảm
-            carbon footprint.
-          </li>
-        </ul>
-      ),
-    },
-    {
-      title: "Kết luận",
-      content: (
-        <>
-          <p>
-            <strong>BMS</strong> không chỉ là công cụ quản lý – mà là yếu tố then
-            chốt đảm bảo <strong>Data Center</strong> vận hành hiệu quả, an toàn
-            và bền vững. Trong bối cảnh dữ liệu bùng nổ và áp lực năng lượng gia
-            tăng, đầu tư vào hệ thống BMS chất lượng là xu hướng tất yếu cho mọi
-            trung tâm dữ liệu hiện đại.
-          </p>
-          <p className="mt-3">
-            Với BMS, doanh nghiệp không chỉ “quản lý” – mà đang chủ động kiểm soát
-            tương lai của hạ tầng số.
-          </p>
-
-          {/* --- ẢNH MINH HỌA --- */}
-          <motion.div
-            variants={fadeInUp}
-            className="relative w-full h-[360px] mt-6 rounded-xl overflow-hidden shadow-lg"
-          >
-            <Image
-              src="/blog/blog1/GetImage (2).png"
-              alt="BMS quản lý tòa nhà thông minh"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-700"
-            />
-          </motion.div>
-        </>
-      ),
-    },
-  ];
+  // Static meta (nếu muốn i18n, có thể chuyển vào JSON)
+  const blogMetaData = {
+    date: "21/12/2025",
+    author: "Thuật",
+  };
 
   return (
-    <section className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
-      {/* --- CỘT TRÁI: NỘI DUNG --- */}
+    <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+      {/* CỘT TRÁI: NỘI DUNG */}
       <motion.div
-        className="lg:col-span-2 space-y-8"
+        className="lg:col-span-2 space-y-6"
         initial="hidden"
         animate="visible"
-        transition={{ staggerChildren: 0.2 }}
+        transition={{ staggerChildren: 0.1 }}
       >
         <motion.p
           variants={fadeInUp}
-          className="text-gray-500 text-sm uppercase tracking-widest mb-2"
+          className="text-gray-500 text-xs uppercase tracking-wider mb-1"
         >
-          Tin tức
+          {t("blogPost.blogPost1.category")}
         </motion.p>
 
         <motion.h1
           variants={fadeInUp}
-          className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug"
+          className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight"
         >
-          BMS là gì? Giải pháp quản lý tòa nhà thông minh cho Data Center hiện đại
+          {t("blogPost.blogPost1.title")}
         </motion.h1>
 
-        <motion.p variants={fadeInUp} className="text-sm text-gray-500 mb-6">
-          Đăng vào ngày <span className="font-medium">21/12/2025</span> bởi{" "}
-          <span className="font-medium text-gray-800">Thuật</span>
+        <motion.p variants={fadeInUp} className="text-sm text-gray-500">
+          {t("blogPost.blogPost1.publishedOn")}{" "}
+          <span className="font-medium text-gray-700">{blogMetaData.date}</span>{" "}
+          {t("blogPost.blogPost1.publishedBy")}{" "}
+          <span className="font-medium text-gray-800">{blogMetaData.author}</span>
         </motion.p>
 
         <motion.div
           variants={fadeInUp}
-          className="relative w-full h-[420px] mb-6 rounded-lg overflow-hidden shadow-lg"
+          className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg group"
         >
           <Image
             src="/blog/blog1/banner.png"
-            alt="BMS hệ thống quản lý tòa nhà"
+            alt={t("blogPost.blogPost1.bannerAlt")}
             fill
-            className="object-cover hover:scale-110 transition-transform duration-700"
+            sizes="(max-width: 1024px) 100vw, 66vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             priority
           />
         </motion.div>
 
-        {/* --- NỘI DUNG CHÍNH --- */}
-        <div className="prose max-w-none text-gray-700 leading-relaxed">
-          {contentSections.map((section, i) => (
+        {/* NỘI DUNG CHÍNH */}
+        <div className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed space-y-4">
+          {contentSections.map((section) => (
             <motion.div
-              key={i}
+              key={section.key}
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="mb-8"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h2 className="text-2xl font-semibold mt-6 mb-3 text-gray-900">
-                {section.title}
+              <h2 className="text-2xl font-semibold mt-6 mb-3 text-gray-800 !leading-snug">
+                {t(`blogPost.blogPost1.${section.key}.title`)}
               </h2>
               <div>{section.content}</div>
             </motion.div>
@@ -304,12 +332,12 @@ export default function Blog1() {
         </div>
       </motion.div>
 
-      {/* --- CỘT PHẢI: SIDEBAR --- */}
+      {/* CỘT PHẢI: SIDEBAR */}
       <motion.div
         className="lg:col-span-1"
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
       >
         <div className="sticky top-8">

@@ -2,200 +2,225 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import BlogSidebar from "../component/BlogSidebar";
+import BlogSidebar from "../component/BlogSidebar"; // Assuming BlogSidebar uses t() internally
+import { useTranslation, Trans } from 'react-i18next'; // 1. Import hook and Trans
 
 export default function Blog5() {
+  const { t } = useTranslation(); // 2. Get translation function
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  // Static data - Assuming date and author don't need translation for now
+  const blogMetaData = {
+    date: "15/10/2025", // Match the original component date
+    author: "Thuật",
+  };
+
+  // Helper function to render content with potential HTML
+  const renderContent = (contentKey: string) => {
+    const translation = t(contentKey, '');
+    if (!translation) return null;
+    if (translation.includes('<strong')) { // Check for <strong> tag specifically
+      return <Trans i18nKey={contentKey} components={{ strong: <strong /> }} />;
+    }
+    return translation;
+  };
+
   return (
-    <section className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[818.66px_389.34px] gap-10">
+    <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-10 md:gap-12 lg:gap-16"> {/* Adjusted layout */}
       {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
       <motion.div
-        className="space-y-8"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        className="space-y-6"
+        initial="hidden"
+        animate="visible"
+        variants={{ // Stagger children
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
+        }}
       >
-        <p className="text-gray-500 text-sm uppercase tracking-widest mb-2">
-          Building Management System
-        </p>
+        <motion.p
+          variants={fadeInUp}
+          className="text-gray-500 text-xs uppercase tracking-wider mb-1"
+        >
+          {t('blogPost.blogPost5.category')} {/* 3. Use t() */}
+        </motion.p>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-          Ứng Dụng Modbus & SNMP Trong BMS và Giám Sát Thiết Bị
-        </h1>
+        <motion.h1
+          variants={fadeInUp}
+          className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight"
+        >
+          {t('blogPost.blogPost5.title')} {/* 3. Use t() */}
+        </motion.h1>
 
-        <p className="text-sm text-gray-500 mb-6">
-          Đăng vào ngày <span className="font-medium">15/10/2025</span> bởi{" "}
-          <span className="font-medium text-gray-800">Thuật</span>
-        </p>
+        <motion.p variants={fadeInUp} className="text-sm text-gray-500">
+          {t('blogPost.blogPost5.publishedOn')}{" "}
+          <span className="font-medium text-gray-700">{blogMetaData.date}</span>{" "}
+          {t('blogPost.blogPost5.publishedBy')}{" "}
+          <span className="font-medium text-gray-800">{blogMetaData.author}</span>
+        </motion.p>
 
-        <div className="relative w-full h-[420px] mb-8 rounded-lg overflow-hidden shadow-md">
+        <motion.div
+          variants={fadeInUp}
+          className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg group"
+        >
           <Image
-            src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-            alt="Ứng dụng Modbus và SNMP trong BMS"
+            src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Consider relevant image
+            alt={t('blogPost.blogPost5.bannerAlt')} // 3. Use t()
             fill
-            className="object-cover hover:scale-110 transition-transform duration-700"
+            sizes="(max-width: 1024px) 100vw, 66vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             priority
           />
-        </div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+        </motion.div>
 
-        <div className="prose max-w-none text-gray-700 leading-relaxed">
-          <h2 className="text-2xl font-semibold mt-6 mb-3">Giới Thiệu</h2>
-          <p>
-            Trong kỷ nguyên tự động hóa và Internet of Things (IoT), việc giám sát và điều khiển các hệ thống trong tòa nhà trở nên ngày càng quan trọng.{" "}
-            <strong>Modbus</strong> và <strong>SNMP</strong> là hai giao thức truyền thông phổ biến nhất được sử dụng trong{" "}
-            <strong>BMS (Building Management System)</strong> để thu thập dữ liệu, điều khiển thiết bị và quản lý hạ tầng thông minh. 
-          </p>
-          <p>
-            Modbus thường được ứng dụng cho thiết bị công nghiệp, HVAC, đồng hồ điện, cảm biến môi trường... trong khi SNMP chủ yếu dùng trong giám sát
-            thiết bị mạng, máy chủ và UPS. Cả hai kết hợp lại giúp BMS vận hành ổn định, minh bạch và hiệu quả.
-          </p>
+        {/* --- NỘI DUNG CHÍNH --- */}
+        <motion.div
+            variants={fadeInUp}
+            className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed space-y-4 prose-headings:text-gray-800 prose-headings:font-semibold prose-h2:text-2xl prose-h3:text-xl prose-strong:text-gray-800 prose-ul:space-y-1 prose-li:my-0.5"
+        >
+            {/* Introduction */}
+            <h2 id="intro">{t('blogPost.blogPost5.section1Title')}</h2>
+            <p>{renderContent('blogPost.blogPost5.section1P1')}</p>
+            <p>{renderContent('blogPost.blogPost5.section1P2')}</p>
 
-          {/* --- GIAO THỨC MODBUS --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">1. Giao Thức Modbus</h2>
-          <h3 className="text-xl font-semibold mt-4 mb-2">1.1. Tổng Quan</h3>
-          <p>
-            <strong>Modbus</strong> là giao thức truyền thông công nghiệp mã nguồn mở, được phát triển bởi Modicon (nay là Schneider Electric). 
-            Nhờ tính đơn giản, ổn định và dễ triển khai, Modbus trở thành tiêu chuẩn de-facto trong công nghiệp tự động hóa.
-          </p>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Modbus RTU – hoạt động qua đường truyền RS-485.</li>
-            <li>Modbus TCP/IP – truyền dữ liệu qua Ethernet (LAN/WAN).</li>
-            <li>Modbus ASCII – dạng ký tự, dễ debug và kiểm tra.</li>
-          </ul>
+            {/* Modbus Protocol */}
+            <h2 id="modbus">{t('blogPost.blogPost5.section2Title')}</h2>
+            <h3 id="modbus-overview">{t('blogPost.blogPost5.section2Sub1Title')}</h3>
+            <p>{renderContent('blogPost.blogPost5.section2Sub1P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost5.section2Sub1Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section2Sub1Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section2Sub1Item3')}</li>
+            </ul>
+            <h3 id="modbus-mechanism">{t('blogPost.blogPost5.section2Sub2Title')}</h3>
+            <p>{renderContent('blogPost.blogPost5.section2Sub2P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost5.section2Sub2Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section2Sub2Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section2Sub2Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section2Sub2Item4')}</li>
+            </ul>
+            {/* Image 1 */}
+            <div className="relative w-full aspect-video my-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost5.imageAlt1')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          <h3 className="text-xl font-semibold mt-4 mb-2">1.2. Cơ Chế Hoạt Động</h3>
-          <p>
-            Modbus sử dụng mô hình <strong>Master–Slave</strong> (hoặc Client–Server trong Modbus TCP):
-          </p>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Master gửi yêu cầu đọc hoặc ghi dữ liệu đến Slave.</li>
-            <li>Slave phản hồi bằng dữ liệu trong các thanh ghi (Register).</li>
-            <li>Một Master có thể kết nối đến tối đa <strong>247 thiết bị Slave</strong>.</li>
-            <li>Dữ liệu được kiểm tra bằng mã <strong>CRC</strong> để đảm bảo chính xác.</li>
-          </ul>
+            {/* SNMP Protocol */}
+            <h2 id="snmp">{t('blogPost.blogPost5.section3Title')}</h2>
+            <h3 id="snmp-overview">{t('blogPost.blogPost5.section3Sub1Title')}</h3>
+            <p>{renderContent('blogPost.blogPost5.section3Sub1P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost5.section3Sub1Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section3Sub1Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section3Sub1Item3')}</li>
+            </ul>
+            <h3 id="snmp-mechanism">{t('blogPost.blogPost5.section3Sub2Title')}</h3>
+            <p>{renderContent('blogPost.blogPost5.section3Sub2P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost5.section3Sub2Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section3Sub2Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section3Sub2Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section3Sub2Item4')}</li>
+            </ul>
+             {/* Image 2 */}
+            <div className="relative w-full aspect-video my-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost5.imageAlt2')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          <div className="relative w-full h-[360px] my-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Mô hình truyền thông Modbus TCP"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
+            {/* Data Transmission */}
+            <h2 id="transmission">{t('blogPost.blogPost5.section4Title')}</h2>
+            <h3 id="modbus-process">{t('blogPost.blogPost5.section4Sub1Title')}</h3>
+            <ul>
+                <li>{renderContent('blogPost.blogPost5.section4Sub1Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub1Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub1Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub1Item4')}</li>
+            </ul>
+            <h3 id="snmp-process">{t('blogPost.blogPost5.section4Sub2Title')}</h3>
+             <ul>
+                <li>{renderContent('blogPost.blogPost5.section4Sub2Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub2Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub2Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section4Sub2Item4')}</li>
+            </ul>
 
-          {/* --- GIAO THỨC SNMP --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">2. Giao Thức SNMP</h2>
-          <h3 className="text-xl font-semibold mt-4 mb-2">2.1. Tổng Quan</h3>
-          <p>
-            <strong>SNMP (Simple Network Management Protocol)</strong> là giao thức quản lý mạng dùng để giám sát và điều khiển các thiết bị IT như switch, router, server, UPS, camera IP...
-          </p>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>SNMPv1: Phiên bản đầu tiên, đơn giản nhưng bảo mật yếu.</li>
-            <li>SNMPv2c: Cải thiện tốc độ và thêm lệnh GETBULK.</li>
-            <li>SNMPv3: Hỗ trợ mã hóa và xác thực người dùng.</li>
-          </ul>
+             {/* Practical Applications */}
+            <h2 id="applications">{t('blogPost.blogPost5.section5Title')}</h2>
+            <h3 id="modbus-apps">{t('blogPost.blogPost5.section5Sub1Title')}</h3>
+             <ul>
+                <li>{renderContent('blogPost.blogPost5.section5Sub1Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub1Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub1Item3')}</li>
+            </ul>
+            <h3 id="snmp-apps">{t('blogPost.blogPost5.section5Sub2Title')}</h3>
+             <ul>
+                <li>{renderContent('blogPost.blogPost5.section5Sub2Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub2Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub2Item3')}</li>
+            </ul>
+             <h3 id="combined-apps">{t('blogPost.blogPost5.section5Sub3Title')}</h3>
+             <ul>
+                <li>{renderContent('blogPost.blogPost5.section5Sub3Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub3Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub3Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section5Sub3Item4')}</li>
+            </ul>
 
-          <h3 className="text-xl font-semibold mt-4 mb-2">2.2. Cơ Chế Hoạt Động</h3>
-          <p>SNMP hoạt động theo mô hình <strong>Manager – Agent</strong>:</p>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Manager gửi lệnh <strong>GET</strong> để lấy thông tin.</li>
-            <li>Agent phản hồi dựa trên cơ sở dữ liệu <strong>MIB</strong> (Management Information Base).</li>
-            <li>Agent có thể chủ động gửi <strong>Trap</strong> khi có sự cố (mất nguồn, quá nhiệt...).</li>
-            <li>Manager có thể dùng lệnh <strong>SET</strong> để thay đổi cấu hình thiết bị.</li>
-          </ul>
+             {/* Benefits */}
+             <h2 id="benefits">{t('blogPost.blogPost5.section6Title')}</h2>
+              <ul>
+                <li>{renderContent('blogPost.blogPost5.section6Item1')}</li>
+                <li>{renderContent('blogPost.blogPost5.section6Item2')}</li>
+                <li>{renderContent('blogPost.blogPost5.section6Item3')}</li>
+                <li>{renderContent('blogPost.blogPost5.section6Item4')}</li>
+                <li>{renderContent('blogPost.blogPost5.section6Item5')}</li>
+                <li>{renderContent('blogPost.blogPost5.section6Item6')}</li>
+            </ul>
 
-          <div className="relative w-full h-[360px] my-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Mô hình SNMP trong giám sát mạng"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
+             {/* Conclusion */}
+            <h2 id="conclusion">{t('blogPost.blogPost5.section7Title')}</h2>
+            <p>{renderContent('blogPost.blogPost5.section7P1')}</p>
+            <p>{renderContent('blogPost.blogPost5.section7P2')}</p>
+             {/* Image 3 */}
+             <div className="relative w-full aspect-video mt-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost5.imageAlt3')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          {/* --- CÁCH TRUYỀN DỮ LIỆU --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">3. Cách Truyền Dữ Liệu</h2>
-          <h3 className="text-xl font-semibold mt-4 mb-2">3.1. Quy Trình Modbus</h3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Master kết nối tới Slave qua RS-485 hoặc TCP/IP.</li>
-            <li>Gửi lệnh đọc/ghi với địa chỉ thanh ghi cụ thể.</li>
-            <li>Slave xử lý và trả về dữ liệu thực.</li>
-            <li>Phần mềm BMS hiển thị thông tin real-time.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2">3.2. Quy Trình SNMP</h3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Manager gửi lệnh GET request với OID cụ thể.</li>
-            <li>Agent truy xuất MIB và phản hồi dữ liệu.</li>
-            <li>Manager lưu dữ liệu và cập nhật dashboard.</li>
-            <li>Agent gửi Trap khi có cảnh báo hoặc sự kiện bất thường.</li>
-          </ul>
-
-          {/* --- ỨNG DỤNG THỰC TẾ --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">4. Ứng Dụng Thực Tế Trong BMS</h2>
-          <h3 className="text-xl font-semibold mt-4 mb-2">4.1. Ứng Dụng Modbus</h3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li><strong>Điều hòa trung tâm (HVAC):</strong> Kết nối 50 máy lạnh qua Modbus RTU để thu thập nhiệt độ, độ ẩm, công suất và điều khiển bật/tắt từ xa.</li>
-            <li><strong>Giám sát năng lượng:</strong> Đồng hồ điện Modbus TCP truyền dữ liệu tiêu thụ mỗi 5 giây, giúp phát hiện bất thường.</li>
-            <li><strong>Phòng server:</strong> Cảm biến nhiệt độ, UPS và PAC điều khiển qua Modbus tích hợp vào DCIM.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2">4.2. Ứng Dụng SNMP</h3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li><strong>Giám sát mạng:</strong> Monitor hàng trăm switch/router, thu thập CPU, RAM, băng thông, cảnh báo khi interface down.</li>
-            <li><strong>Quản lý UPS:</strong> Theo dõi điện áp, tải, nhiệt độ, nhận Trap khi chuyển sang pin, tự động shutdown server khi pin yếu.</li>
-            <li><strong>Giám sát môi trường:</strong> Cảm biến nhiệt độ, độ ẩm, khói gửi Trap ngay khi phát hiện bất thường.</li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mt-6 mb-2">4.3. Kết Hợp Cả Hai Trong BMS</h3>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Modbus cho thiết bị HVAC, đồng hồ điện, cảm biến môi trường.</li>
-            <li>SNMP cho hạ tầng mạng, UPS, camera IP.</li>
-            <li>Gateway trung gian giúp chuyển đổi hai giao thức.</li>
-            <li>Dashboard tổng hợp hiển thị toàn bộ dữ liệu trong BMS.</li>
-          </ul>
-
-          {/* --- LỢI ÍCH --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">5. Lợi Ích Khi Ứng Dụng Modbus & SNMP</h2>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Tích hợp đa dạng thiết bị từ nhiều nhà sản xuất.</li>
-            <li>Giám sát real-time 24/7 với cảnh báo tức thời.</li>
-            <li>Phát hiện sự cố sớm, giảm thời gian downtime.</li>
-            <li>Điều khiển và cấu hình thiết bị từ xa tiện lợi.</li>
-            <li>Dữ liệu tập trung giúp phân tích xu hướng và báo cáo năng lượng.</li>
-            <li>Tối ưu hóa vận hành và tiết kiệm chi phí bảo trì.</li>
-          </ul>
-
-          {/* --- KẾT LUẬN --- */}
-          <h2 className="text-2xl font-semibold mt-8 mb-3">Kết Luận</h2>
-          <p>
-            <strong>Modbus</strong> và <strong>SNMP</strong> là hai giao thức nền tảng giúp BMS trở nên thông minh và linh hoạt hơn. 
-            Modbus phù hợp cho các thiết bị công nghiệp yêu cầu phản hồi tức thời, trong khi SNMP là lựa chọn lý tưởng cho quản lý thiết bị IT và mạng.
-          </p>
-          <p>
-            Khi được tích hợp hợp lý, hai giao thức này tạo nên một hệ thống giám sát tập trung, an toàn và hiệu quả — giúp đội vận hành dễ dàng kiểm soát toàn bộ hạ tầng tòa nhà, từ HVAC đến UPS và mạng nội bộ.
-          </p>
-
-          <div className="relative w-full h-[360px] mt-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Dashboard BMS với Modbus và SNMP"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* --- CỘT PHẢI: SIDEBAR --- */}
       <motion.div
         className="lg:col-span-1"
-        initial={{ opacity: 0, x: 60 }}
+        initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.3 }} // Adjusted delay
         viewport={{ once: true }}
       >
         <div className="sticky top-8">
+           {/* Assuming BlogSidebar is translated */}
           <BlogSidebar />
         </div>
       </motion.div>
