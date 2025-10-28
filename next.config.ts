@@ -96,6 +96,13 @@ const nextConfig: NextConfig = {
          port: '',
          pathname: '/**',
        },
+      { protocol: "https", hostname: "static.vecteezy.com" },
+      { protocol: "https", hostname: "haiauint.vn" },
+      { protocol: "https", hostname: "cdn2.iconfinder.com" },
+      { protocol: "https", hostname: "encrypted-tbn0.gstatic.com" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
+      { protocol: "https", hostname: "png.pngtree.com" },
+
     ],
   },
 };
