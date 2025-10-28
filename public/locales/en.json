@@ -1,0 +1,1108 @@
+{    "_comment1": "gioi-thieu",
+    "aboutPage": {
+      "hero": {
+        "title": "DINH CAO VIET – COMPREHENSIVE M&E SOLUTIONS FOR TECHNOLOGY INFRASTRUCTURE",
+        "subtitle": "Partnering to build Data Centers & ICT infrastructure with efficiency - safety - sustainability."
+      },
+      "intro": {
+        "title": "ABOUT US",
+        "p1": "DINH CAO VIET Investment Consulting - Trading JSC was established in 12/2004, focusing on M&E solutions for Data Centers & ICT infrastructure.",
+        "p2": "With nearly 20 years of experience, we are a trusted partner for many corporations, banks, hospitals... committed to optimal - safe - sustainable solutions.",
+        "p3": "We are committed to providing optimal solutions, ensuring performance, safety, and long-term sustainability in operating technical systems.",
+        "buttonContact": "Contact for Consultation",
+        "buttonSolutions": "Solutions",
+        "imageAlt": "DINH CAO VIET – M&E Solutions"
+      },
+      "strategy": {
+        "tabVision": "Vision",
+        "tabStrategy": "Strategy",
+        "tabTeam": "Team",
+        "tabCustomer": "Customers",
+        "nodeVision": "Vision - Mission",
+        "nodeStrategy": "Core Strategy",
+        "nodeTeam": "Our Team",
+        "nodeCustomer": "For Customers",
+        "content": {
+          "vision": {
+            "title": "VISION, MISSION",
+            "lead": "DCV creates smart & sustainable operation standards for every project.",
+            "body": "<p>DCV's mission is to integrate smart operation technology into every project, contributing to a green future, energy savings, and enhanced user experiences.</p><p>We believe that every solid technical solution today is the foundation for a sustainable connected world tomorrow.</p>"
+          },
+          "strategy": {
+            "title": "CORE STRATEGY",
+            "lead": "Focusing on 3 pillars: Quality - Technology - People, aiming for sustainable growth.",
+            "body": "<p>Dinh Cao Viet (DCV) aims for sustainable development based on quality, technology, and people. We focus on innovating technical solutions, enhancing team capabilities, strategic partnerships, and building modern, energy-efficient M&E systems & Data Centers to deliver sustainable value and maximum efficiency to our customers.</p>"
+          },
+          "customer": {
+            "title": "FOR CUSTOMERS",
+            "lead": "DCV places customers at the center of all activities.",
+            "body": "<p>Customers are the focus; efficiency, safety, and stability are the measures of success.</p><p>We are committed to providing optimal, safe, and sustainable technical solutions, helping customers operate efficiently, save energy, and ensure long-term stability.</p><p>With the motto “Quality - Prestige - Efficiency”, DCV constantly improves to become a trusted partner, accompanying customers in their development.</p>"
+          },
+          "team": {
+            "title": "OUR TEAM",
+            "lead": "Fully certified team with over 20 years of hands-on experience in M&E, HVAC, BMS, Data Center.",
+            "body": "<p>The Dinh Cao Viet (DCV) team consists of engineers and experts with over 20 years of experience in consulting, designing, constructing, and maintaining M&E, HVAC, BMS, and Data Center systems nationwide.</p><p>Each member is well-trained, holding professional certifications in PAC, UPS, Fire Protection, DCIM, and smart energy management, committed to meeting the strictest technical standards.</p>"
+          }
+        }
+      },
+      "cta": {
+        "title": "Need a professional M&E partner for your project?",
+        "subtitle": "Contact <strong>DINH CAO VIET</strong> now for the most optimal and effective solution consultation.",
+        "button": "Consult Now"
+      },
+      "contactDock": {
+        "ariaLabel": "Quick Contacts",
+        "hotline": "Call Hotline",
+        "messenger": "Messenger",
+        "zalo": "Zalo",
+        "email": "Email",
+        "map": "Map",
+        "toggle": "Open contact list",
+        "backToTop": "Back to top"
+      }
+    },
+
+
+    "header": {
+    "topbar": {
+      "news": "News & Events",
+      "hotline": "Hotline: 1900 3339", 
+      "toggleLanguageTitle": "Change language",
+      "toggleLanguageLabel": "Toggle language" 
+    },
+    "nav": {
+      "logoAlt": "DCV Logo",
+      "companyName1": "SERVICES & ENGINEERING JOINT STOCK COMPANY",
+      "companyName2": "DCV REFRIGERATION ELECTRICAL MECHANICAL",
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services", 
+      "projects": "Featured Projects",
+      "contact": "Contact",
+      "blog": "Blog"
+    }
+  },
+
+
+
+
+
+  "footer": {
+    "companyInfo": {
+      "name1": "SERVICES & ENGINEERING JOINT STOCK COMPANY",
+      "name2": "DCV REFRIGERATION ELECTRICAL MECHANICAL",
+      "description": "Comprehensive M&E solutions for Data Centers & ICT infrastructure.",
+      "logoAlt": "DCV Footer Logo"
+    },
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "home": "Home",
+      "about": "About Us",
+      "services": "Solutions",
+      "projects": "Featured Projects",
+      "contact": "Contact"
+    },
+    "mainSolutions": {
+      "title": "MAIN SOLUTIONS",
+      "electrical": "Electrical Systems",
+      "hvac": "HVAC Systems",
+      "bms": "Automation & BMS",
+      "fireProtection": "Fire Fighting Systems",
+      "itInfra": "IT Infrastructure & Data Center",
+      "maintenance": "Maintenance Services"
+    },
+    "contactInfo": {
+      "title": "CONTACT INFORMATION",
+      "addressLabel": "Address:",
+      "addressValue": "12/42 Truong Chinh St, Hoa Thuan Tay Ward, Hai Chau Dist, Da Nang City",
+      "phoneLabel": "Phone:",
+      "phoneValue": "123456789",
+      "hotlineLabel": "Hotline:",
+      "hotlineValue": "1900 3339",
+      "emailLabel": "Email:",
+      "emailValue": "contact@dinhcaoviet.vn"
+    },
+    "copyright": "© {currentYear} Copyright DCV Refrigeration Electrical Mechanical Services & Engineering JSC. All Rights Reserved." 
+  },
+
+
+
+
+
+
+
+    "homepage": {
+    "_comment2": "homepage.swiper",
+ "swiper": {
+      "slide1": {
+        "title": "R.E.E M&E",
+        "desc": "Top 500 Largest Enterprises in Vietnam"
+      },
+      "slide2": {
+        "title": "Leading M&E Solutions",
+        "desc": "Providing professional, high-quality services"
+      },
+      "slide3": {
+        "title": "Trusted Partner for Businesses",
+        "desc": "We deliver efficiency and sustainability"
+      },
+      "button": "View Details"
+    },
+
+
+
+
+    "_comment3": "homepage.articles",
+    "articles": {
+      "sectionTitle": "M&E KNOWLEDGE & SOLUTIONS",
+      "sectionSubtitle": "Stay updated on technology trends, technical standards, and practical M&E construction experience – helping investors, engineers, and contractors optimize project efficiency.",
+      "article1": {
+        "title": "Optimizing VRV/VRF Central Air Conditioning Systems in Large Projects",
+        "category": "Mechanical & Electrical",
+        "description": "Understanding operating principles and performance factors can reduce HVAC energy costs by up to 20%."
+      },
+      "article2": {
+        "title": "5 Points to Check Before Accepting Low Voltage Electrical Systems",
+        "category": "Electrical",
+        "description": "Checking loads, wiring, grounding, and protective devices is crucial for safety and TCVN standard compliance."
+      },
+      "article3": {
+        "title": "Automatic Fire Protection Systems: Common Installation Errors",
+        "category": "Plumbing",
+        "description": "Minor errors like incorrect sprinkler head selection or improper fire alarm panel placement can affect the entire system."
+      },
+      "article4": {
+        "title": "BMS Application in Smart Building Management",
+        "category": "Automation",
+        "description": "BMS helps building owners monitor energy, air conditioning, lighting, and security on a single platform."
+      },
+      "article5": {
+        "title": "Energy Saving Solutions for Electrical Systems",
+        "category": "Technology",
+        "description": "Optimizing capacity, choosing high-efficiency equipment, and remote monitoring significantly reduce operating costs."
+      }
+    },
+
+
+
+    "_comment4": "homepage.intro",
+    "intro": {
+      "title": "DCV M&E REFRIGERATION & DATA CENTER INFRASTRUCTURE SOLUTIONS",
+      "description": "<strong>DCV</strong> specializes in designing, constructing, and integrating precision M&E systems for Data Centers, factories, and commercial buildings – meeting international standards for performance and safety.",
+      "buttonSolutions": "VIEW SOLUTIONS →",
+      "buttonContact": "CONTACT CONSULTING ENGINEER →",
+      "stat1": "Years of Experience",
+      "stat2": "Projects Deployed",
+      "stat3": "Corporate Clients",
+      "stat4": "Global Technology Partners"
+    },
+
+    "_comment5": "homepage.criteria",
+    "criteria": {
+      "title": "<span class=\"text-[#c9e265]\">COMPREHENSIVE M&E SOLUTIONS</span> & DATA CENTER INFRASTRUCTURE",
+      "subtitle": "delivering high efficiency",
+      "left1": "Fire & Safety",
+      "left2": "CCTV & Access Control",
+      "left3": "Ground & Surge Protection",
+      "centerTitle": "DCV",
+      "centerSubtitle": "Comprehensive M&E & Data Center Infrastructure Solutions",
+      "centerDescription": "Providing solutions in M&E – HVAC – BMS – DCIM, meeting the needs for stable operation, energy efficiency, and absolute safety for data centers, factories, and commercial buildings.",
+      "centerButton": "Contact for Consultation →",
+      "right1": "HVAC & SmartCool PAC",
+      "right2": "UPS & Power System",
+      "right3": "BMS & DCIM"
+    },
+
+
+
+
+    "_comment6": "homepage.partners",
+    "partners": {
+      "title": "PARTNERS & TECHNOLOGY FROM THE <span class=\"text-red-600\">WORLD'S LEADING BRANDS</span>",
+      "description": "DCV partners with the world's leading brands to deliver precision cooling solutions that are energy-efficient and sustainable.",
+      "partner1Title": "Airedale by Modine (UK)",
+      "partner1Description": "A world leader in the manufacture of precision cooling systems (PAC, CRAC, CRAH, Chiller) for Data Centers and industrial HVAC.",
+      "partner2Title": "AireWall ONE™ – Data Center Fan Array",
+      "partner2Description": "Smart fan wall solution (200–650 kW) that increases heat exchange efficiency and saves up to 30% on energy.",
+      "partner3Title": "SmartCool™ i-drive Inverter Compressor",
+      "partner3Description": "Inverter compressor (5–83 kW) saving up to 45% energy, suitable for small and medium data centers."
+    },
+
+
+
+    "_comment7": "homepage.solutionsList",
+    "solutionsList": {
+      "title": "<span class=\"text-green-600\">COMPREHENSIVE M&E SOLUTIONS</span> FOR BUSINESSES & PROJECTS",
+      "description": "We provide comprehensive M&E solutions from consulting, design, construction to operation – ensuring projects are safe, energy-efficient, and operate stably according to international standards (TCVN, ISO, IEC...).",
+      "item1": {
+        "title": "Electrical Systems",
+        "description": "Design and construction of medium/low voltage electrical systems, lighting, grounding, and lightning protection for civil and industrial projects. We ensure safety standards, load stability, and optimize operating costs through high-quality equipment and energy-saving solutions. Applications: Factories, office buildings, industrial parks, data centers."
+      },
+      "item2": {
+        "title": "HVAC Systems",
+        "description": "Providing central air conditioning solutions (VRV/VRF, Chiller, AHU, FCU) and ventilation, smoke extraction, and fresh air supply systems. From design to installation, we prioritize energy efficiency, low noise, and equipment durability. Applications: High-rises, hotels, hospitals, shopping malls."
+      },
+      "item3": {
+        "title": "Automation & Building Management Systems (BMS)",
+        "description": "Implementing smart building management and supervision systems (BMS) – connecting electrical, HVAC, lighting, security, and fire protection devices on a single platform. The solution helps optimize energy, enhance comfort, and reduce operating costs. Applications: Buildings, factories, complexes, Data Centers."
+      },
+      "item4": {
+        "title": "Fire Fighting Systems",
+        "description": "Design, installation, and acceptance of automatic fire protection systems including sprinklers, addressable fire alarms, and gas suppression (FM200/CO₂) according to NFPA and TCVN standards. We ensure all projects meet safety standards and are licensed by state authorities. Applications: Workshops, buildings, hotels, data centers."
+      },
+      "item5": {
+        "title": "IT Infrastructure & Data Center",
+        "description": "Providing IT infrastructure solutions including LAN, WiFi, camera, Access Control, UPS, Rack, and specialized cooling systems for Data Centers. We integrate all electrical, cooling, networking, and security systems according to TIA-942 / Uptime Tier standards. Applications: Enterprises, factories, data centers, offices."
+      },
+      "item6": {
+        "title": "Maintenance & Technical Services",
+        "description": "Periodic maintenance, inspection, upgrade, and replacement services for M&E equipment to maintain stable operation and extend system lifespan. We have a 24/7 engineering team ready for emergency support and periodic checks under professional maintenance contracts. Applications: Buildings, industrial parks, manufacturing plants."
+      },
+      "commitmentTitle": "Commitment",
+      "commitmentP1": "With over 10 years of experience in the M&E industry, we are confident in delivering optimal, safe, and effective solutions for every project.",
+      "commitmentP2": "Contact us now for a free technical consultation and to receive the most suitable solution proposal for your project."
+    },
+
+
+
+
+
+    "_comment8": "homepage.contactForm",
+    "contactForm": {
+      "title": "Need advice on <span class=\"text-[#c9e265]\">M&E – HVAC – BMS</span> solutions for your project?",
+      "subtitle": "Contact us now for free technical support.",
+      "addressLabel": "Address:",
+      "addressValue": "12/42 Truong Chinh - Da Nang",
+      "phoneLabel": "Phone:",
+      "phoneValue": "123456789",
+      "emailLabel": "Email:",
+      "emailValue": "123@gmail.com",
+      "zaloSub": "Message via",
+      "zaloTitle": "HD AGENCY OFFICIAL ZALO",
+      "hotlineSub": "Call hotline now",
+      "hotlineTitle": "0938 002 776",
+      "facebookSub": "Live chat directly",
+      "facebookTitle": "HD AGENCY OFFICIAL FACEBOOK",
+      "formTitle": "Get a free consultation",
+      "formNamePlaceholder": "Full Name*",
+      "formCompanyPlaceholder": "Company / Project",
+      "formEmailPlaceholder": "Email*",
+      "formPhonePlaceholder": "Phone Number*",
+      "formInterestSelect": "Type of solution interested in",
+      "formInterestOption1": "M&E",
+      "formInterestOption2": "HVAC",
+      "formInterestOption3": "BMS",
+      "formMessagePlaceholder": "Your Message",
+      "formAgreement": "I agree to be contacted",
+      "formButton": "Send Request →"
+    }
+  },
+
+
+  "servicesPage": {
+    "_comment9": "src/components/service/Hero",
+    "hero": {
+      "title": "Services & Solutions",
+      "subtitle": "Providing comprehensive solutions for building technical infrastructure, from design consultation to construction and maintenance."
+    },
+    "_comment10": "src/components/service/problemsv2",
+    "problems": {
+      "title": "Problems You Might Be Facing?",
+      "item1": "Unstable cooling system, high energy consumption, difficult temperature control.",
+      "item2": "Sudden power outages, weak backup power, unstable ATS operation.",
+      "item3": "Difficult to monitor and manage data center infrastructure, unsynchronized systems.",
+      "item4": "High risk of fire/explosion, lack of early warning and automatic fire suppression.",
+      "item5": "Poor security, difficult access control and monitoring of critical areas.",
+      "item6": "Equipment easily damaged by lightning, non-standard grounding and surge protection."
+    },
+    "_comment11": "src/components/service/applications",
+    "applications": {
+      "title": "Diverse Applications",
+      "subtitle": "Suitable solutions for various types of projects",
+      "card1": {
+        "title": "Data Center",
+        "description": "Comprehensive solutions for data centers, from HVAC, UPS to BMS and DCIM.",
+        "item1": "Tier III/IV Data Center",
+        "item2": "IDC (Internet Data Center)",
+        "item3": "Server Room"
+      },
+      "card2": {
+        "title": "Industrial Factory",
+        "description": "Industrial technical systems, HVAC, and BMS for production environments.",
+        "item1": "Electronics Factory",
+        "item2": "Pharmaceutical Factory",
+        "item3": "Food & Beverage Factory"
+      },
+      "card3": {
+        "title": "Office Building",
+        "description": "Smart building solutions, energy-saving and comfortable.",
+        "item1": "Smart Building",
+        "item2": "LEED Certified",
+        "item3": "Green Building"
+      }
+    },
+    "_comment12": "src/components/service/benefits",
+    "benefits": {
+      "imageAlt": "DCV Data Center",
+      "title": "Benefits of Choosing <span class=\"text-secondary\">DCV</span>", 
+      "description": "DCV delivers smart, secure, and cost-effective data center solutions — helping your business operate efficiently, reduce costs, and meet international standards.",
+      "item1": "Stable operation, minimizing downtime and system risks.",
+      "item2": "Energy savings, optimizing operational and maintenance costs.",
+      "item3": "Centralized 24/7 monitoring, easy control over all equipment.",
+      "item4": "Ensures safety and meets international data security standards."
+    },
+    "_comment13": "src/components/service/benefitsDCV",
+    "benefitsDCV": {
+      "title": "Benefits of Choosing <span class=\"text-secondary\">DCV</span>",
+      "description": "DCV provides intelligent, cost-effective, and stable data center systems – ensuring safety, efficiency, and international standards compliance for your business.",
+      "card1": {
+        "title": "Stable Operation",
+        "description": "Reliable system operation, minimizing risks and downtime."
+      },
+      "card2": {
+        "title": "Cost Savings",
+        "description": "Optimized power consumption and reduced periodic maintenance costs."
+      },
+      "card3": {
+        "title": "24/7 Monitoring",
+        "description": "Easy centralized management and monitoring of equipment, anytime, anywhere."
+      },
+      "card4": {
+        "title": "Safe & Compliant",
+        "description": "Ensures international standards for safety, security, and reliability."
+      }
+    },
+    "_comment14": "src/components/service/cta",
+    "cta": {
+      "title": "Ready to Upgrade Your System?",
+      "description": "Contact us today for a free consultation and receive a detailed quote for the solution best suited to your business.",
+      "buttonContact": "Contact for Consultation",
+      "buttonQuote": "View Quote"
+    },
+    "_comment15": "src/components/service/customerProblems",
+    "customerProblems": {
+      "title": "Customer Problems",
+      "item1": "Unstable cooling system, high energy consumption, difficult temperature control.",
+      "item2": "Sudden power outages, weak backup power, unstable ATS operation.",
+      "item3": "Difficult to monitor and manage data center infrastructure, unsynchronized systems.",
+      "item4": "High risk of fire/explosion, lack of early warning and automatic fire suppression.",
+      "item5": "Poor security, difficult access control and monitoring of critical areas.",
+      "item6": "Equipment easily damaged by lightning, non-standard grounding and surge protection."
+    },
+
+
+    "_comment16": "src/components/service/outstandingSolution",
+    "outstandingSolution": {
+      "imageAlt": "HVAC System",
+      "tag": "Featured Solution",
+      "title": "SmartCool i-drive Inverter",
+      "description": "Advanced inverter technology from Airedale by Modine helps save up to <span class=\"font-semibold text-accent\">40%</span> energy compared to traditional systems, while ensuring temperature accuracy of ±1°C for Data Center environments.", 
+      "point1": "Optimal energy savings",
+      "point2": "High precision",
+      "point3": "Quiet operation",
+      "point4": "Long lifespan",
+      "point5": "BMS/DCIM integration",
+      "button": "Learn More"
+    },
+    "_comment17": "src/components/service/semiCircleProblems",
+    "semiCircleProblems": { 
+      "title": "Customer Problems",
+      "item1": "Unstable cooling system, high energy consumption, difficult temperature control.",
+      "item2": "Sudden power outages, weak backup power, unstable ATS operation.",
+      "item3": "Difficult to monitor and manage data center infrastructure, unsynchronized systems.",
+      "item4": "High risk of fire/explosion, lack of early warning and automatic fire suppression.",
+      "item5": "Poor security, difficult access control and monitoring of critical areas.",
+      "item6": "Equipment easily damaged by lightning, non-standard grounding and surge protection."
+    },
+    "_comment18": "src/components/service/process",
+    "process": {
+      "title": "8-Step Process",
+      "step1": "Design and Consulting",
+      "step2": "Equipment Supply",
+      "step3": "Project Management",
+      "step4": "Deployment and Installation",
+      "step5": "Testing & Configuration",
+      "step6": "Training and Coaching",
+      "step7": "Handover",
+      "step8": "Maintenance & Upkeep"
+    },
+    "_comment19": "src/components/service/processDetailed",
+    "processDetailed": {
+      "title": "8-Step Process",
+      "stepPrefix": "Step {{stepNum}}: ", 
+      "step1": {
+        "title": "Design and Consulting",
+        "description": "We conduct site surveys, analyze needs, create drawings, and propose the most optimal infrastructure solutions."
+      },
+      "step2": {
+        "title": "Equipment Supply",
+        "description": "Ensure the supply of genuine, synchronized equipment that meets technical standards and high performance."
+      },
+      "step3": {
+        "title": "Project Management",
+        "description": "Our engineering team monitors progress and quality, coordinating closely between parties to ensure adherence to the plan."
+      },
+      "step4": {
+        "title": "Deployment and Installation",
+        "description": "Perform installation according to technical specifications, ensuring safety, aesthetics, and optimal operational performance."
+      },
+      "step5": {
+        "title": "Testing & Configuration",
+        "description": "Conduct detailed checks, adjustments, and configuration to ensure the system operates stably and accurately."
+      },
+      "step6": {
+        "title": "Training & Coaching",
+        "description": "Instruct the client's technical team on operation, monitoring, and handling real-world situations."
+      },
+      "step7": {
+        "title": "Handover",
+        "description": "Deliver complete documentation, drawings, system diagrams, and acceptance certificates."
+      },
+      "step8": {
+        "title": "Maintenance & Upkeep",
+        "description": "Provide periodic maintenance services and rapid troubleshooting to keep the system consistently stable."
+      }
+    },
+
+    "_comment20": "src/components/service/serviceList",
+    "serviceList": {
+      "title": "Professional Solutions",
+      "subtitle": "6 leading technical solution groups for your project",
+      "card1": {
+        "title": "HVAC SYSTEM",
+        "description": "Air conditioning system. Ensures precise cooling, maintaining a stable environment for data centers and technology equipment.",
+        "feature1": "SmartCool i-drive Inverter Compressor",
+        "feature2": "AireWall ONE Fan Array",
+        "feature3": "Airedale PAC / CRAC / Chiller",
+        "feature4": "Precise temperature and humidity control",
+        "feature5": "Optimal energy savings"
+      },
+      "card2": {
+        "title": "UPS & POWER DISTRIBUTION SYSTEM",
+        "description": "Uninterruptible Power Supply and Power Distribution System. Provides stable power and timely backup to prevent operational disruptions.",
+        "feature1": "High-capacity UPS",
+        "feature2": "Automatic Transfer Switch (ATS) system",
+        "feature3": "Intelligent Power Distribution (PDU)",
+        "feature4": "Monitoring & Alert System",
+        "feature5": "Professional periodic maintenance"
+      },
+      "card3": {
+        "title": "BMS/DCIM SYSTEM",
+        "description": "Building Management System and Data Center Infrastructure Management. Helps monitor, control, and optimize the operational performance of the entire infrastructure.",
+        "feature1": "Multi-protocol integrated BMS",
+        "feature2": "DCIM - Data Center Infrastructure Management",
+        "feature3": "Modbus / SNMP / BACnet Protocols",
+        "feature4": "Real-time monitoring dashboard",
+        "feature5": "Automation and optimization"
+      },
+      "card4": {
+        "title": "FIRE ALARM & FIRE FIGHTING SYSTEM",
+        "description": "Fire safety and protection system. Early detection of fire risks, automatically activating safety measures for personnel and equipment.",
+        "feature1": "Intelligent & Addressable Fire Alarm",
+        "feature2": "Automatic Fire Suppression (Gas/Water)",
+        "feature3": "VESDA Early Warning Smoke Detection",
+        "feature4": "Environmental temperature monitoring",
+        "feature5": "BMS Integration"
+      },
+      "card5": {
+        "title": "ACCESS CONTROL & CCTV SYSTEM",
+        "description": "Monitoring and access control. Enhances security, effectively managing access to critical areas.",
+        "feature1": "HD/4K/IP Surveillance Cameras",
+        "feature2": "Access Control System (Card/Biometric)",
+        "feature3": "Facial Recognition (AI)",
+        "feature4": "NVR/Cloud Storage",
+        "feature5": "Real-time Intrusion Alerts"
+      },
+      "card6": {
+        "title": "EARTHING & LIGHTNING PROTECTION SYSTEM",
+        "description": "Grounding and surge protection. Protects equipment from lightning strikes and power surges, ensuring system-wide safety.",
+        "feature1": "Safety & Industrial Earthing",
+        "feature2": "Surge Protection (AC/DC/Data)",
+        "feature3": "Surge Protection Device (SPD)",
+        "feature4": "Periodic Ground Resistance Testing",
+        "feature5": "Compliance with International Standards (IEC/TCVN)"
+      }
+    }
+
+  },
+
+
+
+  
+    "blogSidebar": {
+      "searchPlaceholder": "Search...",
+      "allPosts": "ALL POSTS",
+      "featuredPosts": "FEATURED POSTS",
+      "archives": "ARCHIVES",
+      "archiveDate": "December 2025",
+      "categories": "CATEGORIES",
+      "categoryName": "Posts"
+    },
+    "blogPageSidebar": [
+      {
+        "id": 1,
+        "title": "What is BMS? Intelligent building management for modern data centers"
+      },
+      {
+        "id": 2,
+        "title": "HVAC – AHU – FCU – PAC: Understand it right to design it right"
+      },
+      {
+        "id": 3,
+        "title": "UPS Systems and Power Distribution in Data Centers"
+      },
+      {
+        "id": 4,
+        "title": "SmartCool i-drive: Precise, efficient, and stable cooling"
+      },
+      {
+        "id": 5,
+        "title": "Applying Modbus & SNMP in BMS and equipment monitoring"
+      },
+      {
+        "id": 6,
+        "title": "Integrating safety & monitoring systems into a DCIM platform"
+      }
+    ],
+      "blogPage": {
+        "categoryLabel": "News",
+        "publishedOn": "Posted on",
+        "publishedBy": "by",
+        "readMoreButton": "READ ARTICLE →",
+        "post1": {
+          "title": "What is BMS? Smart Building Management Solutions for Modern Data Centers",
+          "excerpt": "This house was designed by a group of Italian architects, using natural materials, creating a feeling of immersion with the surrounding nature." 
+        },
+        "post2": {
+          "title": "HVAC – AHU – FCU – PAC: Understanding Them for Standard Design",
+          "excerpt": "Renovation not only helps refresh the living space but also brings outstanding spiritual and aesthetic value to your home." 
+        },
+        "post3": {
+          "title": "UPS Systems and Power Distribution in Data Centers",
+          "excerpt": "The combination of natural materials, light, and delicate colors helps create a luxurious and modern lifestyle." 
+        },
+        "post4": {
+          "title": "SmartCool i-drive: Precise, Cost-Effective, and Stable Cooling Solutions",
+          "excerpt": "A modern architectural work located in the middle of the forest, utilizing natural light and ventilation to bring absolute relaxation." 
+        },
+        "post5": {
+          "title": "Modbus & SNMP Applications in BMS and Device Monitoring",
+          "excerpt": "Advanced technologies help make the home comfortable, energy-efficient, and easy to control remotely." 
+        },
+        "post6": {
+          "title": "Integrating Safety & Monitoring Systems into the DCIM Platform",
+          "excerpt": "Green architectural design aims for sustainability, helping to minimize environmental impact and bring a healthier life." 
+        }
+      },
+    "blogPost": {
+        "blogPost1": {
+          "category": "News",
+          "title": "What is BMS? Smart Building Management Solutions for Modern Data Centers",
+          "publishedOn": "Posted on",
+          "publishedBy": "by",
+          "bannerAlt": "BMS building management system",
+          "section1": {
+            "title": "What is BMS?",
+            "p1": "<strong>BMS (Building Management System)</strong> – is the central 'brain' that automatically monitors, controls, and optimizes the entire technical infrastructure within buildings and Data Centers. This system helps ensure maximum energy efficiency, safety, and comfort.",
+            "p2": "In the era of digital transformation, BMS serves as the foundational platform connecting hundreds of smart devices – from electrical, air conditioning, and lighting systems to security and fire protection – creating an optimal, cost-effective, and sustainable operating environment."
+          },
+          "section2": {
+            "title": "BMS Structure: 3 Main Components",
+            "sub1Title": "1. Sensors – Sensor System",
+            "sub1Item1": "Temperature & Humidity Sensors: Monitor server room environment.",
+            "sub1Item2": "Pressure Sensors: Track ventilation and air conditioning systems.",
+            "sub1Item3": "Energy Sensors: Measure power consumption.",
+            "sub1Item4": "Water Leak Sensors: Early detection of water leak risks.",
+            "sub1Item5": "Smoke & Heat Sensors: Early fire warning.",
+            "sub1Item6": "Air Quality Sensors: Monitor dust and particulate matter.",
+            "sub2Title": "2. Controllers – Control Units",
+            "sub2Item1": "<strong>DDC:</strong> Handles logic and directly controls devices.",
+            "sub2Item2": "<strong>PLC:</strong> Controls complex automated processes.",
+            "sub2Item3": "<strong>Gateway Controllers:</strong> Connect different protocols.",
+            "sub3Title": "3. HMI – Management Interface",
+            "sub3Item1": "Dashboard displaying overall system status.",
+            "sub3Item2": "Visual graphics based on floor plans with alert color codes.",
+            "sub3Item3": "Energy trend reporting & analysis.",
+            "sub3Item4": "Smart alerts via Email, SMS, App.",
+            "sub3Item5": "Remote control via web or mobile app."
+          },
+          "section3": {
+            "title": "The Role of BMS in Data Centers",
+            "p1": "In data centers, where high stability and precision are required, BMS plays a vital role in ensuring the system operates safely, efficiently, and continuously 24/7.",
+            "listItem1": "<strong>Cooling System Management:</strong> Maintains ideal temperature (18–27°C), coordinates CRAC/CRAH systems, prevents hotspots, optimizes airflow.",
+            "listItem2": "<strong>Energy Monitoring & Optimization:</strong> Tracks PUE in real-time, detects abnormal energy consumption, and forecasts energy demand.",
+            "listItem3": "<strong>Safety & Security:</strong> Integrates access control, camera systems, fire/explosion alerts, and automatic fire suppression management.",
+            "listItem4": "<strong>Backup Power Management:</strong> Monitors UPS, diesel generators, and backup batteries, automatically activating during power outages.",
+            "imageAlt": "BMS in Data Center"
+          },
+          "section4": {
+            "title": "6 Outstanding Benefits of Implementing BMS",
+            "benefit1Title": "1. Operational Optimization",
+            "benefit1Item1": "Automates repetitive tasks, reducing manual errors.",
+            "benefit1Item2": "Reduces incident response time from hours to minutes.",
+            "benefit1Item3": "Enables continuous 24/7 operation without manual intervention.",
+            "benefit1Item4": "Adjusts equipment operation in real-time based on actual needs.",
+            "benefit2Title": "2. Significant Cost Savings",
+            "benefit2Item1": "Reduces energy costs by 20–30% through optimized equipment operation.",
+            "benefit2Item2": "Extends equipment lifespan via Predictive Maintenance.",
+            "benefit2Item3": "Reduces operational labor costs through automation.",
+            "benefit2Item4": "Avoids financial losses due to downtime or unexpected incidents.",
+            "benefit3Title": "3. Enhanced Reliability",
+            "benefit3Item1": "Ensures uptime of 99.99% or higher for critical systems.",
+            "benefit3Item2": "Early detection of potential issues before they cause serious failures.",
+            "benefit3Item3": "Integrates redundancy and automatic failover to ensure service continuity.",
+            "benefit3Item4": "Records and analyzes historical data to identify root causes.",
+            "benefit4Title": "4. Centralized Management",
+            "benefit4Item1": "A unified interface to monitor the entire infrastructure system.",
+            "benefit4Item2": "Manage multiple sites or branches from a single control center.",
+            "benefit4Item3": "Automated, unified, and standardized reporting for technical departments.",
+            "benefit4Item4": "Easily scales management capabilities as the number of devices increases.",
+            "benefit5Title": "5. Standards Compliance",
+            "benefit5Item1": "Meets international operational standards like Tier III, Tier IV.",
+            "benefit5Item2": "Supports data logging for auditing and compliance purposes.",
+            "benefit5Item3": "Reports energy consumption and environmental impact according to ISO 50001.",
+            "benefit5Item4": "Ensures safety, sustainability, and environmental friendliness.",
+            "benefit6Title": "6. Flexible Scalability",
+            "benefit6Item1": "Easily integrates new sensors or devices without system downtime.",
+            "benefit6Item2": "Flexible connection with DCIM, ITSM, SCADA, or energy monitoring systems.",
+            "benefit6Item3": "Remote software/firmware upgrades without disrupting operations.",
+            "benefit6Item4": "Supports future integration of AI, IoT, Machine Learning for smart operations."
+          },
+          "section5": {
+            "title": "Next-Generation BMS Trends",
+            "item1": "<strong>AI & Machine Learning:</strong> Predict failures, optimize energy efficiency.",
+            "item2": "<strong>IoT Integration:</strong> Higher sensor density, lower costs.",
+            "item3": "<strong>Cloud-based Management:</strong> Remote system management anytime, anywhere.",
+            "item4": "<strong>Digital Twin:</strong> Virtual simulation of the entire data center.",
+            "item5": "<strong>Green Technology:</strong> Integration of renewable energy, reduced carbon footprint."
+          },
+          "section6": {
+            "title": "Conclusion",
+            "p1": "<strong>BMS</strong> is not just a management tool – it is a key factor ensuring <strong>Data Centers</strong> operate efficiently, safely, and sustainably. Amidst exploding data growth and increasing energy pressures, investing in a quality BMS system is an essential trend for all modern data centers.",
+            "p2": "With BMS, businesses are not just 'managing' – they are proactively controlling the future of their digital infrastructure.",
+            "imageAlt": "BMS smart building management"
+          }
+        },
+        "blogPost2": {
+          "category": "News",
+          "title": "HVAC – AHU – FCU – PAC: Understand it Right to Design it Right",
+          "publishedOn": "Posted on",
+          "publishedBy": "by",
+          "bannerAlt": "HVAC overview",
+          "section1": {
+            "title": "Introduction",
+            "p1": "In HVAC engineering, choosing the right system determines operational efficiency, capital cost, and user experience. This article explains the differences between <strong>HVAC, AHU, FCU</strong> and <strong>PAC</strong>—from functions and construction to practical selection criteria."
+          },
+          "section2": {
+            "title": "1. HVAC – The Overall System",
+            "sub1Title": "1.1. Definition",
+            "sub1P": "<strong>HVAC (Heating, Ventilation, and Air Conditioning)</strong> is the overall system covering all equipment and technologies for air conditioning, heating, and ventilation in a building.",
+            "sub2Title": "1.2. Key Functions",
+            "sub2List1": "Heating: Maintain temperature in winter",
+            "sub2List2": "Ventilation: Ensure fresh air and air exchange",
+            "sub2List3": "Air Conditioning: Cooling and dehumidification in summer",
+            "sub2List4": "Air quality control (filtration, disinfection)",
+            "sub2List5": "Humidity control",
+            "sub3Title": "1.3. Main Components",
+            "sub3List1": "Chiller (chilled water plant)",
+            "sub3List2": "Boiler",
+            "sub3List3": "Cooling Tower",
+            "sub3List4": "AHU, FCU, PAC (terminal devices)",
+            "sub3List5": "Ductwork and piping",
+            "sub3List6": "BMS control system",
+            "sub4Title": "1.4. Applications",
+            "sub4P": "Office buildings, shopping malls, hospitals, factories, premium hotels.",
+            "imageAlt": "Overall HVAC"
+          },
+          "section3": {
+            "title": "2. AHU – Central Air Handling Unit",
+            "sub1Title": "2.1. Definition",
+            "sub1P": "<strong>AHU (Air Handling Unit)</strong> is the central unit that conditions and distributes air for the whole building or large zones.",
+            "sub2Title": "2.2. Construction",
+            "sub2List1": "Filter section: pre, fine, HEPA",
+            "sub2List2": "Cooling coil section: chilled-water coil",
+            "sub2List3": "Heating coil section: hot-water or electric",
+            "sub2List4": "Fan section: supply & return fans",
+            "sub2List5": "Humidifier section",
+            "sub2List6": "Mixing box section",
+            "sub3Title": "2.3. Working Principle",
+            "sub3P": "Fresh air mixes with return air, passes through filters, cooling/heating coils to adjust temperature, then supply fans push air through ductwork to conditioned spaces.",
+            "sub4Title": "2.4. Pros & Cons",
+            "sub4Pros": "Pros: Centralized conditioning, good control, energy-saving.",
+            "sub4Cons": "Cons: Higher cost, larger space requirement, complex ducting."
+          },
+          "section4": {
+            "title": "3. FCU – Local Fan Coil Unit",
+            "p1": "<strong>FCU (Fan Coil Unit)</strong> is a localized air treatment device serving individual rooms or small zones.",
+            "list1": "Heat-exchange coil",
+            "list2": "Multi-speed centrifugal fan",
+            "list3": "Condensate drain pan",
+            "list4": "Simple air filter",
+            "list5": "Chilled-water control valve",
+            "p2": "FCUs are ideal for separate spaces such as hotel rooms, small offices, and meeting rooms."
+          },
+          "section5": {
+            "title": "4. PAC – Precision Air Conditioner",
+            "sub1Title": "4.1. Definition",
+            "sub1P": "PAC is a dedicated precision air-conditioning unit that controls temperature and humidity with very high accuracy, ensuring stable environments for technology equipment, operating 24/7/365.",
+            "sub2Title": "4.2. Technical Characteristics",
+            "sub2List1": "Temperature accuracy: ±1°C or ±0.5°C",
+            "sub2List2": "Humidity accuracy: ±5% RH or ±2% RH",
+            "sub2List3": "Continuous 24/7 operation",
+            "sub2List4": "Capacity range: 5 kW – 100+ kW",
+            "sub2List5": "High sensible heat ratio (SHR > 0.9)",
+            "sub3Title": "4.3. Construction",
+            "sub3List1": "Dual compressors with inverter control",
+            "sub3List2": "High-efficiency evaporator; EEV",
+            "sub3List3": "Electrode or infrared humidifier",
+            "sub3List4": "Deep reheat dehumidification",
+            "sub3List5": "EC fans with stepless control",
+            "sub3List6": "BMS connectivity, remote monitoring, alarms",
+            "sub4Title": "4.4. Classification",
+            "sub4P1": "By heat rejection method:",
+            "sub4P1List1": "Air-cooled",
+            "sub4P1List2": "Water-cooled",
+            "sub4P1List3": "Glycol-cooled",
+            "sub4P1List4": "Chilled water",
+            "sub4P2": "By installation type:",
+            "sub4P2List1": "Up-flow (under raised floor)",
+            "sub4P2List2": "Down-flow",
+            "sub4P2List3": "Horizontal",
+            "sub5Title": "4.5. Working Principle",
+            "sub5P1": "High-precision sensors continuously monitor temperature and humidity. On small deviations, the unit automatically cools, humidifies, or dehumidifies to restore balance.",
+            "sub5P2": "Continuous air recirculation ensures even temperature and humidity. PACs also provide self-diagnostics, alarms, and data logging for maintenance.",
+            "sub6Title": "4.6. Pros & Cons",
+            "sub6ProsTitle": "Pros:",
+            "sub6Pros1": "Very high accuracy",
+            "sub6Pros2": "24/7 operation with high reliability",
+            "sub6Pros3": "Service life 15–20 years",
+            "sub6Pros4": "Smart monitoring and remote alarms",
+            "sub6ConsTitle": "Cons:",
+            "sub6Cons1": "High CAPEX and OPEX",
+            "sub6Cons2": "Higher power consumption",
+            "sub6Cons3": "Requires skilled technicians",
+            "sub6Cons4": "Needs auxiliaries such as UPS or chilled water",
+            "sub7Title": "4.7. Selection Criteria",
+            "sub7Intro": "PACs are optimal where strictly controlled environments are required with no downtime, such as:",
+            "sub7List1": "Server rooms",
+            "sub7List2": "Data centers",
+            "sub7List3": "Control rooms",
+            "sub7List4": "Telecom rooms",
+            "sub7List5": "Precision labs, museums, archives"
+          },
+          "section6": {
+            "title": "5. Environment-Based Selection Guide",
+            "officeTitle": "5.1. Office",
+            "officeList1": "Large open office (> 500 m²): AHU + ductwork",
+            "officeList2": "Multiple private rooms: Chiller + FCU per room",
+            "officeList3": "Small office (< 100 m²): VRV/VRF or Multi Split",
+            "hospitalTitle": "5.2. Hospital",
+            "hospitalList1": "Operating rooms, ICU: Dedicated AHU with HEPA",
+            "hospitalList2": "General wards: 4-pipe FCU",
+            "hospitalList3": "Hospital server room: PAC",
+            "hotelTitle": "5.3. Hotel",
+            "hotelList1": "Guest rooms: Concealed FCU",
+            "hotelList2": "Lobby, restaurant: AHU",
+            "factoryTitle": "5.4. Factory & Industrial",
+            "factoryList1": "Cleanrooms: AHU with FFU",
+            "factoryList2": "Factory server room: PAC",
+            "factoryList3": "Office area: FCU or AHU depending on size",
+            "dcTitle": "5.5. Data Center",
+            "dcList1": "Small server rooms (< 50 m²): 1–2 PACs with N+1 redundancy",
+            "dcList2": "Medium DC: PACs with dedicated chiller, Hot/Cold aisle",
+            "dcList3": "Large DC: Distributed PACs + chiller plant with Free Cooling"
+          },
+          "section7": {
+            "title": "6. Emerging Technologies",
+            "vrvTitle": "6.1. VRV/VRF (Variable Refrigerant Volume/Flow)",
+            "vrvP": "<strong>VRV/VRF</strong> varies refrigerant flow by zone demand, saving 30–50% energy versus traditional systems.",
+            "vrvList1": "Flexible operation – each indoor unit can be controlled independently",
+            "vrvList2": "Reduced energy loss via inverters and smart sensors",
+            "vrvList3": "Compact installation; ideal for high-rise and offices",
+            "vrvList4": "Combines benefits of local (Multi Split) and central (Chiller) systems",
+            "beamTitle": "6.2. Chilled Beam",
+            "beamP": "<strong>Chilled Beam</strong> cools via chilled water through ceiling beams, saving duct space and cutting power consumption versus conventional systems.",
+            "beamList1": "Optimizes space – ~40% smaller ceiling services",
+            "beamList2": "High energy efficiency thanks to water-based cooling",
+            "beamList3": "Quiet operation, easy maintenance",
+            "beamList4": "Suitable for hospitals, premium offices, schools",
+            "aiTitle": "6.3. AI & IoT in HVAC",
+            "aiP": "<strong>AI</strong> and <strong>IoT</strong> transform HVAC O&M: continuous sensor data enables real-time optimization, failure prediction, and lower maintenance cost.",
+            "aiList1": "Real-time energy optimization",
+            "aiList2": "Predictive maintenance",
+            "aiList3": "Early detection of refrigerant leaks or sensor faults",
+            "aiList4": "Smart control based on user behavior and history",
+            "freeTitle": "6.4. Free Cooling",
+            "freeP": "<strong>Free Cooling</strong> uses outdoor air when conditions permit—very effective in cool climates or at night.",
+            "freeList1": "Leverages natural air – reduces chiller runtime",
+            "freeList2": "Extends equipment life and lowers CO₂ emissions",
+            "freeList3": "Great for data centers, factories, and industrial parks",
+            "summaryTitle": "Summary",
+            "summaryP": "Combining <strong>VRV/VRF, Chilled Beam, AI/IoT</strong>, and <strong>Free Cooling</strong> is shaping a sustainable, energy-efficient, and eco-friendly HVAC future—cutting cost, improving performance, and enabling Green Buildings."
+          },
+          "section8": {
+            "title": "7. Conclusion",
+            "p1": "Selecting the right HVAC solution requires understanding building specifics, operational needs, and budget. The golden rule: define concrete requirements, evaluate holistically, consult experts, and maintain regularly.",
+            "imageAlt": "HVAC conclusion"
+          }
+        },
+        "blogPost3": {
+    "category": "Data Center",
+    "title": "UPS Systems and Power Distribution in Data Centers",
+    "publishedOn": "Posted on",
+    "publishedBy": "by",
+    "bannerAlt": "Data Center UPS and Power Distribution",
+    "section1Title": "1. Operating Principle of UPS Systems",
+    "section1P1": "<strong>UPS (Uninterruptible Power Supply)</strong> is a device that provides uninterrupted backup power, protecting IT equipment in Data Centers from sudden power outages or voltage sags.",
+    "section1Sub1Title": "1.1. What is UPS?",
+    "section1Sub1P1": "UPS acts as an 'energy shield', ensuring stable and clean power for server systems. When the grid power fails, UPS switches to battery power in less than 4ms.",
+    "section1Sub2Title": "1.2. Three Operating Modes",
+    "section1Sub2Item1": "<strong>Normal Mode:</strong> Rectifies AC to DC to charge batteries and supply clean power via the inverter.",
+    "section1Sub2Item2": "<strong>Battery Mode:</strong> During a power outage, UPS automatically uses battery power to sustain the system for 10–30 minutes.",
+    "section1Sub2Item3": "<strong>Bypass Mode:</strong> Supplies power directly from the grid during maintenance or when the load exceeds capacity.",
+    "section2Title": "2. UPS Protection Mechanisms",
+    "section2Item1": "Power Outage Protection: Switches source in milliseconds.",
+    "section2Item2": "Voltage Stabilization and High-Frequency Noise Filtering.",
+    "section2Item3": "Surge Protection and Voltage Fluctuation Damping.",
+    "section2Item4": "Frequency Regulation: Maintains stable 50Hz/60Hz.",
+    "section3Title": "3. Power Structure: Main – ATS – UPS – PDU",
+    "section3P1": "The power supply system in a <strong>Data Center</strong> is designed with multiple layers of protection to ensure power is always <strong>stable, clean, and continuous 24/7</strong>. The general power flow diagram is:",
+    "section3P2": "<strong>GRID POWER → ATS → UPS → PDU → IT EQUIPMENT</strong><br/>(Generators and Backup Batteries are connected in parallel with <strong>ATS</strong> and <strong>UPS</strong> to ensure no interruption.)",
+    "section3Sub1Title": "3.1. Main Components",
+    "section3Sub1_1Title": "🔹 Main Power",
+    "section3Sub1_1Item1": "Supplies electricity from the national grid or the enterprise's private substation.",
+    "section3Sub1_1Item2": "Integrates a <strong>backup generator</strong> that starts within 10–15 seconds of a power outage.",
+    "section3Sub1_1Item3": "Ensures stable input for the entire ATS – UPS – PDU system.",
+    "section3Sub1_2Title": "🔹 ATS (Automatic Transfer Switch)",
+    "section3Sub1_2Item1": "Device that <strong>automatically transfers the power source</strong> between the grid and the generator during a power failure.",
+    "section3Sub1_2Item2": "Extremely fast switching time: <strong>&lt; 100ms</strong>, preventing IT system disruption.",
+    "section3Sub1_2Item3": "Includes a <strong>manual bypass</strong> mode for maintenance without interrupting operations.",
+    "section3Sub1_3Title": "🔹 UPS (Uninterruptible Power Supply)",
+    "section3Sub1_3Item1": "Provides instantaneous power during outages, ensuring continuous operation for IT equipment.",
+    "section3Sub1_3Item2": "Flexible configurations:",
+    "section3Sub1_3Item2_1": "<strong>N+1:</strong> One redundant UPS for each operational cluster.",
+    "section3Sub1_3Item2_2": "<strong>2N:</strong> Two independent systems (A-side & B-side), achieving Tier IV reliability.",
+    "section3Sub1_3Item3": "Main components:",
+    "section3Sub1_3Item3_1": "<strong>Rectifier:</strong> Converts AC → DC to charge batteries.",
+    "section3Sub1_3Item3_2": "<strong>Battery Bank:</strong> Stores backup energy (10–30 minutes).",
+    "section3Sub1_3Item3_3": "<strong>Inverter:</strong> Converts DC → AC to supply clean power to IT loads.",
+    "section3Sub1_3Item3_4": "<strong>Bypass Circuit:</strong> Supplies power directly when maintenance or overload occurs.",
+    "section3Sub1_4Title": "🔹 PDU (Power Distribution Unit)",
+    "section3Sub1_4Item1": "Distributes power from the UPS to racks, network devices, and servers.",
+    "section3Sub1_4Item2": "Two types:",
+    "section3Sub1_4Item2_1": "<strong>Room PDU:</strong> Distributes power to the entire server room.",
+    "section3Sub1_4Item2_2": "<strong>Rack PDU:</strong> Mounted within individual racks (typically 42U), with multiple outlets.",
+    "section3Sub1_4Item3": "Integrated smart features:",
+    "section3Sub1_4Item3_1": "Measure power consumption per outlet or per rack.",
+    "section3Sub1_4Item3_2": "Overload alerts and environmental temperature monitoring.",
+    "section3Sub1_4Item3_3": "Remote control via web interface or DCIM software.",
+    "section3P3": "Thanks to this multi-layered structure, the Data Center power system ensures <strong>stable – safe – uninterrupted</strong> power, even during grid failures or system maintenance.",
+    "section4Title": "4. Continuous 24/7 Power – Operational Process",
+    "section4P1": "The Data Center electrical system is designed based on the principle of <strong>non-interruption (24/7/365)</strong>, ensuring IT equipment always receives stable power, even during grid outages. The entire process is divided into 4 main stages:",
+    "section4Sub1Title": "4.1. Normal Operation",
+    "section4Sub1Item1": "Grid Power → ATS → UPS (charging) → PDU → IT Equipment.",
+    "section4Sub1Item2": "UPS provides 'clean' power to the load while keeping backup batteries fully charged.",
+    "section4Sub1Item3": "Operating time: <strong>Unlimited</strong> as long as grid power is stable.",
+    "section4Sub2Title": "4.2. Power Outage (0–15s)",
+    "section4Sub2Item1": "When grid power fails, UPS instantly switches to battery mode <strong>(no interruption)</strong>.",
+    "section4Sub2Item2": "UPS batteries sustain the entire system for 10–30 minutes.",
+    "section4Sub2Item3": "Generator automatically starts within 10–15 seconds.",
+    "section4Sub3Title": "4.3. Generator Operation",
+    "section4Sub3Item1": "Once the generator stabilizes, ATS transfers the source to the generator.",
+    "section4Sub3Item2": "Power flow: <strong>Generator → ATS → UPS → PDU → Equipment</strong>.",
+    "section4Sub3Item3": "UPS continues charging batteries while supplying power from the generator.",
+    "section4Sub3Item4": "Operating time: <strong>24–48 hours</strong> depending on fuel capacity.",
+    "section4Sub4Title": "4.4. Grid Power Restoration",
+    "section4Sub4Item1": "When grid power returns, ATS automatically transfers the source back to the grid.",
+    "section4Sub4Item2": "Power flow: <strong>Grid Power → ATS → UPS → PDU → IT Equipment</strong>.",
+    "section4Sub4Item3": "Generator shuts down after 5 minutes to ensure stable power.",
+    "section4Sub4Item4": "The entire transition process is <strong>seamless</strong> – no impact on IT systems.",
+    "section4P2": "Thanks to this process, the Data Center power system maintains continuous, safe, and stable operation, meeting the <strong>99.995% uptime</strong> standard of Tier III–IV.",
+    "imageAlt1": "UPS Diagram in Data Center",
+    "section5Title": "5. System Monitoring & Maintenance",
+    "section5P1": "UPS and PDU systems are monitored via <strong>DCIM (Data Center Infrastructure Management)</strong> software, tracking load, voltage, temperature, and battery status in real-time.",
+    "section5Item1": "Monitoring via Dashboard, incident alerts via email/SMS.",
+    "section5Item2": "UPS checked monthly, load tested quarterly, batteries replaced every 5–7 years.",
+    "section5Item3": "Generator tested weekly and undergoes scheduled maintenance every 6 months.",
+    "section6Title": "6. Periodic Maintenance",
+    "section6P1": "Periodic maintenance is mandatory for the Data Center power system to operate stably and achieve maximum lifespan. Key items include the UPS and generator.",
+    "section6Sub1Title": "6.1. UPS (Uninterruptible Power Supply)",
+    "section6Sub1Item1": "<strong>Monthly:</strong> Check battery status, event logs, and equipment temperature.",
+    "section6Sub1Item2": "<strong>Quarterly:</strong> Perform source transfer tests between grid and battery modes.",
+    "section6Sub1Item3": "<strong>Annually:</strong> Conduct full load tests to assess the overall performance of the UPS system.",
+    "section6Sub1Item4": "<strong>Battery Replacement:</strong> Cycle of <strong>5–7 years</strong> depending on operating conditions and battery type.",
+    "section6Sub2Title": "6.2. Backup Generator",
+    "section6Sub2Item1": "<strong>Weekly:</strong> No-load test run for about 15 minutes to ensure starting capability.",
+    "section6Sub2Item2": "<strong>Monthly:</strong> Load test for 30 minutes to check actual capacity and stable voltage maintenance.",
+    "section6Sub2Item3": "<strong>Every 6 Months:</strong> Perform scheduled maintenance, change oil, air filter, and check fuel level.",
+    "section6P2": "Additionally, the DCIM system can assist in automatically recording maintenance schedules, sending reminders, and storing test reports, helping operators manage schedules more effectively.",
+    "section7Title": "Conclusion",
+    "section7P1": "The <strong>Main – ATS – UPS – PDU</strong> system forms four continuous layers of protection for the data center, ensuring stable, clean, and uninterrupted power.",
+    "section7P2": "With <strong>N+1 or 2N redundancy</strong> design and strict periodic maintenance procedures, the system can achieve <strong>99.995% reliability</strong> (Tier III – Tier IV).",
+    "section7P3": "This enables the Data Center to operate 24/7/365, meeting the highest demands of businesses in the digital age – where <strong>downtime equals loss</strong>.",
+    "imageAlt2": "Modern Data Center Power System"
+  },
+  "blogPost4": {
+    "category": "Data Center Cooling",
+    "title": "SmartCool i-drive: Precise, Cost-Effective, and Stable Cooling Solutions",
+    "publishedOn": "Posted on",
+    "publishedBy": "by",
+    "bannerAlt": "SmartCool i-drive – Data Center cooling system",
+    "section1Title": "1. Introduction",
+    "section1P1": "<strong>SmartCool i-drive</strong> is a new generation precision air conditioning system, specifically designed for <strong>server rooms and data centers</strong>. With intelligent inverter technology and ultra-precise temperature control capabilities, SmartCool i-drive offers an optimal solution in terms of <strong>performance, reliability, and energy savings</strong>.",
+    "imageAlt1": "Structure of the SmartCool i-drive system",
+    "section2Title": "2. Intelligent Cooling Mechanism",
+    "section2P1": "SmartCool i-drive utilizes <strong>multi-point</strong> temperature and humidity sensors combined with <strong>automatic AI control algorithms</strong> to analyze heat load and adjust cooling capacity in real-time. This allows the system to maintain a stable temperature environment, protecting servers from sudden fluctuations.",
+    "section2Item1": "Optimizes operation based on actual load.",
+    "section2Item2": "Responds quickly to temperature changes in the server room.",
+    "section2Item3": "Reduces compressor start/stop cycles, helping to <strong>extend equipment lifespan</strong>.",
+    "section3Title": "3. Advanced Inverter Technology",
+    "section3P1": "<strong>Inverter Technology</strong> in SmartCool i-drive allows the compressor speed to vary from 10–100%, instead of just switching on/off like traditional machines. This mechanism saves energy, reduces noise, and ensures precise temperature.",
+    "section3Item1": "Smooth, lag-free operation.",
+    "section3Item2": "Reduces noise levels below <strong>55dB</strong>.",
+    "section3Item3": "Extends compressor lifespan by up to 2 times.",
+    "section3Item4": "Soft start, preventing voltage shocks.",
+    "imageAlt2": "Inverter principle of SmartCool i-drive",
+    "section4Title": "4. Ultra-Precise Temperature Control ±0.5°C",
+    "section4P1": "SmartCool i-drive achieves temperature accuracy of ±0.5°C — significantly better than typical cooling systems (which fluctuate ±2–3°C). This level of control is extremely important in a Data Center environment.",
+    "section4Item1": "Protects server equipment from thermal stress.",
+    "section4Item2": "Reduces the risk of hardware failure due to temperature variations.",
+    "section4Item3": "Optimizes operating efficiency, reducing energy consumption for the cooling system.",
+    "section4Item4": "Complies with <strong>ASHRAE</strong> standards for modern data centers.",
+    "section5Title": "5. Superior Energy Savings",
+    "section5P1": "SmartCool i-drive can help <strong>reduce energy costs by 40–60%</strong> compared to conventional systems, thanks to smart technologies:",
+    "section5Item1": "<strong>EC Fan:</strong> Energy-efficient, high-performance fans.",
+    "section5Item2": "<strong>Smart Capacity Control:</strong> Adjusts capacity based on actual heat load.",
+    "section5Item3": "<strong>Free Cooling:</strong> Utilizes outdoor air when temperature conditions permit.",
+    "section5Item4": "<strong>Sleep Mode:</strong> Automatically reduces capacity during off-peak hours.",
+    "section5P2": "For a <strong>50m²</strong> server room, the system can save up to <strong>30–50 million VND/year</strong> on electricity costs.",
+    "imageAlt3": "SmartCool i-drive energy savings",
+    "section6Title": "6. Outstanding Advantages",
+    "section6Item1": "±0.5°C temperature accuracy – market-leading.",
+    "section6Item2": "40–60% energy savings – payback period of 2–3 years.",
+    "section6Item3": "Quiet operation below 55dB, environmentally friendly.",
+    "section6Item4": "24/7 remote monitoring via mobile app or DCIM platform.",
+    "section6Item5": "Early incident warning, supports predictive maintenance.",
+    "section6Item6": "Equipment lifespan up to 15–20 years.",
+    "section7Title": "7. Conclusion",
+    "section7P1": "<strong>SmartCool i-drive</strong> is the perfect choice for businesses seeking a precise, stable, and energy-efficient cooling solution for their data center. Although the initial investment cost is higher, the long-term economic efficiency and reliability are outstanding.",
+    "section7P2": "By combining <strong>inverter technology, artificial intelligence, and smart monitoring</strong>, SmartCool i-drive helps businesses achieve the goal of a <strong>green – efficient – effective Data Center</strong>.",
+    "imageAlt4": "SmartCool i-drive Data Center Cooling"
+  },
+  "blogPost5": {
+    "category": "Building Management System",
+    "title": "Modbus & SNMP Applications in BMS and Device Monitoring",
+    "publishedOn": "Posted on",
+    "publishedBy": "by",
+    "bannerAlt": "Modbus and SNMP applications in BMS",
+    "section1Title": "Introduction",
+    "section1P1": "In the era of automation and the Internet of Things (IoT), monitoring and controlling building systems has become increasingly important. <strong>Modbus</strong> and <strong>SNMP</strong> are the two most common communication protocols used in <strong>BMS (Building Management System)</strong> to collect data, control devices, and manage smart infrastructure.",
+    "section1P2": "Modbus is typically applied to industrial equipment, HVAC, power meters, environmental sensors, etc., while SNMP is primarily used for monitoring network devices, servers, and UPS. Combined, they help BMS operate stably, transparently, and efficiently.",
+    "section2Title": "1. Modbus Protocol",
+    "section2Sub1Title": "1.1. Overview",
+    "section2Sub1P1": "<strong>Modbus</strong> is an open-source industrial communication protocol developed by Modicon (now Schneider Electric). Due to its simplicity, stability, and ease of implementation, Modbus has become the de-facto standard in industrial automation.",
+    "section2Sub1Item1": "Modbus RTU – operates over RS-485 serial lines.",
+    "section2Sub1Item2": "Modbus TCP/IP – transmits data over Ethernet (LAN/WAN).",
+    "section2Sub1Item3": "Modbus ASCII – character-based, easy to debug and test.",
+    "section2Sub2Title": "1.2. Operating Mechanism",
+    "section2Sub2P1": "Modbus uses a <strong>Master–Slave</strong> model (or Client–Server in Modbus TCP):",
+    "section2Sub2Item1": "Master sends requests to read or write data to a Slave.",
+    "section2Sub2Item2": "Slave responds with data from its registers.",
+    "section2Sub2Item3": "One Master can connect to up to <strong>247 Slave devices</strong>.",
+    "section2Sub2Item4": "Data integrity is checked using a <strong>CRC</strong> code.",
+    "imageAlt1": "Modbus TCP communication model",
+    "section3Title": "2. SNMP Protocol",
+    "section3Sub1Title": "2.1. Overview",
+    "section3Sub1P1": "<strong>SNMP (Simple Network Management Protocol)</strong> is a network management protocol used to monitor and control IT devices such as switches, routers, servers, UPS, IP cameras...",
+    "section3Sub1Item1": "SNMPv1: First version, simple but weak security.",
+    "section3Sub1Item2": "SNMPv2c: Improved speed and added GETBULK command.",
+    "section3Sub1Item3": "SNMPv3: Supports encryption and user authentication.",
+    "section3Sub2Title": "2.2. Operating Mechanism",
+    "section3Sub2P1": "SNMP operates on a <strong>Manager – Agent</strong> model:",
+    "section3Sub2Item1": "Manager sends <strong>GET</strong> commands to retrieve information.",
+    "section3Sub2Item2": "Agent responds based on its <strong>MIB</strong> (Management Information Base) database.",
+    "section3Sub2Item3": "Agent can proactively send <strong>Traps</strong> when an event occurs (power loss, overheating...).",
+    "section3Sub2Item4": "Manager can use <strong>SET</strong> commands to change device configurations.",
+    "imageAlt2": "SNMP model in network monitoring",
+    "section4Title": "3. Data Transmission Methods",
+    "section4Sub1Title": "3.1. Modbus Process",
+    "section4Sub1Item1": "Master connects to Slave via RS-485 or TCP/IP.",
+    "section4Sub1Item2": "Sends read/write command with specific register address.",
+    "section4Sub1Item3": "Slave processes and returns the actual data.",
+    "section4Sub1Item4": "BMS software displays real-time information.",
+    "section4Sub2Title": "3.2. SNMP Process",
+    "section4Sub2Item1": "Manager sends GET request with specific OID.",
+    "section4Sub2Item2": "Agent retrieves MIB and responds with data.",
+    "section4Sub2Item3": "Manager stores data and updates the dashboard.",
+    "section4Sub2Item4": "Agent sends Trap upon alarms or unusual events.",
+    "section5Title": "4. Practical Applications in BMS",
+    "section5Sub1Title": "4.1. Modbus Applications",
+    "section5Sub1Item1": "<strong>Central Air Conditioning (HVAC):</strong> Connecting 50 air conditioners via Modbus RTU to collect temperature, humidity, power, and remotely control on/off.",
+    "section5Sub1Item2": "<strong>Energy Monitoring:</strong> Modbus TCP power meters transmit consumption data every 5 seconds, helping detect anomalies.",
+    "section5Sub1Item3": "<strong>Server Room:</strong> Temperature sensors, UPS, and PAC controlled via Modbus integrated into DCIM.",
+    "section5Sub2Title": "4.2. SNMP Applications",
+    "section5Sub2Item1": "<strong>Network Monitoring:</strong> Monitor hundreds of switches/routers, collecting CPU, RAM, bandwidth, alerting on interface down.",
+    "section5Sub2Item2": "<strong>UPS Management:</strong> Track voltage, load, temperature, receive Traps on battery switchover, automatically shut down servers on low battery.",
+    "section5Sub2Item3": "<strong>Environmental Monitoring:</strong> Temperature, humidity, smoke sensors send Traps immediately upon detecting anomalies.",
+    "section5Sub3Title": "4.3. Combining Both in BMS",
+    "section5Sub3Item1": "Modbus for HVAC, power meters, environmental sensors.",
+    "section5Sub3Item2": "SNMP for network infrastructure, UPS, IP cameras.",
+    "section5Sub3Item3": "Intermediate gateway helps convert between the two protocols.",
+    "section5Sub3Item4": "Unified dashboard displays all data within the BMS.",
+    "section6Title": "5. Benefits of Using Modbus & SNMP",
+    "section6Item1": "Integrates diverse devices from multiple manufacturers.",
+    "section6Item2": "Real-time 24/7 monitoring with instant alerts.",
+    "section6Item3": "Early incident detection, reducing downtime.",
+    "section6Item4": "Convenient remote device control and configuration.",
+    "section6Item5": "Centralized data aids trend analysis and energy reporting.",
+    "section6Item6": "Optimizes operations and saves maintenance costs.",
+    "section7Title": "Conclusion",
+    "section7P1": "<strong>Modbus</strong> and <strong>SNMP</strong> are fundamental protocols that make BMS smarter and more flexible. Modbus is suitable for industrial devices requiring immediate response, while SNMP is ideal for managing IT and network equipment.",
+    "section7P2": "When integrated properly, these two protocols create a centralized, secure, and efficient monitoring system — enabling operations teams to easily control the entire building infrastructure, from HVAC to UPS and the internal network.",
+    "imageAlt3": "BMS Dashboard with Modbus and SNMP"
+  },
+  "blogPost6": {
+    "category": "Data Center Infrastructure Management",
+    "title": "Integrating Safety & Monitoring Systems into the DCIM Platform",
+    "publishedOn": "Posted on",
+    "publishedBy": "by",
+    "bannerAlt": "Integrating DCIM safety and monitoring systems",
+    "section1Title": "Introduction",
+    "section1P1": "In modern data centers, ensuring <strong>safety, security, and centralized monitoring</strong> plays a crucial role. By integrating systems like <strong>Fire Alarm, CCTV</strong>, and <strong>Access Control</strong> into the <strong>DCIM (Data Center Infrastructure Management)</strong> platform, businesses can comprehensively manage infrastructure, minimize risks, and enhance operational efficiency.",
+    "section2Title": "Comprehensive Centralized Management Solution",
+    "section2P1": "DCIM becomes the 'central brain', connecting all safety and monitoring systems via standard protocols, helping consolidate data and display it on a single dashboard.",
+    "imageAlt1": "Comprehensive DCIM management dashboard",
+    "section3Title": "Integration Methods",
+    "section3Sub1Title": "1. Connection via Standard Protocols",
+    "section3Sub1P1": "Systems are connected to DCIM via <strong>BACnet, Modbus, SNMP, or API</strong>, enabling real-time data transmission regarding device status, events, and alerts.",
+    "section3Sub2Title": "2. Single Management Interface",
+    "section3Sub2P1": "All information from safety and monitoring systems is displayed on a centralized dashboard. This helps operators easily monitor, troubleshoot, and make quick decisions.",
+    "section3Sub3Title": "3. Smart Data Linking",
+    "section3Sub3P1": "Upon detecting smoke, the DCIM system can <strong>automatically display cameras from the relevant area</strong>, trigger alarms, and <strong>lock hazardous exits</strong>. This forms the foundation for proactive operational models and intelligent automation.",
+    "imageAlt2": "Smart data linking between Fire Alarm and CCTV",
+    "section4Title": "Operational Benefits",
+    "section4Item1": "<strong>Rapid Response:</strong> Centralized alerts help teams respond promptly to incidents like fires, intrusions, or connectivity loss.",
+    "section4Item2": "<strong>Reduced Monitoring Staff:</strong> A small technical team can manage the entire building through the DCIM interface.",
+    "section4Item3": "<strong>Automated Reporting:</strong> Fully records access history, incidents, and fire alarms for audits and safety standards compliance.",
+    "section4Item4": "<strong>Analysis and Forecasting:</strong> Historical data helps identify system weaknesses and develop proactive maintenance plans.",
+    "section5Title": "Centralized Alerting",
+    "section5Sub1Title": "1. Smart Prioritization",
+    "section5Sub1P1": "DCIM automatically categorizes alerts by severity level – <strong>critical, warning, informational</strong> – helping operators focus on addressing the most important incidents first.",
+    "section5Sub2Title": "2. Multi-Channel Notifications",
+    "section5Sub2P1": "Alerts are sent through multiple channels such as <strong>email, SMS, mobile app</strong>, and the dashboard interface to ensure the team is always updated, wherever they are.",
+    "section5Sub3Title": "3. Event Correlation",
+    "section5Sub3P1": "When an incident occurs, DCIM displays the <strong>exact location on the floor plan</strong>, along with camera footage and access history – facilitating a quick overall assessment of the situation.",
+    "imageAlt3": "Centralized alerting in the DCIM system",
+    "section6Title": "Conclusion",
+    "section6P1": "Integrating safety and monitoring systems into the <strong>DCIM</strong> platform not only helps <strong>simplify operational management</strong> but also <strong>significantly enhances prevention, response, and security capabilities</strong>.",
+    "section6P2": "This is an essential trend for building <strong>Smart – Safe – Efficient Data Centers</strong>, meeting the stringent demands of businesses in the digital transformation era.",
+    "imageAlt4": "Conclusion on DCIM system integration"
+  }
+      
+       
+      }
+   
+    }
+
+
+  

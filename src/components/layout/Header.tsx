@@ -2,18 +2,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaPhoneAlt, FaSearch, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
+import { FaPhoneAlt, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
 
-  // ✅ Theo dõi trạng thái cuộn trang
+  const currentLang = i18n.language || i18n.resolvedLanguage || "vi";
+  const toggleLang = () => {
+    const newLang = currentLang === "vi" ? "en" : "vi";
+    i18n.changeLanguage(newLang);
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,18 +29,28 @@ export default function Header() {
       <div className="bg-[#005baa] text-white text-sm py-2 px-4 flex justify-between md:justify-end items-center gap-4 z-40 relative">
         <a
           href="#"
-          className="bg-[#d94c00] px-3 py-1 rounded-sm font-semibold hidden md:block"
+          className="bg-[#d94c00] px-3 py-1 rounded-sm font-semibold hidden md:block hover:bg-[#b23b00] transition-colors"
         >
-          Tin Tức & Sự Kiện
+          {t("header.topbar.news")}
         </a>
+
         <div className="flex items-center gap-2">
-          <FaPhoneAlt /> <span>Hotline: 1900 3339</span>
+          <FaPhoneAlt size={14} />
+          <span>{t("header.topbar.hotline")}</span>
         </div>
+
         <div className="hidden md:flex items-center gap-3">
-          <span>|</span>
-          <span>14/10/2025, 09:55</span>
-          <FaSearch className="cursor-pointer" />
-          <FaGlobe className="cursor-pointer" />
+          <button
+            onClick={toggleLang}
+            className="inline-flex items-center gap-1.5 cursor-pointer bg-white/10 hover:bg-white/20 transition-colors px-3 py-1 rounded-md"
+            aria-label={t("header.topbar.toggleLanguageLabel")}
+            title={t("header.topbar.toggleLanguageTitle")}
+          >
+            <FaGlobe size={15} />
+            <span className="font-semibold tracking-wide text-xs">
+              {currentLang === "vi" ? "VI" : "EN"}
+            </span>
+          </button>
         </div>
       </div>
 
@@ -49,30 +64,36 @@ export default function Header() {
       >
         <div className="flex items-center justify-between md:justify-center md:gap-[200px] px-6 md:px-16 py-4 md:py-6">
           {/* Logo + Tiêu đề */}
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <img
               src="https://png.pngtree.com/png-vector/20221231/ourmid/pngtree-sun-illustration-logo-sunny-sunset-horizon-vector-png-image_43736816.jpg"
-              alt="REE Logo"
+              alt={t("header.nav.logoAlt", "DCV Logo")}
               className="h-12"
             />
-            <div className="leading-tight">
+            <div className="leading-tight hidden sm:block">
               <h2
                 className={`font-bold text-[13px] md:text-[15px] ${
                   isScrolled ? "text-white" : "text-[#005baa]"
                 }`}
               >
-                CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT
+                {t("header.nav.companyName1")}
               </h2>
               <p className="font-semibold text-[#d94c00] text-[15px] md:text-[17px]">
-                CƠ ĐIỆN LẠNH DCV
+                {t("header.nav.companyName2")}
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Nút mở menu mobile */}
           <button
             className="md:hidden text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={
+              menuOpen
+                ? t("header.aria.closeMenu", "Đóng menu")
+                : t("header.aria.openMenu", "Mở menu")
+            }
+            aria-expanded={menuOpen}
           >
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -88,11 +109,11 @@ export default function Header() {
             } md:flex md:static md:flex-row md:gap-8 font-semibold text-base uppercase`}
           >
             {[
-              { href: "/", label: "Trang chủ" },
-              { href: "/gioi-thieu", label: "Giới thiệu" },
-              { href: "/giai-phap", label: "Dịch vụ" },
-              { href: "/blog", label: "Tin tức" },
-              { href: "#", label: "Liên hệ" },
+              { href: "/", labelKey: "header.nav.home" },
+              { href: "/gioi-thieu", labelKey: "header.nav.about" },
+              { href: "/giai-phap", labelKey: "header.nav.services" },
+              { href: "/blog", labelKey: "header.nav.blog" },
+              { href: "/lien-he", labelKey: "header.nav.contact" },
             ].map((item) => (
               <li key={item.href} className="border-b md:border-none">
                 <Link
@@ -104,7 +125,7 @@ export default function Header() {
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
-                  {item.label}
+                  {t(item.labelKey)}
                 </Link>
               </li>
             ))}
@@ -117,13 +138,11 @@ export default function Header() {
         html {
           scroll-behavior: smooth;
         }
-
-        /* Tránh nội dung bị che khi header cố định */
+        /* Tránh nội dung bị che khi header cố định (tuỳ page, có thể cần padding-top) */
         body {
           padding-top: 0;
         }
-
-        /* Animation & style Swiper nếu bạn dùng */
+        /* (Tùy chọn) Style cho Swiper nếu dùng */
         .swiper-button-next,
         .swiper-button-prev {
           color: white;

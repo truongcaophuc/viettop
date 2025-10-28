@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header"; // Điều chỉnh đường dẫn nếu cần
 import Footer from "../components/layout/Footer"; // Điều chỉnh đường dẫn nếu cần
-
+import I18nProvider from "@/components/providers/I18nProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <I18nProvider>
         <Header />
         {children} {/* Nội dung từ page.tsx */}
         <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

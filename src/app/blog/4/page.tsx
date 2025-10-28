@@ -2,218 +2,200 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import BlogSidebar from "../component/BlogSidebar";
+import BlogSidebar from "../component/BlogSidebar"; // Assuming BlogSidebar uses t() internally
+import { useTranslation, Trans } from 'react-i18next'; // 1. Import hook and Trans
+import { useMemo } from 'react'; // Import useMemo
 
 export default function Blog4() {
+  const { t } = useTranslation(); // 2. Get translation function
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  // Static data - Assuming date and author don't need translation for now
+  const blogMetaData = {
+    date: "15/10/2025", // Match the original component date
+    author: "Thuật",
+  };
+
+  // Helper function to render content with potential HTML
+  const renderContent = (contentKey: string) => {
+    const translation = t(contentKey, ''); // Get translation, provide fallback
+    if (!translation) return null;
+
+    // Check for common HTML tags used in the JSON
+    if (translation.includes('<strong') || translation.includes('<span')) {
+      // Pass allowed components to Trans
+      return <Trans i18nKey={contentKey} components={{ strong: <strong />, span: <span className="font-semibold text-accent" /> }} />;
+    }
+    return translation;
+  };
+
   return (
-    <section className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[818.66px_389.34px] gap-10">
+    <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-10 md:gap-12 lg:gap-16"> {/* Adjusted layout */}
       {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
       <motion.div
-        className="space-y-8"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+        className="space-y-6" // Adjusted spacing
+        initial="hidden"
+        animate="visible"
+        variants={{ // Define container variants for staggering
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } } // Faster stagger
+        }}
       >
-        <p className="text-gray-500 text-sm uppercase tracking-widest mb-2">
-          Data Center Cooling
-        </p>
+        <motion.p
+          variants={fadeInUp} // Use variants for children
+          className="text-gray-500 text-xs uppercase tracking-wider mb-1" // Adjusted size/margin/tracking
+        >
+          {t('blogPost.blogPost4.category')} {/* 3. Use t() */}
+        </motion.p>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-          SmartCool i-drive: Giải pháp làm lạnh chính xác – Tiết kiệm và Ổn định
-        </h1>
+        <motion.h1
+          variants={fadeInUp}
+          className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight" // Adjusted color/leading
+        >
+          {t('blogPost.blogPost4.title')} {/* 3. Use t() */}
+        </motion.h1>
 
-        <p className="text-sm text-gray-500 mb-6">
-          Đăng vào ngày{" "}
-          <span className="font-medium">15/10/2025</span> bởi{" "}
-          <span className="font-medium text-gray-800">Thuật</span>
-        </p>
+        <motion.p variants={fadeInUp} className="text-sm text-gray-500"> {/* Removed mb-6 */}
+          {t('blogPost.blogPost4.publishedOn')}{" "}
+          <span className="font-medium text-gray-700">{blogMetaData.date}</span>{" "}
+          {t('blogPost.blogPost4.publishedBy')}{" "}
+          <span className="font-medium text-gray-800">{blogMetaData.author}</span>
+        </motion.p>
 
-        <div className="relative w-full h-[420px] mb-8 rounded-lg overflow-hidden shadow-md">
+        <motion.div
+          variants={fadeInUp}
+          className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg group" // Use aspect-video, group
+        >
           <Image
-            src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-            alt="SmartCool i-drive – hệ thống làm lạnh Data Center"
+            src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Consider a more relevant image
+            alt={t('blogPost.blogPost4.bannerAlt')} // 3. Use t()
             fill
-            className="object-cover hover:scale-110 transition-transform duration-700"
+            sizes="(max-width: 1024px) 100vw, 66vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105" // Hover effect
             priority
           />
-        </div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div> {/* Subtle overlay */}
+        </motion.div>
 
         {/* --- NỘI DUNG CHÍNH --- */}
-        <div className="prose max-w-none text-gray-700 leading-relaxed">
-          <h2 className="text-2xl font-semibold mt-6 mb-3">1. Giới Thiệu</h2>
-          <p>
-            <strong>SmartCool i-drive</strong> là hệ thống điều hòa làm lạnh
-            chính xác thế hệ mới, được thiết kế đặc biệt cho{" "}
-            <strong>phòng server và trung tâm dữ liệu</strong>. Với công nghệ
-            biến tần thông minh và khả năng kiểm soát nhiệt độ siêu chính xác,
-            SmartCool i-drive mang đến giải pháp tối ưu về{" "}
-            <strong>hiệu suất, độ tin cậy và tiết kiệm năng lượng</strong>.
-          </p>
+        {/* Apply prose styles for typography */}
+        <motion.div
+            variants={fadeInUp} // Apply animation to the content container
+            className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed space-y-4 prose-headings:text-gray-800 prose-headings:font-semibold prose-h2:text-2xl prose-h3:text-xl prose-strong:text-gray-800 prose-ul:space-y-1 prose-li:my-0.5" // Added prose styles
+        >
+            {/* Section 1 */}
+            <h2 id="section1">{t('blogPost.blogPost4.section1Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section1P1')}</p>
+            <div className="relative w-full aspect-video my-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost4.imageAlt1')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          <div className="relative w-full h-[360px] my-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Cấu trúc hệ thống SmartCool i-drive"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
+            {/* Section 2 */}
+            <h2 id="section2">{t('blogPost.blogPost4.section2Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section2P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost4.section2Item1')}</li>
+                <li>{renderContent('blogPost.blogPost4.section2Item2')}</li>
+                <li>{renderContent('blogPost.blogPost4.section2Item3')}</li>
+            </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-3">
-            2. Cơ Chế Làm Lạnh Thông Minh
-          </h2>
-          <p>
-            SmartCool i-drive sử dụng cảm biến nhiệt độ và độ ẩm{" "}
-            <strong>đa điểm</strong>, kết hợp với{" "}
-            <strong>thuật toán AI điều khiển tự động</strong> để phân tích tải
-            nhiệt và điều chỉnh công suất làm lạnh theo thời gian thực. Nhờ đó,
-            hệ thống duy trì môi trường nhiệt độ ổn định, bảo vệ server khỏi sự
-            biến động đột ngột.
-          </p>
+            {/* Section 3 */}
+            <h2 id="section3">{t('blogPost.blogPost4.section3Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section3P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost4.section3Item1')}</li>
+                <li>{renderContent('blogPost.blogPost4.section3Item2')}</li>
+                <li>{renderContent('blogPost.blogPost4.section3Item3')}</li>
+                <li>{renderContent('blogPost.blogPost4.section3Item4')}</li>
+            </ul>
+             <div className="relative w-full aspect-video my-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost4.imageAlt2')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Tối ưu vận hành theo mức tải thực tế.</li>
-            <li>Phản ứng nhanh với thay đổi nhiệt độ trong phòng server.</li>
-            <li>
-              Giảm chu kỳ bật/tắt máy nén, giúp <strong>tăng tuổi thọ</strong>{" "}
-              thiết bị.
-            </li>
-          </ul>
+             {/* Section 4 */}
+            <h2 id="section4">{t('blogPost.blogPost4.section4Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section4P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost4.section4Item1')}</li>
+                <li>{renderContent('blogPost.blogPost4.section4Item2')}</li>
+                <li>{renderContent('blogPost.blogPost4.section4Item3')}</li>
+                <li>{renderContent('blogPost.blogPost4.section4Item4')}</li>
+            </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-3">
-            3. Công Nghệ Biến Tần Tiên Tiến
-          </h2>
-          <p>
-            <strong>Inverter Technology</strong> trên SmartCool i-drive cho phép
-            máy nén thay đổi tốc độ từ 10–100%, thay vì chỉ bật/tắt như máy
-            truyền thống. Cơ chế này giúp tiết kiệm điện năng, giảm độ ồn và
-            đảm bảo nhiệt độ chính xác.
-          </p>
+            {/* Section 5 */}
+            <h2 id="section5">{t('blogPost.blogPost4.section5Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section5P1')}</p>
+            <ul>
+                <li>{renderContent('blogPost.blogPost4.section5Item1')}</li>
+                <li>{renderContent('blogPost.blogPost4.section5Item2')}</li>
+                <li>{renderContent('blogPost.blogPost4.section5Item3')}</li>
+                <li>{renderContent('blogPost.blogPost4.section5Item4')}</li>
+            </ul>
+            <p>{renderContent('blogPost.blogPost4.section5P2')}</p>
+             <div className="relative w-full aspect-video my-6 rounded-lg overflow-hidden shadow-md group">
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost4.imageAlt3')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+            </div>
 
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Vận hành mượt mà, không giật lag.</li>
-            <li>Giảm độ ồn xuống dưới <strong>55dB</strong>.</li>
-            <li>Kéo dài tuổi thọ máy nén gấp 2 lần.</li>
-            <li>Khởi động êm ái, không gây sốc điện áp.</li>
-          </ul>
+            {/* Section 6 */}
+            <h2 id="section6">{t('blogPost.blogPost4.section6Title')}</h2>
+            <ul>
+                <li>{renderContent('blogPost.blogPost4.section6Item1')}</li>
+                <li>{renderContent('blogPost.blogPost4.section6Item2')}</li>
+                <li>{renderContent('blogPost.blogPost4.section6Item3')}</li>
+                <li>{renderContent('blogPost.blogPost4.section6Item4')}</li>
+                <li>{renderContent('blogPost.blogPost4.section6Item5')}</li>
+                <li>{renderContent('blogPost.blogPost4.section6Item6')}</li>
+            </ul>
 
-          <div className="relative w-full h-[360px] my-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Nguyên lý biến tần của SmartCool i-drive"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
+            {/* Section 7 - Conclusion */}
+            <h2 id="section7">{t('blogPost.blogPost4.section7Title')}</h2>
+            <p>{renderContent('blogPost.blogPost4.section7P1')}</p>
+            <p>{renderContent('blogPost.blogPost4.section7P2')}</p>
+             <div className="relative w-full aspect-video mt-6 rounded-lg overflow-hidden shadow-md group"> {/* Use aspect-video, group */}
+                <Image
+                    src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg" // Replace image
+                    alt={t('blogPost.blogPost4.imageAlt4')}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105" // Hover effect
+                />
+            </div>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-3">
-            4. Kiểm Soát Nhiệt Độ Siêu Chính Xác ±0.5°C
-          </h2>
-          <p>
-            SmartCool i-drive đạt độ chính xác nhiệt độ ±0.5°C — vượt trội hơn
-            nhiều so với các hệ thống làm lạnh thông thường (dao động ±2–3°C).
-            Mức kiểm soát này cực kỳ quan trọng trong môi trường Data Center.
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Bảo vệ thiết bị server khỏi stress nhiệt.</li>
-            <li>Giảm nguy cơ lỗi phần cứng do biến động nhiệt độ.</li>
-            <li>
-              Tối ưu hiệu suất hoạt động, giảm điện năng tiêu thụ cho hệ thống
-              làm mát.
-            </li>
-            <li>
-              Tuân thủ tiêu chuẩn <strong>ASHRAE</strong> cho trung tâm dữ liệu
-              hiện đại.
-            </li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold mt-8 mb-3">
-            5. Tiết Kiệm Điện Năng Vượt Trội
-          </h2>
-          <p>
-            SmartCool i-drive có thể giúp <strong>giảm 40–60%</strong> chi phí
-            điện năng so với hệ thống thông thường nhờ các công nghệ thông minh:
-          </p>
-
-          <ul className="list-disc ml-6 space-y-2">
-            <li>
-              <strong>EC Fan:</strong> Quạt tiết kiệm điện, hiệu suất cao.
-            </li>
-            <li>
-              <strong>Smart Capacity Control:</strong> Điều chỉnh công suất theo
-              tải nhiệt thực tế.
-            </li>
-            <li>
-              <strong>Free Cooling:</strong> Tận dụng không khí ngoài trời khi
-              điều kiện nhiệt độ cho phép.
-            </li>
-            <li>
-              <strong>Sleep Mode:</strong> Tự động giảm công suất trong giờ thấp
-              điểm.
-            </li>
-          </ul>
-
-          <p className="mt-4">
-            Với phòng server diện tích <strong>50m²</strong>, hệ thống có thể
-            tiết kiệm đến <strong>30–50 triệu đồng/năm</strong> tiền điện.
-          </p>
-
-          <div className="relative w-full h-[360px] my-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="Tiết kiệm năng lượng SmartCool i-drive"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
-
-          <h2 className="text-2xl font-semibold mt-8 mb-3">
-            6. Ưu Điểm Nổi Bật
-          </h2>
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Độ chính xác nhiệt độ ±0.5°C – hàng đầu thị trường.</li>
-            <li>Tiết kiệm điện 40–60% – hoàn vốn sau 2–3 năm.</li>
-            <li>Vận hành êm ái dưới 55dB, thân thiện môi trường.</li>
-            <li>Giám sát từ xa 24/7 qua ứng dụng di động hoặc nền tảng DCIM.</li>
-            <li>Cảnh báo sớm sự cố, hỗ trợ bảo trì dự phòng.</li>
-            <li>Tuổi thọ thiết bị lên tới 15–20 năm.</li>
-          </ul>
-
-          <h2 className="text-2xl font-semibold mt-8 mb-3">7. Kết Luận</h2>
-          <p>
-            <strong>SmartCool i-drive</strong> là lựa chọn hoàn hảo cho các doanh
-            nghiệp đang tìm kiếm giải pháp làm lạnh chính xác, ổn định và tiết
-            kiệm năng lượng cho trung tâm dữ liệu. Mặc dù chi phí đầu tư ban đầu
-            cao hơn, nhưng hiệu quả kinh tế và độ tin cậy lâu dài là vượt trội.
-          </p>
-          <p>
-            Với việc kết hợp giữa <strong>công nghệ biến tần, trí tuệ nhân tạo và
-            giám sát thông minh</strong>, SmartCool i-drive giúp doanh nghiệp
-            hướng tới mục tiêu <strong>Data Center xanh – tiết kiệm – hiệu quả</strong>.
-          </p>
-
-          <div className="relative w-full h-[360px] mt-8 rounded-lg overflow-hidden shadow-md">
-            <Image
-              src="https://congcutot.vn/uploads/store/page/article/2023/10/nghe-dien-lanh-la-nghe-gi-dd.jpg"
-              alt="SmartCool i-drive Data Center Cooling"
-              fill
-              className="object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </div>
-        </div>
+        </motion.div>
       </motion.div>
 
       {/* --- CỘT PHẢI: SIDEBAR --- */}
       <motion.div
         className="lg:col-span-1"
-        initial={{ opacity: 0, x: 60 }}
+        initial={{ opacity: 0, x: 40 }} // Adjusted x offset
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.7, delay: 0.3 }} // Added delay
         viewport={{ once: true }}
       >
         <div className="sticky top-8">
+           {/* Assuming BlogSidebar is translated */}
           <BlogSidebar />
         </div>
       </motion.div>
