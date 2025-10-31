@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   i18n: {
     locales: ["vi", "en"],
     defaultLocale: "vi",
-    localeDetection: true,
+    localeDetection: false,
   },
 
   images: {
