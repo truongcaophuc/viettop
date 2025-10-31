@@ -67,7 +67,8 @@ export async function generateStaticParams() {
     id: blog.id.toString(),
   }));
 }
-
+export const revalidate = 0;        
+export const dynamic = 'force-dynamic';
 export const dynamicParams = false;
 
 export default function BlogDetail({ params }: { params: { id: string } }) {
