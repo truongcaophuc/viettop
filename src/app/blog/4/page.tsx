@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import BlogSidebar from "../component/BlogSidebar"; // Assuming BlogSidebar uses t() internally
 import { useTranslation, Trans } from 'react-i18next'; // 1. Import hook and Trans
 import { useMemo } from 'react'; // Import useMemo
+import ContactDock from "@/components/layout/ContactDock";
 
 export default function Blog4() {
   const { t } = useTranslation(); // 2. Get translation function
@@ -34,6 +35,7 @@ export default function Blog4() {
   };
 
   return (
+    <>
     <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-10 md:gap-12 lg:gap-16"> {/* Adjusted layout */}
       {/* --- CỘT TRÁI: NỘI DUNG CHÍNH --- */}
       <motion.div
@@ -200,5 +202,7 @@ export default function Blog4() {
         </div>
       </motion.div>
     </section>
+      <ContactDock />
+    </>
   );
 }
