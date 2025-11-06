@@ -14,8 +14,8 @@ export default function Footer() {
     { href: "/", key: "footer.quickLinks.home" },
     { href: "/gioi-thieu", key: "footer.quickLinks.about" },
     { href: "/giai-phap", key: "footer.quickLinks.services" },
-    { href: "/cong-trinh", key: "footer.quickLinks.projects" }, // Update href if needed
-    { href: "/lien-he", key: "footer.quickLinks.contact" }, // Update href if needed
+    { href: "/", key: "footer.quickLinks.projects" }, // Update href if needed
+    { href: "/", key: "footer.quickLinks.contact" }, // Update href if needed
   ];
 
   const mainSolutions = [

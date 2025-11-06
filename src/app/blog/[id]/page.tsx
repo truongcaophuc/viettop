@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import BlogSidebar from "../component/BlogSidebar";
+import ContactDock from "@/components/layout/ContactDock";
 
 // ✅ Đặt mảng blogs RA NGOÀI component, để generateStaticParams có thể truy cập được
 const blogs = [
@@ -76,6 +77,7 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
   if (!blog) return notFound();
 
   return (
+    <>
     <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
       {/* Nội dung bài viết */}
       <div className="lg:col-span-2">
@@ -109,6 +111,7 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
         </a>
       </div>
 
+
       {/* Sidebar */}
       <div className="lg:col-span-1">
         <div className="sticky top-8">
@@ -116,5 +119,7 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
         </div>
       </div>
     </section>
+     <ContactDock />
+    </>
   );
 }
