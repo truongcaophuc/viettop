@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { FaPhoneAlt, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import "../../lib/i18n";
+import "../../lib/i18n"; 
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);

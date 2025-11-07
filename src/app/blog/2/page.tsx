@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import BlogSidebar from "../component/BlogSidebar";
 import { useTranslation, Trans } from "react-i18next";
+import ContactDock from "@/components/layout/ContactDock";
 
 export default function Blog2() {
   const { t } = useTranslation(); // hoặc useTranslation('blog') nếu bạn dùng namespace riêng
@@ -430,6 +431,7 @@ export default function Blog2() {
   const metaAuthor = "Thuật";
 
   return (
+    <>
     <section className="max-w-[1280px] mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
       {/* LEFT: CONTENT */}
       <motion.div
@@ -505,5 +507,7 @@ export default function Blog2() {
         </div>
       </motion.div>
     </section>
+      <ContactDock />
+    </>
   );
 }

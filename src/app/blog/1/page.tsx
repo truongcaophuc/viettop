@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import BlogSidebar from "../component/BlogSidebar";
 import { useTranslation, Trans } from "react-i18next";
 import { useMemo } from "react";
+import ContactDock from "@/components/layout/ContactDock";
 
 export default function Blog1() {
   const { t, i18n } = useTranslation();
@@ -269,6 +270,7 @@ export default function Blog1() {
   };
 
   return (
+    <>
     <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
       {/* CỘT TRÁI: NỘI DUNG */}
       <motion.div
@@ -344,6 +346,9 @@ export default function Blog1() {
           <BlogSidebar />
         </div>
       </motion.div>
+
     </section>
+      <ContactDock />
+    </>
   );
 }

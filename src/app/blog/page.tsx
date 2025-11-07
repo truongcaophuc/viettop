@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useState, useMemo } from "react"; // Import useMemo
 import BlogSidebar from "./component/BlogSidebar"; // Assuming BlogSidebar uses t() internally
 import { useTranslation } from 'react-i18next'; // 1. Import hook
+import ContactDock from "@/components/layout/ContactDock";
 
 // Keep original data structure for static info if needed, or just IDs
 const originalBlogs = [
@@ -34,6 +35,7 @@ export default function BlogPage() {
   ), [blogs, search]); // Depend on blogs and search
 
   return (
+    <>
     <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16"> {/* Adjusted gap */}
       {/* --- Bài viết chính --- */}
       <div className="lg:col-span-2 space-y-12 md:space-y-16"> {/* Adjusted spacing */}
@@ -132,5 +134,7 @@ export default function BlogPage() {
         </div>
       </motion.div>
     </section>
+     <ContactDock />
+    </>
   );
 }

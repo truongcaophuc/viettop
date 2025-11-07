@@ -76,7 +76,7 @@ export default function ContactDock() {
           />
         </a>
 
-        <a
+        {/* <a
           href="#"
           className="social instagram"
           title="Instagram"
@@ -87,9 +87,9 @@ export default function ContactDock() {
             src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
             alt="Instagram"
           />
-        </a>
+        </a> */}
 
-        <a
+        {/* <a
           href="#"
           className="social youtube"
           title="YouTube"
@@ -100,9 +100,9 @@ export default function ContactDock() {
             src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-round-icon-png-image_6315993.png"
             alt="YouTube"
           />
-        </a>
+        </a> */}
 
-        <a
+        {/* <a
           href="#"
           className="social tiktok"
           title="TikTok"
@@ -113,7 +113,7 @@ export default function ContactDock() {
             src="https://static.vecteezy.com/system/resources/previews/016/716/450/non_2x/tiktok-icon-free-png.png"
             alt="TikTok"
           />
-        </a>
+        </a> */}
       </div>
 
       {/* === CSS === */}
