@@ -80,6 +80,12 @@
       "projects": "Featured Projects",
       "contact": "Contact",
       "blog": "Blog"
+    },
+    "link": {
+      "home": "/",
+      "about": "/about-us",
+      "services": "/services", 
+      "blog": "/blog"
     }
   },
 

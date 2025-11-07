@@ -4,11 +4,10 @@ const nextConfig: NextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 
-  // ✅ Bật i18n để Next hiểu prefix /vi, /en
   i18n: {
     locales: ["vi", "en"],
     defaultLocale: "vi",
-    localeDetection: true,
+    localeDetection: false,
   },
 
   images: {

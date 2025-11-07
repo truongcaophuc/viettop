@@ -80,6 +80,12 @@
       "projects": "Công trình tiêu biểu",
       "contact": "Liên hệ",
       "blog": "Blog"
+    },
+    "link": {
+      "trangchu": "/",
+      "gioithieu": "/gioi-thieu",
+      "dichvu": "/giai-phap", 
+      "trangviet": "/blog"
     }
   },
 

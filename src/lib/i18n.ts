@@ -1,24 +1,30 @@
+// i18n.ts
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
 
-i18n
-  .use(HttpBackend) // <-- Dùng để tải file JSON
-  .use(initReactI18next) // <-- Kết nối với React
-  .init({
-    lng: "vi", // Ngôn ngữ mặc định
-    fallbackLng: "vi", // Ngôn ngữ dự phòng nếu key bị thiếu
-    debug: true, // Bật console.log để debug (tắt đi khi deploy)
+if (!i18n.isInitialized) {
+  i18n
+    .use(HttpBackend)
+    .use(initReactI18next)
+    .init({
+      lng: "vi",
+      fallbackLng: "vi",
+      debug: false,
 
-    // Nơi tìm các file JSON
-    backend: {
-      loadPath: "/locales/{{lng}}.json", // Đường dẫn tới file public
-    },
+      backend: {
+        loadPath: "/locales/{{lng}}.json", // /public/locales/vi.json
+      },
 
-    // Cần thiết cho React
-    interpolation: {
-      escapeValue: false, 
-    },
-  });
+      interpolation: {
+        escapeValue: false,
+      },
+
+      // Quan trọng khi xài React + CSR, tránh Suspense default gây nhấp nháy khó kiểm soát
+      react: {
+        useSuspense: false,
+      },
+    });
+}
 
 export default i18n;
