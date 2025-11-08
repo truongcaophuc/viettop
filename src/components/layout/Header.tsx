@@ -156,8 +156,8 @@ export default function HomePage() {
             { href: "/gioi-thieu", labelKey: "header.nav.about" },
             { href: "/giai-phap", labelKey: "header.nav.services" },
             { href: "/blog", labelKey: "header.nav.blog" },
-            { href: "/cong-trinh", labelKey: "header.nav.projects" },
-            { href: "/lien-he", labelKey: "header.nav.contact" },
+            { href: "/", labelKey: "header.nav.projects" },
+            { href: "/", labelKey: "header.nav.contact" },
           ].map((item) => (
             <li key={item.href} className="border-b md:border-none">
               <Link
