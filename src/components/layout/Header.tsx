@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { FaPhoneAlt, FaGlobe, FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import "../../lib/i18n"; 
+import ReactCountryFlag from "react-country-flag"; // <-- import
+import "../../lib/i18n";
 
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,11 +13,10 @@ export default function HomePage() {
 
   // ====== ANTI-FLASH: CHỈ RENDER KHI ĐÃ CÓ TRANSLATION ======
   const [ready, setReady] = useState(() => {
-    // Nếu đã init và có store cho ngôn ngữ hiện tại thì cho render luôn
     const lng = i18n.language || "vi";
     const hasResource =
       i18n.isInitialized &&
-      !!i18n.getResourceBundle(lng, "translation"); // namespace default
+      !!i18n.getResourceBundle(lng, "translation");
     return hasResource;
   });
 
@@ -27,12 +27,10 @@ export default function HomePage() {
       if (hasResource) setReady(true);
     };
 
-    // Trường hợp init đã xong sau khi mount
     if (i18n.isInitialized) {
       handleReady();
     }
 
-    // Khi backend load xong JSON sẽ bắn "loaded"
     i18n.on("loaded", handleReady);
     i18n.on("initialized", handleReady);
 
@@ -42,17 +40,29 @@ export default function HomePage() {
     };
   }, [i18n]);
 
-  if (!ready) {
-    // Không render gì để tránh show key; nếu muốn có thể trả skeleton header
-    return null;
-  }
+  if (!ready) return null;
   // ==========================================================
 
-  const currentLang = i18n.language || "vi";
+  const currentLang = (i18n.language || "vi").toLowerCase();
   const toggleLang = () => {
     const newLang = currentLang === "vi" ? "en" : "vi";
     i18n.changeLanguage(newLang);
   };
+
+  // map language -> country code for flag
+  const langToCountry = (lang) => {
+    switch (lang) {
+      case "en":
+      case "en-us":
+        return "US"; // hoặc "GB" nếu bạn muốn cờ Anh
+      case "vi":
+      default:
+        return "VN";
+    }
+  };
+
+  const countryCode = langToCountry(currentLang);
+  const langLabel = currentLang === "en" ? "English" : "Tiếng Việt";
 
   return (
     <div className="font-sans">
@@ -73,15 +83,26 @@ export default function HomePage() {
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={toggleLang}
-            className="inline-flex items-center gap-1.5 cursor-pointer bg-white/10 hover:bg-white/20 transition-colors px-3 py-1 rounded-md"
-            aria-label={t("header.topbar.toggleLanguageLabel")}
-            title={t("header.topbar.toggleLanguageTitle")}
+            className="inline-flex items-center gap-2 cursor-pointer bg-white/10 hover:bg-white/20 transition-colors px-3 py-1 rounded-md"
+            aria-label={`${t("header.topbar.toggleLanguageLabel")} — ${langLabel}`}
+            title={`${t("header.topbar.toggleLanguageTitle")} — ${langLabel}`}
             aria-pressed={currentLang === "en"}
           >
             <FaGlobe size={15} />
-            <span className="font-semibold tracking-wide text-xs">
-              {currentLang}
-            </span>
+            {/* ReactCountryFlag SVG (clean, scalable) */}
+            <ReactCountryFlag
+              svg
+              countryCode={countryCode}
+              style={{
+                width: "1.25em",
+                height: "1.25em",
+                lineHeight: "1",
+                borderRadius: "0.125rem",
+              }}
+              aria-hidden={false}
+              title={langLabel}
+            />
+            <span className="sr-only">{langLabel}</span>
           </button>
         </div>
       </div>
@@ -109,15 +130,18 @@ export default function HomePage() {
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={toggleLang}
-            className="inline-flex items-center gap-1.5 bg-[#005baa] text-white px-3 py-2 rounded-md active:scale-[0.98]"
-            aria-label={t("header.topbar.toggleLanguageLabel")}
-            title={t("header.topbar.toggleLanguageTitle")}
+            className="inline-flex items-center gap-2 bg-[#005baa] text-white px-3 py-2 rounded-md active:scale-[0.98]"
+            aria-label={`${t("header.topbar.toggleLanguageLabel")} — ${langLabel}`}
+            title={`${t("header.topbar.toggleLanguageTitle")} — ${langLabel}`}
             aria-pressed={currentLang === "en"}
           >
             <FaGlobe size={16} />
-            <span className="font-semibold text-xs uppercase">
-              {currentLang}
-            </span>
+            <ReactCountryFlag
+              svg
+              countryCode={countryCode}
+              style={{ width: "1.25em", height: "1.25em", lineHeight: "1" }}
+              title={langLabel}
+            />
           </button>
 
           <button
@@ -143,7 +167,12 @@ export default function HomePage() {
               onClick={toggleLang}
               className="w-full text-left px-5 py-3 hover:text-[#d94c00] transition-colors flex items-center gap-2"
             >
-              <FaGlobe />
+              <ReactCountryFlag
+                svg
+                countryCode={countryCode}
+                style={{ width: "1.5em", height: "1.5em", lineHeight: "1" }}
+                title={langLabel}
+              />
               <span>
                 {t("header.topbar.toggleLanguageTitle")} •{" "}
                 {currentLang.toUpperCase()}
