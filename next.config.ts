@@ -25,13 +25,35 @@ const nextConfig: NextConfig = {
       "cdn2.iconfinder.com",
       "haiauint.vn",
       "static.vecteezy.com",
+      "suntechvn.vn",
+      "png.pngtree.com",
     ],
+    
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 't4.ftcdn.net', // <-- Hostname causing the error
         port: '',
         pathname: '/**', // Allows any path on this host
+      },
+
+      {
+        protocol: 'https',
+        hostname: 'suntechvn.vn',
+        pathname: '/wp-content/uploads/**',
+      },
+      
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'suntechvn.vn',
+        port: '',
+        pathname: '/**',
       },
       // === Add ALL other external image hostnames you use ===
       {

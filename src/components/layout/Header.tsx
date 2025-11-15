@@ -50,7 +50,7 @@ export default function HomePage() {
   };
 
   // map language -> country code for flag
-  const langToCountry = (lang) => {
+  const langToCountry = (lang: string) => {
     switch (lang) {
       case "en":
       case "en-us":
@@ -162,43 +162,60 @@ export default function HomePage() {
               : "hidden"
           } md:flex md:items-center md:static md:flex-row md:gap-4 lg:gap-6 xl:gap-8 text-[#002b5c] font-semibold text-sm lg:text-base uppercase`}
         >
-          <li className="md:hidden border-b">
-            <button
-              onClick={toggleLang}
-              className="w-full text-left px-5 py-3 hover:text-[#d94c00] transition-colors flex items-center gap-2"
-            >
-              <ReactCountryFlag
-                svg
-                countryCode={countryCode}
-                style={{ width: "1.5em", height: "1.5em", lineHeight: "1" }}
-                title={langLabel}
-              />
-              <span>
-                {t("header.topbar.toggleLanguageTitle")} •{" "}
-                {currentLang.toUpperCase()}
-              </span>
-            </button>
-          </li>
-
           {[
             { href: "/", labelKey: "header.nav.home" },
             { href: "/gioi-thieu", labelKey: "header.nav.about" },
-            { href: "/giai-phap", labelKey: "header.nav.services" },
+            {
+              href: "/giai-phap",
+              labelKey: "header.nav.services",
+              submenu: [
+                {
+                  href: "/giai-phap/dich-vu-securityzone",
+                  label: "Dịch vụ và giải pháp Securityzone",
+                },
+                { href: "/giai-phap/giai-phap-suntech", label: "Giải pháp SunTech" },
+              ],
+            },
             { href: "/blog", labelKey: "header.nav.blog" },
             { href: "/", labelKey: "header.nav.projects" },
             { href: "/", labelKey: "header.nav.contact" },
           ].map((item) => (
-            <li key={item.href} className="border-b md:border-none">
+            <li
+              key={item.href}
+              className="relative border-b md:border-none group"
+            >
               <Link
                 href={item.href}
                 className="block px-5 py-3 md:px-3 md:py-2 lg:px-4 hover:text-[#d94c00] transition-colors whitespace-nowrap"
                 onClick={() => setMenuOpen(false)}
               >
-                {t(item.labelKey)}
+                {item.labelKey ? t(item.labelKey) : undefined}
               </Link>
+
+              {/* Submenu */}
+              {item.submenu && (
+                <ul
+                  className="absolute left-0 top-full hidden group-hover:flex flex-col bg-white shadow-lg border z-50 w-64 py-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out pointer-events-none group-hover:pointer-events-auto"
+                >
+                  {item.submenu.map((sub) => (
+                    <li key={sub.href} className="relative overflow-hidden">
+                      <Link
+                        href={sub.href}
+                        className="block px-5 py-2 relative z-10 text-[#002b5c] transition-all duration-300 hover:text-[#d94c00]"
+                      >
+                        {sub.label}
+                      </Link>
+
+                      {/* Hiệu ứng nền lướt nhẹ */}
+                      <span className="absolute inset-0 bg-gradient-to-r from-[#fbe9e7] to-[#fff] opacity-0 hover:opacity-100 translate-x-[-100%] hover:translate-x-0 transition-all duration-500 ease-out"></span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
+
       </nav>
     </div>
   );
