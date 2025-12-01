@@ -29,7 +29,7 @@ const services = [
   { id: 6, title: "Dịch vụ Hosting & Server +", image: "/images/services/Dịch vụ hosting server.jpg", description: "Cung cấp hạ tầng máy chủ mạnh mẽ, ổn định và bảo mật, đảm bảo website của bạn hoạt động nhanh chóng, an toàn và liên tục 24/7.", color: "from-sky-500 to-blue-600" },
   { id: 7, title: "Đào tạo & Phát triển nhân lực +", image: "/images/services/Đào tạo phát triển nhân lực.jpg", description: "Khóa học CNTT, an ninh mạng, kỹ năng mềm, đào tạo nội bộ.", color: "from-green-500 to-lime-500" },
   { id: 8, title: "Diễn đàn +", image: "/images/services/dien-dan-đi-backlink-1.jpg", description: "Diễn đàn chuyên sâu về mạng và bảo mật, nơi cộng đồng kỹ thuật trao đổi kiến thức từ lý thuyết, lab tới ticket xử lý sự cố trong các lĩnh vực như Switching/Routing, Firewall, hệ thống và server.", color: "from-violet-500 to-purple-600" },
-  { id: 9, title: "Blog & Góc nhìn +", image: "/images/services/blog-la-gi.webp", description: "Tin tức công nghệ, xu hướng, bài viết chuyên sâu, case study.", color: "from-amber-500 to-orange-600" },
+  { id: 9, title: "Sự kiện & Hội thảo +", image: "/images/services/blog-la-gi.webp", description: "Tin tức công nghệ, xu hướng, bài viết chuyên sâu, case study.", color: "from-amber-500 to-orange-600" },
 ];
 
 export default function ServicesPage() {
@@ -70,10 +70,10 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative z-10 flex items-center justify-center h-full px-6">
-          <div className="text-center max-w-5xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-5 leading-tight drop-shadow-2xl">
-              Các Dịch Vụ & Giải Pháp Tại{" "}
-              <span className="text-cyan-400 drop-shadow-glow">SecurityZone.vn</span>
+              Các Dịch Vụ & Giải Pháp của{" "}
+              <span className="text-cyan-400 drop-shadow-glow">Công Nghệ Thông Tin</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto drop-shadow-lg mb-8">
               Chúng tôi đồng hành cùng hàng trăm doanh nghiệp với giải pháp từ hạ tầng CNTT, an ninh mạng, AI, marketing đến đào tạo.
@@ -110,10 +110,15 @@ export default function ServicesPage() {
       <section className="py-24 px-6 bg-gradient-to-b from-gray-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+            {/* <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              
+              <span className="text-cyan-400 drop-shadow-glow"> Dịch Vụ Công Nghệ Thông Tin</span>
+            </h2> */}
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
               Khám Phá Tất Cả Dịch Vụ Và Giải Pháp
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <span className="text-cyan-400 drop-shadow-glow text-3xl md:text-6xl font-bold">Công Nghệ Thông Tin</span>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto md:text-1xl">
               Chúng tôi đồng hành cùng hàng trăm doanh nghiệp với giải pháp từ hạ tầng CNTT, tự động hóa, bảo mật, marketing đến hệ thống quản trị – giúp tối ưu vận hành và thúc đẩy tăng trưởng bền vững.
             </p>
           </div>
@@ -146,7 +151,7 @@ export default function ServicesPage() {
             <div className="space-y-6 text-lg">
               <div className="flex items-center space-x-4"><Phone className="w-6 h-6 text-cyan-400" /><span>1800 646850</span></div>
               <div className="flex items-center space-x-4"><Mail className="w-6 h-6 text-cyan-400" /><span>info@securityzone.vn</span></div>
-              <div className="flex items-center space-x-4"><MapPin className="w-6 h-6 text-cyan-400" /><span>84 Nguyễn Hữu Dật, Hải Châu, Đà Nẵng</span></div>
+              <div className="flex items-center space-x-4"><MapPin className="w-6 h-6 text-cyan-400" /><span> Tầng 8 DIR, 122 Lý Thái Tông, Thanh Khê Tây, Liên Chiểu, Đà Nẵng</span></div>
             </div>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a

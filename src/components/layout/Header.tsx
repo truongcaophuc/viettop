@@ -170,10 +170,10 @@ export default function HomePage() {
               labelKey: "header.nav.services",
               submenu: [
                 {
-                  href: "/giai-phap/dich-vu-securityzone",
-                  label: "Dịch vụ và giải pháp Securityzone",
+                  href: "/giai-phap/dich-vu-cong-nghe-thong-tin",
+                  label: "Dịch vụ và giải pháp Công Nghệ Thông Tin",
                 },
-                { href: "/giai-phap/giai-phap-suntech", label: "Giải pháp SunTech" },
+                { href: "/giai-phap/giai-phap-cong-nghe-toan-dien", label: "Giải Pháp Công Nghệ Hiển Thị Toàn Diện" },
               ],
             },
             { href: "/blog", labelKey: "header.nav.blog" },

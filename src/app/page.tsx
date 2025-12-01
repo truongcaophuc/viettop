@@ -1,21 +1,52 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { useEffect, useMemo } from 'react'; // Import useMemo
+import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import Image from "next/image";
 import { motion } from "framer-motion";
-import SwiperSection from '../components/home/Swiper'; // Assuming SwiperSection is already translated or doesn't need it
-import ArticleSlider from "../components/home/ArticleSlider"; // Assuming ArticleSlider is already translated or doesn't need it
-import ContactDock from "@/components/layout/ContactDock"; // Assuming ContactDock is already translated or doesn't need it
-import { useTranslation } from 'react-i18next'; // Import useTranslation
+import SwiperSection from '../components/home/Swiper';
+import ArticleSlider from "../components/home/ArticleSlider";
+import ContactDock from "@/components/layout/ContactDock";
+import { useTranslation } from 'react-i18next';
 
-export default function AboutSection() {
-  const { t } = useTranslation(); // <-- Get the translation function
+export default function HomePage() {
+  const { t } = useTranslation();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [loading, setLoading] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [success, setSuccess] = useState(false);
 
-  // Animation useEffect hooks remain the same
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccess(false);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("https://usebasin.com/f/2be264203d00", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        e.currentTarget.reset();
+        setTimeout(() => setSuccess(false), 6000);
+      } else {
+        alert("Gửi thất bại, thử lại nhé!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Đồng ý liên hệ !");
+    } finally {
+      setLoading(false);
+    }
+  };
+  // --- Animation effects ---
   useEffect(() => {
-    const elements = document.querySelectorAll('.animate-slideInLeft, .animate-slideInRight');
+    const elements = document.querySelectorAll('.animate-slideInLeft, .animate-slideInRight, .animate-fadeInUp, .animate-left, .animate-right');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('show');
@@ -25,88 +56,33 @@ export default function AboutSection() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const elements = document.querySelectorAll('.animate-fadeInUp');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    });
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const leftIcons = document.querySelectorAll('.animate-left');
-    const rightIcons = document.querySelectorAll('.animate-right');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
-      });
-    });
-    leftIcons.forEach((el) => observer.observe(el));
-    rightIcons.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
-
-  // --- Translate static data arrays using useMemo ---
+  // --- Translated static data ---
   const stats = useMemo(() => [
     { icon: '🛠️', number: '20+', title: t('homepage.intro.stat1') },
     { icon: '📂', number: '300+', title: t('homepage.intro.stat2') },
     { icon: '👥', number: '100+', title: t('homepage.intro.stat3') },
     { icon: '🌐', number: '15+', title: t('homepage.intro.stat4') },
-  ], [t]); // Depend on t
+  ], [t]);
 
   const solutions = useMemo(() => [
-    {
-      id: 1,
-      title: t('homepage.solutionsList.item1.title'),
-      description: t('homepage.solutionsList.item1.description'),
-      image: "/home/giải pháp/điện.png",
-    },
-    {
-      id: 2,
-      title: t('homepage.solutionsList.item2.title'),
-      description: t('homepage.solutionsList.item2.description'),
-      image: "/home/giải pháp/thông gió.png",
-    },
-    {
-      id: 3,
-      title: t('homepage.solutionsList.item3.title'),
-      description: t('homepage.solutionsList.item3.description'),
-      image: "/home/giải pháp/toà nhà.png",
-    },
-    {
-      id: 4,
-      title: t('homepage.solutionsList.item4.title'),
-      description: t('homepage.solutionsList.item4.description'),
-      image: "/home/giải pháp/cháy.png",
-    },
-    {
-      id: 5,
-      title: t('homepage.solutionsList.item5.title'),
-      description: t('homepage.solutionsList.item5.description'),
-      image: "/home/giải pháp/hạ tầng.png",
-    },
-    {
-      id: 6,
-      title: t('homepage.solutionsList.item6.title'),
-      description: t('homepage.solutionsList.item6.description'),
-      image: "/home/giải pháp/dịch vụ.png",
-    },
-  ], [t]); // Depend on t
+    { id: 1, title: t('homepage.solutionsList.item1.title'), description: t('homepage.solutionsList.item1.description'), image: "/home/giải pháp/điện.png" },
+    { id: 2, title: t('homepage.solutionsList.item2.title'), description: t('homepage.solutionsList.item2.description'), image: "/home/giải pháp/thông gió.png" },
+    { id: 3, title: t('homepage.solutionsList.item3.title'), description: t('homepage.solutionsList.item3.description'), image: "/home/giải pháp/toà nhà.png" },
+    { id: 4, title: t('homepage.solutionsList.item4.title'), description: t('homepage.solutionsList.item4.description'), image: "/home/giải pháp/cháy.png" },
+    { id: 5, title: t('homepage.solutionsList.item5.title'), description: t('homepage.solutionsList.item5.description'), image: "/home/giải pháp/hạ tầng.png" },
+    { id: 6, title: t('homepage.solutionsList.item6.title'), description: t('homepage.solutionsList.item6.description'), image: "/home/giải pháp/dịch vụ.png" },
+  ], [t]);
 
-  // --- Translate criteria lists using useMemo ---
   const leftCriteria = useMemo(() => [
-    { title: t('homepage.criteria.left1'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
-    { title: t('homepage.criteria.left2'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
-    { title: t('homepage.criteria.left3'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
+    { title: t('homepage.criteria.left1'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
+    { title: t('homepage.criteria.left2'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
+    { title: t('homepage.criteria.left3'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
   ], [t]);
 
   const rightCriteria = useMemo(() => [
-    { title: t('homepage.criteria.right1'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
-    { title: t('homepage.criteria.right2'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
-    { title: t('homepage.criteria.right3'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg?semt=ais_hybrid&w=740&q=80' },
+    { title: t('homepage.criteria.right1'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
+    { title: t('homepage.criteria.right2'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
+    { title: t('homepage.criteria.right3'), img: 'https://img.freepik.com/psd-cao-cap/logo-facebook-tren-mot-vong-tron-mau-xanh-lam_705838-12823.jpg' },
   ], [t]);
 
   return (
@@ -601,34 +577,70 @@ export default function AboutSection() {
             <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center">
               {t('homepage.contactForm.formTitle')}
             </h3>
-            <form className="space-y-4">
-              <input type="text" placeholder={t('homepage.contactForm.formNamePlaceholder')} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" required /> {/* Added required, adjusted py */}
-              <input type="text" placeholder={t('homepage.contactForm.formCompanyPlaceholder')} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" />
-              <input type="email" placeholder={t('homepage.contactForm.formEmailPlaceholder')} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" required />
-              <input type="tel" placeholder={t('homepage.contactForm.formPhonePlaceholder')} className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" required />
-              <select className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-500 focus:text-gray-900 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors appearance-none bg-white bg-no-repeat bg-right px-8" style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: 'right 0.7rem center', backgroundSize: '1.2em 1.2em' }}> {/* Styled select */}
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <input 
+                name="name" 
+                type="text" 
+                placeholder={t('homepage.contactForm.formNamePlaceholder')} 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" 
+                required 
+              />
+              <input 
+                name="company" 
+                type="text" 
+                placeholder={t('homepage.contactForm.formCompanyPlaceholder')} 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" 
+              />
+              <input 
+                name="email" 
+                type="email" 
+                placeholder={t('homepage.contactForm.formEmailPlaceholder')} 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" 
+                required 
+              />
+              <input 
+                name="phone" 
+                type="tel" 
+                placeholder={t('homepage.contactForm.formPhonePlaceholder')} 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors" 
+                required 
+              />
+              <select 
+                name="interest" 
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-gray-500 focus:text-gray-900 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors appearance-none bg-white bg-no-repeat bg-right px-8" 
+                style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`, backgroundPosition: 'right 0.7rem center', backgroundSize: '1.2em 1.2em' }}
+              >
                 <option value="">{t('homepage.contactForm.formInterestSelect')}</option>
                 <option value="M&E">{t('homepage.contactForm.formInterestOption1')}</option>
                 <option value="HVAC">{t('homepage.contactForm.formInterestOption2')}</option>
                 <option value="BMS">{t('homepage.contactForm.formInterestOption3')}</option>
               </select>
               <textarea
+                name="message"
                 placeholder={t('homepage.contactForm.formMessagePlaceholder')}
                 rows={4}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors resize-none" // Added resize-none
+                className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-[#c9e265] focus:border-[#c9e265] outline-none transition-colors resize-none"
               ></textarea>
 
               <label className="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
-                <input type="checkbox" className="accent-[#c9e265] h-4 w-4 rounded border-gray-300 focus:ring-[#c9e265]/50" required /> {/* Added required, styled checkbox */}
+                <input type="checkbox" className="accent-[#c9e265] h-4 w-4 rounded border-gray-300 focus:ring-[#c9e265]/50" required />
                 <span>{t('homepage.contactForm.formAgreement')}</span>
               </label>
 
               <button
                 type="submit"
-                className="w-full bg-[#244556] text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2a526b] hover:to-[#1a3542] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#244556]/50" // Adjusted hover, added focus styles
+                disabled={loading}
+                className="w-full bg-[#244556] text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:bg-gradient-to-r hover:from-[#2a526b] hover:to-[#1a3542] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#244556]/50 disabled:opacity-60"
               >
-                {t('homepage.contactForm.formButton')}
+                {loading ? "Đang gửi..." : t('homepage.contactForm.formButton')}
               </button>
+
+              {/* Thông báo thành công (tùy chọn) */}
+              {success && (
+                <div className="mt-4 p-4 bg-green-100 text-green-800 rounded-lg text-center font-medium">
+                  Gửi thành công! Cảm ơn bạn ❤️
+                </div>
+              )}
             </form>
           </motion.div>
         </div>
