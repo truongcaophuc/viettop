@@ -62,7 +62,7 @@ const ServicePage = () => {
     id: 1,
     title: "HỘI TRƯỜNG, PHÒNG HỘI NGHỊ TRỰC TUYẾN",
     img: "https://suntechvn.vn/wp-content/uploads/2023/01/man-hinh-led-hoi-truong-1024x768.jpg",
-    href: "https://suntechvn.vn/giai-phap-cho-phong-hoi-truong-hoi-nghi/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai/",
     slug: "phong-hoi-truong-hoi-nghi",
     description: "Giải pháp màn hình LED hiện đại cho hội nghị trực tuyến, hội thảo chuyên nghiệp.",
   },
@@ -70,7 +70,7 @@ const ServicePage = () => {
     id: 2,
     title: "PHÒNG THU, ĐÀI TRUYỀN HÌNH",
     img: "https://suntechvn.vn/wp-content/uploads/2023/01/dai-truyen-hinh-bac-giang-1024x768.jpg",
-    href: "https://suntechvn.vn/giai-phap-phong-thu-hinh-dai-truyen-hinh/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai/",
     slug: "phong-thu-dai-truyen-hinh",
     description: "Hệ thống hiển thị chất lượng cao cho phòng thu, phát sóng truyền hình.",
   },
@@ -78,7 +78,7 @@ const ServicePage = () => {
     id: 3,
     title: "PHÒNG ĐIỀU KHIỂN TRUNG TÂM",
     img: "https://suntechvn.vn/wp-content/uploads/2023/02/phong-dieu-khien-trung-tam.jpg",
-    href: "https://suntechvn.vn/giai-phap-cho-phong-dieu-khien-va-giam-sat-trung-tam/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai/",
     slug: "phong-dieu-khien-trung-tam",
     description: "Màn hình ghép, video wall cho trung tâm điều hành, giám sát 24/7.",
   },
@@ -86,7 +86,7 @@ const ServicePage = () => {
     id: 4,
     title: "STUDIO ẢO",
     img: "https://suntechvn.vn/wp-content/uploads/2023/03/led-volume.jpg",
-    href: "https://suntechvn.vn/giai-phap-cho-phong-studio-ao/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai/",
     slug: "studio-ao",
     description: "Công nghệ LED Volume cho quay phim ảo, hiệu ứng hình ảnh chân thực.",
   },
@@ -94,7 +94,7 @@ const ServicePage = () => {
     id: 5,
     title: "SÂN VẬN ĐỘNG, TRUNG TÂM THỂ THAO",
     img: "https://suntechvn.vn/wp-content/uploads/2023/03/man-led-svd.jpg",
-    href: "https://suntechvn.vn/giai-phap-san-van-dong-trung-tam-the-thao/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai//",
     slug: "san-van-dong-the-thao",
     description: "Màn hình LED ngoài trời độ sáng cao cho sân vận động, sự kiện thể thao.",
   },
@@ -102,7 +102,7 @@ const ServicePage = () => {
     id: 6,
     title: "SÂN KHẤU VÀ SỰ KIỆN NGOÀI TRỜI",
     img: "https://suntechvn.vn/wp-content/uploads/2023/03/man-hinh-led-su-kien-ngoai-troi.jpg",
-    href: "https://suntechvn.vn/giai-phap-su-kien-ngoai-troi/",
+    href: "https://securityzone.vn/dich-vu-cong-nghe-hien-thi-hien-dai/",
     slug: "su-kien-ngoai-troi",
     description: "Giải pháp màn hình LED chống nước, chịu nhiệt cho sự kiện ngoài trời.",
   },
@@ -153,9 +153,9 @@ useEffect(() => {
           style={{ backgroundImage: "url('https://suntechvn.vn/wp-content/uploads/2023/02/giai-phap-lap-dat-man-led.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
-          <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Dịch vụ & Giải pháp <span className="text-cyan-400">SUNTECH</span>
+              Dịch vụ & Giải pháp <span className="text-cyan-400">Công Nghệ Toàn Diện</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-200">
               Bảo vệ doanh nghiệp của bạn với công nghệ an ninh mạng tiên tiến nhất
@@ -167,8 +167,9 @@ useEffect(() => {
         <section className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Các Dịch Vụ Nổi Bật Của SUNTECH
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              
+               <span className="text-cyan-400 drop-shadow-glow"> Các Dịch Vụ Nổi Bật Của Công Nghệ Hiển Thị Toàn Diện</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Giải pháp màn hình LED toàn diện từ tư vấn, thiết kế đến triển khai và bảo hành
@@ -235,7 +236,7 @@ useEffect(() => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Tại sao <span className="text-cyan-300">Suntech</span> là lựa chọn hàng đầu?
+              Tại sao <span className="text-cyan-300">Công Nghệ Hiển Thị Toàn Diện</span> là lựa chọn hàng đầu?
             </h2>
             <p className="text-lg text-cyan-100 max-w-3xl mx-auto">
               Hơn 10 năm kinh nghiệm bảo vệ hàng trăm doanh nghiệp khỏi các mối đe dọa mạng tinh vi
