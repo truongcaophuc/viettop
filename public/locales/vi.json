@@ -7,7 +7,7 @@
     },
     "intro": {
       "title": "GIỚI THIỆU VỀ CHÚNG TÔI",
-      "p1": "Công ty CP Tư Vấn Đầu Tư – Thương Mại ĐỈNH CAO VIỆT được thành lập từ 12/2004, tập trung vào các giải pháp M&E cho Data Center & hạ tầng ICT.",
+      "p1": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ ĐỈNH CAO VIỆT được thành lập từ 12/2004, tập trung vào các giải pháp M&E cho Data Center & hạ tầng ICT.",
       "p2": "Với gần 20 năm kinh nghiệm, chúng tôi là đối tác tin cậy của nhiều tập đoàn, ngân hàng, bệnh viện… cam kết giải pháp tối ưu – an toàn – bền vững.",
       "p3": "Chúng tôi cam kết mang đến giải pháp tối ưu, đảm bảo hiệu suất, an toàn và tính bền vững lâu dài trong vận hành hệ thống kỹ thuật.",
       "buttonContact": "Liên hệ tư vấn",
@@ -72,8 +72,8 @@
     },
     "nav": {
       "logoAlt": "Logo DCV",
-      "companyName1": "CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT",
-      "companyName2": "CƠ ĐIỆN LẠNH DCV",
+      "companyName1": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ",
+      "companyName2": "ĐỈNH CAO VIỆT",
       "home": "Trang chủ",
       "about": "Giới thiệu",
       "services": "Dịch vụ",
@@ -91,8 +91,8 @@
 
   "footer": {
     "companyInfo": {
-      "name1": "CÔNG TY CỔ PHẦN DỊCH VỤ & KỸ THUẬT",
-      "name2": "CƠ ĐIỆN LẠNH DCV",
+      "name1": "CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ",
+      "name2": "ĐỈNH CAO VIỆT",
       "description": "Giải pháp M&E toàn diện cho Data Center & hạ tầng ICT.",
       "logoAlt": "Logo DCV Footer"
     },
@@ -124,7 +124,7 @@
       "emailLabel": "Email:",
       "emailValue": "contact@dinhcaoviet.vn"
     },
-    "copyright": "© {currentYear} Bản quyền thuộc về Công ty CP Dịch vụ & Kỹ thuật Cơ điện lạnh DCV. Đã đăng ký Bản quyền."
+    "copyright": "© {currentYear} Bản quyền thuộc về Công ty TNHH Thương mại Dịch vụ Đỉnh Cao Việt. Đã đăng ký bản quyền."
   },
 
   "_comment2": "homepage.swiper",
