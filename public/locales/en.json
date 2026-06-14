@@ -128,26 +128,34 @@
       "emailLabel": "Email:",
       "emailValue": "contact@dinhcaoviet.vn"
     },
-    "copyright": "© {currentYear} Dinh Cao Viet Trading Service Company Limited. All Rights Reserved."
+    "copyright": "© {currentYear} Dinh Cao Viet Trading Service Company Limited." 
   },
+
+
+
+
+
+
 
     "homepage": {
     "_comment2": "homepage.swiper",
-    "swiper": {
-          "slide1": {
-            "title": "R.E.E M&E",
-            "desc": "Top 500 Largest Enterprises in Vietnam"
-          },
-          "slide2": {
-            "title": "Leading M&E Solutions",
-            "desc": "Providing professional, high-quality services"
-          },
-          "slide3": {
-            "title": "Trusted Partner for Businesses",
-            "desc": "We deliver efficiency and sustainability"
-          },
-          "button": "View Details"
-        },
+ "swiper": {
+      "slide1": {
+        "title": "R.E.E M&E",
+        "desc": "Top 500 Largest Enterprises in Vietnam"
+      },
+      "slide2": {
+        "title": "Leading M&E Solutions",
+        "desc": "Providing professional, high-quality services"
+      },
+      "slide3": {
+        "title": "Trusted Partner for Businesses",
+        "desc": "We deliver efficiency and sustainability"
+      },
+      "button": "View Details"
+    },
+
+
 
 
     "_comment3": "homepage.articles",
